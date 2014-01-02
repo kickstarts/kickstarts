@@ -1,4 +1,4 @@
-# Node Boilerplates
+# Node Boilerplates [![Build Status](https://travis-ci.org/vitorbritto/node-boilerplates.png)](https://travis-ci.org/vitorbritto/node-boilerplates)
 
 My personal boilerplates. :)
 
