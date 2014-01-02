@@ -10,8 +10,7 @@ My personal boilerplates. :)
 1 - Clone and execute
 
 ```bash
-git clone git://github.com/vitorbritto/node-boilerplates.git projectname
-cd projectname
+git clone git://github.com/vitorbritto/node-boilerplates.git you-project-name-here && cd $_
 npm i && node newproject
 ```
 
