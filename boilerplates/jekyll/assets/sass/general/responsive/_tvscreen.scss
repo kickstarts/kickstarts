@@ -1,0 +1,53 @@
+//
+// TV SCREEN - Large desktop and up
+// --------------------------------------------------
+
+@if $use-responsive == true {
+
+@include respond-to(tvscreen) {
+
+
+    // AUTHOR'S CSS GOES HERE
+
+
+
+
+    // ====================================================================================
+    // DO NOT REMOVE FROM HERE
+    // ====================================================================================
+
+
+    // Helper Classes
+    .hidden-desktop    { display: none !important; }
+    .visible-desktop   { display: inherit !important ; }
+
+    .visible-tablet    { display: none !important; }
+    .visible-phone     { display: none !important; }
+
+    .hidden-tablet     { display: none !important; }
+    .hidden-phone      { display: none !important; }
+
+
+    // General Structure
+    body {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    @if $use-thumbnails == true {
+        // Thumbnails
+        .thumbnails {
+            margin-left: -$gutter-width;
+        }
+        .thumbnails > li {
+            margin-left: $gutter-width;
+        }
+        .row .thumbnails {
+            margin-left: 0;
+        }
+    }
+
+}
+
+}
+

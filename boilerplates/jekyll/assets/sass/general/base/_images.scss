@@ -1,0 +1,14 @@
+//
+// Image, Object and Embed
+// --------------------------------------------------
+
+img,
+object,
+embed {
+    @if $legacy-support == true {
+        _width: 100%;
+    }
+    max-width: 100%;
+    height: auto;
+    border: none;
+}

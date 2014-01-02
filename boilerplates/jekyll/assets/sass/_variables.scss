@@ -1,0 +1,300 @@
+////////////////////////////////////////////////////////////////////
+//
+// CORE SETTINGS
+//
+////////////////////////////////////////////////////////////////////
+
+
+// IMPORTANT MESSAGE
+// -----------------------------------------------------------------
+// Feel free to edit but DO NOT REMOVE ANY VARIABLES HERE!
+// If you find you need to do so it is a failing of the
+// framework so please tweet at @vitorbritto.
+// -----------------------------------------------------------------
+
+
+// Colors
+// -------------------------
+
+// Grays
+$black:                 #000000                 !default;
+$gray:                  #555555                 !default;
+$white:                 #ffffff                 !default;
+$gray-dark:             #333333                 !default;
+$gray-light:            #bbbbbb                 !default;
+$gray-darker:           #222222                 !default;
+$gray-lighter:          #eeeeee                 !default;
+
+// Common Colors
+$blue:                  #0064cd                 !default;
+$green:                 #3ca838                 !default;
+$red:                   #e72727                 !default;
+$yellow:                #ff9a1f                 !default;
+$orange:                #e64919                 !default;
+$pink:                  #c3325f                 !default;
+$purple:                #834186                 !default;
+
+// Light Colors
+$blue-light:             #48a1e5                !default;
+$green-light:            #8bd47d                !default;
+$red-light:              #d58181                !default;
+$yellow-light:           lighten($yellow, 25%)  !default;
+$pink-light:             #c3325f                !default;
+$purple-light:           #834186                !default;
+
+// Dark Colors
+$blue-dark:              darken($blue, 10%)     !default;
+$yellow-dark:            darken($yellow, 10%)   !default;
+$red-dark:               darken($red, 10%)      !default;
+$green-dark:             #2a7a1a                !default;
+$purple-dark:            #371849                !default;
+
+
+// Scaffolding
+// -------------------------
+$background-color:      $white      !default;
+$text-color:            $gray-dark  !default;
+
+
+// Links
+// -------------------------
+$link-color:            $blue                       !default;
+$link-color-hover:      darken($link-color, 15%)    !default;
+$link-color-focus:      darken($link-color, 15%)    !default;
+$link-color-active:     darken($link-color, 15%)    !default;
+$link-color-visited:    $link-color                 !default;
+
+
+// Typography
+// -------------------------
+$sans-font-family:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-family:       Georgia, "Times New Roman", Times, serif;
+$mono-font-family:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// Uncomment to set a custom font-family
+$custom-font-family:      "Open Sans", sans-serif;
+
+
+$base-font-family:        $custom-font-family   !default;
+$base-font-size:          14px                  !default;
+$base-line-height:        20px                  !default;
+$alt-font-family:         $serif-font-family    !default;
+
+$headings-font-family:    inherit   !default;
+$headings-font-weight:    normal    !default;
+$headings-color:          inherit   !default;
+
+$warning-text:             darken($yellow-dark, 10%)                                        !default;
+$warning-background:       $yellow-light                                                    !default;
+$warning-border:           darken(adjust-hue($warning-background, -10), 3%)                 !default;
+
+$error-text:               $red-dark                                                        !default;
+$error-background:         lighten($red-light, 15%)                                         !default;
+$error-border:             darken(adjust-hue($error-background, -10), 3%)                   !default;
+
+$success-text:             $green-dark                                                      !default;
+$success-background:       lighten($green-light, 14%)                                       !default;
+$success-border:           darken(adjust-hue($success-background, -10), 5%)                 !default;
+
+$info-text:                $blue-dark                                                       !default;
+$info-background:          lighten($blue-light, 28%)                                        !default;
+$info-border:              darken(adjust-hue($info-background, -10), 7%)                    !default;
+
+
+// Component sizing
+// -------------------------
+$font-size-large:         $base-font-size * 1.25; // ~18px
+$font-size-small:         $base-font-size * 0.85; // ~12px
+$font-size-mini:          $base-font-size * 0.75; // ~11px
+
+$padding-large:           11px 19px !default; // 44px
+$padding-small:           2px 10px  !default; // 26px
+$padding-mini:            0px 6px   !default; // 22px
+
+$base-border-radius:      5px !default;
+$border-radius-large:     8px !default;
+$border-radius-small:     3px !default;
+
+
+// Tables
+// -------------------------
+$table-background:               transparent                !default; // overall background-color
+$table-background-accent:        #f9f9f9                    !default; // for striping
+$table-background-hover:         #f5f5f5                    !default; // for hover
+$table-border:                   #ddd                       !default; // table and cell border
+
+
+// Forms
+// -------------------------
+$input-background:               $white                     !default;
+$input-border:                   $gray-light                !default;
+$input-border-hover:             darken($blue-light, 10%)   !default;
+$input-border-radius:            $base-border-radius        !default;
+$input-disabled-background:      $gray-lighter              !default;
+$form-actions-background:        #f5f5f5                    !default;
+$placeholder-text:               $gray-light                !default;
+$input-height:                   $base-line-height + 10px   !default;
+
+
+// Misc
+// -------------------------
+$hr-border:                      $gray-lighter              !default;
+$horizontal-component-offset:    180px                      !default;
+
+
+
+////////////////////////////////////////////////////////////////////
+//
+// COMPONENTS
+//
+////////////////////////////////////////////////////////////////////
+
+
+// Z-index master list
+// -------------------------
+
+// Try to avoid customizing these :)
+$z-index-dropdown:          1000 !default;
+$z-index-popover:           1010 !default;
+$z-index-tooltip:           1030 !default;
+$z-index-navbar:            1030 !default;
+$z-index-fixed-navbar:      1090 !default;
+$z-index-modal-backdrop:    1040 !default;
+$z-index-modal:             1050 !default;
+
+
+// Buttons
+// -------------------------
+
+// Sassy Buttons - Compass extension by Jared Hardy - http://www.jaredhardy.com
+
+// Sassy Button defaults
+// These are the base defaults for the buttons, if you are going to use similar buttons on an entire site changing these
+// can save you some time by calling the sassy button mixin with less arguments.
+
+$btn-base-color:             rgba(11, 153, 194, 1)       !default;
+$btn-second-color:           false                       !default;
+$btn-border-radius:          5px                         !default;
+$btn-padding:                0.5em 1.5em                 !default;
+$btn-font-size:              14px                        !default;
+$btn-text-color:             white                       !default;
+$btn-text-style:             "raised"                    !default;
+$btn-gradient-style:         "simple"                    !default;
+$btn-pseudo-states:          true                        !default;
+
+
+// Navbar
+// ------------------------
+$navbar-height:									40px 										!default;
+
+// Normal Navbar
+$navbar-background:								$gray-lighter     						 	!default;
+$navbar-background-highlight:					$white          						 	!default;
+$navbar-border: 								$gray-light 								!default;
+$navbar-text:									$gray 										!default;
+$navbar-link-color:								$gray 										!default;
+$navbar-link-color-hover:						lighten($navbar-link-color, 10%) 			!default;
+$navbar-link-color-active:						$white 										!default;
+$navbar-link-background-hover:					lighten($navbar-background, 2%) 			!default;
+$navbar-link-background-active:					lighten($blue, 2%) 							!default;
+
+$navbar-brand-color:                			$navbar-link-color 							!default;
+
+// Inverted Navbar
+$navbar-inverse-background:						$gray-darker 								!default;
+$navbar-inverse-background-highlight:			$gray-dark 									!default;
+$navbar-inverse-border:                   		lighten($gray-dark, 10%) 					!default;
+$navbar-inverse-text:							$white 										!default;
+$navbar-inverse-link-color:						$white  									!default;
+$navbar-inverse-link-color-hover:				$white 										!default;
+$navbar-inverse-link-color-active:				$navbar-inverse-link-color-hover 			!default;
+$navbar-inverse-link-background-hover:			lighten($navbar-inverse-background, 1%) 	!default;
+$navbar-inverse-link-background-active:			transparent 								!default;
+
+// Dropdowns
+$dropdown-background:                $white 												!default;
+$dropdown-border:                    rgba(0,0,0,.2) 										!default;
+$dropdown-divider-top:               #e5e5e5 												!default;
+$dropdown-divider-bottom:            $white 												!default;
+$dropdown-link-color:                $gray-dark 											!default;
+$dropdown-link-color-hover:          $white 												!default;
+$dropdown-link-color-active:         $dropdown-link-color 									!default;
+$dropdown-link-background-hover:     $dropdown-link-color-active 							!default;
+$dropdown-link-background-active:  	 $link-color 											!default;
+
+
+// Alerts
+// -------------------------
+$warning-text:             darken($yellow-dark, 10%) 										!default;
+$warning-background:       $yellow-light 													!default;
+$warning-border:           darken(adjust-hue($warning-background, -10), 3%) 				!default;
+
+$error-text:               $red-dark 														!default;
+$error-background:         lighten($red-light, 15%) 										!default;
+$error-border:             darken(adjust-hue($error-background, -10), 3%) 					!default;
+
+$success-text:             $green-dark 														!default;
+$success-background:       lighten($green-light, 14%) 										!default;
+$success-border:           darken(adjust-hue($success-background, -10), 5%) 				!default;
+
+$info-text:                $blue-dark 														!default;
+$info-background:          lighten($blue-light, 28%) 										!default;
+$info-border:              darken(adjust-hue($info-background, -10), 7%) 					!default;
+
+
+// Pagination
+// -------------------------
+$pagination-background:                 $white 												!default;
+$pagination-background-hover:           $blue 												!default;
+$pagination-background-active:          $blue-light 										!default;
+
+
+// Hero unit
+// -------------------------
+$hero-unit-background:                  $gray-lighter                                       !default;
+$hero-unit-heading-color:               inherit                                             !default;
+$hero-unit-lead-color:                  inherit                                             !default;
+
+
+// Wells
+// -------------------------
+$well-background:                       $gray-lighter                                       !default;
+
+
+// Tooltips and popovers
+// -------------------------
+$tooltip-color:              $white                                                         !default;
+$tooltip-background:         $black                                                         !default;
+$tooltip-arrow-width:        5px                                                            !default;
+$tooltip-arrow-color:        $tooltip-background                                            !default;
+
+$popover-background:         $white                                                         !default;
+$popover-arrow-width:        10px                                                           !default;
+$popover-arrow-color:        $white                                                         !default;
+$popover-title-background:   darken($popover-background, 3%)                                !default;
+
+// Special enhancement for popovers
+$popover-arrow-outer-width:  $popover-arrow-width + 1                                       !default;
+$popover-arrow-outer-color:  rgba(0,0,0,.25)                                                !default;
+
+
+////////////////////////////////////////////////////////////////////
+//
+// SUPPORT - Legacy and Experimental Browser Support
+//
+////////////////////////////////////////////////////////////////////
+
+$legacy-support-for-ie:                 $legacy-support;
+$legacy-support-for-ie6:                $legacy-support;
+$legacy-support-for-ie7:                $legacy-support;
+$legacy-support-for-ie8:                $legacy-support;
+$legacy-support-for-mozilla:            $legacy-support;
+
+$experimental-support-for-mozilla:      $experimental-support;
+$experimental-support-for-webkit:       $experimental-support;
+$experimental-support-for-opera:        $experimental-support;
+$experimental-support-for-microsoft:    $experimental-support;
+$experimental-support-for-khtml:        $experimental-support;
+$experimental-support-for-svg:          $experimental-support;
+$experimental-support-for-pie:          $experimental-support;
+$experimental-support-for-gradients:    $experimental-support;

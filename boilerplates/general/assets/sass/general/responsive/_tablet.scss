@@ -1,0 +1,45 @@
+//
+// TABLET - Portrait tablet to landscape and desktop
+// --------------------------------------------------
+
+@if $use-responsive == true {
+
+@include respond-to(tablet) {
+
+
+    // AUTHOR'S CSS GOES HERE
+
+
+
+
+    // ====================================================================================
+    // DO NOT REMOVE FROM HERE
+    // ====================================================================================
+
+
+    // Helper Classes
+    .hidden-desktop  { display: inherit !important; }
+    .visible-desktop { display: none !important; }
+
+    .hidden-tablet   { display: none !important; }
+    .visible-tablet  { display: inherit !important; }
+
+    .hidden-phone    { display: inherit !important; }
+    .visible-phone   { display: none !important; }
+
+
+    // General Structure
+    body {
+        @if $use-container-gutter == true {
+            padding-left: $container-gutter;
+            padding-right: $container-gutter;
+        } @else {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}
+
+}
+

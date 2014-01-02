@@ -1,0 +1,49 @@
+// Fonts mixin
+font-url(file)
+  return '../fonts/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+        url(font-url(file + '.woff')) format('woff'), 
+        url(font-url(file + '.ttf')) format('truetype'), 
+        url(font-url(file + '.svg#'+ family)) format('svg')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#'+ family)) format('svg')
+
+// Background transparency (RGBA)
+background-transparency(color, alpha = 1)
+  ms-color = argb(color, alpha)
+  background rgb(color)
+  background rgba(color, alpha)
+  .lt-ie8 &
+    zoom 1
+  .lt-ie9 &
+    background transparent
+    filter s('progid:DXImageTransform.Microsoft.gradient(startColorstr=%s,endColorstr=%s)', ms-color, ms-color)
+    &:nth-child(n)
+      filter none
+
+// Background-size
+bg-size(img-url, img-size)
+  background-image: url(img-url)
+  background-size: img-size
+  -ms-behavior: url(/backgroundsize.htc);
+
+hex(decimal)
+  hex-value = ('0') ('1') ('2') ('3') ('4') ('5') ('6') ('7') ('8') ('9') ('A') ('B') ('C') ('D') ('E') ('F')
+  unquote(hex-value[floor(decimal / 16)] + hex-value[floor(decimal % 16)])
+ 
+argb(color, alpha = 1)
+  unquote('#') + hex(alpha * 255) + hex(red(color)) + hex(green(color)) + hex(blue(color))
+
+// Help Class
+.transition
+  transition: all .2s linear

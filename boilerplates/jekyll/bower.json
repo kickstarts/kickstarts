@@ -1,0 +1,25 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "authors": [
+    "Vitor Britto <email@domain.com.br>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "modernizr": "~2.6.2"
+  }
+}

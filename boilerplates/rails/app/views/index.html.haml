@@ -1,0 +1,26 @@
+!!! 5
+<!--[if lt IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{:lang => "en"}
+  <!--<![endif]-->
+  %head
+    %meta{:charset => "utf-8"}
+    %title
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %link{:href => "css/screen.min.css?v=#{Time.now.to_i}", :rel => "stylesheet"}
+    %script{:src => "js/modernizr-2.5.3.min.js"}
+    
+  %body
+    %header
+    %div{:role => "main"}
+    %footer
+    %script{:src => "js/libs.min.js?v=#{Time.now.to_i}"}
+    %script{:src => "js/app.min.js?v=#{Time.now.to_i}"}
+    :javascript
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

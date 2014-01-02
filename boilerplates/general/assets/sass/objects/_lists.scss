@@ -1,0 +1,26 @@
+//
+// Lists Utility Classes
+// --------------------------------------------------
+
+@if $use-lists == true {
+
+    .list-unstyled { @include list-style("unstyled"); }
+    .list-square   { @include list-style("square"); }
+    .list-inline   { @include horizontal-list; }
+
+    // Horizontal layout (like forms)
+    .dl-horizontal {
+        @include clearfix; // Ensure dl clears floats if empty dd elements present
+        dt {
+            float: left;
+            width: $horizontal-component-offset - 20;
+            clear: left;
+            text-align: right;
+            @include text-overflow;
+        }
+        dd {
+            margin-left: $horizontal-component-offset;
+        }
+    }
+
+}

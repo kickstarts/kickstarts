@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////////////////////
+//
+// INITIAL CONFIGURATION
+//
+////////////////////////////////////////////////////////////////////
+
+// 1 - Pick a reset or normalization - Accepted values: "meyer", "normalize" (default) or "custom"
+$use-reset: "normalize"
+
+// 2 - Would you like to use grid system classes (unsemantic way)?
+$use-grid-classes: true
+
+// 3 - Pick a type of grid - Accepted values: "fluid", "static"
+$use-grid-type: "fluid"
+$total-width: 100% // For a static grid system, just set a fixed value for the container (e.g: 960px).
+
+// 4 - Responsiveness?
+$use-responsive: true
+
+// 5 - Would you like to use border-box? - It's highly recommended to use it!
+$use-border-box: true
+
+// 6 - Would you like to use experimental and legacy(old browser) support?
+$legacy-support: true
+$experimental-support: true
+
+// 7 - Choose a type of button - Accepted values: "flat", "simple", "shiny" "glass", "matte"
+$btn-type: "flat"
+
+
+////////////////////////////////////////////////////////////////////
+//
+// GRID SYSTEM CONFIGURATION
+//
+////////////////////////////////////////////////////////////////////
+
+// Set the number of columns, column and gutter widths
+$column-width: 60px
+$gutter-width: 20px
+$columns:      12
+
+// Use max-width for your container (only for fluid grid system)
+$use-max-width: false
+$max-width:     960px // Set your max-width value
+
+// Use padding-left and padding-right on your container
+$use-container-gutter: false
+$container-gutter:     20px // Set a custom value for the padding
+
+// Enable sub-pixel fix for IE6 & 7.
+// Set $legacy-support to TRUE on _defaults.scss
+// See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+$min-width:  999999
+$correction: 0.5 / $min-width * 100
+
+// Use the offset options in your grid - push, pull, squish and centered
+$use-grid-offset: true
+
+// Set your helper classes
+$class-container:   "container"
+$class-row:         "row"
+$class-column:      "span"
+$class-push:        "push"
+$class-pull:        "pull"
+$class-squish:      "squish"
+
+// Set your breakpoints
+$tvscreen: 1441px
+$desktop:  979px
+$tablet:   768px
+$mobile:   767px
+
+
+////////////////////////////////////////////////////////////////////
+//
+// OBJECTS - Which objects would you like to use?
+//
+////////////////////////////////////////////////////////////////////
+
+// General
+$use-global:        true // Global - It's highly recommended to use it!
+$use-animations:    true // Animations on links
+$use-types:         true // Types and Headings
+$use-links:         true // Links
+$use-lists:         true // Lists
+$use-tables:        true // Tables
+$use-images:        true // Images
+$use-forms:         true // Forms and inputs

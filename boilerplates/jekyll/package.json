@@ -1,0 +1,23 @@
+{
+  "name": "vitorbritto",
+  "version": "1.0.0",
+  "title": "Vitor Britto",
+  "homepage": "http://www.vitorbritto.com/blog",
+  "description": "Desenvolvedor Web",
+  "author": {
+    "name": "Vitor Britto",
+    "url": "http://www.vitorbritto.com",
+    "email": "code@vitorbritto.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitorbritto/blog.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-contrib-uglify": "~0.2.1",
+    "grunt-contrib-jshint": "~0.5.4",
+    "load-grunt-tasks": "~0.1.0"
+  }
+}
