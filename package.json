@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/vitorbritto/node-boilerplate.git"
+    "url": "git://github.com/vitorbritto/node-boilerplates.git"
   },
   "dependencies": {
     "shelljs": "~0.2.6",

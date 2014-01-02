@@ -6,7 +6,7 @@ My personal boilerplates. :)
 
 ## Getting Started
 
-1. Clone and execute
+1 - Clone and execute
 
 ```bash
 git clone git://github.com/vitorbritto/node-boilerplates.git projectname
@@ -14,19 +14,19 @@ cd projectname
 npm i && node newproject
 ```
 
-2. Select a boilerplate
+2 - Select a boilerplate
 
-* [General](general/)
-* [Mobile](mobile/)
-* [WordPress](wordpress/)
-* [Ghost](ghost/)
-* [Rails](rails/)
-* [Node](node/)
-* [Jekyll](jekyll/)
-* [DocPad](docpad/)
-* [Assemble](assemble/)
+- [General](general/)
+- [Mobile](mobile/)
+- [WordPress](wordpress/)
+- [Ghost](ghost/)
+- [Rails](rails/)
+- [Node](node/)
+- [Jekyll](jekyll/)
+- [DocPad](docpad/)
+- [Assemble](assemble/)
 
-3. Profit!
+3 - Profit!
 
 
 ## License
