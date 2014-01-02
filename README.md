@@ -7,15 +7,15 @@ My personal boilerplates. :)
 
 ## Getting Started
 
-1 - Clone and execute
+1. Clone and execute
 
 ```bash
 git clone git://github.com/vitorbritto/node-boilerplates.git you-project-name-here && cd $_
 npm i && node newproject
 ```
 
-2 - Select a boilerplate
-3 - Profit!
+2. Select a boilerplate
+3. Profit!
 
 
 ## Included Boilerplates
