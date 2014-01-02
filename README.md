@@ -4,6 +4,7 @@ My personal boilerplates. :)
 
 > Work in progress...
 
+
 ## Getting Started
 
 1 - Clone and execute
@@ -15,6 +16,10 @@ npm i && node newproject
 ```
 
 2 - Select a boilerplate
+3 - Profit!
+
+
+## Included Boilerplates
 
 - [General](general/)
 - [Mobile](mobile/)
@@ -25,8 +30,6 @@ npm i && node newproject
 - [Jekyll](jekyll/)
 - [DocPad](docpad/)
 - [Assemble](assemble/)
-
-3 - Profit!
 
 
 ## License
