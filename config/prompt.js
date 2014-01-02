@@ -2,13 +2,13 @@ var inquirer = require('inquirer');
 var prompt = [
     {
         choices: [
-            { name: "Assemble", vaule: "assemble" },
-            { name: "Docpad", vaule: "docpad" },
-            { name: "General", vaule: "general" },
-            { name: "Ghost", vaule: "ghost" },
-            { name: "Jekyll", vaule: "jekyll" },
-            { name: "Rails", vaule: "rails" },
-            { name: "WordPress", vaule: "wordpress" }
+            { name: "Assemble", value: "assemble" },
+            { name: "Docpad", value: "docpad" },
+            { name: "General", value: "general" },
+            { name: "Ghost", value: "ghost" },
+            { name: "Jekyll", value: "jekyll" },
+            { name: "Rails", value: "rails" },
+            { name: "WordPress", value: "wordpress" }
         ],
         name: 'boilerplate',
         message: 'Wich boilerplate method would you like to use?',

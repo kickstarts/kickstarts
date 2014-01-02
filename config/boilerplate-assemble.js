@@ -10,19 +10,19 @@ var error    = cli.red.bold,
     success  = cli.green;
 
 sh.echo(notice('! Initialize Building process...'));
-sh.mv(__dirname + '/assemble', './');
-sh.rm('-rf', [
-        './boilerplates',
-        './config',
-        './node_modules',
-        './git',
-        '.gitignore',
-        '.travis.yml',
-        'LICENSE',
-        'newproject.js',
-        'package.json',
-        'README.md'
-    ]
-);
+// sh.mv(__dirname + '/assemble', './');
+// sh.rm('-rf', [
+//         './boilerplates',
+//         './config',
+//         './node_modules',
+//         './git',
+//         '.gitignore',
+//         '.travis.yml',
+//         'LICENSE',
+//         'newproject.js',
+//         'package.json',
+//         'README.md'
+//     ]
+// );
 sh.echo(success('✔ All Done!'));
 
