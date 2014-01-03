@@ -11,13 +11,6 @@
         "type": "git",
         "url": "git://github.com/vitorbritto/node-boilerplates.git"
     },
-    "keywords": [
-        "boilerplates",
-        "generator",
-        "nodejs",
-        "static generators",
-        "blog plataform"
-    ],
     "dependencies": {
         "shelljs": "~0.2.6",
         "cli-color": "~0.2.2",
