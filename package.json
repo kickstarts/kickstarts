@@ -4,9 +4,6 @@
     "title": "Node Boilerplates",
     "author": "Vitor Britto <code@vitorbritto.com.br>",
     "description": "A jump-start for my projects.",
-    "scripts": {
-        "start": "node newproject.js",
-    },
     "repository": {
         "type": "git",
         "url": "git://github.com/vitorbritto/node-boilerplates.git"

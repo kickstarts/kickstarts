@@ -12,7 +12,7 @@ A jump-start for my projects. :)
 
 ```bash
 git clone git://github.com/vitorbritto/node-boilerplates.git
-npm i && node newproject (**or** npm start)
+npm i && node newproject
 ```
 
 2. Select a boilerplate type
