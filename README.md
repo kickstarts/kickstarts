@@ -8,10 +8,10 @@ A jump-start for my projects. :)
 
 ## Getting Started
 
-1. Clone this repository and execute inside your root project folder
+1. Clone this repository and execute
 
 ```bash
-git clone git://github.com/vitorbritto/node-boilerplates.git
+git clone git://github.com/vitorbritto/node-boilerplates.git projectname && cd $_
 npm i && node newproject
 ```
 
