@@ -1,24 +1,28 @@
 {
-    "name": "node-boilerplates",
-    "version": "0.0.1",
-    "title": "Node Boilerplates",
-    "description": "A jump-start for my projects.",
-    "private": true,
-    "author": {
-        "name": "Vitor Britto",
-        "email": "code@vitorbritto.com.br"
-    },
-    "scripts": {
-        "start": "node newproject.js",
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/vitorbritto/node-boilerplates.git"
-    },
-    "dependencies": {
-        "shelljs": "~0.2.6",
-        "cli-color": "~0.2.2",
-        "inquirer": "~0.3.5"
-    },
-    "license": "MIT"
+  "name": "node-boilerplate",
+  "version": "0.1.0",
+  "description": "A jump-start for new projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://vitorbritto@github.com/vitorbritto/node-boilerplate.git"
+  },
+  "keywords": [
+    "skeleton",
+    "boilerplate",
+    "generator"
+  ],
+  "private": true,
+  "author": {
+    "name": "Vitor Britto",
+    "email": "code@vitorbritto.com.br"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitorbritto/node-boilerplate/issues"
+  },
+  "dependencies": {
+    "shelljs": "~0.2.6",
+    "inquirer": "~0.3.5",
+    "cli-color": "~0.2.2"
+  }
 }
