@@ -6,7 +6,7 @@
     "private": true,
     "author": {
         "name": "Vitor Britto",
-        "email": " code@vitorbritto.com.br"
+        "email": "code@vitorbritto.com.br"
     },
     "scripts": {
         "start": "node newproject.js",
