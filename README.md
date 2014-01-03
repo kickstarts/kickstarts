@@ -1,24 +1,27 @@
 # Node Boilerplates [![Build Status](https://travis-ci.org/vitorbritto/node-boilerplates.png)](https://travis-ci.org/vitorbritto/node-boilerplates)
 
-My personal boilerplates. :)
+A jump-start for my projects. :)
 
 > Work in progress...
+> **Todo List:** [https://github.com/vitorbritto/node-boilerplates/issues/1](https://github.com/vitorbritto/node-boilerplates/issues/1)
 
 
 ## Getting Started
 
-1. Clone and execute
+1. Clone this repository and execute inside your root project folder
 
 ```bash
-git clone git://github.com/vitorbritto/node-boilerplates.git you-project-name-here && cd $_
-npm i && node newproject
+git clone git://github.com/vitorbritto/node-boilerplates.git
+npm i && node newproject (**or** npm start)
 ```
 
-2. Select a boilerplate
+2. Select a boilerplate type
 3. Profit!
 
 
 ## Included Boilerplates
+
+Here are the boilerplates available yet.
 
 - [General](general/)
 - [Mobile](mobile/)
