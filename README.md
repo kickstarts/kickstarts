@@ -1,4 +1,4 @@
-# Node Boilerplates [![Build Status](https://travis-ci.org/vitorbritto/node-boilerplates.png)](https://travis-ci.org/vitorbritto/node-boilerplates)
+# Boilerplates - Node.js Version [![Build Status](https://travis-ci.org/vitorbritto/node-boilerplates.png)](https://travis-ci.org/vitorbritto/node-boilerplates)
 
 A jump-start for my projects. :)
 
