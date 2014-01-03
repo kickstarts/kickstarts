@@ -1,8 +1,7 @@
 {
     "name": "node-boilerplates",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "title": "Node Boilerplates",
-    "private": true,
     "author": "Vitor Britto <code@vitorbritto.com.br>",
     "description": "A jump-start for my projects.",
     "scripts": {
