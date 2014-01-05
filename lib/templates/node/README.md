@@ -21,7 +21,7 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 * [Stylus](http://learnboost.github.io/stylus/) - CSS pre-processor
 * [Jade](http://jade-lang.com/) - A template engine for HTML pre-processor
-* [Grunt](http://gruntjs.com/) - Task runner
+* [Gulp](http://gulpjs.com/) - Task runner
 * [Bower](http://bower.io/) - Manager dependencies
 * [Livereload](http://livereload.com/) - Automagically refresh your browser
 

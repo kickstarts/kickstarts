@@ -1,18 +1,19 @@
 {
     "bitwise": true,
+    "curly": true,
     "eqeqeq": true,
     "eqnull": true,
     "immed": true,
-    "newcap": true,
-    "esnext": true,
+    "indent": 4,
     "latedef": true,
+    "newcap": true,
     "noarg": true,
-    "node": true,
     "undef": true,
+    "strict": true,
+    "trailing": true,
+    "esnext": true,
+    "smarttabs": true,
     "browser": true,
-    "trailing": true,
     "jquery": true,
-    "curly": true,
-    "trailing": true,
-    "smarttabs": true
+    "node": true
 }

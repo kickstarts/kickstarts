@@ -1,14 +1,14 @@
 {
   "name": "projectname",
   "version": "0.1.0",
-  "main": "bower",
+  "main": "bower.json",
   "ignore": [
     "**/.*",
     "node_modules",
     "components"
   ],
-  "readme": "ERROR: No README.md file found!",
-  "description": "ERROR: No README.md file found!",
+  "readme": "",
+  "description": "",
   "repository": {
     "type": "git",
     "url": "git://github.com/vitorbritto/boilerplate/node.git"
