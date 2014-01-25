@@ -23,7 +23,7 @@ npm install
 chmod u+x newproject.js
 ```
 
-4 - Execute with: `./newproject.js`
+4 - Execute with: `./newproject.js` <br/>
 5 - Profit!
 
 
