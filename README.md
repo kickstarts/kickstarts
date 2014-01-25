@@ -1,22 +1,30 @@
-# Boilerplates - Node.js Version [![Build Status](https://travis-ci.org/vitorbritto/node-boilerplates.png)](https://travis-ci.org/vitorbritto/node-boilerplates)
+# Boilerplates [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.png)](https://travis-ci.org/vitorbritto/boilerplates)
 
 A jump-start for my projects. :)
 
 > Work in progress...
-> **Todo List:** [https://github.com/vitorbritto/node-boilerplates/issues/1](https://github.com/vitorbritto/node-boilerplates/issues/1)
+> **Todo List:** [https://github.com/vitorbritto/boilerplates/issues/1](https://github.com/vitorbritto/boilerplates/issues/1)
 
 
 ## Getting Started
 
-1. Clone this repository and execute
+1 - First of all, make sure you have [Node.js](http://nodejs.org/) installed. <br/>
+2 - Clone this repository and create your project folder
 
 ```bash
-git clone git://github.com/vitorbritto/node-boilerplates.git projectname && cd $_
-npm i && node newproject
+git clone git://github.com/vitorbritto/boilerplates.git projectname
+cd projectname
 ```
 
-2. Select a boilerplate type
-3. Profit!
+3 - Install dependencies and make the script executable
+
+```bash
+npm install
+chmod u+x newproject.js
+```
+
+4 - Execute with: `./newproject.js`
+5 - Profit!
 
 
 ## Included Boilerplates
