@@ -9,6 +9,7 @@ var prompt = [
             { name: "General", value: "general" },
             { name: "Ghost", value: "ghost" },
             { name: "Jekyll", value: "jekyll" },
+            { name: "Harp", value: "harp" },
             { name: "Mobile", value: "mobile" },
             { name: "Node", value: "node" },
             { name: "Rails", value: "rails" },
@@ -27,39 +28,43 @@ inquirer.prompt(prompt, function(answers) {
     switch (boilerplate) {
 
         case 'assemble':
-            require('./lib/boilerplate-assemble');
+            require('./lib/bp-assemble');
         break;
 
         case 'docpad':
-            require('./lib/boilerplate-docpad');
+            require('./lib/bp-docpad');
         break;
 
         case 'general':
-            require('./lib/boilerplate-general');
+            require('./lib/bp-general');
         break;
 
         case 'ghost':
-            require('./lib/boilerplate-ghost');
+            require('./lib/bp-ghost');
+        break;
+
+        case 'harp':
+            require('./lib/bp-harp');
         break;
 
         case 'jekyll':
-            require('./lib/boilerplate-jekyll');
+            require('./lib/bp-jekyll');
         break;
 
         case 'mobile':
-            require('./lib/boilerplate-mobile');
+            require('./lib/bp-mobile');
         break;
 
         case 'node':
-            require('./lib/boilerplate-node');
+            require('./lib/bp-node');
         break;
 
         case 'rails':
-            require('./lib/boilerplate-rails');
+            require('./lib/bp-rails');
         break;
 
         case 'wordpress':
-            require('./lib/boilerplate-wordpress');
+            require('./lib/bp-wordpress');
         break;
 
     }
