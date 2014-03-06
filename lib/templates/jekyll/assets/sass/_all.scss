@@ -10,8 +10,7 @@
 // GETTING STARTED
 // -------------------
 // COMPASS................................Require Compass Framework
-// DEFAULTS...............................Initialize Defaults
-// VARIABLES..............................Setting Variables
+// CONFIG.................................Initialize Configuration
 //
 //
 // MODULES
@@ -33,6 +32,8 @@
 // BASE/MISC..............................
 // BASE/TABLES............................
 // BASE/FORMS.............................
+//
+// BASE/LAYOUT............................Your Layout goes here
 //
 // RESPONSIVE/MOBILE......................Media queries for Smartphones Devices
 // RESPONSIVE/TABLET......................Media queries for Tablets Devices
@@ -80,8 +81,7 @@
 
 // GETTING STARTED
 @import "compass";
-@import "defaults";
-@import "variables";
+@import "config";
 
 // MODULES
 @import "modules/mixins";
@@ -98,6 +98,7 @@
 @import "general/base/misc";
 @import "general/base/tables";
 @import "general/base/forms";
+@import "general/base/layout";
 @import "general/responsive/mobile";
 @import "general/responsive/tablet";
 @import "general/responsive/tvscreen";

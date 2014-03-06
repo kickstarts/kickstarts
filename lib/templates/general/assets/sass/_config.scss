@@ -1,5 +1,145 @@
 ////////////////////////////////////////////////////////////////////
 //
+// INITIAL CONFIGURATION
+//
+////////////////////////////////////////////////////////////////////
+
+// 1 - Pick a reset or normalization - Accepted values: "meyer", "normalize" (default) or "custom"
+$use-reset: "normalize";
+
+// 2 - Would you like to use grid system classes (unsemantic way)?
+$use-grid-classes: true;
+
+// 3 - Pick a type of grid - Accepted values: "fluid", "static"
+$use-grid-type: "fluid";
+$total-width: 100%; // For a static grid system, just set a fixed value for the container (e.g: 960px).
+
+// 4 - Responsiveness?
+$use-responsive: true;
+
+// 5 - Would you like to use border-box? - It's highly recommended to use it!
+$use-border-box: true;
+
+// 6 - Would you like to use experimental and legacy(old browser) support?
+$legacy-support: true;
+$experimental-support: true;
+
+// 7 - Choose a type of button - Accepted values: "flat", "simple", "shiny" "glass", "matte"
+$btn-type: "flat";
+
+
+
+////////////////////////////////////////////////////////////////////
+//
+// GRID SYSTEM CONFIGURATION
+//
+////////////////////////////////////////////////////////////////////
+
+// Set the number of columns, column and gutter widths
+$column-width: 60px;
+$gutter-width: 20px;
+$columns:      12;
+
+// Use max-width for your container (only for fluid grid system)
+$use-max-width: false;
+$max-width:     960px; // Set your max-width value
+
+// Use padding-left and padding-right on your container
+$use-container-gutter: false;
+$container-gutter:     20px; // Set a custom value for the padding
+
+// Enable sub-pixel fix for IE6 & 7.
+// Set $legacy-support to TRUE on _defaults.scss
+// See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+$min-width:  999999;
+$correction: 0.5 / $min-width * 100;
+
+// Use the offset options in your grid - push, pull, squish and centered
+$use-grid-offset: true;
+
+// Set your helper classes
+$class-container:   "container";
+$class-row:         "row";
+$class-column:      "span";
+$class-push:        "push";
+$class-pull:        "pull";
+$class-squish:      "squish";
+
+// Set your breakpoints
+$tvscreen: 1441px;
+$desktop:  979px;
+$tablet:   768px;
+$mobile:   767px;
+
+
+
+////////////////////////////////////////////////////////////////////
+//
+// OBJECTS - Which objects would you like to use?
+//
+////////////////////////////////////////////////////////////////////
+
+// General
+$use-global:            true    !default; // Global - It's highly recommended to use it!
+$use-animations:        true    !default; // Animations on links
+$use-types:             true    !default; // Types and Headings
+$use-links:             true    !default; // Links
+$use-lists:             true    !default; // Lists
+$use-tables:            true    !default; // Tables
+$use-images:            true    !default; // Images
+$use-forms:             true    !default; // Forms and inputs
+
+
+
+////////////////////////////////////////////////////////////////////
+//
+// EXTENDED FEATURES
+//
+////////////////////////////////////////////////////////////////////
+
+// Sprites
+// ----------------------------------------------------------------
+// More about Compass Sprite Generator at:
+// http://compass-style.org/help/tutorials/spriting/
+// http://compass-style.org/reference/compass/helpers/sprites/
+// ----------------------------------------------------------------
+
+$sprites-layout: horizontal; // Accepted values: "horizontal", "vertical", "diagonal", "smart"
+$sprites-default-size: 48px; // Set your value
+$sprites-image-default-width: $sprites-default-size;
+$sprites-image-default-height: $sprites-default-size;
+$sprites-dimensions: true;
+$disable-magic-sprite-selectors: false;
+
+
+// Font Icons
+// ----------------------------------------------------------------
+// Use Icomoon generator for custom icons at:
+// http://icomoon.io/app/#/select
+// ----------------------------------------------------------------
+
+// Would you like to use Font Icons?
+$use-icons: true !default;
+
+// Base
+$font-path: "../fonts";
+$font-name: unquote("iconame");    // Change font name to yours
+$icon-type: "custom";           // Pick a type of icon - Accepted values: "custom" and "fontawesome"
+$icons-sizes: false;            // Would you like to use icon sizes?
+$icons-states: false;           // Would you like to use alternative states?
+$icons-components: true;        // Would you like to use icon on components (navbar, tabs, pills, etc)?
+$icons-animation: false;        // Would you like to use icon animation and rotate?
+
+// Colors
+$icon-border: #e3e3e3;
+$icon-muted: #e3e3e3;
+$icon-light: #eeeeee;
+$icon-dark: #333333;
+
+
+
+////////////////////////////////////////////////////////////////////
+//
 // CORE SETTINGS
 //
 ////////////////////////////////////////////////////////////////////
@@ -149,20 +289,6 @@ $horizontal-component-offset:    180px                      !default;
 //
 ////////////////////////////////////////////////////////////////////
 
-
-// Z-index master list
-// -------------------------
-
-// Try to avoid customizing these :)
-$z-index-dropdown:          1000 !default;
-$z-index-popover:           1010 !default;
-$z-index-tooltip:           1030 !default;
-$z-index-navbar:            1030 !default;
-$z-index-fixed-navbar:      1090 !default;
-$z-index-modal-backdrop:    1040 !default;
-$z-index-modal:             1050 !default;
-
-
 // Buttons
 // -------------------------
 
@@ -182,100 +308,6 @@ $btn-text-style:             "raised"                    !default;
 $btn-gradient-style:         "simple"                    !default;
 $btn-pseudo-states:          true                        !default;
 
-
-// Navbar
-// ------------------------
-$navbar-height:									40px 										!default;
-
-// Normal Navbar
-$navbar-background:								$gray-lighter     						 	!default;
-$navbar-background-highlight:					$white          						 	!default;
-$navbar-border: 								$gray-light 								!default;
-$navbar-text:									$gray 										!default;
-$navbar-link-color:								$gray 										!default;
-$navbar-link-color-hover:						lighten($navbar-link-color, 10%) 			!default;
-$navbar-link-color-active:						$white 										!default;
-$navbar-link-background-hover:					lighten($navbar-background, 2%) 			!default;
-$navbar-link-background-active:					lighten($blue, 2%) 							!default;
-
-$navbar-brand-color:                			$navbar-link-color 							!default;
-
-// Inverted Navbar
-$navbar-inverse-background:						$gray-darker 								!default;
-$navbar-inverse-background-highlight:			$gray-dark 									!default;
-$navbar-inverse-border:                   		lighten($gray-dark, 10%) 					!default;
-$navbar-inverse-text:							$white 										!default;
-$navbar-inverse-link-color:						$white  									!default;
-$navbar-inverse-link-color-hover:				$white 										!default;
-$navbar-inverse-link-color-active:				$navbar-inverse-link-color-hover 			!default;
-$navbar-inverse-link-background-hover:			lighten($navbar-inverse-background, 1%) 	!default;
-$navbar-inverse-link-background-active:			transparent 								!default;
-
-// Dropdowns
-$dropdown-background:                $white 												!default;
-$dropdown-border:                    rgba(0,0,0,.2) 										!default;
-$dropdown-divider-top:               #e5e5e5 												!default;
-$dropdown-divider-bottom:            $white 												!default;
-$dropdown-link-color:                $gray-dark 											!default;
-$dropdown-link-color-hover:          $white 												!default;
-$dropdown-link-color-active:         $dropdown-link-color 									!default;
-$dropdown-link-background-hover:     $dropdown-link-color-active 							!default;
-$dropdown-link-background-active:  	 $link-color 											!default;
-
-
-// Alerts
-// -------------------------
-$warning-text:             darken($yellow-dark, 10%) 										!default;
-$warning-background:       $yellow-light 													!default;
-$warning-border:           darken(adjust-hue($warning-background, -10), 3%) 				!default;
-
-$error-text:               $red-dark 														!default;
-$error-background:         lighten($red-light, 15%) 										!default;
-$error-border:             darken(adjust-hue($error-background, -10), 3%) 					!default;
-
-$success-text:             $green-dark 														!default;
-$success-background:       lighten($green-light, 14%) 										!default;
-$success-border:           darken(adjust-hue($success-background, -10), 5%) 				!default;
-
-$info-text:                $blue-dark 														!default;
-$info-background:          lighten($blue-light, 28%) 										!default;
-$info-border:              darken(adjust-hue($info-background, -10), 7%) 					!default;
-
-
-// Pagination
-// -------------------------
-$pagination-background:                 $white 												!default;
-$pagination-background-hover:           $blue 												!default;
-$pagination-background-active:          $blue-light 										!default;
-
-
-// Hero unit
-// -------------------------
-$hero-unit-background:                  $gray-lighter                                       !default;
-$hero-unit-heading-color:               inherit                                             !default;
-$hero-unit-lead-color:                  inherit                                             !default;
-
-
-// Wells
-// -------------------------
-$well-background:                       $gray-lighter                                       !default;
-
-
-// Tooltips and popovers
-// -------------------------
-$tooltip-color:              $white                                                         !default;
-$tooltip-background:         $black                                                         !default;
-$tooltip-arrow-width:        5px                                                            !default;
-$tooltip-arrow-color:        $tooltip-background                                            !default;
-
-$popover-background:         $white                                                         !default;
-$popover-arrow-width:        10px                                                           !default;
-$popover-arrow-color:        $white                                                         !default;
-$popover-title-background:   darken($popover-background, 3%)                                !default;
-
-// Special enhancement for popovers
-$popover-arrow-outer-width:  $popover-arrow-width + 1                                       !default;
-$popover-arrow-outer-color:  rgba(0,0,0,.25)                                                !default;
 
 
 ////////////////////////////////////////////////////////////////////

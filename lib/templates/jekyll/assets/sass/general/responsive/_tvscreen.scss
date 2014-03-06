@@ -27,13 +27,6 @@
     .hidden-tablet     { display: none !important; }
     .hidden-phone      { display: none !important; }
 
-
-    // General Structure
-    body {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
     @if $use-thumbnails == true {
         // Thumbnails
         .thumbnails {

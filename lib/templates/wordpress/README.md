@@ -15,7 +15,7 @@ Go to the Gist Cave and find the gold. :)
 ###### TODO LIST
 
 * Instructions
-* ~~Includes~~
+* Includes
 * Structure
 * ~~Project Documentation~~
 

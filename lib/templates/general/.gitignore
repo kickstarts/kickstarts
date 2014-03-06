@@ -2,5 +2,4 @@
 src/components/*
 src/.sass-cache/*
 src/node_modules/*
-ie/*
 assets/css/*
