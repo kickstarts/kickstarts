@@ -25,8 +25,6 @@
 // -------------------
 // RESET.................................. Normalize CSS
 // SCAFFOLDING............................ General Scaffolding
-// DEFAULT................................ Default Structure
-// FORMS.................................. Form and Inputs
 //
 //
 // APP
@@ -82,10 +80,7 @@
 @import "modules/functions";
 
 // GENERAL
-@import "general/reset";
-@import "general/scaffolding";
-@import "general/default";
-@import "general/forms";
+@import "app/scaffolding";
 
 // APP
 @import "app/layout";

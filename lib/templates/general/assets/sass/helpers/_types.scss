@@ -1,0 +1,62 @@
+//
+// Types Utility Classes
+// --------------------------------------------------
+
+@if $use-types == true {
+
+    // Headings
+    .big-title {
+        margin-bottom: $base-line-height;
+        font-size: $base-font-size * 1.5;
+        font-weight: 100;
+        line-height: $base-line-height * 1.5;
+    }
+    .normal-title {
+        font-size: $base-font-size * 2;
+        font-weight: 300;
+        padding-bottom: ($base-line-height / 2) - 1;
+        margin: $base-line-height 0 ($base-line-height * 1.5);
+    }
+    .small-title {
+        font-size: $base-font-size - 4;
+        font-weight: 400;
+        padding-bottom: ($base-line-height / 2) - 2;
+        margin: $base-line-height 0 ($base-line-height * 1.25);
+    }
+
+    // Paragraphs
+    .text-left    { text-align: left; }
+    .text-center  { text-align: center; }
+    .text-right   { text-align: right; }
+    .text-justify { text-align: justify; }
+
+    .font-lighter { font-weight: 300; }
+    .font-normal  { font-weight: normal; }
+    .font-bold    { font-weight: bold; }
+    .font-bolder  { font-weight: bolder; }
+
+    .text-upper { text-transform: uppercase; }
+    .text-lower { text-transform: lowercase; }
+
+    .text-underline { border-bottom: 1px solid; }
+    .text-highlight { background: #ffc; }
+
+    .text-white { color: $white; }
+    a.text-white:hover { color: darken($white, 10%); }
+
+    .text-muted { color: darken($gray-light, 20%); }
+    a.text-muted:hover { color: darken($gray-light, 30%); }
+
+    .text-warning { color: $warning-text; }
+    a.text-warning:hover { color: darken($warning-text, 10%); }
+
+    .text-error { color: $error-text; }
+    a.text-error:hover { color: darken($error-text, 10%); }
+
+    .text-info { color: $info-text; }
+    a.text-info:hover { color: darken($info-text, 10%); }
+
+    .text-success { color: $success-text; }
+    a.text-success:hover { color: darken($success-text, 10%); }
+
+}
