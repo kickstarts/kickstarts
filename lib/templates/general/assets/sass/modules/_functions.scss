@@ -22,8 +22,3 @@
 @function color-shade($color, $percent){
   @return mix(black, $color, $percent);
 }
-
-
-// --------------------------------------------------------------------
-// If you have some particular function in your project, add it here.
-// --------------------------------------------------------------------

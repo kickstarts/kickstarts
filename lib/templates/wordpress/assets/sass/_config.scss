@@ -4,27 +4,21 @@
 //
 ////////////////////////////////////////////////////////////////////
 
-// 1 - Pick a reset or normalization - Accepted values: "meyer", "normalize" (default) or "custom"
-$use-reset: "normalize";
-
-// 2 - Would you like to use grid system classes (unsemantic way)?
+// 1 - Would you like to use grid system classes (unsemantic way)?
 $use-grid-classes: true;
 
-// 3 - Pick a type of grid - Accepted values: "fluid", "static"
+// 2 - Pick a type of grid - Accepted values: "fluid", "static"
 $use-grid-type: "fluid";
 $total-width: 100%; // For a static grid system, just set a fixed value for the container (e.g: 960px).
 
-// 4 - Responsiveness?
+// 3 - Responsiveness?
 $use-responsive: true;
 
-// 5 - Would you like to use border-box? - It's highly recommended to use it!
-$use-border-box: true;
-
-// 6 - Would you like to use experimental and legacy(old browser) support?
+// 4 - Would you like to use experimental and legacy(old browser) support?
 $legacy-support: true;
 $experimental-support: true;
 
-// 7 - Choose a type of button - Accepted values: "flat", "simple", "shiny" "glass", "matte"
+// 5 - Choose a type of button - Accepted values: "flat", "simple", "shiny" "glass", "matte"
 $btn-type: "flat";
 
 
@@ -75,7 +69,7 @@ $mobile:   767px;
 
 ////////////////////////////////////////////////////////////////////
 //
-// OBJECTS - Which objects would you like to use?
+// HELPERS - Which Utility Classes would you like to use?
 //
 ////////////////////////////////////////////////////////////////////
 

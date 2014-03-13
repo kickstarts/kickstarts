@@ -15,43 +15,36 @@
 //
 // MODULES
 // -------------------
-// MIXINS................................Sass Mixins
-// FUNCTIONS.............................Functions for your project
-// ADDONS................................Custom addons for your project
+// MIXINS................................ General Mixins
+// GRID.................................. Initialize Grid System (Semantic.gs)
+// FUNCTIONS............................. Functions for your project
+// ADDONS................................ Custom addons for your project
 //
 //
 // GENERAL
 // -------------------
-// GRID/GRID..............................Initialize Grid System
-//
-// BASE/SCAFFOLDING.......................
-// BASE/TYPES.............................
-// BASE/LINKS.............................
-// BASE/LISTS.............................
-// BASE/IMAGES............................
-// BASE/MISC..............................
-// BASE/TABLES............................
-// BASE/FORMS.............................
-//
-// BASE/LAYOUT............................Your Layout goes here
-//
-// RESPONSIVE/MOBILE......................Media queries for Smartphones Devices
-// RESPONSIVE/TABLET......................Media queries for Tablets Devices
-// RESPONSIVE/TV SCREEN...................Media queries for large screens devices
-//
-// LEGACY/ICONS...........................Font Awesome support for old browsers
-// LEGACY/MODERNIZR.......................Fallbacks with modernizr for old browsers
+// RESET.................................. Normalize CSS
+// SCAFFOLDING............................ General Scaffolding
+// DEFAULT................................ Default Structure
+// FORMS.................................. Form and Inputs
 //
 //
-// OBJECTS
+// APP
 // -------------------
-// BASE...................................Utility classes for base structure elements
-// GLOBAL.................................A series of helper classes to use arbitrarily
-// GRID...................................The CSS Modular way to work with grid system
-// RESPONSIVE.............................Visibility Utilities for Responsive Layouts
-// ANIMATION..............................Components animation
-// SPRITES................................Compass Sprite Generator
-// ICONS..................................Fon icons
+// LAYOUT................................. Your Layout goes here
+// RESPONSIVE............................. Media queries for Smartphones Devices
+// LEGACY................................. Use Polyfills with Modernizr (Legacy Support)
+//
+//
+// HELPERS
+// -------------------
+// BASE................................... Utility classes for base structure elements
+// GLOBAL................................. A series of helper classes to use arbitrarily
+// GRID................................... The CSS Modular way to work with grid system
+// RESPONSIVE............................. Visibility Utilities for Responsive Layouts
+// ANIMATION.............................. Components animation
+// SPRITES................................ Compass Sprite Generator (extra)
+// ICONS.................................. Font icons goes here
 //
 // ----------------------------------------------------------------------------
 
@@ -84,31 +77,31 @@
 @import "config";
 
 // MODULES
+@import "modules/grid";
 @import "modules/mixins";
 @import "modules/functions";
-@import "modules/addons";
 
 // GENERAL
-@import "general/grid/grid";
-@import "general/base/scaffolding";
-@import "general/base/types";
-@import "general/base/links";
-@import "general/base/lists";
-@import "general/base/images";
-@import "general/base/misc";
-@import "general/base/tables";
-@import "general/base/forms";
-@import "general/base/layout";
-@import "general/responsive/mobile";
-@import "general/responsive/tablet";
-@import "general/responsive/tvscreen";
-@import "general/legacy/icons";
-@import "general/legacy/modernizr";
+@import "general/reset";
+@import "general/scaffolding";
+@import "general/default";
+@import "general/forms";
+
+// APP
+@import "app/layout";
+@import "app/responsive";
+@import "app/legacy";
 
 // OBJECTS
-@import "objects/global";
-@import "objects/base";
-@import "objects/grid";
-@import "objects/responsive";
-@import "objects/icons";
-@import "objects/sprites";
+@import "helpers/grid";
+@import "helpers/responsive";
+@import "helpers/global";
+@import "helpers/types";
+@import "helpers/links";
+@import "helpers/lists";
+@import "helpers/tables";
+@import "helpers/images";
+@import "helpers/forms";
+@import "helpers/inputs";
+@import "helpers/icons";
+@import "helpers/sprites";
