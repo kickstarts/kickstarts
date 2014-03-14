@@ -75,12 +75,13 @@
 @import "config";
 
 // MODULES
-@import "modules/grid";
 @import "modules/mixins";
 @import "modules/functions";
+@import "modules/grid";
+@import "modules/buttons";
 
 // GENERAL
-@import "app/scaffolding";
+@import "general/scaffolding";
 
 // APP
 @import "app/layout";
@@ -98,5 +99,6 @@
 @import "helpers/images";
 @import "helpers/forms";
 @import "helpers/inputs";
+@import "helpers/buttons";
 @import "helpers/icons";
 @import "helpers/sprites";

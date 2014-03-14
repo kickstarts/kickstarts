@@ -73,15 +73,15 @@ $mobile:   767px;
 //
 ////////////////////////////////////////////////////////////////////
 
-// General
-$use-global:            true    !default; // Global
-$use-animations:        true    !default; // Animations on links
-$use-types:             true    !default; // Types and Headings
-$use-links:             true    !default; // Links
-$use-lists:             true    !default; // Lists
-$use-tables:            true    !default; // Tables
-$use-images:            true    !default; // Images
-$use-forms:             true    !default; // Forms and inputs
+$use-global:         true !default; // Global
+$use-animations:     true !default; // Animations on links
+$use-types:          true !default; // Types and Headings
+$use-links:          true !default; // Links
+$use-lists:          true !default; // Lists
+$use-tables:         true !default; // Tables
+$use-images:         true !default; // Images
+$use-forms:          true !default; // Forms and inputs
+$use-buttons:        true !default; // Buttons
 
 
 
@@ -183,15 +183,9 @@ $red-dark:               darken($red, 10%)      !default;
 $green-dark:             #2a7a1a                !default;
 $purple-dark:            #371849                !default;
 
-
 // Scaffolding
-// -------------------------
 $background-color:      $white      !default;
 $text-color:            $gray-dark  !default;
-
-
-// Links
-// -------------------------
 $link-color:            $blue                       !default;
 $link-color-hover:      darken($link-color, 15%)    !default;
 $link-color-focus:      darken($link-color, 15%)    !default;
@@ -217,22 +211,6 @@ $alt-font-family:         $serif-font-family    !default;
 $headings-font-family:    inherit   !default;
 $headings-font-weight:    normal    !default;
 $headings-color:          inherit   !default;
-
-$warning-text:             darken($yellow-dark, 10%)                                        !default;
-$warning-background:       $yellow-light                                                    !default;
-$warning-border:           darken(adjust-hue($warning-background, -10), 3%)                 !default;
-
-$error-text:               $red-dark                                                        !default;
-$error-background:         lighten($red-light, 15%)                                         !default;
-$error-border:             darken(adjust-hue($error-background, -10), 3%)                   !default;
-
-$success-text:             $green-dark                                                      !default;
-$success-background:       lighten($green-light, 14%)                                       !default;
-$success-border:           darken(adjust-hue($success-background, -10), 5%)                 !default;
-
-$info-text:                $blue-dark                                                       !default;
-$info-background:          lighten($blue-light, 28%)                                        !default;
-$info-border:              darken(adjust-hue($info-background, -10), 7%)                    !default;
 
 
 // Component sizing
@@ -270,19 +248,6 @@ $placeholder-text:               $gray-light                !default;
 $input-height:                   $base-line-height + 10px   !default;
 
 
-// Misc
-// -------------------------
-$hr-border:                      $gray-lighter              !default;
-$horizontal-component-offset:    180px                      !default;
-
-
-
-////////////////////////////////////////////////////////////////////
-//
-// COMPONENTS
-//
-////////////////////////////////////////////////////////////////////
-
 // Buttons
 // -------------------------
 
@@ -301,6 +266,12 @@ $btn-text-color:             white                       !default;
 $btn-text-style:             "raised"                    !default;
 $btn-gradient-style:         "simple"                    !default;
 $btn-pseudo-states:          true                        !default;
+
+
+// Misc
+// -------------------------
+$hr-border:                      $gray-lighter              !default;
+$horizontal-component-offset:    180px                      !default;
 
 
 
