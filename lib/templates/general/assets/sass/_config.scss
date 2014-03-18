@@ -73,15 +73,15 @@ $mobile:   767px;
 //
 ////////////////////////////////////////////////////////////////////
 
-$use-global:         true !default; // Global
-$use-animations:     true !default; // Animations on links
-$use-types:          true !default; // Types and Headings
-$use-links:          true !default; // Links
-$use-lists:          true !default; // Lists
-$use-tables:         true !default; // Tables
-$use-images:         true !default; // Images
-$use-forms:          true !default; // Forms and inputs
-$use-buttons:        true !default; // Buttons
+$use-global:         true; // Global
+$use-animations:     true; // Animations on links
+$use-types:          true; // Types and Headings
+$use-links:          true; // Links
+$use-lists:          true; // Lists
+$use-tables:         true; // Tables
+$use-images:         true; // Images
+$use-forms:          true; // Forms and inputs
+$use-buttons:        true; // Buttons
 
 
 
@@ -113,7 +113,7 @@ $disable-magic-sprite-selectors: false;
 // ----------------------------------------------------------------
 
 // Would you like to use Font Icons?
-$use-icons: true !default;
+$use-icons: true;
 
 // Base
 $font-path: "../fonts";
@@ -151,46 +151,46 @@ $icon-dark: #333333;
 // -------------------------
 
 // Grays
-$black:                 #000000                 !default;
-$gray:                  #555555                 !default;
-$white:                 #ffffff                 !default;
-$gray-dark:             #333333                 !default;
-$gray-light:            #bbbbbb                 !default;
-$gray-darker:           #222222                 !default;
-$gray-lighter:          #eeeeee                 !default;
+$black:                 #000000;
+$gray:                  #555555;
+$white:                 #ffffff;
+$gray-dark:             #333333;
+$gray-light:            #bbbbbb;
+$gray-darker:           #222222;
+$gray-lighter:          #eeeeee;
 
 // Common Colors
-$blue:                  #0064cd                 !default;
-$green:                 #3ca838                 !default;
-$red:                   #e72727                 !default;
-$yellow:                #ffcc00                 !default;
-$orange:                #e64919                 !default;
-$pink:                  #c3325f                 !default;
-$purple:                #834186                 !default;
+$blue:                  #0064cd;
+$green:                 #3ca838;
+$red:                   #e72727;
+$yellow:                #ffcc00;
+$orange:                #e64919;
+$pink:                  #c3325f;
+$purple:                #834186;
 
 // Light Colors
-$blue-light:             #48a1e5                !default;
-$green-light:            #8bd47d                !default;
-$red-light:              #d58181                !default;
-$yellow-light:           lighten($yellow, 25%)  !default;
-$pink-light:             #c3325f                !default;
-$purple-light:           #834186                !default;
+$blue-light:             #48a1e5;
+$green-light:            #8bd47d;
+$red-light:              #d58181;
+$yellow-light:           lighten($yellow, 25%);
+$pink-light:             #c3325f;
+$purple-light:           #834186;
 
 // Dark Colors
-$blue-dark:              darken($blue, 10%)     !default;
-$yellow-dark:            darken($yellow, 10%)   !default;
-$red-dark:               darken($red, 10%)      !default;
-$green-dark:             #2a7a1a                !default;
-$purple-dark:            #371849                !default;
+$blue-dark:              darken($blue, 10%);
+$yellow-dark:            darken($yellow, 10%);
+$red-dark:               darken($red, 10%);
+$green-dark:             #2a7a1a;
+$purple-dark:            #371849;
 
 // Scaffolding
-$background-color:      $white      !default;
-$text-color:            $gray-dark  !default;
-$link-color:            $blue                       !default;
-$link-color-hover:      darken($link-color, 15%)    !default;
-$link-color-focus:      darken($link-color, 15%)    !default;
-$link-color-active:     darken($link-color, 15%)    !default;
-$link-color-visited:    $link-color                 !default;
+$background-color:      $white;
+$text-color:            $gray-dark;
+$link-color:            $blue;
+$link-color-hover:      darken($link-color, 15%);
+$link-color-focus:      darken($link-color, 15%);
+$link-color-active:     darken($link-color, 15%);
+$link-color-visited:    $link-color;
 
 
 // Typography
@@ -203,14 +203,14 @@ $mono-font-family:        Monaco, Menlo, Consolas, "Courier New", monospace;
 $custom-font-family:      "Open Sans", sans-serif;
 
 
-$base-font-family:        $custom-font-family   !default;
-$base-font-size:          14px                  !default;
-$base-line-height:        20px                  !default;
-$alt-font-family:         $serif-font-family    !default;
+$base-font-family:        $custom-font-family;
+$base-font-size:          14px;
+$base-line-height:        20px;
+$alt-font-family:         $serif-font-family;
 
-$headings-font-family:    inherit   !default;
-$headings-font-weight:    normal    !default;
-$headings-color:          inherit   !default;
+$headings-font-family:    inherit;
+$headings-font-weight:    normal ;
+$headings-color:          inherit;
 
 
 // Component sizing
@@ -219,33 +219,33 @@ $font-size-large:         $base-font-size * 1.25; // ~18px
 $font-size-small:         $base-font-size * 0.85; // ~12px
 $font-size-mini:          $base-font-size * 0.75; // ~11px
 
-$padding-large:           11px 19px !default; // 44px
-$padding-small:           2px 10px  !default; // 26px
-$padding-mini:            0px 6px   !default; // 22px
+$padding-large:           11px 19px; // 44px
+$padding-small:           2px 10px;  // 26px
+$padding-mini:            0px 6px;   // 22px
 
-$base-border-radius:      5px !default;
-$border-radius-large:     8px !default;
-$border-radius-small:     3px !default;
+$base-border-radius:      5px;
+$border-radius-large:     8px;
+$border-radius-small:     3px;
 
 
 // Tables
 // -------------------------
-$table-background:               transparent                !default; // overall background-color
-$table-background-accent:        #f9f9f9                    !default; // for striping
-$table-background-hover:         #f5f5f5                    !default; // for hover
-$table-border:                   #ddd                       !default; // table and cell border
+$table-background:               transparent; // overall background-color
+$table-background-accent:        #f9f9f9;     // for striping
+$table-background-hover:         #f5f5f5;     // for hover
+$table-border:                   #ddd;        // table and cell border
 
 
 // Forms
 // -------------------------
-$input-background:               $white                     !default;
-$input-border:                   $gray-light                !default;
-$input-border-hover:             darken($blue-light, 10%)   !default;
-$input-border-radius:            $base-border-radius        !default;
-$input-disabled-background:      $gray-lighter              !default;
-$form-actions-background:        #f5f5f5                    !default;
-$placeholder-text:               $gray-light                !default;
-$input-height:                   $base-line-height + 10px   !default;
+$input-background:               $white;
+$input-border:                   $gray-light;
+$input-border-hover:             darken($blue-light, 10%);
+$input-border-radius:            $base-border-radius;
+$input-disabled-background:      $gray-lighter;
+$form-actions-background:        #f5f5f5;
+$placeholder-text:               $gray-light;
+$input-height:                   $base-line-height + 10px;
 
 
 // Buttons
@@ -257,21 +257,21 @@ $input-height:                   $base-line-height + 10px   !default;
 // These are the base defaults for the buttons, if you are going to use similar buttons on an entire site changing these
 // can save you some time by calling the sassy button mixin with less arguments.
 
-$btn-base-color:             rgba(11, 153, 194, 1)       !default;
-$btn-second-color:           false                       !default;
-$btn-border-radius:          5px                         !default;
-$btn-padding:                0.5em 1.5em                 !default;
-$btn-font-size:              14px                        !default;
-$btn-text-color:             white                       !default;
-$btn-text-style:             "raised"                    !default;
-$btn-gradient-style:         "simple"                    !default;
-$btn-pseudo-states:          true                        !default;
+$btn-base-color:             rgba(11, 153, 194, 1);
+$btn-second-color:           false;
+$btn-border-radius:          5px;
+$btn-padding:                0.5em 1.5em;
+$btn-font-size:              14px;
+$btn-text-color:             white;
+$btn-text-style:             "raised";
+$btn-gradient-style:         "simple";
+$btn-pseudo-states:          true;
 
 
 // Misc
 // -------------------------
-$hr-border:                      $gray-lighter              !default;
-$horizontal-component-offset:    180px                      !default;
+$hr-border:                      $gray-lighter;
+$horizontal-component-offset:    180px;
 
 
 
