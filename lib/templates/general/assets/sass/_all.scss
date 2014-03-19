@@ -25,6 +25,7 @@
 // -------------------
 // RESET.................................. Normalize CSS
 // SCAFFOLDING............................ General Scaffolding
+// EXTEND................................. Extends the scaffolding (generally table, form and inputs)
 //
 //
 // APP
@@ -81,7 +82,10 @@
 @import "modules/buttons";
 
 // GENERAL
+@import "general/reset";
 @import "general/scaffolding";
+@import "general/extend";
+@import "general/responsive";
 
 // APP
 @import "app/layout";
@@ -90,7 +94,7 @@
 
 // OBJECTS
 @import "helpers/grid";
-@import "helpers/responsive";
+
 @import "helpers/global";
 @import "helpers/types";
 @import "helpers/links";

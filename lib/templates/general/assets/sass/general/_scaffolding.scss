@@ -2,9 +2,6 @@
 // Scaffolding
 // --------------------------------------------------
 
-@import "reset";
-
-
 *,
 *:before,
 *:after {
@@ -272,10 +269,3 @@ embed {
     height: auto;
     border: none;
 }
-
-
-//
-// Extend
-// --------------------------------------------------
-
-@import "extend"; // Table, Form and inputs
