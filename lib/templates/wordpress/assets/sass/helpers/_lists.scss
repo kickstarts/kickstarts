@@ -4,9 +4,7 @@
 
 @if $use-lists == true {
 
-    .list-unstyled { @include list-style("unstyled"); }
-    .list-square   { @include list-style("square"); }
-    .list-inline   { @include horizontal-list; }
+    .list-inline { @include horizontal-list; }
 
     // Horizontal layout (like forms)
     .dl-horizontal {

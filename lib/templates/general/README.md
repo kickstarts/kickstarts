@@ -9,13 +9,12 @@ Generate a new project based on General Scaffolding.
 * [jQuery](http://jquery.com/) - JavaScript library
 * [Normalize](http://necolas.github.io/normalize.css/) - For standardize CSS elements
 * [Modernizr](http://modernizr.com/) - For legacy browsers support
-* [RequireJS](http://requirejs.org/) - A JavaScript module loader
 * [Sass](http://sass-lang.com/) - An extension of CSS3 aka CSS preprocessor.
 * [Compass](http://compass-style.org/) - A framework for Sass
 * [PhantomJS](http://assemble.io/) - For static generator with templates and patials
 * [Grunt](http://gruntjs.com/) - Task runner
 * [Bower](http://bower.io/) - Manager dependencies
-* [Livereload](http://livereload.com/) - Automagically refresh your browser
+* [Browser-Sync](http://browsersync.io/) - Automagically refresh all your devices
 
 ## Structure
 
@@ -28,6 +27,6 @@ Go to the Gist Cave and find the gold. :)
 ###### TODO LIST
 
 * Instructions
-* ~~Includes~~
+* Includes
 * Structure
-* ~~Project Documentation~~
+* ~~Documentation~~

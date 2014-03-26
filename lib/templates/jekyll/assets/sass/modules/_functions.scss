@@ -3,13 +3,12 @@
 // --------------------------------------------------
 
 // Generic function to calculate a percentage based on pixel values
-// (independent of any specific grid system)
-
-@function calc-pc($target, $container: $base-font-size) {
+@function pc($target, $container: $base-font-size) {
   @return $target / $container * 100%;
 }
 
-@function calc-em($target, $container: $base-font-size) {
+// Generic function to calculate a relative unit based on pixel values
+@function em($target, $container: $base-font-size) {
   @return $target / $container * 1em;
 }
 
@@ -22,8 +21,3 @@
 @function color-shade($color, $percent){
   @return mix(black, $color, $percent);
 }
-
-
-// --------------------------------------------------------------------
-// If you have some particular function in your project, add it here.
-// --------------------------------------------------------------------

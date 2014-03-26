@@ -1,67 +1,6 @@
 //
-// STRUCTURE MIXINS
+// BASE MIXINS
 // --------------------------------------------------
-
-@mixin link-style($link-type) {
-    @if $link-type == "normal" {
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    @if $link-type == "unstyled" {
-        color: inherit;
-        text-decoration: inherit;
-        cursor: inherit;
-        &:active, &:focus {
-            outline: none;
-        }
-    }
-}
-
-// Lists
-// ------------------
-@mixin list-style($list-type) {
-    @if $list-type == "unstyled" {
-        list-style-image: none;
-        list-style-type: none;
-        margin-left: 0;
-    }
-    @if $list-type == "square" {
-        list-style-type: square;
-        margin-left: 20px;
-    }
-}
-
-// Images
-// ------------------
-@mixin img($style: false, $align: false) {
-    @if $align {
-        border: none;
-        @if $align == "left" {
-            @include float(left);
-            margin: 0 30px 30px 0;
-            border: none;
-        }
-        @else if $align == "right" {
-            @include float(right);
-            margin: 0 0 30px 30px;
-        }
-    }
-    @if $style == "circle" {
-        @include border-radius(500px);
-    }
-    @else if $style == "rounded" {
-        @include border-radius($base-border-radius);
-    }
-    @else if $style == "polaroid" {
-        padding: 4px;
-        background-color: $white;
-        border: 1px solid $gray-light;
-        border: 1px solid rgba(0,0,0,.2);
-        @include box-shadow(0 1px 3px rgba(0,0,0,.1));
-    }
-}
 
 // Forms
 // ------------------
@@ -161,6 +100,248 @@ $placeholders: '-webkit-input-placeholder',
 
 
 //
+// Buttons
+// -------------------------------------------------
+
+// Mixing that gets included when calling the button-structure if you need any
+// styles applied to all your sassy buttons, add it here.
+@mixin button-default-structure {
+    display: inline-block;
+    cursor: pointer;
+}
+
+// The Sassy Button kitchen sink.
+@mixin button($gradient-style: $btn-gradient-style, $border-radius: $btn-border-radius, $font-size: $btn-font-size, $first-color: $btn-base-color, $second-color: $btn-second-color, $text-color: $btn-text-color, $text-style: $btn-text-style, $auto-states: $btn-pseudo-states, $ie: $legacy-support) {
+    @include button-structure($border-radius, $font-size, $btn-padding);
+    @include button-gradient($gradient-style, $first-color, $second-color, $text-color, $text-style, $auto-states, $ie);
+    @include firefox-fix;
+}
+
+// Structure for a sassy button
+@mixin button-structure($border-radius: $btn-border-radius, $font-size: $btn-font-size, $padding: $btn-padding) {
+    font-size: $font-size;
+    padding: $padding;
+    @include button-default-structure;
+    @include border-radius($border-radius);
+}
+
+// Fix for the Firefox padding issue
+@mixin firefox-fix {
+    &::-moz-focus-inner {
+        padding: 0 !important;
+        margin: -1px !important;
+    }
+}
+
+// Mixin that controls the text style
+@mixin button-text-style($base-color, $second-color, $text-color, $text-style: "inset") {
+    $text-lightness: lightness($text-color);
+    $text-color-shift: 0;
+    $diff: lightness($base-color) - lightness($second-color);
+    @if $diff > 40 {
+        $text-color-shift: 35 + $diff / 10;
+    }
+    @else if $diff > 18 {
+        $text-color-shift: 30 + $diff / 10;
+    }
+    @else {
+        $text-color-shift: 25 + $diff / 10;
+    }
+    color: $text-color;
+    @if $text-style == "inset" {
+        @if $text-lightness < 50 {
+            @include text-shadow(lighten($second-color, $text-color-shift / 1.5) 0 1px 0);
+        }
+        @else {
+            @include text-shadow(darken($base-color, $text-color-shift) 0 -1px 0);
+        }
+    }
+    @if $text-style == "raised" {
+        @if $text-lightness < 50 {
+            @include text-shadow(lighten($second-color, $text-color-shift / 1.5) 0 -1px 0);
+        }
+        @else {
+            @include text-shadow(darken($base-color, $text-color-shift) 0 1px 0);
+        }
+    }
+}
+
+// Mixins for shadows used in buttons
+@mixin button-highlight-shadow($base-color) {
+    @include box-shadow(lighten($base-color, 15%) 0 1px 0 inset);
+}
+
+@mixin button-active-shadow($second-color) {
+    @include box-shadow(darken($second-color, 8%) 0 1px 2px inset);
+}
+
+// Mixins for gradients used in buttons
+@mixin button-gradient($style: $btn-gradient-style, $base-color: $btn-base-color, $second-color: $btn-second-color, $text-color: $btn-text-color, $text-style: $btn-text-style, $auto-states: $btn-pseudo-states, $ie: $legacy-support) {
+    $first-color: $base-color;
+    $lightness: lightness($base-color);
+    $brightness-divsor: 1;
+    @if $lightness > 75 {
+        $brightness-divsor: 2;
+    }
+  // user a simple filter gradient if $legacy-support is true
+  @if $ie {
+    @include filter-gradient($first-color, darken($first-color, 20%));
+  }
+  @else {
+    background-color: $base-color;
+  }
+  // Matte Gradient Style
+  @if $style == "matte" {
+    $first-color: $base-color;
+    @if $second-color == false {
+        $first-color: lighten($base-color, 15%);
+        $second-color: $base-color;
+    }
+    @include background(linear-gradient(color-stops($first-color, $second-color 70%)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($first-color, $second-color, $style);
+    }
+  }
+  // Shiny Gradient Style
+  @if $style == "shiny" {
+    $first-color: lighten($base-color, 25% / $brightness-divsor);
+    @if $second-color == false {
+        $second-color: darken($base-color, 10%);
+    }
+    @include background(linear-gradient(color-stops($first-color, $base-color 50%, $second-color)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($first-color, $second-color, $style);
+    }
+  }
+  // Glass Gradient Style
+  @if $style == "glass" {
+    $first-color: lighten($base-color, 8% / $brightness-divsor);
+    @if $second-color == false {
+        $second-color: $base-color;
+    }
+    @include background(linear-gradient(color-stops($first-color 50%, $base-color 51%)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($first-color, $second-color, $style);
+    }
+  }
+  // Simple Gradient Style
+  @if $style == "simple" {
+    @if $second-color == false {
+        $second-color: darken($base-color, 10%);
+    }
+    @include background(linear-gradient(color-stops($base-color, $second-color)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($base-color, $second-color, $style);
+    }
+  }
+  // Flat Style
+  @if $style == "flat" {
+    $second-color: $base-color;
+    background-color: $base-color;
+    border: 0;
+    @if $auto-states {
+        @include pseudo-states($base-color, false, $style);
+    }
+  }
+  // Apply Text Styles
+  @if $text-style {
+    @include button-text-style($first-color, $second-color, $text-color, $text-style);
+  }
+}
+
+// Mixin for some optional styles on sassy buttons
+@mixin button-style($style, $base-color: $btn-base-color) {
+    @if $style == "push" {
+        position: relative;
+        @include box-shadow(darken($base-color, 12%) 0 0.4em 0px, lighten($base-color, 18%) 0 1px 0 inset);
+        border-bottom: solid 1px $base-color;
+        &:active {
+            top: 0.3em;
+            @include box-shadow(darken($base-color, 8%) 0 0.2em 0px);
+        }
+    }
+    @if $style == "inset" {
+        @include box-shadow(darken($base-color, 8%) 0 0.2em 0.4em inset);
+        border: solid 1px darken($base-color, 15%);
+        &:active {
+            @include box-shadow(darken($base-color, 12%) 0 0.2em 0.4em inset);
+        }
+    }
+}
+
+
+// Mixin that generates :hover, :active, and disabled pseudo states
+@mixin pseudo-states($first-color, $second-color, $style) {
+    @include button-hover($first-color, $second-color, $style);
+    &.disabled, &[disabled] {
+        @include opacity(0.6);
+        background: $second-color;
+        cursor: default;
+        @include box-shadow(none);
+    }
+}
+
+@mixin button-hover($first-color, $second-color, $style) {
+    &:hover {
+        text-decoration: none;
+    }
+    @if $style == "matte" {
+        &:hover {
+            background-color: darken($second-color, 5%);
+            @include background(linear-gradient(color-stops(darken($first-color, 5%) 3%, darken($second-color, 5%) 75%)));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "shiny" {
+        &:hover {
+            background-color: $second-color;
+            @include background(linear-gradient(color-stops(darken($first-color, 2%), $second-color 50%, darken($second-color, 8%))));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "glass" {
+        &:hover {
+            background-color: darken($second-color, 7%);
+            @include background(linear-gradient(color-stops(darken($first-color, 7%) 50%, darken($second-color, 7%) 51%)));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "simple" {
+        &:hover {
+            background-color: darken($second-color, 5%);
+            @include background(linear-gradient(color-stops(darken($first-color, 5%), darken($second-color, 5%))));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "flat" {
+        &:hover {
+            background-color: darken($first-color, 5%);
+        }
+        &:active {
+            background-color: darken($first-color, 8%);
+        }
+    }
+}
+
+
+
+//
 // LEGACY MIXINS
 // --------------------------------------------------
 
@@ -229,20 +410,6 @@ $placeholders: '-webkit-input-placeholder',
 // UTILITY MIXINS
 // --------------------------------------------------
 
-// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
-@mixin clearfix() {
-    *zoom:1;
-
-    &:before,
-    &:after {
-        content:"";
-        display:table;
-    }
-    &:after {
-        clear:both;
-    }
-}
-
 
 // Webkit-style focus
 // ------------------
@@ -262,17 +429,6 @@ $placeholders: '-webkit-input-placeholder',
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-// Sizing shortcuts
-// -------------------------
-@mixin size($height, $width) {
-    width: $width;
-    height: $height;
-}
-@mixin square($size) {
-    @include size($size, $size);
 }
 
 
@@ -362,55 +518,6 @@ $placeholders: '-webkit-input-placeholder',
 }
 
 
-// Arrows
-// -------------------------
-@mixin arrow($size, $color, $direction) {
-    height: 0;
-    width: 0;
-
-    @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
-        border-color: transparent;
-        border-style: solid;
-        border-width: $size / 2;
-
-        @if $direction == up {
-            border-bottom-color: $color;
-
-        } @else if $direction == right {
-            border-left-color:   $color;
-
-        } @else if $direction == down {
-            border-top-color:    $color;
-
-        } @else if $direction == left {
-            border-right-color:  $color;
-        }
-    }
-
-    @else if ($direction == up-right) or ($direction == up-left) {
-        border-top: $size solid $color;
-
-        @if $direction == up-right {
-            border-left:  $size solid transparent;
-
-        } @else if $direction == up-left {
-            border-right: $size solid transparent;
-        }
-    }
-
-    @else if ($direction == down-right) or ($direction == down-left) {
-        border-bottom: $size solid $color;
-
-        @if $direction == down-right {
-            border-left:  $size solid transparent;
-
-        } @else if $direction == down-left {
-            border-right: $size solid transparent;
-        }
-    }
-}
-
-
 // Sprites (with retina)
 // -------------------------
 @mixin retina-sprite($name, $hover: false, $active: false) {
@@ -478,621 +585,4 @@ $placeholders: '-webkit-input-placeholder',
       }
     }
   }
-}
-
-
-//
-// RESET AND NORMALIZE MIXINS
-// --------------------------------------------------
-
-
-// Eric Meyer Reset
-// -------------------------------
-@mixin meyer-reset() {
-  // /* http://meyerweb.com/eric/tools/css/reset/
-  //  * v2.0 | 20110126
-  //  * License: none (public domain) */
-  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  // /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
-  ol, ul {
-    list-style: none;
-  }
-  blockquote, q {
-    quotes: none;
-    &:before, &:after {
-      content: "";
-      content: none;
-    }
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-}
-
-
-// Normalize Reset
-// -------------------------------
-
-@mixin normalize-reset() {
-
-  /* ==========================================================================
-     Normalize.scss settings
-     ========================================================================== */
-  /**
-   * Includes legacy browser support IE6/7
-   *
-   * Set to false if you want to drop support for IE6 and IE7
-   */
-
-  /* ==========================================================================
-     HTML5 display definitions
-     ========================================================================== */
-
-  /*
-   * Corrects `block` display not defined in IE 8/9.
-   */
-
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  main,
-  nav,
-  section,
-  summary {
-      display: block;
-  }
-
-  /**
-   * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
-   */
-
-  audio,
-  canvas,
-  video {
-      display: inline-block;
-      @if $legacy-support == true {
-          *display: inline;
-          *zoom: 1;
-      }
-  }
-
-  /**
-   * Prevents modern browsers from displaying `audio` without controls.
-   * Remove excess height in iOS 5 devices.
-   */
-
-  audio:not([controls]) {
-      display: none;
-      height: 0;
-  }
-
-  /**
-   * Address styling not present in IE 8/9.
-   */
-
-  [hidden] {
-      display: none;
-  }
-
-  ::selection      { background: #1f8adb; color: white; }
-  ::-moz-selection { background: #1f8adb; color: white; }
-
-  /* ==========================================================================
-     Base
-     ========================================================================== */
-
-  /**
-   * 1. Set default font family to sans-serif.
-   * 2. Prevent iOS text size adjust after orientation change, without disabling
-   *    user zoom.
-   * 3.Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
-   *    `em` units.
-   */
-
-  html {
-      @if $legacy-support == true {
-          font-size: 100%; /* 1 */
-      }
-      font-family: sans-serif; /* 1 */
-      -webkit-text-size-adjust: 100%; /* 2 */
-      -ms-text-size-adjust: 100%; /* 2 */
-  }
-
-  /**
-   * Remove default margin.
-   */
-
-  body {
-      margin: 0;
-  }
-
-  /* ==========================================================================
-     Links
-     ========================================================================== */
-
-  /**
-   * Address `outline` inconsistency between Chrome and other browsers.
-   */
-
-  /**
-   * Improves readability when focused and also mouse hovered in all browsers.
-   */
-
-  a {
-      &:focus {
-          outline: thin dotted;
-      }
-      &:active, &:hover {
-          outline: 0;
-      };
-  }
-
-
-  /* ==========================================================================
-     Typography
-     ========================================================================== */
-
-  /**
-   * Addresses font sizes and margins set differently in IE 6/7.
-   * Address variable `h1` font-size and margin within `section` and `article`
-   * contexts in Firefox 4+, Safari 5, and Chrome.
-   */
-
-  h1 {
-      font-size: 2em;
-      margin: 0.67em 0;
-      @if $legacy-support == true {
-          margin: 0.67em 0;
-      }
-  }
-
-  @if $legacy-support == true {
-      h2 {
-          font-size: 1.5em;
-          margin: 0.83em 0;
-      }
-
-      h3 {
-          font-size: 1.17em;
-          margin: 1em 0;
-      }
-
-      h4 {
-          font-size: 1em;
-          margin: 1.33em 0;
-      }
-
-      h5 {
-          font-size: 0.83em;
-          margin: 1.67em 0;
-      }
-
-      h6 {
-          font-size: 0.75em;
-          margin: 2.33em 0;
-      }
-  }
-
-  /**
-   * Address styling not present in IE 8/9, Safari 5, and Chrome.
-   */
-
-  abbr[title] {
-      border-bottom: 1px dotted;
-  }
-
-  /**
-   * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
-   */
-
-  b,
-  strong {
-      font-weight: bold;
-  }
-
-  @if $legacy-support == true {
-      blockquote {
-          margin: 1em 40px;
-      }
-  }
-
-  /**
-   * Address styling not present in Safari 5 and Chrome.
-   */
-
-  dfn {
-      font-style: italic;
-  }
-
-  /**
-   * Address differences between Firefox and other browsers.
-   */
-
-  hr {
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
-      height: 0;
-  }
-
-  /**
-   * Addresses styling not present in IE 8/9.
-   */
-
-  mark {
-      background: #ff0;
-      color: #000;
-  }
-
-  /**
-   * Addresses margins set differently in IE 6/7.
-   */
-
-  @if $legacy-support == true {
-      p,
-      pre {
-          margin: 1em 0;
-      }
-  }
-
-  /**
-   * Correct font family set oddly in Safari 5 and Chrome.
-   */
-
-  code,
-  kbd,
-  pre,
-  samp {
-      font-family: monospace, serif;
-      @if $legacy-support == true {
-          _font-family: 'courier new', monospace;
-      }
-      font-size: 1em;
-  }
-
-  /**
-   * Improve readability of pre-formatted text in all browsers.
-   */
-
-  pre {
-      white-space: pre-wrap;
-  }
-
-  /**
-   *  Set consistent quote types.
-   */
-
-  q {
-      quotes: "\201C" "\201D" "\2018" "\2019";
-  }
-
-  @if $legacy-support == true {
-      /*
-       * Addresses CSS quotes not supported in IE 6/7.
-       */
-
-      q {
-          quotes: none;
-      }
-
-      /*
-       * Addresses `quotes` property not supported in Safari 4.
-       */
-
-      q:before,
-      q:after {
-          content: '';
-          content: none;
-      }
-  }
-
-  /**
-   * Address inconsistent and variable font size in all browsers.
-   */
-
-  small {
-      font-size: 80%;
-  }
-
-  /**
-   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
-   */
-
-  sub,
-  sup {
-      font-size: 75%;
-      line-height: 0;
-      position: relative;
-      vertical-align: baseline;
-  }
-
-  sup {
-      top: -0.5em;
-  }
-
-  sub {
-      bottom: -0.25em;
-  }
-
-  @if $legacy-support == true {
-
-      /* ==========================================================================
-         Lists
-         ========================================================================== */
-
-      /*
-       * Addresses margins set differently in IE 6/7.
-       */
-
-      dl,
-      menu,
-      ol,
-      ul {
-          margin: 1em 0;
-      }
-
-      dd {
-          margin: 0 0 0 40px;
-      }
-
-      /*
-       * Addresses paddings set differently in IE 6/7.
-       */
-
-      menu,
-      ol,
-      ul {
-          padding: 0 0 0 40px;
-      }
-
-      /*
-       * Corrects list images handled incorrectly in IE 7.
-       */
-
-      nav ul,
-      nav ol {
-          list-style: none;
-          list-style-image: none;
-      }
-
-  }
-
-  /* ==========================================================================
-     Embedded content
-     ========================================================================== */
-
-  /**
-   * 1. Remove border when inside `a` element in IE 8/9.
-   * 2. Improves image quality when scaled in IE 7.
-   */
-
-  img {
-      border: 0;
-      @if $legacy-support == true {
-          -ms-interpolation-mode: bicubic; /* 2 */
-      }
-  }
-
-  /**
-   * Correct overflow displayed oddly in IE 9.
-   */
-
-  svg:not(:root) {
-      overflow: hidden;
-  }
-
-  /* ==========================================================================
-     Figures
-     ========================================================================== */
-
-  /**
-   * Address margin not present in IE 8/9 and Safari 5.
-   */
-
-  figure {
-      margin: 0;
-  }
-
-  /* ==========================================================================
-     Forms
-     ========================================================================== */
-
-  /**
-   * Define consistent border, margin, and padding.
-   */
-
-  fieldset {
-      border: 1px solid #c0c0c0;
-      margin: 0 2px;
-      padding: 0.35em 0.625em 0.75em;
-  }
-
-  /**
-   * 1. Correct `color` not being inherited in IE 8/9.
-   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
-   * 3. Corrects text not wrapping in Firefox 3.
-   * 4. Corrects alignment displayed oddly in IE 6/7.
-   */
-
-  legend {
-      border: 0; /* 1 */
-      padding: 0; /* 2 */
-      @if $legacy-support == true {
-          white-space: normal; /* 2 */
-          *margin-left: -7px; /* 3 */
-      }
-  }
-
-  /**
-   * 1. Correct font family not being inherited in all browsers.
-   * 2. Correct font size not being inherited in all browsers.
-   * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
-   * 4. Improves appearance and consistency in all browsers.
-   */
-
-  button,
-  input,
-  select,
-  textarea {
-      font-family: inherit; /* 1 */
-      font-size: 100%; /* 2 */
-      margin: 0; /* 3 */
-      @if $legacy-support == true {
-          vertical-align: baseline; /* 3 */
-          *vertical-align: middle; /* 3 */
-      }
-  }
-
-  /**
-   * Address Firefox 4+ setting `line-height` on `input` using `!important` in
-   * the UA stylesheet.
-   */
-
-  button,
-  input {
-      line-height: normal;
-  }
-
-  /**
-   * Address inconsistent `text-transform` inheritance for `button` and `select`.
-   * All other form control elements do not inherit `text-transform` values.
-   * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
-   * Correct `select` style inheritance in Firefox 4+ and Opera.
-   */
-
-  button,
-  select {
-      text-transform: none;
-  }
-
-  /**
-   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-   *    and `video` controls.
-   * 2. Correct inability to style clickable `input` types in iOS.
-   * 3. Improve usability and consistency of cursor style between image-type
-   *    `input` and others.
-   * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
-   *    Known issue: inner spacing remains in IE 6.
-   */
-
-  button,
-  html input[type="button"], /* 1 */
-  input[type="reset"],
-  input[type="submit"] {
-      -webkit-appearance: button; /* 2 */
-      cursor: pointer; /* 3 */
-      @if $legacy-support == true {
-          *overflow: visible;  /* 4 */
-      }
-  }
-
-  /**
-   * Re-set default cursor for disabled elements.
-   */
-
-  button[disabled],
-  html input[disabled] {
-      cursor: default;
-  }
-
-  /**
-   * 1. Address box sizing set to `content-box` in IE 8/9.
-   * 2. Remove excess padding in IE 8/9.
-   * 3. Removes excess padding in IE 7.
-   *    Known issue: excess padding remains in IE 6.
-   */
-
-  input[type="checkbox"],
-  input[type="radio"] {
-      box-sizing: border-box; /* 1 */
-      padding: 0; /* 2 */
-      @if $legacy-support == true {
-          *height: 13px; /* 3 */
-          *width: 13px; /* 3 */
-      }
-  }
-
-  /**
-   * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
-   * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
-   *    (include `-moz` to future-proof).
-   */
-
-  input[type="search"] {
-      -webkit-appearance: textfield; /* 1 */
-      -moz-box-sizing: content-box;
-      -webkit-box-sizing: content-box; /* 2 */
-      box-sizing: content-box;
-  }
-
-  /**
-   * Remove inner padding and search cancel button in Safari 5 and Chrome
-   * on OS X.
-   */
-
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-decoration {
-      -webkit-appearance: none;
-  }
-
-  /**
-   * Remove inner padding and border in Firefox 4+.
-   */
-
-  button::-moz-focus-inner,
-  input::-moz-focus-inner {
-      border: 0;
-      padding: 0;
-  }
-
-  /**
-   * 1. Remove default vertical scrollbar in IE 8/9.
-   * 2. Improve readability and alignment in all browsers.
-   */
-
-  textarea {
-      overflow: auto; /* 1 */
-      vertical-align: top; /* 2 */
-  }
-
-  /* ==========================================================================
-     Tables
-     ========================================================================== */
-
-  /**
-   * Remove most spacing between table cells.
-   */
-
-  table {
-      border-collapse: collapse;
-      border-spacing: 0;
-  }
-
-}
-
-
-//
-// Custom Reset
-// ----------------------------------------------------
-
-@mixin custom-reset() {
-
 }

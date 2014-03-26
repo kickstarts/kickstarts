@@ -15,35 +15,46 @@
 //
 // MODULES
 // -------------------
-// MIXINS................................ General Mixins
-// GRID.................................. Initialize Grid System (Semantic.gs)
-// FUNCTIONS............................. Functions for your project
-// ADDONS................................ Custom addons for your project
+// FUNCTIONS.............................. Functions for your project
+// GRID................................... Initialize Grid System (Semantic.gs)
+// MIXINS................................. General Mixins
 //
 //
 // GENERAL
 // -------------------
 // RESET.................................. Normalize CSS
 // SCAFFOLDING............................ General Scaffolding
-// EXTEND................................. Extends the scaffolding (generally table, form and inputs)
+// TYPOGRAPHY............................. Text, Headings and misc types
+// TABLES................................. Basic Table
+// FORMS.................................. Forms and inputs
 //
 //
 // APP
 // -------------------
-// LAYOUT................................. Your Layout goes here
-// RESPONSIVE............................. Media queries for Smartphones Devices
-// LEGACY................................. Use Polyfills with Modernizr (Legacy Support)
+// LAYOUT................................. Layout goes here
+// RESPONSIVE............................. Media queries goes here
+// LEGACY................................. Polyfills with Modernizr (Legacy Support) goes here
 //
 //
 // HELPERS
 // -------------------
-// BASE................................... Utility classes for base structure elements
+// BUTTONS................................ Custom Buttons classes using Sassy.
 // GLOBAL................................. A series of helper classes to use arbitrarily
 // GRID................................... The CSS Modular way to work with grid system
-// RESPONSIVE............................. Visibility Utilities for Responsive Layouts
-// ANIMATION.............................. Components animation
-// SPRITES................................ Compass Sprite Generator (extra)
+// ANIMATION.............................. CSS Animations goes here
 // ICONS.................................. Font icons goes here
+// IMAGES................................. Custom image classes
+// INPUTS................................. Custom inputs classes
+// LISTS.................................. Custom lists classes
+// RESPONSIVE............................. Responsive Util Classes
+// SPRITES................................ Jump start configuration to generate Sprite with Compass
+// TABLES................................. Custom Tables classes
+// TYPES.................................. Custom Types classes
+//
+//
+// OBJECTS
+// -------------------
+// This folder may contains your ui/components (e.g: tabs, progress bars, breadcrumbs, panels)
 //
 // ----------------------------------------------------------------------------
 
@@ -79,7 +90,6 @@
 @import "modules/mixins";
 @import "modules/functions";
 @import "modules/grid";
-@import "modules/buttons";
 
 // GENERAL
 @import "general/reset";
@@ -92,12 +102,10 @@
 @import "app/responsive";
 @import "app/legacy";
 
-// OBJECTS
+// HELPERS
 @import "helpers/grid";
-
 @import "helpers/global";
 @import "helpers/types";
-@import "helpers/links";
 @import "helpers/lists";
 @import "helpers/tables";
 @import "helpers/images";
@@ -106,3 +114,8 @@
 @import "helpers/buttons";
 @import "helpers/icons";
 @import "helpers/sprites";
+@import "helpers/animation";
+@import "helpers/responsive";
+
+// OBJECTS
+// UI Components goes here

@@ -1,0 +1,81 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+body {
+    background: $background-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-color;
+    width: 100%;
+    height: 100%;
+
+    @include clearfix;
+
+    // Optimize Font Legibility
+    @include optimize-font;
+
+    @if $use-container-gutter == true {
+        padding-left: $container-gutter;
+        padding-right: $container-gutter;
+    }
+}
+
+
+// Links
+// --------------------------------------------------
+
+a {
+    @if $use-animations == true {
+        @include transition(all linear 0.2s);
+    }
+    @include link-colors($link-color, $link-color-hover, $link-color-active, $link-color-visited, $link-color-focus);
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+    padding: 0;
+    margin: 0 0 $base-line-height / 2 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul { margin-bottom: 0; }
+li { line-height: $base-line-height; }
+
+// Description Lists
+dl { margin-bottom: $base-line-height; }
+dt,
+dd { line-height: $base-line-height; }
+dt { font-weight: bold; }
+dd { margin-left: $base-line-height / 2; }
+
+
+// Image, Object and Embed
+// --------------------------------------------------
+
+img,
+object,
+embed {
+    @if $legacy-support == true {
+        _width: 100%;
+    }
+    max-width: 100%;
+    height: auto;
+    border: none;
+}

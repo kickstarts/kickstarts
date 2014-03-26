@@ -13,4 +13,4 @@
   Standards: HTML5, CSS3, JavaScript
   Components: Modernizr, jQuery, GruntJS, Bower
   Preprocessors: Sass (with Compass)
-  Software: Photoshop, Sublime Text 2, Terminal
+  Software: Sublime Text 2, Terminal

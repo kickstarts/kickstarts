@@ -33,8 +33,7 @@ Go to the Gist Cave and find the gold. :)
 
 ###### TODO LIST
 
-* ~~Instructions~~
+* Instructions
 * Includes
-    * Guard - *sass, compass, coffeescript, haml*
 * Structure
 * Project Documentation

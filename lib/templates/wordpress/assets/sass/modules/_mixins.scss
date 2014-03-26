@@ -1,36 +1,6 @@
 //
-// STRUCTURE MIXINS
+// BASE MIXINS
 // --------------------------------------------------
-
-// Images
-// ------------------
-@mixin img($style: false, $align: false) {
-    @if $align {
-        border: none;
-        @if $align == "left" {
-            @include float(left);
-            margin: 0 30px 30px 0;
-            border: none;
-        }
-        @else if $align == "right" {
-            @include float(right);
-            margin: 0 0 30px 30px;
-        }
-    }
-    @if $style == "circle" {
-        @include border-radius(50%);
-    }
-    @else if $style == "rounded" {
-        @include border-radius($base-border-radius);
-    }
-    @else if $style == "polaroid" {
-        padding: 4px;
-        background-color: $white;
-        border: 1px solid $gray-light;
-        border: 1px solid rgba(0,0,0,.2);
-        @include box-shadow(0 1px 3px rgba(0,0,0,.1));
-    }
-}
 
 // Forms
 // ------------------

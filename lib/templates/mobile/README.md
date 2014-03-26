@@ -5,6 +5,7 @@ Generate a new project based on [Phonegap](http://wordpress.org/).
 ## Includes
 
 * [Topcoat](http://topcoat.io/)
+* [PhoneGap]()
 
 ## Structure
 
@@ -17,8 +18,6 @@ Go to the Gist Cave and find the gold. :)
 ###### TODO LIST
 
 * Instructions
-* ~~Includes~~
+* Includes
 * Structure
-* ~~Project Documentation~~
-
-
+* Project Documentation

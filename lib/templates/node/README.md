@@ -8,10 +8,8 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 * [Express](http://expressjs.com/) - Web application framework for Node
 
-
 **Client-side**
 
-* [Ambitious Grid System](https://github.com/ambitiousframework/grid-system) - An adaptive Grid System from Semantic.gs
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
 * [jQuery](http://jquery.com/) - JavaScript library
 * [Normalize](http://necolas.github.io/normalize.css/) - For standardize CSS elements
@@ -23,7 +21,6 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 * [Jade](http://jade-lang.com/) - A template engine for HTML pre-processor
 * [Gulp](http://gulpjs.com/) - Task runner
 * [Bower](http://bower.io/) - Manager dependencies
-* [Livereload](http://livereload.com/) - Automagically refresh your browser
 
 **Optional**
 
@@ -34,6 +31,7 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 * [Node MySQL](https://npmjs.org/package/mysql) - MySQL driver for NodeJS
 * [Backbone](http://backbonejs.org/) - MV* framework
 * [Underscore](http://underscorejs.org/) - A utility-belt library for JavaScript.
+* [Marionette]() - Make backbone dance! :)
 
 ## Structure
 
@@ -45,10 +43,7 @@ Go to the Gist Cave and find the gold. :)
 
 ###### TODO LIST
 
-* ~~Instructions~~
+* Instructions
 * Includes
-    * Update `pakacge.json`
-    * Update `Gruntfile.js` - Tasks: *Minify, Concat, Compile, Linting, Connect, Live Reload*
 * Structure
-    * Update `app.js`
 * Project Documentation

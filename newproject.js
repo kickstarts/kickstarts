@@ -1,22 +1,24 @@
 #!/usr/bin/env node
 
 var inquirer = require('inquirer');
+
 var prompt = [
     {
         choices: [
-            { name: "Assemble", value: "assemble" },
-            { name: "Docpad", value: "docpad" },
             { name: "General", value: "general" },
-            { name: "Ghost", value: "ghost" },
-            { name: "Jekyll", value: "jekyll" },
-            { name: "Harp", value: "harp" },
             { name: "Mobile", value: "mobile" },
             { name: "Node", value: "node" },
+            { name: "Benm Stack", value: "backbone" },
+            { name: "Cli Tool", value: "clitool" },
             { name: "Rails", value: "rails" },
-            { name: "WordPress", value: "wordpress" }
+            { name: "WordPress", value: "wordpress" },
+            { name: "Docpad", value: "docpad" },
+            { name: "Ghost", value: "ghost" },
+            { name: "Jekyll", value: "jekyll" },
+            { name: "Harp", value: "harp" }
         ],
         name: 'boilerplate',
-        message: 'Wich boilerplate method would you like to use?',
+        message: 'Which boilerplate would you like to use?',
         type: 'list'
     }
 ];
@@ -27,8 +29,12 @@ inquirer.prompt(prompt, function(answers) {
 
     switch (boilerplate) {
 
-        case 'assemble':
-            require('./lib/bp-assemble');
+        case 'backbone':
+            require('./lib/bp-backbone');
+        break;
+
+        case 'clitool':
+            require('./lib/bp-clitool');
         break;
 
         case 'docpad':
