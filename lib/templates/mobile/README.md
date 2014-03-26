@@ -1,6 +1,6 @@
-# Phonegap Boilerplate
+# Mobile Boilerplate
 
-Generate a new project based on [Phonegap](http://wordpress.org/).
+Generate a new project based on [Phonegap]().
 
 ## Includes
 
