@@ -2,6 +2,28 @@
 
 Generate a new project based on [Rails](http://rubyonrails.org/).
 
+## Requires
+
+- [Node.JS](http://nodejs.org/)
+- [Bower](http://bower.io)
+- [Grunt](http://gruntjs.com)
+- [Ruby](https://www.ruby-lang.org/pt/)
+- [Sass](http://sass-lang.com/)
+- [Compass](http://compass-style.org/)
+
+
+## Instructions
+
+1. Clone the project
+
+  ```bash
+  git clone git://github.com/vitorbritto/boilerplates
+  ```
+2. Choose **Rails**
+
+3. Profit! :)
+
+
 ## Includes
 
 **Client-side**
@@ -25,6 +47,7 @@ Generate a new project based on [Rails](http://rubyonrails.org/).
 
 ## Structure
 
+
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
@@ -33,7 +56,8 @@ Go to the Gist Cave and find the gold. :)
 
 ###### TODO LIST
 
-* Instructions
-* Includes
-* Structure
-* Project Documentation
+- [ ] Requires
+- [ ] Instructions
+- [ ] Includes
+- [ ] Structure
+- [ ] Documentation

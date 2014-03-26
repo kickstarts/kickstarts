@@ -1,6 +1,6 @@
-# Ghost Boilerplate
+# Harp Boilerplate
 
-Generate a new project based on [Ghost](https://ghost.org/).
+Generate a new project based on [Harp](http://harpjs.com/).
 
 ## Requires
 
@@ -12,7 +12,7 @@ Generate a new project based on [Ghost](https://ghost.org/).
   ```bash
   git clone git://github.com/vitorbritto/boilerplates
   ```
-2. Choose **Ghost**
+2. Choose **Harp**
 
 3. Profit! :)
 
