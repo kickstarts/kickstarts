@@ -1,6 +1,6 @@
-# Phonegap Boilerplate
+# Mobile Boilerplate
 
-Generate a new project based on [Phonegap](http://wordpress.org/).
+Generate a new project based on [Phonegap]().
 
 ## Includes
 
@@ -17,7 +17,7 @@ Go to the Gist Cave and find the gold. :)
 ###### TODO LIST
 
 * Instructions
-* ~~Includes~~
+* Includes
 * Structure
 * ~~Project Documentation~~
 
