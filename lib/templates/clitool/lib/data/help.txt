@@ -1,0 +1,11 @@
+Usage: index [options] [command]
+
+Commands:
+
+run           Main Command
+
+Options:
+
+-h, --help     output usage information
+-v, --version  output the version number
+-s --silent    Skip status logged to the console

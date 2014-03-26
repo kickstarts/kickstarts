@@ -7,9 +7,10 @@ var prompt = [
         choices: [
             { name: "General", value: "general" },
             { name: "Mobile", value: "mobile" },
-            { name: "Node", value: "node" },
-            { name: "Benm Stack", value: "backbone" },
-            { name: "Cli Tool", value: "clitool" },
+            { name: "NodeJS", value: "node" },
+            { name: "Backbone", value: "backbone" },
+            { name: "Benm Stack", value: "benmstack" },
+            { name: "CLI Tool", value: "clitool" },
             { name: "Rails", value: "rails" },
             { name: "WordPress", value: "wordpress" },
             { name: "Docpad", value: "docpad" },
@@ -31,6 +32,10 @@ inquirer.prompt(prompt, function(answers) {
 
         case 'backbone':
             require('./lib/bp-backbone');
+        break;
+
+        case 'benmstack':
+            require('./lib/bp-benmstack');
         break;
 
         case 'clitool':
