@@ -5,10 +5,10 @@ guard 'haml', :output => 'public', :input => 'app/views' do
 end
 
 guard 'compass', :notification => true do
-  watch(/^app\/stylesheets\/(.*)\.s[ac]ss/)
+  watch(/^app\/assets\/stylesheets\/(.*)\.s[ac]ss/)
 end
 
-guard 'coffeescript', :input => 'app/coffeescripts', :output => 'public/js'
+guard 'coffeescript', :input => 'app/assets/coffeescripts', :output => 'public/js'
 
 guard 'process', :name => 'Minify lib javascript', :command => 'juicer merge public/js/libs/libs.js --force -s -o public/js/libs.min.js' do
   watch %r{public/js/libs/libs\.js}

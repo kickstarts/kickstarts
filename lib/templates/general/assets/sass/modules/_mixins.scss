@@ -2,37 +2,6 @@
 // STRUCTURE MIXINS
 // --------------------------------------------------
 
-@mixin link-style($link-type) {
-    @if $link-type == "normal" {
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    @if $link-type == "unstyled" {
-        color: inherit;
-        text-decoration: inherit;
-        cursor: inherit;
-        &:active, &:focus {
-            outline: none;
-        }
-    }
-}
-
-// Lists
-// ------------------
-@mixin list-style($list-type) {
-    @if $list-type == "unstyled" {
-        list-style-image: none;
-        list-style-type: none;
-        margin-left: 0;
-    }
-    @if $list-type == "square" {
-        list-style-type: square;
-        margin-left: 20px;
-    }
-}
-
 // Images
 // ------------------
 @mixin img($style: false, $align: false) {
@@ -49,7 +18,7 @@
         }
     }
     @if $style == "circle" {
-        @include border-radius(500px);
+        @include border-radius(50%);
     }
     @else if $style == "rounded" {
         @include border-radius($base-border-radius);
@@ -158,6 +127,248 @@ $placeholders: '-webkit-input-placeholder',
     }
   }
 }
+
+
+//
+// Buttons
+// -------------------------------------------------
+
+// Mixing that gets included when calling the button-structure if you need any
+// styles applied to all your sassy buttons, add it here.
+@mixin button-default-structure {
+    display: inline-block;
+    cursor: pointer;
+}
+
+// The Sassy Button kitchen sink.
+@mixin button($gradient-style: $btn-gradient-style, $border-radius: $btn-border-radius, $font-size: $btn-font-size, $first-color: $btn-base-color, $second-color: $btn-second-color, $text-color: $btn-text-color, $text-style: $btn-text-style, $auto-states: $btn-pseudo-states, $ie: $legacy-support) {
+    @include button-structure($border-radius, $font-size, $btn-padding);
+    @include button-gradient($gradient-style, $first-color, $second-color, $text-color, $text-style, $auto-states, $ie);
+    @include firefox-fix;
+}
+
+// Structure for a sassy button
+@mixin button-structure($border-radius: $btn-border-radius, $font-size: $btn-font-size, $padding: $btn-padding) {
+    font-size: $font-size;
+    padding: $padding;
+    @include button-default-structure;
+    @include border-radius($border-radius);
+}
+
+// Fix for the Firefox padding issue
+@mixin firefox-fix {
+    &::-moz-focus-inner {
+        padding: 0 !important;
+        margin: -1px !important;
+    }
+}
+
+// Mixin that controls the text style
+@mixin button-text-style($base-color, $second-color, $text-color, $text-style: "inset") {
+    $text-lightness: lightness($text-color);
+    $text-color-shift: 0;
+    $diff: lightness($base-color) - lightness($second-color);
+    @if $diff > 40 {
+        $text-color-shift: 35 + $diff / 10;
+    }
+    @else if $diff > 18 {
+        $text-color-shift: 30 + $diff / 10;
+    }
+    @else {
+        $text-color-shift: 25 + $diff / 10;
+    }
+    color: $text-color;
+    @if $text-style == "inset" {
+        @if $text-lightness < 50 {
+            @include text-shadow(lighten($second-color, $text-color-shift / 1.5) 0 1px 0);
+        }
+        @else {
+            @include text-shadow(darken($base-color, $text-color-shift) 0 -1px 0);
+        }
+    }
+    @if $text-style == "raised" {
+        @if $text-lightness < 50 {
+            @include text-shadow(lighten($second-color, $text-color-shift / 1.5) 0 -1px 0);
+        }
+        @else {
+            @include text-shadow(darken($base-color, $text-color-shift) 0 1px 0);
+        }
+    }
+}
+
+// Mixins for shadows used in buttons
+@mixin button-highlight-shadow($base-color) {
+    @include box-shadow(lighten($base-color, 15%) 0 1px 0 inset);
+}
+
+@mixin button-active-shadow($second-color) {
+    @include box-shadow(darken($second-color, 8%) 0 1px 2px inset);
+}
+
+// Mixins for gradients used in buttons
+@mixin button-gradient($style: $btn-gradient-style, $base-color: $btn-base-color, $second-color: $btn-second-color, $text-color: $btn-text-color, $text-style: $btn-text-style, $auto-states: $btn-pseudo-states, $ie: $legacy-support) {
+    $first-color: $base-color;
+    $lightness: lightness($base-color);
+    $brightness-divsor: 1;
+    @if $lightness > 75 {
+        $brightness-divsor: 2;
+    }
+  // user a simple filter gradient if $legacy-support is true
+  @if $ie {
+    @include filter-gradient($first-color, darken($first-color, 20%));
+  }
+  @else {
+    background-color: $base-color;
+  }
+  // Matte Gradient Style
+  @if $style == "matte" {
+    $first-color: $base-color;
+    @if $second-color == false {
+        $first-color: lighten($base-color, 15%);
+        $second-color: $base-color;
+    }
+    @include background(linear-gradient(color-stops($first-color, $second-color 70%)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($first-color, $second-color, $style);
+    }
+  }
+  // Shiny Gradient Style
+  @if $style == "shiny" {
+    $first-color: lighten($base-color, 25% / $brightness-divsor);
+    @if $second-color == false {
+        $second-color: darken($base-color, 10%);
+    }
+    @include background(linear-gradient(color-stops($first-color, $base-color 50%, $second-color)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($first-color, $second-color, $style);
+    }
+  }
+  // Glass Gradient Style
+  @if $style == "glass" {
+    $first-color: lighten($base-color, 8% / $brightness-divsor);
+    @if $second-color == false {
+        $second-color: $base-color;
+    }
+    @include background(linear-gradient(color-stops($first-color 50%, $base-color 51%)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($first-color, $second-color, $style);
+    }
+  }
+  // Simple Gradient Style
+  @if $style == "simple" {
+    @if $second-color == false {
+        $second-color: darken($base-color, 10%);
+    }
+    @include background(linear-gradient(color-stops($base-color, $second-color)));
+    @include button-highlight-shadow($first-color);
+    border: 1px solid darken($second-color, 5%);
+    @if $auto-states {
+        @include pseudo-states($base-color, $second-color, $style);
+    }
+  }
+  // Flat Style
+  @if $style == "flat" {
+    $second-color: $base-color;
+    background-color: $base-color;
+    border: 0;
+    @if $auto-states {
+        @include pseudo-states($base-color, false, $style);
+    }
+  }
+  // Apply Text Styles
+  @if $text-style {
+    @include button-text-style($first-color, $second-color, $text-color, $text-style);
+  }
+}
+
+// Mixin for some optional styles on sassy buttons
+@mixin button-style($style, $base-color: $btn-base-color) {
+    @if $style == "push" {
+        position: relative;
+        @include box-shadow(darken($base-color, 12%) 0 0.4em 0px, lighten($base-color, 18%) 0 1px 0 inset);
+        border-bottom: solid 1px $base-color;
+        &:active {
+            top: 0.3em;
+            @include box-shadow(darken($base-color, 8%) 0 0.2em 0px);
+        }
+    }
+    @if $style == "inset" {
+        @include box-shadow(darken($base-color, 8%) 0 0.2em 0.4em inset);
+        border: solid 1px darken($base-color, 15%);
+        &:active {
+            @include box-shadow(darken($base-color, 12%) 0 0.2em 0.4em inset);
+        }
+    }
+}
+
+
+// Mixin that generates :hover, :active, and disabled pseudo states
+@mixin pseudo-states($first-color, $second-color, $style) {
+    @include button-hover($first-color, $second-color, $style);
+    &.disabled, &[disabled] {
+        @include opacity(0.6);
+        background: $second-color;
+        cursor: default;
+        @include box-shadow(none);
+    }
+}
+
+@mixin button-hover($first-color, $second-color, $style) {
+    &:hover {
+        text-decoration: none;
+    }
+    @if $style == "matte" {
+        &:hover {
+            background-color: darken($second-color, 5%);
+            @include background(linear-gradient(color-stops(darken($first-color, 5%) 3%, darken($second-color, 5%) 75%)));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "shiny" {
+        &:hover {
+            background-color: $second-color;
+            @include background(linear-gradient(color-stops(darken($first-color, 2%), $second-color 50%, darken($second-color, 8%))));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "glass" {
+        &:hover {
+            background-color: darken($second-color, 7%);
+            @include background(linear-gradient(color-stops(darken($first-color, 7%) 50%, darken($second-color, 7%) 51%)));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "simple" {
+        &:hover {
+            background-color: darken($second-color, 5%);
+            @include background(linear-gradient(color-stops(darken($first-color, 5%), darken($second-color, 5%))));
+        }
+        &:active {
+            @include button-active-shadow($second-color);
+        }
+    }
+    @if $style == "flat" {
+        &:hover {
+            background-color: darken($first-color, 5%);
+        }
+        &:active {
+            background-color: darken($first-color, 8%);
+        }
+    }
+}
+
 
 
 //

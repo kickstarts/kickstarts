@@ -204,8 +204,8 @@ $custom-font-family:      "Open Sans", sans-serif;
 
 
 $base-font-family:        $custom-font-family;
-$base-font-size:          14px;
-$base-line-height:        20px;
+$base-font-size:          em(14px);
+$base-line-height:        em(20px);
 $alt-font-family:         $serif-font-family;
 
 $headings-font-family:    inherit;
@@ -261,7 +261,7 @@ $btn-base-color:             rgba(11, 153, 194, 1);
 $btn-second-color:           false;
 $btn-border-radius:          5px;
 $btn-padding:                0.5em 1.5em;
-$btn-font-size:              14px;
+$btn-font-size:              em(14px);
 $btn-text-color:             white;
 $btn-text-style:             "raised";
 $btn-gradient-style:         "simple";

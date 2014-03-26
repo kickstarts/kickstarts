@@ -1,160 +1,17 @@
 @if $use-responsive == true {
 
-
-    //
     // MOBILE - Landscape phone to desktop/tablet
-    // --------------------------------------------------
-
     @include respond-to(mobile) {
 
-
-        // AUTHOR'S CSS GOES HERE
-
-
-
-
-        // ====================================================================================
-        // DO NOT REMOVE FROM HERE
-        // ====================================================================================
-
-
-        // Helper Classes
-        .hidden-desktop  { display: inherit !important; }
-        .visible-desktop { display: none !important; }
-
-        .hidden-tablet   { display: inherit !important; }
-        .visible-tablet  { display: none !important; }
-
-        .hidden-phone    { display: none !important; }
-        .visible-phone   { display: inherit !important; }
-
-
-        // General Structure
-        body {
-            @if $use-container-gutter == true {
-                padding-left: $container-gutter;
-                padding-right: $container-gutter;
-            }
-            @else {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-
-        // Grid System
-        .row {
-            width: 100%;
-        }
-        [class*="span"],
-        .row [class*="span"] {
-            float: none;
-            display: block;
-            width: 100%;
-            margin-left: 0;
-            @include box-sizing(border-box);
-        }
-        .span12,
-        .row .span12 {
-            width: 100%;
-            @include box-sizing(border-box);
-        }
-        .row [class*="push"]:first-child {
-            margin-left: 0;
-        }
-
-        // Form and Inputs
-        textarea,
-        #{$all-text-inputs},
-        input.input-mini,
-        input.input-small,
-        input.input-medium,
-        input.input-large,
-        textarea.input-mini,
-        textarea.input-small,
-        textarea.input-medium,
-        textarea.input-large,
-        input[class*="span"],
-        select[class*="span"],
-        textarea[class*="span"] {
-            @include input-size(full);
-        }
-
-        input[type="checkbox"],
-        input[type="radio"] {
-            border: 1px solid $gray-lighter;
-        }
-
     }
 
-
-    //
     // TABLET - Portrait tablet to landscape and desktop
-    // --------------------------------------------------
-
     @include respond-to(tablet) {
 
-
-        // AUTHOR'S CSS GOES HERE
-
-
-
-
-        // ====================================================================================
-        // DO NOT REMOVE FROM HERE
-        // ====================================================================================
-
-
-        // Helper Classes
-        .hidden-desktop  { display: inherit !important; }
-        .visible-desktop { display: none !important; }
-
-        .hidden-tablet   { display: none !important; }
-        .visible-tablet  { display: inherit !important; }
-
-        .hidden-phone    { display: inherit !important; }
-        .visible-phone   { display: none !important; }
-
-
-        // General Structure
-        body {
-            @if $use-container-gutter == true {
-                padding-left: $container-gutter;
-                padding-right: $container-gutter;
-            } @else {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-
     }
 
-
-    //
     // TV SCREEN - Large desktop and up
-    // --------------------------------------------------
-
     @include respond-to(tvscreen) {
-
-
-        // AUTHOR'S CSS GOES HERE
-
-
-
-
-        // ====================================================================================
-        // DO NOT REMOVE FROM HERE
-        // ====================================================================================
-
-
-        // Helper Classes
-        .hidden-desktop    { display: none !important; }
-        .visible-desktop   { display: inherit !important ; }
-
-        .visible-tablet    { display: none !important; }
-        .visible-phone     { display: none !important; }
-
-        .hidden-tablet     { display: none !important; }
-        .hidden-phone      { display: none !important; }
 
     }
 
