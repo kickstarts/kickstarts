@@ -14,14 +14,14 @@ Generate a new project based on [Jekyll](http://jekyllrb.com/).
 
 ## Instructions
 
-1. Clone the project
+**Start the server in DEV mode and watching files for rebuild:**
 
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **Jekyll**
+    $ rake
 
-3. Profit! :)
+**Build project:**
+
+    $ rake build
+
 
 ## Includes
 
@@ -39,12 +39,8 @@ Generate a new project based on [Jekyll](http://jekyllrb.com/).
 
 ## Structure
 
-===
 
-###### TODO LIST
+## Documentation
 
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation
+Go to the Gist Cave and find the gold. :)
+

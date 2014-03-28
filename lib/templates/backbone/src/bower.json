@@ -1,15 +1,33 @@
 {
-  "name": "backbone-boilerplate",
-
-  "dependencies": {
-    "html5-boilerplate": "~4.3.0",
-    "almond": "~0.2.9",
-    "lodash": "~2.4.1",
-    "backbone": "~1.1.1",
-    "jquery": "~2.1.0",
-    "requirejs": "~2.1.10",
-    "mocha": "~1.17.1",
-    "chai": "~1.9.0",
-    "sinon": "~1.8.2"
-  }
+    "name": "Project Name",
+    "version": "0.1.0",
+    "homepage": "http://www.projectpage.com",
+    "authors": [
+        "Vitor Britto <code@vitorbritto.com.br>"
+    ],
+    "description": "Some description here.",
+    "keywords": [
+        "template",
+        "boilerplate"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~1.10.2",
+        "modernizr": "~2.6.2",
+        "backbone": "~1.1.1",
+        "underscore": "~1.4.4",
+        "requirejs": "~2.1.10",
+        "requirejs-text": "~2.0.5",
+        "mocha": "~1.17.1",
+        "chai": "~1.9.0",
+        "sinon": "~1.8.2"
+    }
 }

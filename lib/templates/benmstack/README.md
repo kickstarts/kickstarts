@@ -1,8 +1,8 @@
-# B.E.N.M Boilerplate
+# B.E.N.M. Boilerplate
 
 ---
 
-** WORK IN PROGRESS**
+**WORK IN PROGRESS**
 
 ---
 
@@ -20,41 +20,31 @@ Generate a new project based on Benm Stack (Backbone, ExpressJS, Node.js and Mon
 
 ## Instructions
 
-1. Clone the project
-
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **Benm Stack**
-
-3. Profit! :)
-
-##### Available Tasks
-
-Start the server in DEV mode, with nodemon watching the app for a relaunch,
-watchers on scripts and less files for rebuild:
+**Start the server in DEV mode with nodemon watching files for rebuild:**
 
     $ grunt server
 
-> Note: Windows users, for some reason the grunt shell task will not launch mongod during runtime (so the node server will crash). Be sure to launch
-mongod in another window before starting grunt server.
+> **Note:** Windows users, for some reason the grunt shell task will not launch mongod during runtime (so the node server will crash). Be sure to launch mongod in another window before starting grunt server.
 
-To run tests in TDD watch mode:
+**Run a build and test the now optimized assets:**
+
+    grunt build
+
+**To run tests in TDD watch mode:**
 
     $ grunt tdd
 
-To run tests once:
+**Run all tests - both server and client:**
+
+    $ grunt test
+
+**To run tests once:**
 
     $ grunt test:client
 
-Server tests have been added using Mocha, Chai, and Proxyquire.  To run the
-tests:
+**Server tests have been added using Mocha and Chai. To run the tests:**
 
     $ grunt test:server
-
-Run all tests - both server and client
-
-    $ grunt test
 
 
 ## Includes
@@ -86,13 +76,3 @@ Run all tests - both server and client
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation

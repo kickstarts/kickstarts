@@ -1,20 +1,18 @@
 # Ghost Boilerplate
 
+---
+
+**WORK IN PROGRESS**
+
+---
+
 Generate a new project based on [Ghost](https://ghost.org/).
+
 
 ## Requires
 
 
 ## Instructions
-
-1. Clone the project
-
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **Ghost**
-
-3. Profit! :)
 
 
 ## Includes
@@ -26,13 +24,3 @@ Generate a new project based on [Ghost](https://ghost.org/).
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation

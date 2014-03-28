@@ -14,15 +14,6 @@ Generate a new project based on [Rails](http://rubyonrails.org/).
 
 ## Instructions
 
-1. Clone the project
-
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **Rails**
-
-3. Profit! :)
-
 
 ## Includes
 
@@ -55,13 +46,3 @@ Generate a new project based on [Rails](http://rubyonrails.org/).
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation

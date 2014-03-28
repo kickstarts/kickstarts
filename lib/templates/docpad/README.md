@@ -14,14 +14,9 @@ Generate a new project based on [DocPad](http://docpad.org/).
 
 ## Instructions
 
-1. Clone the project
+**Run and watch for files:**
 
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **DocPad**
-
-3. Profit! :)
+    docpad run
 
 
 ## Includes
@@ -44,13 +39,3 @@ Generate a new project based on [DocPad](http://docpad.org/).
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation

@@ -18,6 +18,16 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 3. Profit! :)
 
+#### Available Tasks
+
+**To run Karma as a daemon:**
+
+    grunt test
+
+**To run Karma tests once and output the results:**
+
+    grunt test:report
+
 
 ## Includes
 
@@ -41,16 +51,7 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 ## Structure
 
+
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation

@@ -2,7 +2,7 @@
 
 ---
 
-** WORK IN PROGRESS**
+**WORK IN PROGRESS**
 
 ---
 
@@ -13,20 +13,20 @@ Generate a new project based on [Backbone](http://backbonejs.org/) (only client-
 
 - [Node.JS](http://nodejs.org/)
 
+
 ## Instructions
 
-1. Clone the project
+**Run a build and test the now optimized assets:**
 
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **Backbone**
+    $ grunt build
 
-3. Profit! :)
+**To run Karma as a daemon:**
 
-#### Build
+    $ grunt karma:daemon
 
-#### Tests
+**To run Karma tests once and output the results:**
+
+    $ grunt karma:run
 
 
 ## Includes
@@ -50,22 +50,7 @@ Generate a new project based on [Backbone](http://backbonejs.org/) (only client-
 
 ## Structure
 
+
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation
-
-
-
-## License ##
-Copyright © 2014 Tim Branyen (@tbranyen)
-Licensed under the MIT license.

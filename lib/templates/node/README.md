@@ -2,7 +2,7 @@
 
 ---
 
-** WORK IN PROGRESS**
+**WORK IN PROGRESS**
 
 ---
 
@@ -16,15 +16,6 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 
 ## Instructions
-
-1. Clone the project
-
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **NodeJS**
-
-3. Profit! :)
 
 
 ## Includes
@@ -45,13 +36,3 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-===
-
-###### TODO LIST
-
-- [ ] Requires
-- [ ] Instructions
-- [ ] Includes
-- [ ] Structure
-- [ ] Documentation
