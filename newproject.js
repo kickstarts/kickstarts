@@ -5,18 +5,18 @@ var inquirer = require('inquirer');
 var prompt = [
     {
         choices: [
-            { name: "General", value: "general" },
-            { name: "Mobile", value: "mobile" },
-            { name: "NodeJS", value: "node" },
-            { name: "Backbone", value: "backbone" },
-            { name: "Benm Stack", value: "benmstack" },
-            { name: "CLI Tool", value: "clitool" },
-            { name: "Rails", value: "rails" },
-            { name: "WordPress", value: "wordpress" },
-            { name: "Docpad", value: "docpad" },
-            { name: "Ghost", value: "ghost" },
-            { name: "Jekyll", value: "jekyll" },
-            { name: "Harp", value: "harp" }
+            { name: 'General', value: 'general' },
+            { name: 'Mobile', value: 'mobile' },
+            { name: 'NodeJS', value: 'node' },
+            { name: 'Backbone', value: 'backbone' },
+            { name: 'B.E.N.M. Stack', value: 'benmstack' },
+            { name: 'CLI Tool', value: 'clitool' },
+            { name: 'Rails', value: 'rails' },
+            { name: 'WordPress', value: 'wordpress' },
+            { name: 'Docpad', value: 'docpad' },
+            { name: 'Ghost', value: 'ghost' },
+            { name: 'Jekyll', value: 'jekyll' },
+            { name: 'Harp', value: 'harp' }
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to use?',
