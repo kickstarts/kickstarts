@@ -1,0 +1,26 @@
+{
+    "name": "projectname",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.8.0",
+        "grunt-contrib-copy": "~0.5.0",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-compress": "~0.6.0",
+        "grunt-processhtml": "~0.3.0",
+        "grunt-karma": "~0.8.2",
+        "grunt-karma-coveralls": "~2.3.0",
+        "karma-mocha": "~0.1.0",
+        "karma-phantomjs-launcher": "~0.1.0",
+        "karma-coverage": "~0.1.0"
+    },
+    "peerDependencies": {
+        "bower": "*",
+        "grunt-cli": "*",
+        "coveralls": "*"
+    },
+
+    "scripts": {
+        "test": "grunt karma:run"
+    }
+}
