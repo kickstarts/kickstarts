@@ -1,8 +1,11 @@
 ![Boilerplates Logo](logo-bp.jpg "Boilerplates")
 
-# Boilerplates [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.png)](https://travis-ci.org/vitorbritto/boilerplates)
+<p style="text-align: center;">A jump-start for my projects. :)</p>
 
-A jump-start for my projects. :)
+<span style="text-align: center;">
+    [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.png)](https://travis-ci.org/vitorbritto/boilerplates)
+</span>
+
 
 > **Todo List:** [https://github.com/vitorbritto/boilerplates/issues/1](https://github.com/vitorbritto/boilerplates/issues/1)
 
