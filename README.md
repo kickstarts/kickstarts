@@ -12,7 +12,7 @@ This is my personal Yeoman. A simple jump-start for my projects. =]
 ## Getting Started
 
 1 - First of all, make sure you have [Node.js](http://nodejs.org/) installed. <br/>
-2 - Clone this repository
+2 - Clone this repository <br/>
 3 - Access the generated folder
 
 ```bash
