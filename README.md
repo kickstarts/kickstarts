@@ -41,13 +41,12 @@ Here are the boilerplates available yet.
 - [WordPress](lib/templates/wordpress/)
 - [Backbone](lib/templates/backbone/)
 - [B.E.N.M Stack](lib/templates/benmstack/)
-- [Ghost](lib/templates/ghost/)
-- [Rails](lib/templates/rails/)
 - [Node](lib/templates/node/)
+- [Rails](lib/templates/rails/)
 - [Jekyll](lib/templates/jekyll/)
+- [Harp](lib/templates/harp/)
 - [DocPad](lib/templates/docpad/)
-- [Assemble](lib/templates/assemble/)
-
+- [Ghost](lib/templates/ghost/)
 
 ## License
 
