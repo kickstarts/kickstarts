@@ -8,7 +8,7 @@
  */
 
 // if (!is_user_logged_in()) {
-//     wp_redirect('http://www.dominio.com.br/2013', 302);
+//     wp_redirect('caminho-para-redirecionar', 302);
 //     exit;
 // }
 
@@ -47,7 +47,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="copyright" content="&copy; Copyright 2013 <?php echo $title_default; ?>" />
 <link type="text/plain" rel="author" href="humans.txt" />
-
 <meta name="keywords" content="<?php echo $keys_default; ?>" />
 <meta name="description" content="<?php echo $desc_default; ?>" />
 
@@ -68,7 +67,6 @@
 ?>
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
 <link href="<?php echo WP_IMAGE_URL ?>/favicon.ico" rel="shortcut icon" />
 
 <!-- Custom Font
@@ -97,14 +95,12 @@
 
     <div class="container">
 
+        <!-- #header -->
         <header id="header" class="row">
 
-        </header><!-- #header -->
+        </header>
+        <!-- /#header -->
 
-        <div id="main">
+        <!-- #main -->
+        <div id="main" class="row">
 
-        <div class="row">
-            <div class="span12">
-
-            </div>
-        </div>

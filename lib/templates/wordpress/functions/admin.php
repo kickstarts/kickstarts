@@ -1,10 +1,10 @@
 <?php
 /**
  * --------------------------------------------------------------
- * CONFIGURAÇÃO DO PAINEL DE CONTROLE - Não modifique nada aqui!
+ * ADMIN PANEL CONFIGURATION - Do not change anything here!
  * --------------------------------------------------------------
  *
- * @package Colégio Assunção
+ * @package Project Name
  */
 
 
@@ -42,79 +42,14 @@ function wps_admin_bar() {
     $wp_admin_bar->add_menu(
         array(
             'parent' =>'new',
-            'id'     => 'banners',
-            'title'  => 'Banner',
-            'href'   => admin_url().'post-new.php?post_type=banners'
+            'id'     => 'default',
+            'title'  => 'Default CPT',
+            'href'   => admin_url().'post-new.php?post_type=default'
         )
     );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'avaliacoes',
-            'title'  => 'Avaliação',
-            'href'   => admin_url().'post-new.php?post_type=avaliacoes'
-        )
-    );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'gabaritos',
-            'title'  => 'Gabarito',
-            'href'   => admin_url().'post-new.php?post_type=gabaritos'
-        )
-    );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'fotos',
-            'title'  => 'Galeria',
-            'href'   => admin_url().'post-new.php?post_type=fotos'
-        )
-    );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'videos',
-            'title'  => 'Vídeo',
-            'href'   => admin_url().'post-new.php?post_type=videos'
-        )
-    );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'convenios',
-            'title'  => 'Convênio',
-            'href'   => admin_url().'post-new.php?post_type=convenios'
-        )
-    );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'professores',
-            'title'  => 'Professor',
-            'href'   => admin_url().'post-new.php?post_type=professores'
-        )
-    );
-    $wp_admin_bar->add_menu(
-        array(
-            'parent' =>'new',
-            'id'     => 'alunos',
-            'title'  => 'Ex-aluno',
-            'href'   => admin_url().'post-new.php?post_type=alunos'
-        )
-    );
-
-    $wp_admin_bar->add_menu(
-        array(
-            'id'     => 'Chat',
-            'title'  => 'Chat Online',
-            'href'   => 'http://formilla.com/login.aspx',
-            'meta'   =>  array( 'target' => '_blank' )
-        )
-    );
-
 }
 add_action( 'wp_before_admin_bar_render', 'wps_admin_bar' );
+
 
 /*
  * Hide update notice of wordpress version.
@@ -123,6 +58,7 @@ function wp_hide_msg() {
     remove_action( 'admin_notices', 'update_nag', 3 );
 }
 add_action('admin_menu','wp_hide_msg');
+
 
 /*
  * Hide "help" guide.
@@ -133,6 +69,7 @@ function hide_help() {
     </style>';
 }
 add_action('admin_head', 'hide_help');
+
 
 /*
  * Change the footer text
@@ -147,7 +84,7 @@ add_filter('admin_footer_text', 'remove_footer_admin');
  * Remove version from footer.
  */
 function change_footer_version() {
-    return 'Mantido com Wordpress. Desenvolvido por: <a href="http://www.vitorbritto.com" target="_blank" title="Vitor Britto - Desenvolvimento Web">vitorbritto</a>';
+    return 'Mantido com Wordpress. Desenvolvido por: <a href="http://www.vitorbritto.com.br" target="_blank" title="Vitor Britto - Desenvolvimento Web">vitorbritto</a>';
 }
 add_filter( 'update_footer', 'change_footer_version', 9999 );
 
@@ -173,6 +110,7 @@ remove_meta_box( 'commentstatusdiv', 'post', 'normal' );    // Comment status me
 }
 add_action( 'admin_menu', 'remove_meta_boxes' );
 
+
 /*
  * Remove widgets dashboard.
  */
@@ -187,6 +125,7 @@ function admin_remove_dashboard_widgets() {
     // remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
 }
 add_action( 'wp_dashboard_setup', 'admin_remove_dashboard_widgets' );
+
 
 /*
  * Set the color based on post status.
@@ -240,6 +179,7 @@ function remove_screen_options_tab() {
 }
 add_filter('screen_options_show_screen', 'remove_screen_options_tab');
 
+
 /*
  * Remove items from user profile.
  */
@@ -251,6 +191,7 @@ function change_contactmethod( $contactmethods ) {
 }
 add_filter('user_contactmethods','change_contactmethod',10,1);
 
+
 /*
  * Remove the preview and view buttons from publish meta box.
  */
@@ -258,15 +199,7 @@ function posttype_admin_css() {
     global $post_type;
     $post_types = array(
         /* set post types */
-        'avaliacoes',
-        'gabaritos',
-        'agenda',
-        'alunos',
-        'professores',
-        'livros',
-        'videos',
-        'fotos',
-        'banners',
+        'default',
         'post',
         'page',
         );
@@ -276,16 +209,19 @@ function posttype_admin_css() {
 add_action( 'admin_head-post-new.php', 'posttype_admin_css' );
 add_action( 'admin_head-post.php', 'posttype_admin_css' );
 
+
 /**
  * Disable auto update of plugins.
  */
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 
+
 /*
  * Remove Welcome Panel.
  */
 remove_action( 'welcome_panel', 'wp_welcome_panel' );
+
 
 /*
  * Hide Pages on List.
@@ -300,157 +236,43 @@ remove_action( 'welcome_panel', 'wp_welcome_panel' );
 // }
 // add_action( 'pre_get_posts' ,'exclude_this_page' );
 
+
 /*
  * New Title Placeholder
  */
-
-/* Ex-Alunos */
-function alunos_custom_title_text($title) {
+function default_custom_title_text($title) {
     if (function_exists ('get_current_screen')) {
         $screen = get_current_screen();
-        if ( 'alunos' == $screen->post_type ) {
-            $title = 'Digite o nome do aluno aqui';
+        if ( 'default' == $screen->post_type ) {
+            $title = 'Digite o título aqui';
         }
         return $title;
     }
 }
-add_filter( 'enter_title_here', 'alunos_custom_title_text' );
+add_filter( 'enter_title_here', 'default_custom_title_text' );
 
-/* Professores */
-function professores_custom_title_text($title) {
-    if (function_exists ('get_current_screen')) {
-        $screen = get_current_screen();
-        if ( 'professores' == $screen->post_type ) {
-            $title = 'Digite o nome do professor aqui';
-        }
-        return $title;
-    }
-}
-add_filter( 'enter_title_here', 'professores_custom_title_text' );
-
-/* Livros */
-function livros_custom_title_text($title) {
-    if (function_exists ('get_current_screen')) {
-        $screen = get_current_screen();
-        if ( 'livros' == $screen->post_type ) {
-            $title = 'Digite o nome do livro aqui';
-        }
-        return $title;
-    }
-}
-add_filter( 'enter_title_here', 'livros_custom_title_text' );
-
-/* Agenda */
-function eventos_custom_title_text($title) {
-    if (function_exists ('get_current_screen')) {
-        $screen = get_current_screen();
-        if ( 'agenda' == $screen->post_type ) {
-            $title = 'Digite o nome do evento aqui';
-        }
-        return $title;
-    }
-}
-add_filter( 'enter_title_here', 'eventos_custom_title_text' );
-
-/* Fotos */
-function fotos_custom_title_text($title) {
-    if (function_exists ('get_current_screen')) {
-        $screen = get_current_screen();
-        if ( 'fotos' == $screen->post_type ) {
-            $title = 'Digite o nome da galeria de fotos aqui';
-        }
-        return $title;
-    }
-}
-add_filter( 'enter_title_here', 'fotos_custom_title_text' );
-
-/* Videos */
-function videos_custom_title_text($title) {
-    if (function_exists ('get_current_screen')) {
-        $screen = get_current_screen();
-        if ( 'videos' == $screen->post_type ) {
-            $title = 'Digite o nome do video aqui';
-        }
-        return $title;
-    }
-}
-add_filter( 'enter_title_here', 'videos_custom_title_text' );
-
-/* Convênios */
-function convenios_custom_title_text($title) {
-    if (function_exists ('get_current_screen')) {
-        $screen = get_current_screen();
-        if ( 'convenios' == $screen->post_type ) {
-            $title = 'Digite o nome do conveniado aqui';
-        }
-        return $title;
-    }
-}
-add_filter( 'enter_title_here', 'convenios_custom_title_text' );
 
 /*
  * Featured Image
  */
+function posts_columns_default($defaults){
+    // $defaults['default_posts_thumbs'] = 'Imagem';
+    // return $defaults;
+    $col_start = array_slice( $defaults, 0, 1, true );
+    $col_end   = array_slice( $defaults, 1, null, true );
+    $all_cols  = array_merge( $col_start, array( 'default_posts_thumbs' => __('Foto') ), $col_end );
+        return $all_cols;
+    }
+    add_filter('manage_default_posts_columns', 'posts_columns_default', 10);
 
-// /* Professores */
-// function posts_columns_professores($defaults){
-//     // $defaults['professores_posts_thumbs'] = 'Imagem';
-//     // return $defaults;
-//     $col_start = array_slice( $defaults, 0, 1, true );
-//     $col_end   = array_slice( $defaults, 1, null, true );
-//     $all_cols  = array_merge( $col_start, array( 'professores_posts_thumbs' => __('Foto') ), $col_end );
-//         return $all_cols;
-//     }
-//     add_filter('manage_professores_posts_columns', 'posts_columns_professores', 10);
-
-//     function posts_custom_columns_professores($column_name, $id){
-//         if($column_name === 'professores_posts_thumbs'){
-//             echo the_post_thumbnail( 'admin-thumb' );
-//         } else {
-//             echo '<img src="' . WP_IMAGE_URL .' /avatar-professores.jpg" />';
-//         }
-//     }
-// add_action('manage_professores_posts_custom_column', 'posts_custom_columns_professores', 10, 2);
-
-// /* Ex-alunos */
-// function posts_columns_alunos($defaults){
-//     // $defaults['alunos_posts_thumbs'] = 'Imagem';
-//     // return $defaults;
-//     $col_start = array_slice( $defaults, 0, 1, true );
-//     $col_end   = array_slice( $defaults, 1, null, true );
-//     $all_cols  = array_merge( $col_start, array( 'alunos_posts_thumbs' => __('Foto') ), $col_end );
-//         return $all_cols;
-//     }
-//     add_filter('manage_alunos_posts_columns', 'posts_columns_alunos', 10);
-
-//     function posts_custom_columns_alunos($column_name, $id){
-//         if($column_name === 'alunos_posts_thumbs'){
-//             echo the_post_thumbnail( 'admin-thumb' );
-//         } else {
-//             echo '<img src="' . WP_IMAGE_URL .' /avatar-alunos.jpg" />';
-//         }
-//     }
-// add_action('manage_alunos_posts_custom_column', 'posts_custom_columns_alunos', 10, 2);
-
-// /* Livros */
-// function posts_columns_livros($defaults){
-//     // $defaults['livros_posts_thumbs'] = 'Imagem';
-//     // return $defaults;
-//     $col_start = array_slice( $defaults, 0, 1, true );
-//     $col_end   = array_slice( $defaults, 1, null, true );
-//     $all_cols  = array_merge( $col_start, array( 'livros_posts_thumbs' => __('Foto') ), $col_end );
-//         return $all_cols;
-//     }
-//     add_filter('manage_livros_posts_columns', 'posts_columns_livros', 10);
-
-//     function posts_custom_columns_livros($column_name, $id){
-//         if($column_name === 'livros_posts_thumbs'){
-//             echo the_post_thumbnail( 'admin-thumb' );
-//         } else {
-//             echo '<img src="' . WP_IMAGE_URL .' /avatar-livros.jpg" />';
-//         }
-//     }
-// add_action('manage_livros_posts_custom_column', 'posts_custom_columns_livros', 10, 2);
+    function posts_custom_columns_default($column_name, $id){
+        if($column_name === 'default_posts_thumbs'){
+            echo the_post_thumbnail( 'admin-thumb' );
+        } else {
+            echo '<img src="' . WP_IMAGE_URL .' /avatar-default.jpg" />';
+        }
+    }
+add_action('manage_default_posts_custom_column', 'posts_custom_columns_default', 10, 2);
 
 
 /**
@@ -458,24 +280,24 @@ add_filter( 'enter_title_here', 'convenios_custom_title_text' );
  *
  * @global array $post WP post object.
  */
-// function autoset_featured() {
-//     global $post;
-//     if ( isset( $post->ID ) ) {
-//         $already_has_thumb = has_post_thumbnail( $post->ID );
-//         if ( ! $already_has_thumb ) {
-//             $attached_image = get_children( 'post_parent=' . $post->ID . '&post_type=attachment&post_mime_type=image&numberposts=1' );
-//             if ( $attached_image ) {
-//                 foreach ( $attached_image as $attachment_id => $attachment ) {
-//                     set_post_thumbnail( $post->ID, $attachment_id );
-//                 }
-//             }
-//         }
-//     }
-// }
+function autoset_featured() {
+    global $post;
+    if ( isset( $post->ID ) ) {
+        $already_has_thumb = has_post_thumbnail( $post->ID );
+        if ( ! $already_has_thumb ) {
+            $attached_image = get_children( 'post_parent=' . $post->ID . '&post_type=attachment&post_mime_type=image&numberposts=1' );
+            if ( $attached_image ) {
+                foreach ( $attached_image as $attachment_id => $attachment ) {
+                    set_post_thumbnail( $post->ID, $attachment_id );
+                }
+            }
+        }
+    }
+}
 
-// add_action( 'the_post', 'autoset_featured' );
-// add_action( 'save_post', 'autoset_featured' );
-// add_action( 'draft_to_publish', 'autoset_featured' );
-// add_action( 'new_to_publish', 'autoset_featured' );
-// add_action( 'pending_to_publish', 'autoset_featured' );
-// add_action( 'future_to_publish', 'autoset_featured' );
+add_action( 'the_post', 'autoset_featured' );
+add_action( 'save_post', 'autoset_featured' );
+add_action( 'draft_to_publish', 'autoset_featured' );
+add_action( 'new_to_publish', 'autoset_featured' );
+add_action( 'pending_to_publish', 'autoset_featured' );
+add_action( 'future_to_publish', 'autoset_featured' );

@@ -2,11 +2,10 @@
 
 ## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.png)](https://travis-ci.org/vitorbritto/boilerplates)
 
+This is my personal Yeoman. A simple jumpstart for my projects
 
-This is my personal Yeoman. A simple jump-start for my projects. =]
-
-
-> **Todo List:** [https://github.com/vitorbritto/boilerplates/issues/1](https://github.com/vitorbritto/boilerplates/issues/1)
+> **WORK IN PROGRESS!**
+> **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/1](https://github.com/vitorbritto/boilerplates/issues/1)
 
 
 ## Getting Started

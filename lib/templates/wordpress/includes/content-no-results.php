@@ -2,7 +2,7 @@
 /**
  * The template for displaying no results for search.
  *
- * @package Colégio Assunção
+ * @package Project Name
  */
 ?>
 

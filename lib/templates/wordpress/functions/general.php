@@ -9,7 +9,7 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package Colégio Assunção
+ * @package Project Name
  */
 
 /**
@@ -24,14 +24,15 @@ function enqueue_scripts() {
     wp_register_script('jquery', WP_SCRIPT_URL . '/vendor/jquery-1.10.2.min.js', array(), null, true);
     wp_enqueue_script('jquery');
 
-    // wp_register_script('modernizr', WP_SCRIPT_URL . '/vendor/modernizr-2.6.2.min.js', array(), null, false);
-    // wp_enqueue_script('modernizr');
+    wp_register_script('modernizr', WP_SCRIPT_URL . '/vendor/modernizr-2.6.2.min.js', array(), null, false);
+    wp_enqueue_script('modernizr');
 
     wp_register_script('app', WP_SCRIPT_URL . '/app.min.js', array(), null, true);
     wp_enqueue_script('app');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
 
 /**
  * Load stylesheets.
@@ -42,6 +43,7 @@ function enqueue_stylesheet($uri, $dir) {
 
 add_filter('stylesheet_uri', 'enqueue_stylesheet', 10, 2);
 
+
 /**
  * Flush Rewrite Rules for new CPTs and Taxonomies.
  */
@@ -51,16 +53,17 @@ function flush_rewrite() {
 
 add_action('after_switch_theme', 'flush_rewrite');
 
+
 /**
  * Custom Search for categories
  */
-function search_posts_filter($query){
-    if ($query->is_search){
-        $query->set('cat','1,2,3,4');
-    }
-    return $query;
-}
-add_filter('pre_get_posts','search_posts_filter');
+// function search_posts_filter($query){
+//     if ($query->is_search){
+//         $query->set('cat','1,2,3,4');
+//     }
+//     return $query;
+// }
+// add_filter('pre_get_posts','search_posts_filter');
 
 
 /**

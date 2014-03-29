@@ -2,7 +2,7 @@
 /**
  * The template for displaying all page contents.
  *
- * @package Colégio Assunção
+ * @package Project Name
  */
 ?>
 

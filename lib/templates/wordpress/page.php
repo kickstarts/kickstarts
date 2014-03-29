@@ -14,24 +14,15 @@ get_header(); ?>
 
 <?php
     global $pages_with_sidebar;
-    if (is_page($pages_with_sidebar)) : ?>
+    if (is_page($pages_with_sidebar)) :
+?>
 
-<div class="row box">
-    <div class="span2 first">
-        <?php get_sidebar(); ?>
-    </div>
-    <div class="span10 last">
-        <?php get_template_part('includes/content', 'page'); ?>
-    </div>
-</div>
+    <?php get_sidebar(); ?>
+    <?php get_template_part('includes/content', 'page'); ?>
 
 <?php else : ?>
 
-<div class="row box">
-    <div class="span12 first">
-        <?php get_template_part('includes/content', 'page'); ?>
-    </div>
-</div>
+    <?php get_template_part('includes/content', 'page'); ?>
 
 <?php endif; ?>
 

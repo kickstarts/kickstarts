@@ -6,12 +6,17 @@
  */
 ?>
 
-        </div><!-- #main -->
-    </div><!-- .container -->
+        </div>
+        <!-- /#main -->
 
+    </div>
+    <!-- /.container -->
+
+    <!-- #footer -->
     <footer id="footer">
 
-    </footer><!-- #footer -->
+    </footer>
+    <!-- /#footer -->
 
     <?php wp_footer(); ?>
 

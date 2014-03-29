@@ -2,7 +2,7 @@
 /**
  * Optimization Functions and definitions
  *
- * @package Colégio Assunção
+ * @package Project Name
  */
 
 /**

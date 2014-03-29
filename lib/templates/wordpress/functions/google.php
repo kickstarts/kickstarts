@@ -2,7 +2,7 @@
 /**
  * Google Functions and definitions
  *
- * @package Colégio Assunção
+ * @package Project Name
  */
 
  /*
@@ -12,15 +12,15 @@ function google_analytics() { ?>
 
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-46158523-1']);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
+    (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    })();
 
 </script>
 
@@ -43,7 +43,7 @@ function google_maps() { ?>
 
         function initialize() {
 
-            var mapPostion = new google.maps.LatLng(-12.984381,-38.512359),
+            var mapPostion = new google.maps.LatLng(-99.999999, -99.999999),
                 mapShowType = google.maps.MapTypeId.TERRAIN,
                 mapZoomStyle = google.maps.ZoomControlStyle.SMALL;
 
@@ -63,7 +63,7 @@ function google_maps() { ?>
             var marker = new google.maps.Marker({
                 position: mapPostion,
                 map: map,
-                title:"Colégio Assunção"
+                title:"Project Name"
             });
 
             marker.setMap(map);
