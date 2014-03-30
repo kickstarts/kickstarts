@@ -2,7 +2,6 @@
     "asi": false,
     "bitwise": true,
     "boss": true,
-    "browser": true,
     "curly": true,
     "debug": false,
     "eqeqeq": true,
@@ -13,8 +12,10 @@
     "expr": true,
     "forin": true,
     "funcscope": false,
+    "jquery": true,
     "globalstrict": false,
     "immed": true,
+    "indent": 4,
     "iterator": false,
     "lastsemic": false,
     "latedef": true,
@@ -37,11 +38,21 @@
     "scripturl": true,
     "shadow": false,
     "smarttabs": false,
-    "strict": false,
+    "strict": true,
     "sub": false,
     "supernew": false,
     "trailing": true,
     "undef": true,
     "unused": true,
-    "white": false
+    "white": false,
+
+    "browser": true,
+
+    "globals": {
+        "_": false,
+        "Backbone": false,
+        "Marionette": false,
+        "jQuery": false
+    }
+
 }
