@@ -39,14 +39,18 @@ Here are the boilerplates available yet.
 - [General](lib/templates/general/)
 - [Mobile](lib/templates/mobile/)
 - [WordPress](lib/templates/wordpress/)
-- [Backbone](lib/templates/backbone/)
+- [Simple Web App](lib/templates/simpleapp/) - _with modules structure_
+- [Single App Page Boilerplate](lib/templates/spa/) - _only client-side_
 - [B.E.N.M Stack](lib/templates/benmstack/)
+- [MEAN Stack Boilerplate](lib/templates/meanstack/)
 - [Node](lib/templates/node/)
+- [CLI Tool Boilerplate](lib/templates/clitool/)
 - [Rails](lib/templates/rails/)
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
 - [DocPad](lib/templates/docpad/)
 - [Ghost](lib/templates/ghost/)
+
 
 ## License
 
