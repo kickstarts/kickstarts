@@ -14,6 +14,7 @@ var prompt = [
             { name: 'NodeJS', value: 'node' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'Rails', value: 'rails' },
+            { name: 'Sinatra', value: 'sinatra' },
             { name: 'WordPress', value: 'wordpress' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
@@ -67,6 +68,10 @@ inquirer.prompt(prompt, function(answers) {
 
         case 'rails':
             require('./lib/bp-rails');
+        break;
+
+        case 'sinatra':
+            require('./lib/bp-sinatra');
         break;
 
         case 'wordpress':
