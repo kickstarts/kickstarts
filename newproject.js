@@ -7,7 +7,7 @@ var prompt = [
         choices: [
             { name: 'General', value: 'general' },
             { name: 'Mobile', value: 'mobile' },
-            { name: 'Simple App', value: 'simpleapp' },
+            { name: 'Web App', value: 'webapp' },
             { name: 'Single Page App', value: 'spa' },
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
@@ -42,7 +42,7 @@ inquirer.prompt(prompt, function(answers) {
         break;
 
         case 'simpleapp':
-            require('./lib/bp-simpleapp');
+            require('./lib/bp-webapp');
         break;
 
         case 'backbone':
