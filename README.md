@@ -40,12 +40,13 @@ Here are the boilerplates available yet.
 - [Mobile](lib/templates/mobile/)
 - [WordPress](lib/templates/wordpress/)
 - [Simple Web App](lib/templates/simpleapp/) - _with modules structure_
-- [Single App Page Boilerplate](lib/templates/spa/) - _only client-side_
-- [B.E.N.M Stack](lib/templates/benmstack/)
-- [MEAN Stack Boilerplate](lib/templates/meanstack/)
-- [Node](lib/templates/node/)
-- [CLI Tool Boilerplate](lib/templates/clitool/)
+- [Single App Page](lib/templates/spa/) - _only client-side_
+- [BENM Stack](lib/templates/benmstack/)
+- [MEAN Stack](lib/templates/meanstack/)
+- [Node](lib/templates/node/) - _only server-side_
+- [CLI Tool](lib/templates/clitool/)
 - [Rails](lib/templates/rails/)
+- [Sinatra](lib/templates/sinatra/)  - _only server-side_
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
 - [DocPad](lib/templates/docpad/)

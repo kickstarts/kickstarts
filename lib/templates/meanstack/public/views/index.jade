@@ -1,3 +1,21 @@
 extends layout
 
-    block body
+block body
+    div(ng-controller='')
+        h2 Hello {{name}}
+        ul.menu
+        li
+        a(href='view1') view1
+        li
+        a(href='view2') view2
+
+    div(ng-view)
+
+    footer
+        script
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+        script( src='scripts/requires/angular/angular.js' )

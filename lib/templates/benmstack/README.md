@@ -1,11 +1,5 @@
 # B.E.N.M. Boilerplate
 
----
-
-**WORK IN PROGRESS**
-
----
-
 Generate a new project based on BENM Stack (Backbone, ExpressJS, Node.js and MongoDB).
 
 
@@ -68,7 +62,8 @@ Generate a new project based on BENM Stack (Backbone, ExpressJS, Node.js and Mon
 - [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
 - [Chai](http://chaijs.com/) - BDD / TDD assertion library for node and the browser
 
-> Note: I'm migrating to Browserify and CommonJS.
+> Note: I'm moving to Browserify and CommonJS.
+
 
 ## Structure
 

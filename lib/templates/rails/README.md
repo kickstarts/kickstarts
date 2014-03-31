@@ -1,5 +1,11 @@
 # Rails
 
+---
+
+**WORK IN PROGRESS**
+
+---
+
 Generate a new project based on [Rails](http://rubyonrails.org/).
 
 ## Requires
