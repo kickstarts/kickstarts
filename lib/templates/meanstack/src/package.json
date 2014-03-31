@@ -1,28 +1,28 @@
 {
-	"name": "meanjs",
-	"description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
-	"version": "0.2.2",
-	"private": false,
-	"author": "https://github.com/meanjs/mean/graphs/contributors",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/meanjs/mean.git"
-	},
-	"engines": {
-		"node": "0.10.x",
-		"npm": "1.4.x"
-	},
-	"scripts": {
-		"start": "grunt",
-		"test": "grunt test",
-		"postinstall": "bower install --config.interactive=false"
-	},
-	"dependencies": {
-		"express": "~3.5.1",
-		"mongoose": "~3.8.8",
-		"nodemon": "*",
-	},
-	"devDependencies": {
+    "name": "application-name",
+    "version": "0.1.0",
+    "title": "Project Name",
+    "description": "Project description goes here",
+    "private": true,
+    "author": {
+        "name": "Vitor Britto",
+        "url": "http://vitorbritto.com.br",
+        "email": "code@vitorbritto.com.br"
+    },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    },
+    "scripts": {
+        "start": "grunt",
+        "test": "grunt test"
+    },
+    "dependencies": {
+        "express": "~3.5.1",
+        "mongoose": "~3.8.8",
+        "nodemon": "*",
+    },
+    "devDependencies": {
         "karma": "~0.10.8",
         "chai": "~1.9.0",
         "load-grunt-tasks": "~0.2.0",
