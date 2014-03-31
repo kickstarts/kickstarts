@@ -8,9 +8,7 @@
     "description": "Some description here.",
     "keywords": [
         "benm stack",
-        "template",
-        "backbone",
-        "underscore"
+        "template"
     ],
     "license": "MIT",
     "ignore": [
@@ -23,8 +21,6 @@
     ],
     "dependencies": {
         "modernizr": "~2.6.2",
-        "jquery": "~1.10.2",
-        "backbone": "~1.1.0",
-        "underscore": "~1.5.2"
+        "jquery": "~1.10.2"
     }
 }

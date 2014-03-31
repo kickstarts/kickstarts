@@ -6,7 +6,7 @@
 
 ---
 
-Generate a new project based on Benm Stack (Backbone, ExpressJS, Node.js and MongoDB).
+Generate a new project based on BENM Stack (Backbone, ExpressJS, Node.js and MongoDB).
 
 
 ## Requires
@@ -59,6 +59,7 @@ Generate a new project based on Benm Stack (Backbone, ExpressJS, Node.js and Mon
 - [Stylus](http://learnboost.github.io/stylus/) - CSS pre-processor
 - [Jade](http://jade-lang.com/) - A template engine for HTML pre-processor
 - [Backbone](http://backbonejs.org/) - MV* framework
+- [Marionette](http://marionettejs.com/) - Make your Backbone applications dance! :)
 - [Underscore](http://underscorejs.org/) - A utility-belt library for JavaScript.
 - [Browserify](http://browserify.org/) - require('modules') in the browser.
 - [Grunt](http://gruntjs.com/) - Task runner
@@ -66,9 +67,8 @@ Generate a new project based on Benm Stack (Backbone, ExpressJS, Node.js and Mon
 - [Karma](http://karma-runner.github.io/0.12/index.html) - Productive testing environment to developers
 - [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
 - [Chai](http://chaijs.com/) - BDD / TDD assertion library for node and the browser
-- [Sinon]()
-- [Marionette]() - Make backbone dance! :)
 
+> Note: I'm migrating to Browserify and CommonJS.
 
 ## Structure
 

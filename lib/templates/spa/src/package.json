@@ -1,0 +1,55 @@
+{
+    "name": "application-name",
+    "version": "0.1.0",
+    "title": "Project Name",
+    "description": "Project description goes here",
+    "private": true,
+    "author": {
+        "name": "Vitor Britto",
+        "url": "http://vitorbritto.com.br",
+        "email": "code@vitorbritto.com.br"
+    },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    },
+    "scripts": {
+        "test": "grunt karma:run"
+    },
+    "bugs": {
+        "url": "https://github.com/vitorbritto/boilerplates/issues"
+    },
+    "devDependencies": {
+        "karma": "~0.10.8",
+        "chai": "~1.9.0",
+        "load-grunt-tasks": "~0.2.0",
+        "time-grunt": "~0.2.3",
+        "grunt": "~0.4.2",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-contrib-stylus": "~0.9.0",
+        "grunt-contrib-jade": "~0.8.0",
+        "grunt-contrib-jshint": "~0.8.0",
+        "grunt-contrib-uglify": "~0.2.7",
+        "grunt-contrib-copy": "~0.5.0",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-compress": "~0.6.0",
+        "grunt-processhtml": "~0.3.0",
+        "grunt-bower-task": "~0.3.4",
+        "grunt-concurrent": "~0.4.2",
+        "grunt-simple-mocha": "~0.4.0",
+        "grunt-karma": "~0.8.2",
+        "grunt-karma-coveralls": "~2.3.0",
+        "karma-mocha": "~0.1.0",
+        "karma-script-launcher": "~0.1.0",
+        "karma-chrome-launcher": "~0.1.1",
+        "karma-firefox-launcher": "~0.1.2",
+        "karma-phantomjs-launcher": "~0.1.1",
+        "karma-coverage": "~0.2.0"
+    },
+    "peerDependencies": {
+        "bower": "*",
+        "grunt-cli": "*",
+        "coveralls": "*"
+    }
+}
+

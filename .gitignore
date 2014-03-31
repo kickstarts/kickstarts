@@ -1,6 +1,3 @@
 .DS_Store
 node_modules
 lib/templates/mobile/*
-lib/templates/spa/*
-lib/templates/simpleapp/*
-lib/templates/meanstack/*
