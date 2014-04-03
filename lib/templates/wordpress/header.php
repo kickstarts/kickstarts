@@ -8,7 +8,7 @@
  */
 
 // if (!is_user_logged_in()) {
-//     wp_redirect('caminho-para-redirecionar', 302);
+//     wp_redirect('http://www.damain.com/subdomain', 302);
 //     exit;
 // }
 
@@ -43,13 +43,11 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 
 <meta charset="<?php bloginfo('charset'); ?>" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="copyright" content="&copy; Copyright 2013 <?php echo $title_default; ?>" />
 <link type="text/plain" rel="author" href="humans.txt" />
 <meta name="keywords" content="<?php echo $keys_default; ?>" />
 <meta name="description" content="<?php echo $desc_default; ?>" />
-
 <meta name="google-site-verification" content="" />
 <?php
     if(is_single() || is_page() || is_category() || is_home()) {
@@ -68,10 +66,7 @@
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link href="<?php echo WP_IMAGE_URL ?>/favicon.ico" rel="shortcut icon" />
-
-<!-- Custom Font
-<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css">
--->
+<!-- <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
 
 <meta property="og:title" content="<?php echo $title_default; ?>"/>
 <meta property="og:type" content="site"/>
@@ -84,7 +79,7 @@
 
 <!--[if lt IE 9]>
 <script type="text/javascript">
-    window.location.href = "http://www.dominio.com.br/ie/";
+    window.location.href = "http://www.consil.com.br/ie/";
 </script>
 <![endif]-->
 
@@ -93,6 +88,7 @@
 
 <?php get_template_part('includes/feature', 'custom') ?>
 
+    <!-- .container -->
     <div class="container">
 
         <!-- #header -->
@@ -102,5 +98,4 @@
         <!-- /#header -->
 
         <!-- #main -->
-        <div id="main" class="row">
-
+        <div id="main">

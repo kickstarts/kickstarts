@@ -31,16 +31,16 @@
     },
     "devDependencies": {
         "grunt": "~0.4.2",
-        "grunt-browser-sync": "~0.3.0",
-        "grunt-contrib-watch": "~0.5.3",
-        "grunt-contrib-compass": "~0.6.0",
-        "grunt-contrib-jshint": "~0.6.4",
-        "grunt-contrib-uglify": "~0.2.4",
-        "grunt-rsync": "~0.2.1",
-        "grunt-ftp-deploy": "0.0.10",
-        "time-grunt": "~0.1.1",
-        "load-grunt-tasks": "~0.2.0",
-        "async": "~0.2.9",
-        "system": "~0.1.0"
+        "grunt-browser-sync": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-rsync": "*",
+        "grunt-ftp-deploy": "*",
+        "time-grunt": "*",
+        "load-grunt-tasks": "*",
+        "async": "*",
+        "system": "*"
     }
 }

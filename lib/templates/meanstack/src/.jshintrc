@@ -43,14 +43,14 @@
     "undef": true,
     "unused": true,
     "white": false,
-
     "browser": true,
-
+    "node": true,
+    "jquery": true,
+    "phantom": true,
     "globals": {
-        "node": false,
-        "jquery": false,
+        "Backbone": false,
+        "Marionette": false,
         "angular": false,
-        "node": false
+        "_": false
     }
-
 }
