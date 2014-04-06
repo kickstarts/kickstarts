@@ -1,15 +1,30 @@
 {
-  "name": "node-boilerplate",
+  "name": "boilerplates",
   "version": "0.1.0",
   "description": "A jump-start for new projects.",
   "repository": {
     "type": "git",
-    "url": "https://vitorbritto@github.com/vitorbritto/node-boilerplate.git"
+    "url": "https://vitorbritto@github.com/vitorbritto/boilerplates.git"
   },
   "keywords": [
-    "skeleton",
-    "boilerplate",
-    "generator"
+    "boilerplates",
+    "generator",
+    "meanstack",
+    "benmstack",
+    "angular",
+    "backbone",
+    "clitool",
+    "rails",
+    "sinatra",
+    "mobile",
+    "phonegap",
+    "topcoat",
+    "harp",
+    "jekyll",
+    "ghost",
+    "spa",
+    "webapp",
+    "wordpress"
   ],
   "private": true,
   "author": {
@@ -18,7 +33,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vitorbritto/node-boilerplate/issues"
+    "url": "https://github.com/vitorbritto/boilerplates/issues"
   },
   "dependencies": {
     "shelljs": "~0.2.6",
