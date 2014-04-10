@@ -47,19 +47,21 @@
     "node"          : true,
     "jquery"        : true,
     "phantom"       : true,
-
     "globals": {
-
-        /* JS FRAMEWORKS */
+        "require"    : false,
         "Backbone"   : false,
         "Marionette" : false,
         "angular"    : false,
+        "jasmine"    : false,
         "$scope"     : false,
         "_"          : false,
-        "jQuery"     : false
-        "$"          : false
-
-        /* TEST UNITS */
+        "jQuery"     : false,
+        "$"          : false,
+        "console"    : false,
+        "require"    : false,
+        "process"    : false,
+        "__dirname"  : false,
+        "exports"    : false,
         "describe"   : false,
         "it"         : false,
         "before"     : false,
