@@ -14,16 +14,10 @@
         "npm": "1.4.x"
     },
     "scripts": {
-        "start": "node server.js"
+        "test": "grunt karma:run"
     },
     "bugs": {
         "url": "https://github.com/vitorbritto/boilerplates/issues"
-    },
-    "dependencies": {
-        "express": "3.3.4",
-        "nodemon": "*",
-        "mongoose": "~3.8.3",
-        "MD5": "~1.2.0"
     },
     "devDependencies": {
         "karma": "~0.10.8",
@@ -41,10 +35,8 @@
         "grunt-contrib-compress": "~0.6.0",
         "grunt-processhtml": "~0.3.0",
         "grunt-bower-task": "~0.3.4",
-        "grunt-nodemon": "~0.1.2",
         "grunt-concurrent": "~0.4.2",
         "grunt-simple-mocha": "~0.4.0",
-        "grunt-shell-spawn": "~0.3.0",
         "grunt-karma": "~0.8.2",
         "grunt-karma-coveralls": "~2.3.0",
         "karma-mocha": "~0.1.0",
@@ -58,10 +50,6 @@
         "bower": "*",
         "grunt-cli": "*",
         "coveralls": "*"
-    },
-
-    "scripts": {
-        "test": "grunt karma:run"
     }
 }
 
