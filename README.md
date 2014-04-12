@@ -4,7 +4,7 @@
 
 This is my personal Yeoman. A simple jumpstart for my projects
 
-> **WORK IN PROGRESS!**
+> **WORK IN PROGRESS!** <br/>
 > **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/1](https://github.com/vitorbritto/boilerplates/issues/1)
 
 
