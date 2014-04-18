@@ -9,52 +9,37 @@
 //
 // GETTING STARTED
 // -------------------
-// COMPASS................................Require Compass Framework
-// CONFIG.................................Initialize Configuration
+// COMPASS................................ Require Compass Framework
 //
-//
-// MODULES
+// CORE
 // -------------------
-// FUNCTIONS.............................. Functions for your project
-// GRID................................... Initialize Grid System (Semantic.gs)
-// MIXINS................................. General Mixins
-//
+// CONFIG................................. Inital Configuration
+// MIXINS................................. Sass Mixins
+// FUNCTIONS.............................. Sass Functions
+// GRID................................... Grid System Constructor
+// PRINT.................................. Media Query for Print
 //
 // GENERAL
 // -------------------
-// RESET.................................. Normalize CSS
-// SCAFFOLDING............................ General Scaffolding
-// TYPOGRAPHY............................. Text, Headings and misc types
-// TABLES................................. Basic Table
-// FORMS.................................. Forms and inputs
-//
+// RESET.................................. CSS Normalize
+// BASE................................... Scaffolding
+// TABLE.................................. Basic Table Style
+// FORM................................... Basic Form Style
 //
 // APP
 // -------------------
-// LAYOUT................................. Layout goes here
-// RESPONSIVE............................. Media queries goes here
-// LEGACY................................. Polyfills with Modernizr (Legacy Support) goes here
-//
+// LAYOUT................................. Your Application Style goes here
+// RESPONSIVE............................. Your Application Responsive rules goes here
+// LEGACY................................. Your Legacy (old browser support) goes here
 //
 // HELPERS
 // -------------------
-// BUTTONS................................ Custom Buttons classes using Sassy.
-// GLOBAL................................. A series of helper classes to use arbitrarily
-// GRID................................... The CSS Modular way to work with grid system
-// ANIMATION.............................. CSS Animations goes here
-// ICONS.................................. Font icons goes here
-// IMAGES................................. Custom image classes
-// INPUTS................................. Custom inputs classes
-// LISTS.................................. Custom lists classes
-// RESPONSIVE............................. Responsive Util Classes
-// SPRITES................................ Jump start configuration to generate Sprite with Compass
-// TABLES................................. Custom Tables classes
-// TYPES.................................. Custom Types classes
-//
-//
-// OBJECTS
-// -------------------
-// This folder may contains your ui/components (e.g: tabs, progress bars, breadcrumbs, panels)
+// GRID................................... Modular grid system
+// BROWSER................................ Utils classes for the browser
+// RESPONSIVE............................. Utils classes for responsive visibility rules
+// ICONS.................................. Your font icons customization goes here
+// SPRITES................................ Generator for Sprite images with Compass helper
+// ANIMATION.............................. Your CSS animations goes here
 //
 // ----------------------------------------------------------------------------
 
@@ -84,18 +69,19 @@
 
 // GETTING STARTED
 @import "compass";
-@import "config";
 
-// MODULES
-@import "modules/mixins";
-@import "modules/functions";
-@import "modules/grid";
+// CORE
+@import "core/config";
+@import "core/mixins";
+@import "core/functions";
+@import "core/grid";
+@import "core/print";
 
 // GENERAL
 @import "general/reset";
-@import "general/scaffolding";
-@import "general/extend";
-@import "general/responsive";
+@import "general/base";
+@import "general/tables";
+@import "general/forms";
 
 // APP
 @import "app/layout";
@@ -104,18 +90,12 @@
 
 // HELPERS
 @import "helpers/grid";
-@import "helpers/global";
-@import "helpers/types";
-@import "helpers/lists";
-@import "helpers/tables";
-@import "helpers/images";
-@import "helpers/forms";
-@import "helpers/inputs";
-@import "helpers/buttons";
+@import "helpers/browser";
+@import "helpers/responsive";
 @import "helpers/icons";
 @import "helpers/sprites";
 @import "helpers/animation";
-@import "helpers/responsive";
 
-// OBJECTS
-// UI Components goes here
+
+// MODULES
+// your ui-component goes here

@@ -1,5 +1,5 @@
 @if $use-animations == true {
 
     // YOUR CSS GOES HERE
-
+    @include keyframes(bounce);
 }
