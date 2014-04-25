@@ -1,6 +1,6 @@
 ![Boilerplates Logo](logo-bp.jpg "Boilerplates")
 
-## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.png)](https://travis-ci.org/vitorbritto/boilerplates)
+## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.svg)](https://travis-ci.org/vitorbritto/boilerplates)
 
 This is my personal Yeoman. A simple jumpstart for my projects
 
@@ -11,26 +11,24 @@ This is my personal Yeoman. A simple jumpstart for my projects
 ## Getting Started
 
 1 - First of all, make sure you have [Node.js](http://nodejs.org/) installed. <br/>
-2 - Clone this repository <br/>
-3 - Access the generated folder
+2 - Clone this repository and access the generated folder
 
 ```bash
 $ git clone git://github.com/vitorbritto/boilerplates.git [project-name]
 $ cd [project-name]
 ```
 
-4 - Install dependencies and make the script executable
+3 - Install dependencies and make the script executable
 
 ```bash
 $ npm install
 $ chmod u+x newproject.js
 ```
 
+4 - Execute with: `./newproject.js` <br/>
+5 - Profit! :)
+
 > **Note**: chmod is an UNIX command, not present in MS-DOS.
-
-5 - Execute with: `./newproject.js` <br/>
-6 - Profit!
-
 
 ## Boilerplates
 
