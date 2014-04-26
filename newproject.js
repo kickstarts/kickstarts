@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict';
+
 var inquirer = require('inquirer');
 
 var prompt = [
@@ -20,7 +22,6 @@ var prompt = [
             { name: 'Harp', value: 'harp' },
             { name: 'Docpad', value: 'docpad' },
             { name: 'Ghost', value: 'ghost' }
-
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to generate?',
@@ -34,64 +35,64 @@ inquirer.prompt(prompt, function(answers) {
 
     switch (boilerplate) {
 
-        case 'general':
-            require('./lib/bp-general');
+    case 'general':
+        require('./lib/bp-general');
         break;
 
-        case 'mobile':
-            require('./lib/bp-mobile');
+    case 'mobile':
+        require('./lib/bp-mobile');
         break;
 
-        case 'simpleapp':
-            require('./lib/bp-webapp');
+    case 'simpleapp':
+        require('./lib/bp-webapp');
         break;
 
-        case 'backbone':
-            require('./lib/bp-spa');
+    case 'backbone':
+        require('./lib/bp-spa');
         break;
 
-        case 'benmstack':
-            require('./lib/bp-benmstack');
+    case 'benmstack':
+        require('./lib/bp-benmstack');
         break;
 
-        case 'meanstack':
-            require('./lib/bp-meanstack');
+    case 'meanstack':
+        require('./lib/bp-meanstack');
         break;
 
-        case 'node':
-            require('./lib/bp-node');
+    case 'node':
+        require('./lib/bp-node');
         break;
 
-        case 'clitool':
-            require('./lib/bp-clitool');
+    case 'clitool':
+        require('./lib/bp-clitool');
         break;
 
-        case 'rails':
-            require('./lib/bp-rails');
+    case 'rails':
+        require('./lib/bp-rails');
         break;
 
-        case 'sinatra':
-            require('./lib/bp-sinatra');
+    case 'sinatra':
+        require('./lib/bp-sinatra');
         break;
 
-        case 'wordpress':
-            require('./lib/bp-wordpress');
+    case 'wordpress':
+        require('./lib/bp-wordpress');
         break;
 
-        case 'jekyll':
-            require('./lib/bp-jekyll');
+    case 'jekyll':
+        require('./lib/bp-jekyll');
         break;
 
-        case 'harp':
-            require('./lib/bp-harp');
+    case 'harp':
+        require('./lib/bp-harp');
         break;
 
-        case 'docpad':
-            require('./lib/bp-docpad');
+    case 'docpad':
+        require('./lib/bp-docpad');
         break;
 
-        case 'ghost':
-            require('./lib/bp-ghost');
+    case 'ghost':
+        require('./lib/bp-ghost');
         break;
 
     }

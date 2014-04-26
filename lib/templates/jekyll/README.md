@@ -43,4 +43,3 @@ Generate a new project based on [Jekyll](http://jekyllrb.com/).
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
