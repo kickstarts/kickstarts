@@ -26,7 +26,3 @@ Generate a new project based on [Phonegap]().
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
-
-## References
-
-- [FastGap]()
