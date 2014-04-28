@@ -51,6 +51,14 @@ Here are the boilerplates available yet.
 - [Ghost](lib/templates/ghost/)
 
 
+## References
+
+- [MEAN.JS](https://github.com/meanjs/mean)
+- [BBB](https://github.com/backbone-boilerplate/backbone-boilerplate)
+- [FastGap](https://github.com/FastGap/fastgap)
+
+
+
 ## License
 
 [MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
