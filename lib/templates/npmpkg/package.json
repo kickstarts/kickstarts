@@ -1,0 +1,25 @@
+{
+  "name": "pkgname",
+  "version": "0.1.2",
+  "description": "Returns information about your system.",
+  "main": "index.js",
+  "bin": {
+    "pkgname": "index.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitorbritto/pkgname"
+  },
+  "keywords": [
+    "pkgname"
+  ],
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitorbritto/pkgname/issues"
+  },
+  "homepage": "https://github.com/vitorbritto/pkgname"
+}

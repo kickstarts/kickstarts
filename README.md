@@ -4,8 +4,7 @@
 
 This is my personal Yeoman. A simple jumpstart for my projects
 
-> **WORK IN PROGRESS!** <br/>
-> **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/1](https://github.com/vitorbritto/boilerplates/issues/1)
+> **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/](https://github.com/vitorbritto/boilerplates/issues/)
 
 
 ## Getting Started
@@ -43,6 +42,7 @@ Here are the boilerplates available yet.
 - [MEAN Stack](lib/templates/meanstack/)
 - [Node](lib/templates/node/) - _only server-side_
 - [CLI Tool](lib/templates/clitool/)
+- [NPM Package](lib/templates/npmpkg/)
 - [Rails](lib/templates/rails/)
 - [Sinatra](lib/templates/sinatra/)  - _only server-side_
 - [Jekyll](lib/templates/jekyll/)

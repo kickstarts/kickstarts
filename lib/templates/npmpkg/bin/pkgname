@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var sl    = require('simlog'),
+    sh    = require('simhelp'),
+    pkg   = require('../package'),
+    pnm   = pkg.name,
+    ver   = pkg.version,
+    desc  = pkg.description,
+    input = process.argv.slice(2),
+    isH   = process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1,
+    isV   = process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -1;
+
+if (isH) {
+    sh.main(pnm, ver, desc);
+}
+
+if (isV) {
+    return console.log('Package version: %s', ver);
+}
+
+if (input.length > 0) {
+    if (true) {
+        sl.success('File generate successfully!');
+    } else {
+        sl.error('Error!');
+    }
+}

@@ -15,6 +15,7 @@ var prompt = [
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS', value: 'node' },
             { name: 'CLI Tool', value: 'clitool' },
+            { name: 'npm package', value: 'npmpkg' },
             { name: 'Rails', value: 'rails' },
             { name: 'Sinatra', value: 'sinatra' },
             { name: 'WordPress', value: 'wordpress' },
@@ -65,6 +66,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'clitool':
         require('./lib/bp-clitool');
+        break;
+
+    case 'npmpkg':
+        require('./lib/bp-npmpkg');
         break;
 
     case 'rails':
