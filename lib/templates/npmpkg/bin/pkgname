@@ -2,18 +2,28 @@
 
 'use strict';
 
-var sl    = require('simlog'),
-    sh    = require('simhelp'),
+// Init Config
+var log   = require('simlog'),
+    help  = require('simhelp'),
     pkg   = require('../package'),
-    pnm   = pkg.name,
-    ver   = pkg.version,
-    desc  = pkg.description,
     input = process.argv.slice(2),
     isH   = process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1,
     isV   = process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -1;
 
+// Program Information
+var pnm   = pkg.name,
+    ver   = pkg.version,
+    desc  = pkg.description,
+    aut   = pkg.author.name,
+    lic   = pkg.license,
+    repo  = pkg.repo;
+
+// CLI
 if (isH) {
-    sh.main(pnm, ver, desc);
+    help
+        .main(pnm, ver, desc)
+        // .option('r', 'run', 'run your application')
+        .details(repo, aut, lic);
 }
 
 if (isV) {
@@ -22,8 +32,8 @@ if (isV) {
 
 if (input.length > 0) {
     if (true) {
-        sl.success('File generate successfully!');
+        log.success('File generate successfully!');
     } else {
-        sl.error('Error!');
+        log.error('Error!');
     }
 }
