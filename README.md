@@ -40,11 +40,11 @@ Here are the boilerplates available yet.
 - [Single App Page](lib/templates/spa/) - _only client-side_
 - [BENM Stack](lib/templates/benmstack/)
 - [MEAN Stack](lib/templates/meanstack/)
-- [Node](lib/templates/node/) - _only server-side_
+- [Node](lib/templates/nodeapi/) - _for RESTful API_
 - [CLI Tool](lib/templates/clitool/)
 - [NPM Package](lib/templates/npmpkg/)
 - [Rails](lib/templates/rails/)
-- [Sinatra](lib/templates/sinatra/)  - _only server-side_
+- [Sinatra](lib/templates/sinatra/) - _for RESTful API_
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
 - [DocPad](lib/templates/docpad/)
