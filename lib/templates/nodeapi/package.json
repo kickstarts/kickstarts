@@ -14,7 +14,8 @@
     "project",
     "gulp",
     "nodejs",
-    "expressjs"
+    "expressjs",
+    "restful api"
   ],
   "repository": {
     "type": "git",
