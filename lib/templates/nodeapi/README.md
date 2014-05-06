@@ -11,19 +11,16 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 ## Instructions
 
 ```bash
-# Run Nodemon - watch for server changes
-$ npm run server
-
 # Run tests
 $ gulp mocha
-___OR___
-$ npm run test
 
 # Run lint and watch for changes
-$ gulp
+$ gulp [watch]
 
-# Run all (watch server changes and lint scritps)
-$ npm run all
+# Run all (watch server changes and lint scripts)
+$ npm start
+__OR__
+$ gulp server
 ```
 
 ## Includes
@@ -33,6 +30,7 @@ $ npm run all
 - [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
 - [Chai](http://chaijs.com/) - BDD / TDD assertion library for node and the browser
 - [JSHint](http://www.jshint.com/)
+- [Nodemon](https://github.com/remy/nodemon)
 
 ## Structure
 
