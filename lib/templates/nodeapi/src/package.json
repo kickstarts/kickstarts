@@ -24,8 +24,10 @@
     "url": "https://github.com/vitorbritto/boilerplates/issues"
   },
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "gulp test"
+    "server": "nodemon app.js",
+    "lint": "gulp",
+    "test": "gulp mocha",
+    "all": "npm run server && npm run lint"
   },
   "licenses": {
     "type": "MIT",
