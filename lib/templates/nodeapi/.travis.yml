@@ -14,5 +14,4 @@ branches:
     - master
 
 before_install:
-  - npm install -gq grunt-cli bower coveralls
-  - bower install
+  - npm install -gq gulp

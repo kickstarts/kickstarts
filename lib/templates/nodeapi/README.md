@@ -2,10 +2,12 @@
 
 Generate a new project based on [NodeJS](http://nodejs.org/).
 
+
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
 - [Gulp](http://gulpjs.com/)
+- [MongoDB](http://www.mongodb.org/) - NoSQL database
 
 
 ## Instructions
@@ -23,6 +25,7 @@ __OR__
 $ gulp server
 ```
 
+
 ## Includes
 
 - [Express](http://expressjs.com/) - Web application framework for Node
@@ -31,6 +34,9 @@ $ gulp server
 - [Chai](http://chaijs.com/) - BDD / TDD assertion library for node and the browser
 - [JSHint](http://www.jshint.com/)
 - [Nodemon](https://github.com/remy/nodemon)
+- [Forever](https://www.npmjs.org/package/forever)
+- [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
+
 
 ## Structure
 

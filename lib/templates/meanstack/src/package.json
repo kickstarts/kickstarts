@@ -24,8 +24,15 @@
     "node": ">=0.10.0",
     "npm": ">=1.1.0"
   },
-  "devDependencies": {
+  "dependencies": {
+    "express": "^3.3.4",
+    "mongoose": "^3.8.8",
     "grunt": "^0.4.4",
+    "browserify": "^3.44.2",
+    "forever": "latest"
+  },
+  "devDependencies": {
+
     "time-grunt": "^0.3.1",
     "load-grunt-tasks": "^0.4.0",
     "grunt-contrib-clean": "^0.5.0",
@@ -51,7 +58,6 @@
     "grunt-handlebars": "^0.0.6",
     "grunt-contrib-requirejs": "^0.4.3",
     "grunt-umd": "^1.7.3",
-    "browserify": "^3.44.2",
     "grunt-browserify": "^2.0.8",
     "grunt-contrib-jasmine": "^0.6.3",
     "grunt-contrib-qunit": "^0.4.0",
