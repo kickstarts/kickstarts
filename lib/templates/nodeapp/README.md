@@ -12,6 +12,18 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 ## Instructions
 
+**STEP 1: Configure your database**
+
+```
+1. In your Shell, type `mongo`.
+2. Create a new database typing `use name_of_database`.
+3. Set the name of you newly database in `config.js` file.
+```
+
+**STEP 2: Bootstrap your application**
+
+**STEP 3: In meantime, run the available tasks**
+
 ```bash
 # Run tests
 $ gulp mocha
