@@ -13,7 +13,7 @@ var prompt = [
             { name: 'Single Page App', value: 'spa' },
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
-            { name: 'NodeJS API', value: 'nodeapi' },
+            { name: 'NodeJS App', value: 'nodeapp' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'npm package', value: 'npmpkg' },
             { name: 'Rails', value: 'rails' },
@@ -60,8 +60,8 @@ inquirer.prompt(prompt, function(answers) {
         require('./lib/bp-meanstack');
         break;
 
-    case 'nodeapi':
-        require('./lib/bp-nodeapi');
+    case 'nodeapp':
+        require('./lib/bp-nodeapp');
         break;
 
     case 'clitool':

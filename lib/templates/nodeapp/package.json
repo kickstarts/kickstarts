@@ -36,7 +36,9 @@
     "mongoose": "^3.8.8",
     "chai": "^1.8.1",
     "mocha": "^1.10.0",
-    "forever": "latest"
+    "forever": "latest",
+    "jade": "latest",
+    "stylus": "latest"
   },
   "devDependencies": {
     "gulp": "^3.5.6",
