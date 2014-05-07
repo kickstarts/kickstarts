@@ -1,10 +1,5 @@
-extends layout
-
-block header
-    div id="header"
+extends partials/layout
 
 block content
-    div id="content"
-
-block footer
-    div id="footer"
+    h1= title
+    p Welcome to #{title}
