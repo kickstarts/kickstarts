@@ -21,8 +21,7 @@ var prompt = [
             { name: 'WordPress', value: 'wordpress' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
-            { name: 'Docpad', value: 'docpad' },
-            { name: 'Ghost', value: 'ghost' }
+            { name: 'Docpad', value: 'docpad' }
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to generate?',
@@ -95,11 +94,6 @@ inquirer.prompt(prompt, function(answers) {
     case 'docpad':
         require('./lib/bp-docpad');
         break;
-
-    case 'ghost':
-        require('./lib/bp-ghost');
-        break;
-
     }
 
 });
