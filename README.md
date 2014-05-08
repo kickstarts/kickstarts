@@ -40,7 +40,7 @@ Here are the boilerplates available yet.
 - [Single App Page](lib/templates/spa/) - _only client-side_
 - [BENM Stack](lib/templates/benmstack/)
 - [MEAN Stack](lib/templates/meanstack/)
-- [Node App](lib/templates/nodeapi/)
+- [Node App](lib/templates/nodeapp/)
 - [CLI Tool](lib/templates/clitool/)
 - [NPM Package](lib/templates/npmpkg/)
 - [Rails](lib/templates/rails/)
