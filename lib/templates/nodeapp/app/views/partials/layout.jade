@@ -6,13 +6,10 @@ html
         meta(name="description", content=description)
         meta(name="author", content=author)
         meta(name="viewport", content='width=device-width')
-        link(rel='stylesheet', href='/css/app.css')
+        link(rel='stylesheet', href='/assets/styles/style.css')
     body
 
         block content
 
         footer
-            //- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-            //- script
-              window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\\/script>')
-            script(defer, src='/js/app.js')
+            script(src='/assets/scripts/app.min.js')

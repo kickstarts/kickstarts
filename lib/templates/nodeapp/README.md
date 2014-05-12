@@ -50,6 +50,20 @@ $ gulp server
 - [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
 
 
+## Extras
+
+```bash
+
+# Super Agent - http://visionmedia.github.io/superagent/
+$ npm install superagent
+
+# Passaport - http://passportjs.org/
+$ npm install passaport
+
+
+```
+
+
 ## Structure
 
 
