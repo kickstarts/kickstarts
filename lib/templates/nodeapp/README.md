@@ -1,6 +1,6 @@
-# NodeJS API
+# NodeJS Application / REST API
 
-Generate a new project based on [NodeJS](http://nodejs.org/).
+Generate a new project based on [NodeJS Application](http://nodejs.org/).
 
 
 ## Requires
@@ -12,54 +12,81 @@ Generate a new project based on [NodeJS](http://nodejs.org/).
 
 ## Instructions
 
-**STEP 1: Configure your database**
+**STEP 1: Create your database**
 
 ```
 1. In your Shell, type `mongo`.
 2. Create a new database typing `use name_of_database`.
-3. Set the name of you newly database in `config.js` file.
 ```
 
-**STEP 2: Bootstrap your application**
+**STEP 2: Set your configurations**
 
-**STEP 3: In meantime, run the available tasks**
+```
+1. Set app configurations in `./config/app.js` file.
+2. Set task configuration in `./config/taks.js` file.
+3. Run `npm i` to install dependencies.
+```
+
+**STEP 3: Bootstrap your application**
+
+**STEP 4: In meantime, run the available tasks**
 
 ```bash
-# Run tests
+# Unit Tests
 $ gulp mocha
 
-# Run lint and watch for changes
-$ gulp [watch]
+# Process Scripts (lint and minify scripts)
+$ gulp scripts
 
-# Run all (watch server changes and lint scripts)
-$ npm start
-__OR__
-$ gulp server
+# Build App
+$ gulp build
+
+# Run all (build, start server, lint and for changes)
+$ gulp
 ```
-
 
 ## Includes
 
+**Main**
 - [Express](http://expressjs.com/) - Web application framework for Node
-- [Gulp](http://gulpjs.com/) - Task runner
-- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
-- [Chai](http://chaijs.com/) - BDD / TDD assertion library for node and the browser
-- [JSHint](http://www.jshint.com/)
+- [Gulp](http://gulpjs.com/) - The streaming build system
+- [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
+- [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
+- [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
+
+**Additional**
+- [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation
+- [Superagent](https://github.com/visionmedia/superagent) - Ajax with less suck - (and node.js HTTP client to match)
 - [Nodemon](https://github.com/remy/nodemon)
-- [Forever](https://www.npmjs.org/package/forever)
 - [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
+- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
+- [Chai]()
+- [Winston](https://npmjs.org/package/winston) - A multi-transport async logging library for Node.js
 
+**Middlewares**
+- [morgan](https://github.com/expressjs/morgan)
+- [favicon](https://github.com/expressjs/favicon)
+- [compression](https://github.com/expressjs/compression)
+- [body-parser](https://github.com/expressjs/body-parser)
+- [cookie-parser](https://github.com/expressjs/cookie-parser)
+- [errorhandler](https://github.com/expressjs/errorhandler)
+- [method-override](https://github.com/expressjs/method-override)
+- [session](https://github.com/expressjs/session)
 
-## Extras
+## Recommended Dependencies
 
 ```bash
 
-# Super Agent - http://visionmedia.github.io/superagent/
+# Express Flash - https://npmjs.org/package/express-flash
+# Flash Messages for your Express Application
+$ npm instal express-flash
+
+# Node Mailer
 $ npm install superagent
 
-# Passaport - http://passportjs.org/
-$ npm install passaport
-
+# Passaport - https://github.com/jaredhanson/passport
+# Simple, unobtrusive authentication for Node.js
+$ npm install passport
 
 ```
 

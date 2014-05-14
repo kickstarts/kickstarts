@@ -1,0 +1,15 @@
+footer
+    .container
+        p
+            | Copyright © #{moment().format('YYYY')}&nbsp;
+            | &nbsp;#{application}, all rights reserved. |&nbsp;
+
+//- Javascript
+//- ! Place scripts in footer for faster page rendering !
+script(src='/lib/jquery/dist/jquery.min.js')
+//- Then we use jQuery to async load everything else!
+script.
+    $(document).ready(function() {
+        // Load main project js
+        $.getScript('/assets/scripts/#{application}.min.js');
+    });
