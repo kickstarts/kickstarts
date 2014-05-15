@@ -57,10 +57,11 @@ $ gulp
 **Additional**
 - [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation
 - [Superagent](https://github.com/visionmedia/superagent) - Ajax with less suck - (and node.js HTTP client to match)
-- [Nodemon](https://github.com/remy/nodemon)
+- [Supertest](https://github.com/visionmedia/supertest) - Super-agent driven library for testing node.js HTTP servers
+- [Nodemon](https://github.com/remy/nodemon) - Monitor for any changes in your node.js application
 - [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
 - [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
-- [Chai]()
+- [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser
 - [Winston](https://npmjs.org/package/winston) - A multi-transport async logging library for Node.js
 
 **Middlewares**
