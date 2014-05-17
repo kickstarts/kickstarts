@@ -1,6 +1,6 @@
 {
   "name": "pkgname",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Returns information about your system.",
   "main": "index.js",
   "bin": {
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/vitorbritto/pkgname",
   "devDependencies": {
     "chai": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "simhelp": "^0.1.1",
+    "simlog": "^0.1.3"
   }
 }

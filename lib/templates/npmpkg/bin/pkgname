@@ -3,27 +3,26 @@
 'use strict';
 
 // Init Config
-var log   = require('simlog'),
-    help  = require('simhelp'),
-    pkg   = require('../package'),
-    input = process.argv.slice(2),
-    isH   = process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1,
-    isV   = process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -1;
+var logger = require('simlog'),
+    help   = require('simhelp'),
+    pkg    = require('../package'),
+    input  = process.argv.slice(2),
+    isH    = process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1,
+    isV    = process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -1;
 
 // Program Information
 var pnm   = pkg.name,
     ver   = pkg.version,
     desc  = pkg.description,
     aut   = pkg.author.name,
-    lic   = pkg.license,
-    repo  = pkg.repo;
+    lic   = pkg.license;
 
 // CLI
 if (isH) {
     help
         .main(pnm, ver, desc)
-        // .option('r', 'run', 'run your application')
-        .details(repo, aut, lic);
+        .option('u', 'usetheforce', 'run npmpkg')
+        .details(aut, lic);
 }
 
 if (isV) {
@@ -32,8 +31,9 @@ if (isV) {
 
 if (input.length > 0) {
     if (true) {
-        log.success('File generate successfully!');
+        module.exports = require('../lib/npmpkg');
+        logger.success('Running!');
     } else {
-        log.error('Error!');
+        logger.error('Error!');
     }
 }
