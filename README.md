@@ -36,8 +36,7 @@ Here are the boilerplates available yet.
 - [General](lib/templates/general/)
 - [Mobile](lib/templates/mobile/)
 - [WordPress](lib/templates/wordpress/)
-- [Simple Web App](lib/templates/simpleapp/) - _with modules structure_
-- [Single App Page](lib/templates/spa/) - _only client-side_
+- [Web App](lib/templates/webapp/) - _only clint side_
 - [BENM Stack](lib/templates/benmstack/)
 - [MEAN Stack](lib/templates/meanstack/)
 - [Node App](lib/templates/nodeapp/)
@@ -55,7 +54,6 @@ Here are the boilerplates available yet.
 - [MEAN.JS](https://github.com/meanjs/mean)
 - [BBB](https://github.com/backbone-boilerplate/backbone-boilerplate)
 - [FastGap](https://github.com/FastGap/fastgap)
-
 
 
 ## License
