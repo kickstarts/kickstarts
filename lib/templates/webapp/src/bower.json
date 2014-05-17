@@ -21,7 +21,11 @@
     ],
     "dependencies": {
         "modernizr": "~2.6.2",
-        "jquery": "~1.10.2"
+        "jquery": "~1.10.2",
+        "backbone": "~1.1.0",
+        "underscore": "~1.5.2",
+        "requirejs": "~2.1.10",
+        "requirejs-text": "~2.0.5",
     },
     "devDependencies": {
         "mocha": "~1.17.1",
