@@ -29,6 +29,6 @@
         "update-notifier": "~0.1.7"
     },
     "devDependencies": {
-        "mocha": "~1.17.0"
+        "mocha": "*"
     },
 }
