@@ -1,6 +1,9 @@
-# Node Boilerplate
+# CLI Tool Boilerplate
 
 Generate a new project based on [NodeJS](http://nodejs.org/).
+
+> WORK IN PROGRESS
+
 
 ## Requires
 
