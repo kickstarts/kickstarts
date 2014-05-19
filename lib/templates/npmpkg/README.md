@@ -1,20 +1,24 @@
-# NPM Package
+# NPM Package Boilerplate
 
-Description goes here.
+Basic Structure for Node Packages.
 
-
-## Install
-
-    npm install [package-name]
+> WORK IN PROGRESS
 
 
-## Usage
+## Requires
 
-```javascript
-
-```
+- [Node.JS](http://nodejs.org/)
 
 
-## License
+## Instructions
 
-[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
+
+## Includes
+
+
+## Structure
+
+
+## Documentation
+
+Go to the Gist Cave and find the gold. :)
