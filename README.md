@@ -24,7 +24,7 @@ $ npm install
 $ chmod u+x newproject.js
 ```
 
-4 - Execute with: `./newproject.js` <br/>
+4 - Execute with: `node newproject` OR `./newproject.js` <br/>
 5 - Profit! :)
 
 > **Note**: chmod is an UNIX command, not present in MS-DOS.
@@ -36,7 +36,7 @@ Here are the boilerplates available yet.
 - [General](lib/templates/general/)
 - [Mobile](lib/templates/mobile/)
 - [WordPress](lib/templates/wordpress/)
-- [Web App](lib/templates/webapp/) - _only clint side_
+- [Web App](lib/templates/webapp/) - _only client side_
 - [BENM Stack](lib/templates/benmstack/)
 - [MEAN Stack](lib/templates/meanstack/)
 - [Node App](lib/templates/nodeapp/)
