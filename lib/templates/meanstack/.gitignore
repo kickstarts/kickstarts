@@ -1,9 +1,6 @@
 .DS_Store
-.nodemonignore
-.sass-cache/
+spec/coverage/
+public/scripts/vendors/
 npm-debug.log
-node_modules/
-public/lib
-app/tests/coverage/
-.bower-*/
-.idea/
+node_modules
+TODO.md

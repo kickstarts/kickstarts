@@ -1,5 +1,6 @@
-extends partials/layout
+extends layouts/layout
 
 block content
-    h1= title
-    p Welcome to #{title}
+    div ng-view
+        h1= title
+        p Welcome to #{title}.
