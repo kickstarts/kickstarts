@@ -39,7 +39,7 @@ $ ./newproject.js
 
 > **Note**: chmod is an UNIX command, not present in MS-DOS.
 
-#### Extra
+### Extra
 
 Place this Bash Function in your `.bashrc` file.
 
