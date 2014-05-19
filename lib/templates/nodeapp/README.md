@@ -41,7 +41,7 @@ $ gulp scripts
 # Build App
 $ gulp build
 
-# Run all (build, start server, lint and for changes)
+# Run all (clean, build, start server, lint and watch for changes)
 $ gulp
 ```
 
