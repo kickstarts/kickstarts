@@ -1,6 +1,8 @@
-# B.E.N.M. Boilerplate
+# B.E.N.M. Stack Boilerplate
 
 Generate a new project based on BENM Stack (Backbone, ExpressJS, Node.js and MongoDB).
+
+> WORK IN PROGRESS
 
 
 ## Requires
