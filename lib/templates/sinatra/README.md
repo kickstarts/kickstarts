@@ -1,12 +1,9 @@
 # Sinatra
 
----
-
-**WORK IN PROGRESS**
-
----
-
 Generate a new project based on [Sinatra](http://sinatrarb.com/).
+
+> WORK IN PROGRESS
+
 
 ## Requires
 
