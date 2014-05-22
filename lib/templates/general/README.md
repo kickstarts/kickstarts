@@ -2,6 +2,7 @@
 
 Generate a new project based on General Scaffolding.
 
+
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
