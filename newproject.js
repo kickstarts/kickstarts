@@ -10,11 +10,12 @@ var prompt = [
             { name: 'General', value: 'general' },
             { name: 'Mobile', value: 'mobile' },
             { name: 'Web App', value: 'webapp' },
+            { name: 'Single App Page', value: 'spa'},
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS App', value: 'nodeapp' },
             { name: 'CLI Tool', value: 'clitool' },
-            { name: 'npm package', value: 'npmpkg' },
+            { name: 'Node Module', value: 'npmpkg' },
             { name: 'Rails', value: 'rails' },
             { name: 'Sinatra', value: 'sinatra' },
             { name: 'WordPress', value: 'wordpress' },
@@ -40,6 +41,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'mobile':
         require('./lib/bp-mobile');
+        break;
+
+    case 'spa':
+        require('./lib/bp-spa');
         break;
 
     case 'webapp':
