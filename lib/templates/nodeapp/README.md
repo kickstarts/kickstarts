@@ -48,21 +48,21 @@ $ gulp
 ## Includes
 
 **Main**
-- [Express](http://expressjs.com/) - Web application framework for Node
-- [Gulp](http://gulpjs.com/) - The streaming build system
-- [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
-- [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
+- [Express](http://expressjs.com/) - Web application framework for Node.
+- [Gulp](http://gulpjs.com/) - The streaming build system.
+- [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs.
+- [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset.
 - [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
 
 **Additional**
-- [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation
-- [Superagent](https://github.com/visionmedia/superagent) - Ajax with less suck - (and node.js HTTP client to match)
-- [Supertest](https://github.com/visionmedia/supertest) - Super-agent driven library for testing node.js HTTP servers
-- [Nodemon](https://github.com/remy/nodemon) - Monitor for any changes in your node.js application
-- [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
-- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
-- [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser
-- [Winston](https://npmjs.org/package/winston) - A multi-transport async logging library for Node.js
+- [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation.
+- [Superagent](https://github.com/visionmedia/superagent) - Ajax with less suck - (and node.js HTTP client to match).
+- [Supertest](https://github.com/visionmedia/supertest) - Super-agent driven library for testing node.js HTTP servers.
+- [Nodemon](https://github.com/remy/nodemon) - Monitor for any changes in your node.js application.
+- [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS.
+- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser.
+- [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser.
+- [Winston](https://npmjs.org/package/winston) - A multi-transport async logging library for Node.js.
 
 **Middlewares**
 - [morgan](https://github.com/expressjs/morgan)
