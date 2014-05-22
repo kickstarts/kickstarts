@@ -2,6 +2,7 @@
 
 Generate a new project based on [DocPad](http://docpad.org/).
 
+
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
