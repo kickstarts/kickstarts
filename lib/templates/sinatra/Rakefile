@@ -1,0 +1,43 @@
+require 'rake/testtask'
+# require 'open-uri'
+# require 'fileutils'
+# require 'zip/zipfilesystem'
+
+namespace :build do
+  desc "Compiles all .scss files in the assets/styles directory and places them in public/styles (minified)"
+  task :style do
+    puts "Compiling and minifying .scss files in sass/"
+    scss_files = FileList['assets/styles/*.scss']
+    scss_files.each do |file|
+      puts "Processing: #{file}"
+      `sass #{file}:public/styles/#{file[5..-5]}css --style compressed`
+    end
+  end
+  desc "Lint and Minifies all .js files in the assets/scripts directory and places them in public/scripts (minified)"
+  # task :script do
+  #   puts "Compiling and minifying .scss files in sass/"
+  #   scss_files = FileList['assets/styles/*.scss']
+  #   scss_files.each do |file|
+  #     puts "Processing: #{file}"
+  #     `sass #{file}:public/styles/#{file[5..-5]}css --style compressed`
+  #   end
+  # end
+  desc "Build Styles and Scripts"
+  task :all do
+    Rake::Task["build:style"].invoke
+    Rake::Task["build:script"].invoke
+  end
+end
+
+desc "List all routes for this application"
+task :routes do
+  puts `grep '^[get|post|put|delete].*do$' app/controllers/*.rb | sed 's/ do$//'`
+end
+
+Rake::TestTask.new do |t|
+  t.libs.push("./")
+  t.test_files = FileList['tests/*.rb']
+  t.verbose = true
+ends
+
+task :default => ["build"]
