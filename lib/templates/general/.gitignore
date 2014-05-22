@@ -2,4 +2,4 @@
 src/components/*
 src/.sass-cache/*
 src/node_modules/*
-assets/css/*
+assets/css/**/*.scss
