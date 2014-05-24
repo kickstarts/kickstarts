@@ -151,22 +151,22 @@ $icon-dark: #333333;
 // -------------------------
 
 // Grays
-$black:                 #000000;
-$gray:                  #555555;
-$white:                 #ffffff;
-$gray-dark:             #333333;
-$gray-light:            #bbbbbb;
-$gray-darker:           #222222;
-$gray-lighter:          #eeeeee;
+$black:                  #000000;
+$gray:                   #555555;
+$white:                  #ffffff;
+$gray-dark:              #333333;
+$gray-light:             #bbbbbb;
+$gray-darker:            #222222;
+$gray-lighter:           #eeeeee;
 
 // Common Colors
-$blue:                  #0064cd;
-$green:                 #3ca838;
-$red:                   #e72727;
-$yellow:                #ffcc00;
-$orange:                #e64919;
-$pink:                  #c3325f;
-$purple:                #834186;
+$blue:                   #0064cd;
+$green:                  #3ca838;
+$red:                    #e72727;
+$yellow:                 #ffcc00;
+$orange:                 #e64919;
+$pink:                   #c3325f;
+$purple:                 #834186;
 
 // Light Colors
 $blue-light:             #48a1e5;
@@ -177,11 +177,12 @@ $pink-light:             #c3325f;
 $purple-light:           #834186;
 
 // Dark Colors
-$blue-dark:              darken($blue, 10%);
+$blue-dark:              darken($blue, 2%);
 $yellow-dark:            darken($yellow, 10%);
 $red-dark:               darken($red, 10%);
 $green-dark:             #2a7a1a;
 $purple-dark:            #371849;
+
 
 
 // Scaffolding
@@ -206,10 +207,10 @@ $serif-font-family:       Georgia, "Times New Roman", Times, serif;
 $mono-font-family:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 // Uncomment to set a custom font-family
-// $custom-font-family:      "Open Sans", sans-serif;
+$custom-font-family:      "Open Sans", sans-serif;
 $base-font-family:        $custom-font-family;
-$base-font-size:          em(14px);
-$base-line-height:        em(20px);
+$base-font-size:          14px;
+$base-line-height:        20px;
 $alt-font-family:         $serif-font-family;
 
 $headings-font-family:    inherit;
@@ -265,7 +266,7 @@ $btn-base-color:             rgba(11, 153, 194, 1);
 $btn-second-color:           false;
 $btn-border-radius:          5px;
 $btn-padding:                0.5em 1.5em;
-$btn-font-size:              em(14px);
+$btn-font-size:              14px;
 $btn-text-color:             white;
 $btn-text-style:             "raised";
 $btn-gradient-style:         "simple";

@@ -1,24 +1,13 @@
 {
-  "name": "project-name",
+  "name": "aj-manutencao",
   "version": "0.1.0",
-  "title": "Project Title",
-  "homepage": "www.domain.com",
-  "description": "Projct description goes here",
+  "title": "AJ Manutenção",
+  "homepage": "www.ajmanutencao.com.br",
+  "description": "Website para a empresa AJ Manutenção",
   "private": true,
   "author": {
     "name": "Vitor Britto",
     "url": "http://vitorbritto.com.br"
-  },
-  "keywords": [
-    "boilerplate",
-    "grunt"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vitorbritto/boierlplates.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vitorbritto/boierlplates/issues"
   },
   "engines": {
     "node": ">=0.10.0",
@@ -32,14 +21,10 @@
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-compress": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-browser-sync": "lastest",
+    "grunt-browser-sync": "^0.9.1",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-imageoptim": "^1.4.1",
-    "grunt-rsync": "^0.5.0",
-    "grunt-ftp-deploy": "^0.1.2",
-    "grunt-contrib-csslint": "^0.2.0",
-    "grunt-contrib-compass": "^0.7.2",
-    "grunt-contrib-htmlmin": "^0.2.0"
+    "grunt-contrib-compass": "^0.7.2"
   }
 }
