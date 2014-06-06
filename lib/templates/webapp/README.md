@@ -1,6 +1,6 @@
 # Web App Boilerplate
 
-Generate a new project based on Angular. _Only client-side_
+Generate a new project based on BackboneJS. _Only client-side_
 
 > WORK IN PROGRESS
 
@@ -8,12 +8,18 @@ Generate a new project based on Angular. _Only client-side_
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-
+- [Bower]()
+- [Gulp]()
 
 ## Instructions
 
 
 ## Includes
+
+- [BackboneJS]()
+- [Browserify]()
+- [Jade]()
+- [Stylus]()
 
 
 ## Structure

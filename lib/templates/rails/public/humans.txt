@@ -10,7 +10,6 @@
 
 
 /* SITE */
-  Standards: HTML5, CSS3, JavaScript
-  Components: Modernizr, jQuery, Backbone, underscore
-  Preprocessors: Sass, HAML, CoffeeScript
-  Software: Photoshop, Sublime Text 2, Terminal
+  Standards:
+  Setup:
+  Software:

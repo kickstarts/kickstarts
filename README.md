@@ -64,19 +64,20 @@ And execute it with: `new [project-name]`
 
 ## Boilerplates
 
-Here are the boilerplates available yet.
-
 - [General](lib/templates/general/)
 - [Mobile](lib/templates/mobile/)
 - [WordPress](lib/templates/wordpress/)
-- [Web App](lib/templates/webapp/) - _only client side_
-- [BENM Stack](lib/templates/benmstack/)
-- [MEAN Stack](lib/templates/meanstack/)
+- [B.E.N.M. Stack](lib/templates/benmstack/)
+- [M.E.A.N. Stack](lib/templates/meanstack/)
+- [L.A.M. Stack](lib/templates/lamstack/)
+- [Web App](lib/templates/webapp/)
+- [Single Page App](lib/templates/spa/)
 - [Node App](lib/templates/nodeapp/)
+- [Laravel](lib/templates/laravel/)
+- [Rails](lib/templates/rails/)
+- [Sinatra](lib/templates/sinatra/)
 - [CLI Tool](lib/templates/clitool/)
 - [NPM Package](lib/templates/npmpkg/)
-- [Rails](lib/templates/rails/)
-- [Sinatra](lib/templates/sinatra/) - _for RESTful API_
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
 - [DocPad](lib/templates/docpad/)

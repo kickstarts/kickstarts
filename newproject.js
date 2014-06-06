@@ -11,6 +11,7 @@ var prompt = [
             { name: 'Mobile', value: 'mobile' },
             { name: 'Web App', value: 'webapp' },
             { name: 'Single App Page', value: 'spa'},
+            { name: 'LAM Stack', value: 'lamstack' },
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS App', value: 'nodeapp' },
@@ -51,6 +52,10 @@ inquirer.prompt(prompt, function(answers) {
         require('./lib/bp-webapp');
         break;
 
+    case 'lamstack':
+        require('./lib/bp-lamstack');
+        break;
+
     case 'benmstack':
         require('./lib/bp-benmstack');
         break;
@@ -69,6 +74,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'npmpkg':
         require('./lib/bp-npmpkg');
+        break;
+
+    case 'laravel':
+        require('./lib/bp-laravel');
         break;
 
     case 'rails':

@@ -1,70 +1,137 @@
 # B.E.N.M. Stack Boilerplate
 
-Generate a new project based on BENM Stack (Backbone, ExpressJS, Node.js and MongoDB).
-
-> WORK IN PROGRESS
+The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Gulp](http://gulpjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
 
 
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-- [Bower](http://bower.io)
-- [Grunt](http://gruntjs.com)
-- [MongoDB](http://mongodb.com)
+- [MongoDB](http://www.mongodb.org/)
+- [Gulp](http://gulpjs.com/)
 - [PhantomJS](http://phantomjs.org/)
+- [Karma](http://karma-runner.github.io/0.12/index.html)
 
 
 ## Instructions
 
-**Start the server in DEV mode with nodemon watching files for rebuild:**
+**STEP 1: Create your database**
 
-    $ grunt server
+```
+1. In your Shell, type `mongo`.
+2. Create a new database typing `use name_of_database`.
+```
 
-> **Note:** Windows users, for some reason the grunt shell task will not launch mongod during runtime (so the node server will crash). Be sure to launch mongod in another window before starting grunt server.
+**STEP 2: Install Dependencies**
 
-**Run a build and test the now optimized assets:**
+```
+1. Run `npm install` to install dependencies.
+```
 
-    grunt build
+**STEP 3: Set your configurations**
 
-**To run tests in TDD watch mode:**
+```
+1. Set server configs in `./config/server.js` file.
+2. Set client configs in `./config/client.js` file.
+3. Set build configs in `./config/build.js` file.
+4. Set spec configs in `./config/test.js` file.
+```
 
-    $ grunt tdd
+**STEP 4: Bootstrap your application**
 
-**Run all tests - both server and client:**
+**STEP 5: In meantime, run the available tasks**
 
-    $ grunt test
+```bash
+# Start Serve and watch for Changes
+$ gulp serve
 
-**To run tests once:**
+# Unit Tests (Client and Server)
+$ gulp spec
 
-    $ grunt test:client
+    # Server-side
+    $ gulp server
 
-**Server tests have been added using Mocha and Chai. To run the tests:**
+    # Client-side
+    $ gulp client
 
-    $ grunt test:server
+# Build App
+$ gulp build
+
+# Deploys
+
+    # Heroku
+    $ gulp heroku
+
+    # GitHub
+    $ gulp github
+
+    # Personal Host
+    $ gulp host
+```
 
 
 ## Includes
 
+**Main Dependencies**
+- [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
 - [Express](http://expressjs.com/) - Web application framework for Node
-- [MongoDB](http://www.mongodb.org/) - NoSQL database
-- [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
+- [BackboneJS](http://backbonejs.org/) - MV* framework
+- [Gulp](http://gulpjs.com/) - The streaming build system
+- [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
+- [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
 - [jQuery](http://jquery.com/) - JavaScript library
 - [Normalize](http://necolas.github.io/normalize.css/) - For standardize CSS elements
 - [Modernizr](http://modernizr.com/) - For legacy browsers support
-- [Stylus](http://learnboost.github.io/stylus/) - CSS pre-processor
-- [Jade](http://jade-lang.com/) - A template engine for HTML pre-processor
-- [Backbone](http://backbonejs.org/) - MV* framework
-- [Marionette](http://marionettejs.com/) - Make your Backbone applications dance! :)
-- [Underscore](http://underscorejs.org/) - A utility-belt library for JavaScript.
-- [Browserify](http://browserify.org/) - require('modules') in the browser.
-- [Grunt](http://gruntjs.com/) - Task runner
-- [Bower](http://bower.io/) - Manager dependencies
-- [Karma](http://karma-runner.github.io/0.12/index.html) - Productive testing environment to developers
-- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
-- [Chai](http://chaijs.com/) - BDD / TDD assertion library for node and the browser
 
-> Note: I'm moving to Browserify and CommonJS.
+**Additional**
+- [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation
+- [Superagent](https://github.com/visionmedia/superagent) - Ajax with less suck - (and node.js HTTP client to match)
+- [Supertest](https://github.com/visionmedia/supertest) - Super-agent driven library for testing node.js HTTP servers
+- [Nodemon](https://github.com/remy/nodemon) - Monitor for any changes in your node.js application
+- [Mongoose](http://mongoosejs.com/) - Elegant mongodb object modeling for NodeJS
+- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
+- [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser
+- [Winston](https://npmjs.org/package/winston) - A multi-transport async logging library for Node.js
+
+**Middlewares**
+- [morgan](https://github.com/expressjs/morgan)
+- [favicon](https://github.com/expressjs/favicon)
+- [compression](https://github.com/expressjs/compression)
+- [body-parser](https://github.com/expressjs/body-parser)
+- [cookie-parser](https://github.com/expressjs/cookie-parser)
+- [errorhandler](https://github.com/expressjs/errorhandler)
+- [method-override](https://github.com/expressjs/method-override)
+- [session](https://github.com/expressjs/session)
+
+## Recommended Dependencies
+
+```bash
+
+###############
+# Client-Side #
+###############
+
+# Marionette - http://marionettejs.com/
+# A composite application library for Backbone.js
+$ npm install marionette --save
+
+###############
+# Server-Side #
+###############
+
+# Express Flash - https://npmjs.org/package/express-flash
+# Flash Messages for your Express Application
+$ npm instal express-flash  --save
+
+# Node Mailer - http://www.nodemailer.com/
+# easy as cake e-mail sending for your Node.js applications.
+$ npm install nodemailer --save
+
+# Passaport - https://github.com/jaredhanson/passport
+# Simple, unobtrusive authentication for Node.js
+$ npm install passport  --save
+
+```
 
 
 ## Structure
@@ -72,4 +139,5 @@ Generate a new project based on BENM Stack (Backbone, ExpressJS, Node.js and Mon
 
 ## Documentation
 
-Go to the Gist Cave and find the gold. :)
+After you clone this repository, be sure to delete this content and replace it.
+You can go to the Gist Cave and find the gold. :)

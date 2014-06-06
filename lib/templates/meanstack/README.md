@@ -1,8 +1,6 @@
 # M.E.A.N. Stack Boilerplate
 
-Generate a new project based on MEAN Stack (MongoDB, ExpressJS, AngularJS and Node.js).
-
-> WORK IN PROGRESS
+The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Gulp](http://gulpjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
 
 
 ## Requires
@@ -10,10 +8,9 @@ Generate a new project based on MEAN Stack (MongoDB, ExpressJS, AngularJS and No
 - [Node.JS](http://nodejs.org/)
 - [MongoDB](http://www.mongodb.org/)
 - [Gulp](http://gulpjs.com/)
-- [Bower](http://bower.io)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
-- [Browserify](http://browserify.org/)
+
 
 ## Instructions
 
@@ -24,38 +21,60 @@ Generate a new project based on MEAN Stack (MongoDB, ExpressJS, AngularJS and No
 2. Create a new database typing `use name_of_database`.
 ```
 
-**STEP 2: Set your configurations**
+**STEP 2: Install Dependencies**
 
 ```
-1. Set app configurations in `./config/app.js` file.
-2. Set task configuration in `./config/taks.js` file.
-3. Run `npm i` to install dependencies.
+1. Run `npm install` to install dependencies.
 ```
 
-**STEP 3: Bootstrap your application**
+**STEP 3: Set your configurations**
 
-**STEP 4: In meantime, run the available tasks**
+```
+1. Set server configs in `./config/server.js` file.
+2. Set client configs in `./config/client.js` file.
+3. Set build configs in `./config/build.js` file.
+4. Set spec configs in `./config/test.js` file.
+```
+
+**STEP 4: Bootstrap your application**
+
+**STEP 5: In meantime, run the available tasks**
 
 ```bash
-# Unit Tests
-$ gulp mocha
+# Start Serve and watch for Changes
+$ gulp serve
 
-# Bundle Scripts
-$ gulp bundle
+# Unit Tests (Client and Server)
+$ gulp spec
+
+    # Server-side
+    $ gulp server
+
+    # Client-side
+    $ gulp client
 
 # Build App
 $ gulp build
 
-# Run all (clean, build, start server, lint and watch for changes)
-$ gulp
+# Deploys
+
+    # Heroku
+    $ gulp heroku
+
+    # GitHub
+    $ gulp github
+
+    # Personal Host
+    $ gulp host
 ```
+
 
 ## Includes
 
 **Main**
 - [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
 - [Express](http://expressjs.com/) - Web application framework for Node
-- [AngularJS](http://backbonejs.org/) - MV* framework
+- [AngularJS](https://angularjs.org/) - Superheroic JavaScript MVW Framework
 - [Gulp](http://gulpjs.com/) - The streaming build system
 - [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
 - [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset

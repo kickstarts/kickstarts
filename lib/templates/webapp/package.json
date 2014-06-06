@@ -1,0 +1,63 @@
+{
+  "private": true,
+  "name": "application-name",
+  "version": "0.1.0",
+  "title": "Project Name",
+  "description": "Project description goes here",
+  "author": {
+    "name": "Vitor Britto",
+    "url": "http://vitorbritto.com.br",
+    "email": "code@vitorbritto.com.br"
+  },
+  "keywords": [
+    "boilerplate",
+    "gulp",
+    "framework",
+    "template",
+    "backbonejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitorbritto/boilerplates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorbritto/boilerplates/issues"
+  },
+  "licenses": {
+    "type": "MIT",
+    "url": "http://vitorbritto.mit-license.org/"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "jade": "~1.3.0",
+    "stylus": "0.42.3",
+    "nib": "^1.0.2",
+    "lodash": "~2.4.1",
+    "jquery": "^2.1.1",
+    "backbone": "^1.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-mocha": "^0.4.1",
+    "gulp-uglify": "^0.3.0",
+    "gulp-jshint": "^1.5.5",
+    "jshint-stylish": "^0.2.0",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-changed": "^0.3.0",
+    "gulp-clean": "^0.2.4",
+    "gulp-livereload": "^1.5.0",
+    "gulp-header": "^1.0.2",
+    "gulp-imagemin": "^0.5.0",
+    "gulp-browserify": "0.2.x",
+    "mocha": "^1.18.2",
+    "chai": "~1.9.1",
+    "karma": "latest",
+    "karma-mocha": "~0.1",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.1",
+    "karma-firefox-launcher": "~0.1.2",
+    "karma-phantomjs-launcher": "~0.1.1"
+  }
+}

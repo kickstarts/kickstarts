@@ -78,6 +78,10 @@
     "chai": "~1.9.1",
     "supertest": "~0.12.0",
     "superagent": "^0.18.0",
-    "karma": "latest"
+    "karma-mocha": "~0.1",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.1",
+    "karma-firefox-launcher": "~0.1.2",
+    "karma-phantomjs-launcher": "~0.1.1"
   }
 }

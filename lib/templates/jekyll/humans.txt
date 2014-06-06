@@ -10,7 +10,6 @@
 
 
 /* SITE */
-  Standards: HTML5, CSS3, JavaScript
-  Components: Modernizr, jQuery, GruntJS, Bower
-  Preprocessors: Sass (with Compass)
-  Software: Sublime Text 2, Terminal
+  Standards:
+  Setup:
+  Software:

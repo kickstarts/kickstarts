@@ -10,9 +10,6 @@
     "private": true,
     "main": "index.js",
     "bin": "bin/main",
-    "scripts": {
-        "test": "mocha"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/vitorbritto/boilerplates"
@@ -20,7 +17,10 @@
     "bugs": {
         "url": "https://github.com/vitorbritto/boilerplates/issues"
     },
-    "license": "MIT",
+    "licenses": {
+        "type": "MIT",
+        "url": "http://vitorbritto.mit-license.org/"
+    },
     "dependencies": {
         "commander": "~2.0.0",
         "colors": "~0.6.2",
@@ -29,6 +29,11 @@
         "update-notifier": "~0.1.7"
     },
     "devDependencies": {
-        "mocha": "*"
+        "gulp": "^3.6.2",
+        "gulp-mocha": "^0.4.1",
+        "gulp-jshint": "^1.5.5",
+        "jshint-stylish": "^0.2.0",
+        "mocha": "^1.18.2",
+        "chai": "~1.9.1"
     },
 }

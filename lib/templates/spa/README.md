@@ -1,6 +1,6 @@
 # Single Page App Boilerplate
 
-Generate a new project based on Angular and ReactJS. _Only client-side_
+Generate a new project based on AngularJS. _Only client-side_
 
 > WORK IN PROGRESS
 
@@ -17,7 +17,6 @@ Generate a new project based on Angular and ReactJS. _Only client-side_
 ## Includes
 
 - [AngularJS]()
-- [ReactJS]()
 - [Browserify]()
 - [Jade]()
 - [Stylus]()

@@ -97,4 +97,5 @@ $ npm install passport
 
 ## Documentation
 
-Go to the Gist Cave and find the gold. :)
+After you clone this repository, be sure to delete this content and replace it.
+You can go to the Gist Cave and find the gold. :)
