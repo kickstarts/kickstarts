@@ -1,0 +1,88 @@
+//
+// Inputs Utility Classes
+// --------------------------------------------------
+
+@if $use-inputs == true {
+
+    // Input Sizes
+    .input-mini   { @include input-size("mini"); }
+    .input-small  { @include input-size("small"); }
+    .input-medium { @include input-size("medium"); }
+    .input-large  { @include input-size("large"); }
+    .input-full   { @include input-size("full"); }
+
+    // Checkbox and Radio Inline
+    .radio,
+    .checkbox {
+        min-height: $base-line-height; // clear the floating input if there is no label text
+        padding-left: 20px;
+    }
+    .radio input[type="radio"],
+    .checkbox input[type="checkbox"] {
+        float: left;
+        margin-left: -20px;
+    }
+
+    .radio.inline,
+    .checkbox.inline {
+        @include inline-block;
+        padding-top: 5px;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+    .radio.inline + .radio.inline,
+    .checkbox.inline + .checkbox.inline {
+        margin-left: 10px; // space out consecutive inline controls
+    }
+
+    // Input States
+    textarea,
+    #{$all-text-inputs} {
+        &.error {
+            border: 1px solid $red-light;
+        }
+        &.success {
+            border: 1px solid $green-light;
+        }
+    }
+
+    // Help Text
+    .help-block,
+    .help-inline {
+        color: lighten($text-color, 15%); // lighten the text some for contrast
+    }
+
+    .help-block {
+        display: block; // account for any element using help-block
+        margin-bottom: $base-line-height / 2;
+    }
+
+    .help-inline {
+        display: inline-block;
+        @if $legacy-support == true {
+            @include legacy-inline-block;
+        }
+        vertical-align: middle;
+        padding-left: 5px;
+    }
+
+    // Uneditable inputs
+    .uneditable-input,
+    .uneditable-textarea {
+        color: $gray-light;
+        background-color: darken($input-background, 1%);
+        border-color: $input-border;
+        cursor: not-allowed;
+    }
+
+    .uneditable-input { // For text that needs to appear as an input but should not be an input
+    overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
+    white-space: nowrap;
+    }
+
+    .uneditable-textarea { // Make uneditable textareas behave like a textarea
+        width: auto;
+        height: auto;
+    }
+
+}

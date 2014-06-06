@@ -1,17 +1,11 @@
 {
-    "name": "Project Name",
+    "name": "AJ Manutenção",
     "version": "0.1.0",
-    "homepage": "http://www.projectpage.com",
+    "homepage": "http://www.ajmanutencao.com.br",
     "authors": [
         "Vitor Britto <code@vitorbritto.com.br>"
     ],
-    "description": "Some description here.",
-    "keywords": [
-        "jekyll",
-        "template",
-        "static generator"
-    ],
-    "license": "MIT",
+    "description": "Website para a empresa AJ Manutenção",
     "ignore": [
         "**/.*",
         "node_modules",
