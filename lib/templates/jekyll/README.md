@@ -14,13 +14,13 @@ Generate a new project based on [Jekyll](http://jekyllrb.com/).
 
 ## Instructions
 
-**Start the server in DEV mode and watching files for rebuild:**
+```
+# Start the server in DEV mode and watching files for rebuild:
+$ rake
 
-    $ rake
-
-**Build project:**
-
-    $ rake build
+# Build project:
+$ rake build
+```
 
 
 ## Includes

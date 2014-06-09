@@ -1,9 +1,9 @@
 {
-  "name": "vitorbritto",
+  "name": "projectname",
   "version": "1.0.0",
   "title": "Vitor Britto",
-  "homepage": "http://www.vitorbritto.com/blog",
-  "description": "Desenvolvedor Web",
+  "homepage": "http://www.projectname.com",
+  "description": "Description goes here",
   "author": {
     "name": "Vitor Britto",
     "url": "http://www.vitorbritto.com",
@@ -11,13 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/vitorbritto/blog.git"
+    "url": "git://github.com/vitorbritto/boilerplates.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-uglify": "~0.2.1",
-    "grunt-contrib-jshint": "~0.5.4",
-    "load-grunt-tasks": "~0.1.0"
+    "grunt": "^0.4.4",
+    "time-grunt": "^0.3.1",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-jshint": "^0.10.0"
   }
 }
