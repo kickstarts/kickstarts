@@ -33,8 +33,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "karma start ./config/test.js",
-    "install": "bower install"
+    "test": "karma start ./config/test.js"
   },
   "engines": {
     "node": "~0.10.0"
