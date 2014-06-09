@@ -11,15 +11,9 @@ This boilerplate provides an initial structure for CLI Tools based on [Node.JS](
 
 ## Instructions
 
-**STEP 1: Install Dependencies**
+**STEP 1: Bootstrap your application**
 
-```
-$ npm install
-```
-
-**STEP 2: Bootstrap your application**
-
-**STEP 3: In meantime, run the available tasks**
+**STEP 2: In meantime, run the available tasks**
 
 ```bash
 # Watch for changes
@@ -47,9 +41,6 @@ $ gulp spec
 - [Inquirer](https://www.npmjs.org/package/inquirer)
 - [Colors](https://www.npmjs.org/package/colors)
 - [ShellJS](https://www.npmjs.org/package/shelljs)
-
-
-## Structure
 
 
 ## Documentation
