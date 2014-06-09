@@ -2,7 +2,7 @@
 
 ## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.svg)](https://travis-ci.org/vitorbritto/boilerplates)
 
-This is my personal Yeoman. A simple jumpstart for my projects
+This is my personal Yeoman. A jumpstart for my projects
 
 > **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/](https://github.com/vitorbritto/boilerplates/issues/)
 
@@ -39,7 +39,7 @@ $ ./newproject.js
 
 > **Note**: chmod is an UNIX command, not present in MS-DOS.
 
-### Extra
+### Bonus
 
 Place this Bash Function in your `.bashrc` file.
 
@@ -59,7 +59,7 @@ new() {
 }
 ```
 
-And execute it with: `new [project-name]`
+Execute it with: `new [project-name]`
 
 
 ## Boilerplates
@@ -87,7 +87,7 @@ And execute it with: `new [project-name]`
 
 - [MEAN.JS](https://github.com/meanjs/mean)
 - [BBB](https://github.com/backbone-boilerplate/backbone-boilerplate)
-- [FastGap](https://github.com/FastGap/fastgap)
+- [Ionic](http://ionicframework.com/)
 
 
 ## License
