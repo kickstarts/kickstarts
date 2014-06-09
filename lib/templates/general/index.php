@@ -3,17 +3,11 @@
 /**
  * The template for displaying Home Page.
  *
- * @package AJ Manutenção
+ * @package Project Name
  */
 
-require 'includes/head.php'; ?>
+require 'includes/partials/head.php';
+require 'includes/templates/home.php';
+require 'includes/partials/footer.php';
 
-    <main class="container">
-
-        <section class="main">
-
-        </section>
-
-    </main>
-
-<?php require 'includes/footer.php'; ?>
+?>
