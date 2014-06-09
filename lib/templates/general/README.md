@@ -15,17 +15,15 @@ Generate a new project based on General Scaffolding.
 
 ## Instructions
 
-**STEP 1: Create the WP database**
-
-**STEP 2: Set your configurations**
+**STEP 1: Set your configurations**
 
 ```
 Open `./src/grunt.conf.js` file and set up your configurations.
 ```
 
-**STEP 3: Bootstrap your project**
+**STEP 2: Bootstrap your project**
 
-**STEP 4: In meantime, run the available tasks**
+**STEP 3: In meantime, run the available tasks**
 
 ```bash
 # Start Serve and watch for Changes

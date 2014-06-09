@@ -1,5 +1,5 @@
 .DS_Store
-src/components/*
-src/.sass-cache/*
-src/node_modules/*
-assets/css/**/*.scss
+src/node_modules/
+src/.sass-cache/
+src/components/
+src/npm-debug.log

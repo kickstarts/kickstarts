@@ -1,9 +1,9 @@
 {
-  "name": "aj-manutencao",
+  "name": "projectname",
   "version": "0.1.0",
-  "title": "AJ Manutenção",
-  "homepage": "www.ajmanutencao.com.br",
-  "description": "Website para a empresa AJ Manutenção",
+  "title": "Project Name",
+  "homepage": "www.projectname.com",
+  "description": "Description goes here",
   "private": true,
   "author": {
     "name": "Vitor Britto",
