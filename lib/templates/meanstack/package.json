@@ -29,15 +29,19 @@
   },
   "licenses": {
     "type": "MIT",
-    "url": "https://github.com/vitorbritto/boilerplates/blob/master/LICENSE"
+    "url": "http://vitorbritto.mit-license.org/"
+  },
+  "engines": {
+    "node": "~0.10.0"
   },
   "scripts": {
     "start": "node app.js",
     "test": "karma start ./config/test.js",
-    "install": "bower install"
+    "install": "napa"
   },
-  "engines": {
-    "node": "~0.10.0"
+  "napa": {
+    "angular": "angular/bower-angular",
+    "angular-route": "angular/bower-angular-route"
   },
   "dependencies": {
     "express": "^4.1.1",
@@ -57,8 +61,9 @@
     "compression": "^1.0.1",
     "winston": "~0.7.3",
     "forever": "*",
+    "browserify": "~3.46.0",
     "lodash": "~2.4.1",
-    "napa": "~0.3.0"
+    "jquery": "^2.1.1"
   },
   "devDependencies": {
     "gulp": "^3.6.2",
@@ -78,6 +83,8 @@
     "chai": "~1.9.1",
     "supertest": "~0.12.0",
     "superagent": "^0.18.0",
+    "napa": "^0.4.1",
+    "karma": "~0.12.0",
     "karma-mocha": "~0.1",
     "karma-script-launcher": "~0.1.0",
     "karma-chrome-launcher": "~0.1.1",

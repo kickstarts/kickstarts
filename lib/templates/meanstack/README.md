@@ -1,6 +1,6 @@
 # M.E.A.N. Stack Boilerplate
 
-The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Gulp](http://gulpjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
+The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Gulp](http://gulpjs.com/), [Napa](https://www.npmjs.org/package/napa) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
 
 
 ## Requires
@@ -10,7 +10,7 @@ The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org
 - [Gulp](http://gulpjs.com/)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
-
+- [Napa](https://www.npmjs.org/package/napa)
 
 ## Instructions
 
@@ -76,6 +76,7 @@ $ gulp build
 - [Express](http://expressjs.com/) - Web application framework for Node
 - [AngularJS](https://angularjs.org/) - Superheroic JavaScript MVW Framework
 - [Gulp](http://gulpjs.com/) - The streaming build system
+- [Karma](http://karma-runner.github.io/0.12/index.html)
 - [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
 - [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
