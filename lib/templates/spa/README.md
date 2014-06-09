@@ -22,9 +22,6 @@ Generate a new project based on AngularJS. _Only client-side_
 - [Stylus]()
 
 
-## Structure
-
-
 ## Documentation
 
 Go to the Gist Cave and find the gold. :)
