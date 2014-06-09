@@ -1,9 +1,9 @@
 {
-  "name": "aj-manutencao",
+  "name": "project-name",
   "version": "0.1.0",
-  "title": "AJ Manutenção",
-  "homepage": "www.ajmanutencao.com.br",
-  "description": "Website para a empresa AJ Manutenção",
+  "title": "Project Name",
+  "homepage": "www.domain.com",
+  "description": "Description goes here",
   "private": true,
   "author": {
     "name": "Vitor Britto",
@@ -25,6 +25,7 @@
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-imageoptim": "^1.4.1",
-    "grunt-contrib-compass": "^0.7.2"
+    "grunt-contrib-compass": "^0.7.2",
+    "grunt-ftp-deploy": "^0.1.3"
   }
 }

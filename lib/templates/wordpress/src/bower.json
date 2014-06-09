@@ -1,11 +1,11 @@
 {
-    "name": "AJ Manutenção",
+    "name": "Project Name",
     "version": "0.1.0",
-    "homepage": "http://www.ajmanutencao.com.br",
+    "homepage": "http://www.domain.com",
     "authors": [
         "Vitor Britto <code@vitorbritto.com.br>"
     ],
-    "description": "Website para a empresa AJ Manutenção",
+    "description": "Description goes here",
     "ignore": [
         "**/.*",
         "node_modules",

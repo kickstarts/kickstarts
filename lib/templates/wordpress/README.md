@@ -14,12 +14,39 @@ Generate a new project based on [WordPress](http://wordpress.org/).
 
 ## Instructions
 
+**STEP 1: Create the WP database**
+
+**STEP 2: Set your configurations**
+
+```
+Open `./src/grunt.conf.js` file and set up your configurations.
+```
+
+**STEP 3: Bootstrap your project**
+
+**STEP 4: In meantime, run the available tasks**
+
+```bash
+# Start Serve and watch for Changes
+$ grunt
+
+# Build App
+$ gulp build
+
+# Share App
+$ gulp share
+
+# Deploy App
+$ gulp deploy
+```
+
 
 ## Includes
-
-
-## Structure
-
+- [WordPress](http://wordpress.org/)
+- [Bower](http://bower.io)
+- [Grunt](http://gruntjs.com)
+- [Sass](http://sass-lang.com/)
+- [Compass](http://compass-style.org/)
 
 ## Documentation
 
