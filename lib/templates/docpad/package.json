@@ -17,8 +17,8 @@
     "bugs": {
         "url": "https://github.com/username/repository/issues"
     },
-    "main": "node_modules/docpad/bin/docpad-server",
     "scripts": {
+        "serve": "node_modules/docpad/bin/docpad-server",
         "deploy": "node_modules/docpad/bin/docpad deploy-ghpages --env static",
         "generate": "node_modules/docpad/bin/docpad generate --env static",
         "watch": "node_modules/docpad/bin/docpad run"

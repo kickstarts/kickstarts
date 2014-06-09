@@ -15,14 +15,24 @@ Generate a new project based on [DocPad](http://docpad.org/).
 
 ## Instructions
 
-**Run and watch for files:**
+```
+# Run and watch for files:
+$ npm watch
 
-    docpad run
+# Start web server:
+$ npm serve
+
+# Deploy build files to gh-pages
+$ npm deploy
+
+# Generate Project
+$ npm generate
+```
 
 
 ## Includes
 
-- [Ambitious Grid System](https://github.com/ambitiousframework/grid-system) - An adaptive Grid System from Semantic.gs
+- [DocPad](http://docpad.org/) - Streamlined Web Development
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
 - [jQuery](http://jquery.com/) - JavaScript library
 - [Normalize](http://necolas.github.io/normalize.css/) - For standardize CSS elements
@@ -32,9 +42,6 @@ Generate a new project based on [DocPad](http://docpad.org/).
 - [Grunt](http://gruntjs.com/) - Task runner
 - [Bower](http://bower.io/) - Manager dependencies
 - [Livereload](http://livereload.com/) - Automagically refresh your browser
-
-
-## Structure
 
 
 ## Documentation
