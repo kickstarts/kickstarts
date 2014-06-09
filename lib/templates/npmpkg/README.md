@@ -2,8 +2,6 @@
 
 Basic Structure for Node Packages.
 
-> WORK IN PROGRESS
-
 
 ## Requires
 
@@ -12,11 +10,16 @@ Basic Structure for Node Packages.
 
 ## Instructions
 
+```
+# Test
+$ npm test
+```
+
 
 ## Includes
 
-
-## Structure
+- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser.
+- [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser.
 
 
 ## Documentation
