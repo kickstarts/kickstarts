@@ -15,20 +15,38 @@ Generate a new project based on General Scaffolding.
 
 ## Instructions
 
-1. Clone the project
+**STEP 1: Create the WP database**
 
-  ```bash
-  git clone git://github.com/vitorbritto/boilerplates
-  ```
-2. Choose **General**
+**STEP 2: Set your configurations**
 
-3. Profit! :)
+```
+Open `./src/grunt.conf.js` file and set up your configurations.
+```
+
+**STEP 3: Bootstrap your project**
+
+**STEP 4: In meantime, run the available tasks**
+
+```bash
+# Start Serve and watch for Changes
+$ grunt
+
+# Build App
+$ gulp build
+
+# Share App
+$ gulp share
+
+# Deploy App
+$ gulp deploy
+```
 
 
 ## Includes
-
-
-## Structure
+- [Bower](http://bower.io)
+- [Grunt](http://gruntjs.com)
+- [Sass](http://sass-lang.com/)
+- [Compass](http://compass-style.org/)
 
 
 ## Documentation
