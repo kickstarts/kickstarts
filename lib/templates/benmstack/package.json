@@ -57,6 +57,7 @@
     "compression": "^1.0.1",
     "winston": "~0.7.3",
     "forever": "*",
+    "browserify": "~3.46.0",
     "lodash": "~2.4.1",
     "jquery": "^2.1.1",
     "backbone": "^1.1.2"

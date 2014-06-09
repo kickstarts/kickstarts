@@ -21,13 +21,7 @@ The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.or
 2. Create a new database typing `use name_of_database`.
 ```
 
-**STEP 2: Install Dependencies**
-
-```
-1. Run `npm install` to install dependencies.
-```
-
-**STEP 3: Set your configurations**
+**STEP 2: Set your configurations**
 
 ```
 1. Set server configs in `./config/server.js` file.
@@ -36,9 +30,9 @@ The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.or
 4. Set spec configs in `./config/test.js` file.
 ```
 
-**STEP 4: Bootstrap your application**
+**STEP 3: Bootstrap your application**
 
-**STEP 5: In meantime, run the available tasks**
+**STEP 4: In meantime, run the available tasks**
 
 ```bash
 # Start Serve and watch for Changes
@@ -132,9 +126,6 @@ $ npm install nodemailer --save
 $ npm install passport  --save
 
 ```
-
-
-## Structure
 
 
 ## Documentation
