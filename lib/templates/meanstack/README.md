@@ -1,16 +1,17 @@
 # M.E.A.N. Stack Boilerplate
 
-The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Gulp](http://gulpjs.com/), [Napa](https://www.npmjs.org/package/napa) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
+The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Grunt](http://gruntjs.com), [Napa](https://www.npmjs.org/package/napa) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
 
 
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
 - [MongoDB](http://www.mongodb.org/)
-- [Gulp](http://gulpjs.com/)
+- [Grunt](http://gruntjs.com)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
 - [Napa](https://www.npmjs.org/package/napa)
+
 
 ## Instructions
 
@@ -21,51 +22,24 @@ The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org
 2. Create a new database typing `use name_of_database`.
 ```
 
-**STEP 2: Install Dependencies**
+**STEP 2: Set up your configurations in `./config` folder**
 
-```
-1. Run `npm install` to install dependencies.
-```
+**STEP 3: Bootstrap your application**
 
-**STEP 3: Set your configurations**
-
-```
-1. Set server configs in `./config/server.js` file.
-2. Set client configs in `./config/client.js` file.
-3. Set build configs in `./config/build.js` file.
-4. Set spec configs in `./config/test.js` file.
-```
-
-**STEP 4: Bootstrap your application**
-
-**STEP 5: In meantime, run the available tasks**
+**STEP 4: In meantime, run the available tasks**
 
 ```bash
 # Start Serve and watch for Changes
-$ gulp serve
+$ grunt serve
 
 # Unit Tests (Client and Server)
-$ gulp spec
-
-    # Server-side
-    $ gulp server
-
-    # Client-side
-    $ gulp client
+$ grunt spec
 
 # Build App
-$ gulp build
+$ grunt build
 
-# Deploys
-
-    # Heroku
-    $ gulp heroku
-
-    # GitHub
-    $ gulp github
-
-    # Personal Host
-    $ gulp host
+# Share App
+$ grunt share
 ```
 
 
@@ -75,7 +49,7 @@ $ gulp build
 - [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
 - [Express](http://expressjs.com/) - Web application framework for Node
 - [AngularJS](https://angularjs.org/) - Superheroic JavaScript MVW Framework
-- [Gulp](http://gulpjs.com/) - The streaming build system
+- [Grunt](http://gruntjs.com) - The JavaScript Task Runner
 - [Karma](http://karma-runner.github.io/0.12/index.html)
 - [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
 - [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
