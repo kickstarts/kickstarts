@@ -1,0 +1,62 @@
+//
+// Global Utility Classes
+// --------------------------------------------------
+
+if $use-global == true
+  $hide-text
+    hide-text()
+  $is-hide
+    display: none
+  $is-visible
+    display: block
+  $is-hidden
+    visibility: hidden
+
+  $has-clear
+    clear: both
+  $clearfix
+    clearfix()
+
+  $pull-left
+    float(left)
+  $pull-right
+    float(right)
+  $is-block
+    reset-float()
+    margin-right: auto
+    margin-left: auto
+
+  $has-radius
+    border-radius($base-border-radius)
+  $has-radius-large
+    border-radius($border-radius-large)
+  $has-radius-small
+    border-radius($border-radius-small)
+  $is-rounded
+    border-radius(50%)
+
+  $no-filter
+    filter: none // for gte IE9 only
+
+  $is-fixed
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 9999
+
+  .overlay
+    background: rgba(black, 0.65)
+    border-top: 1px solid rgba(black, 0.9)
+    height: 100%
+    width: 100%
+  .breakline
+    margin: 5px auto
+    border-bottom: 1px solid rgba(0, 0, 0, 0.75)
+    clearfix()
+
+  // Compass - Stretching
+  // http://compass-style.org/reference/compass/layout/stretching/
+  // http://compass-style.org/examples/compass/layout/stretching/
+  .modal
+    stretch(1em, 1em, 1em, 1em)

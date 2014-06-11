@@ -1,0 +1,27 @@
+//
+// Images Utility Classes
+// --------------------------------------------------
+
+if $use-images == true
+
+  $img-left
+    float(left)
+    margin: 0 30px 30px 0
+    border: none
+
+  $img-right
+    float(right)
+    margin: 0 0 30px 30px
+
+  $img-rounded
+    border-radius($base-border-radius)
+
+  .img-circle
+    img-circle(240px)
+
+  .img-polaroid
+    padding: 4px
+    background-color: $white
+    border: 1px solid $gray-light
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))

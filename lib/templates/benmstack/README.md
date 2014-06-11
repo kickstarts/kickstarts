@@ -23,12 +23,7 @@ The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.or
 
 **STEP 2: Set your configurations**
 
-```
-1. Set server configs in `./config/server.js` file.
-2. Set client configs in `./config/client.js` file.
-3. Set build configs in `./config/build.js` file.
-4. Set spec configs in `./config/test.js` file.
-```
+Configurations files are inside `config` folder.
 
 **STEP 3: Bootstrap your application**
 
@@ -41,25 +36,10 @@ $ gulp serve
 # Unit Tests (Client and Server)
 $ gulp spec
 
-    # Server-side
-    $ gulp server
-
-    # Client-side
-    $ gulp client
-
 # Build App
 $ gulp build
 
-# Deploys
-
-    # Heroku
-    $ gulp heroku
-
-    # GitHub
-    $ gulp github
-
-    # Personal Host
-    $ gulp host
+# Heroku Deploy - https://github.com/appstack/heroku-buildpack-nodejs-gulp
 ```
 
 
