@@ -1,13 +1,13 @@
 # B.E.N.M. Stack Boilerplate
 
-The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Gulp](http://gulpjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
+The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.org/) on the _client-side_ and [ExpressJS](http://expressjs.com/) on the _server-side_, including [Grunt](http://gruntjs.com) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
 
 
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
 - [MongoDB](http://www.mongodb.org/)
-- [Gulp](http://gulpjs.com/)
+- [Grunt](http://gruntjs.com)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
 
@@ -21,9 +21,7 @@ The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.or
 2. Create a new database typing `use name_of_database`.
 ```
 
-**STEP 2: Set your configurations**
-
-Configurations files are inside `config` folder.
+**STEP 2: Set up your configurations in `./config` folder**
 
 **STEP 3: Bootstrap your application**
 
@@ -31,15 +29,16 @@ Configurations files are inside `config` folder.
 
 ```bash
 # Start Serve and watch for Changes
-$ gulp serve
+$ grunt serve
 
 # Unit Tests (Client and Server)
-$ gulp spec
+$ grunt spec
 
 # Build App
-$ gulp build
+$ grunt build
 
-# Heroku Deploy - https://github.com/appstack/heroku-buildpack-nodejs-gulp
+# Share App
+$ grunt share
 ```
 
 
@@ -49,7 +48,7 @@ $ gulp build
 - [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
 - [Express](http://expressjs.com/) - Web application framework for Node
 - [BackboneJS](http://backbonejs.org/) - MV* framework
-- [Gulp](http://gulpjs.com/) - The streaming build system
+- [Grunt](http://gruntjs.com) - The JavaScript Task Runner
 - [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
 - [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
