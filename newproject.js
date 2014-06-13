@@ -15,7 +15,6 @@ var prompt = [
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS App', value: 'nodeapp' },
-            { name: 'Laravel', value: 'laravel' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Rails', value: 'rails' },
@@ -75,10 +74,6 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'npmpkg':
         require('./lib/bp-npmpkg');
-        break;
-
-    case 'laravel':
-        require('./lib/bp-laravel');
         break;
 
     case 'rails':
