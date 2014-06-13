@@ -1,26 +1,19 @@
 # Web App Boilerplate
 
-The Web App Boilerplate provides an initial structure with [BackboneJS](http://backbonejs.org/) on the _client-side_, including [Gulp](http://gulpjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
+The Web App Boilerplate provides an initial structure with [BackboneJS](http://backbonejs.org/) on the _client-side_, including [Grunt](http://gruntjs.com) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
 
 
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-- [MongoDB](http://www.mongodb.org/)
-- [Gulp](http://gulpjs.com/)
+- [Grunt](http://gruntjs.com)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
 
 
 ## Instructions
 
-**STEP 1: Set your configurations**
-
-```
-1. Set app configs in `./config/app.js` file.
-2. Set build configs in `./config/build.js` file.
-3. Set spec configs in `./config/test.js` file.
-```
+**STEP 1: Set up your configurations in `./config` folder**
 
 **STEP 3: Bootstrap your application**
 
@@ -28,21 +21,16 @@ The Web App Boilerplate provides an initial structure with [BackboneJS](http://b
 
 ```bash
 # Start Serve and watch for Changes
-$ gulp serve
+$ grunt serve
 
 # Unit Tests (Client and Server)
-$ gulp spec
+$ grunt spec
 
 # Build App
-$ gulp build
+$ grunt build
 
-# Deploys (gh, ftp)
-
-    # GitHub
-    $ gulp gh
-
-    # Personal Host
-    $ gulp ftp
+# Share App
+$ grunt share
 ```
 
 
@@ -53,7 +41,7 @@ $ gulp build
 - [Normalize](http://necolas.github.io/normalize.css/) - For standardize CSS elements
 - [Modernizr](http://modernizr.com/) - For legacy browsers support
 - [BackboneJS](http://backbonejs.org/) - MV* framework
-- [Gulp](http://gulpjs.com/) - The streaming build system
+- [Grunt](http://gruntjs.com) - The streaming build system
 - [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
 - [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
 - [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation

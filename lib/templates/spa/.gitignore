@@ -1,6 +1,4 @@
 .DS_Store
 spec/coverage/
-public/scripts/vendors/
 npm-debug.log
 node_modules
-TODO.md
