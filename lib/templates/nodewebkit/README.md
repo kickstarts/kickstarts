@@ -11,9 +11,7 @@ Generate a new project based on [Node Webkit Application](https://github.com/rog
 
 ## Instructions
 
-**STEP 1:** First of all, run `npm install` to download dependencies, binaries and build the initial structure.
-
-**STEP 2:** Execute `grunt run` to easily bootstrap the application.
+**STEP 1:** Execute `grunt run` to easily bootstrap the application.
 
 **In meantime, you can run the following tasks:**
 

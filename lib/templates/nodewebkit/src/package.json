@@ -5,7 +5,7 @@
   "homepage": "www.projectname.com",
   "license": "MIT",
   "scripts": {
-    "install": "grunt"
+    "build": "grunt"
   },
   "devDependencies": {
     "chai": "*",
