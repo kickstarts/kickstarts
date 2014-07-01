@@ -1,0 +1,83 @@
+
+// CONTENTS
+// ----------------------------------------------------------------------------
+//
+// CONTENTS...............................You’re reading it!
+// WARNING................................Importante Note for Developers
+// IMPORTS................................Begin importing the sections below
+//
+//
+// GETTING STARTED
+// -------------------
+// COMPASS................................ Require Compass Framework
+//
+// CORE
+// -------------------
+// CONFIG................................. App Configuration
+// SETTINGS............................... App Variables
+// MIXINS................................. Sass Mixins
+// GRID................................... Grid System Constructor
+//
+// GENERAL
+// -------------------
+// RESET.................................. CSS Normalize
+// BASE................................... Scaffolding
+// TABLE.................................. Basic Table Style
+// FORM................................... Basic Form Style
+//
+// APP
+// -------------------
+// LAYOUT................................. Your Application Style goes here
+//
+// HELPERS
+// -------------------
+// GLOBALS................................ Globals Classes for Behaviors
+// TYPES.................................. Helper Classes for Types
+// LINKS.................................. Helper Classes for Links
+// LISTS.................................. Helper Classes for Lists
+// IMAGES................................. Helper Classes for Images
+// TABLES................................. Helper Classes for Tables
+// FORMS.................................. Helper Classes for Forms
+// INPUTS................................. Helper Classes for Inputs
+// BUTTONS................................ Helper Classes for Buttons
+// SPRITE................................. Generator for Sprite images with Compass helper
+// ANIMATION.............................. Your CSS animations goes here
+//
+// ----------------------------------------------------------------------------
+
+//
+// IMPORTS
+// ---------------------------
+
+
+// GETTING STARTED
+@import "compass";
+
+// CORE
+@import "core/config";
+@import "core/settings";
+@import "core/mixins";
+@import "core/grid";
+
+// GENERAL
+@import "general/reset";
+@import "general/base";
+@import "general/tables";
+@import "general/forms";
+
+// APP
+@import "app/layout";
+
+// HELPERS
+@import "helpers/animation";
+@import "helpers/buttons";
+@import "helpers/forms";
+@import "helpers/globals";
+@import "helpers/images";
+@import "helpers/inputs";
+@import "helpers/links";
+@import "helpers/lists";
+@import "helpers/sprite";
+@import "helpers/tables";
+@import "helpers/types";
+@import "helpers/custom";

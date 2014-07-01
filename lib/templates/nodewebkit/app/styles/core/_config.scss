@@ -1,0 +1,70 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// INITIAL CONFIGURATION
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+// 1 - Set a value for the width container
+$total-width: 420px; // Default is 420px
+
+// 2 - Choose a type of button - Accepted values: "flat", "simple", "shiny" "glass", "matte"
+$btn-type: "flat";
+
+// 3 - Would you like to use animations?
+$use-animations: true;
+
+// 4 - Would you like to use custom helpers instead of defaults?
+$use-custom: false;
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// GRID SYSTEM CONFIGURATION
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+// Set the number of columns, column and gutter widths
+$column-width:          26px;
+$gutter-width:          8px;
+$columns:               12;
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// HELPERS - Which helpers would you like to use?
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+// Important
+// You can also use the "_custom.scss" file to include your own helpers classes
+// By doing this, i think its more apropieta disable all the following helpers
+
+$use-global:         true;  // Global
+$use-types:          true;  // Types and Headings
+$use-links:          true;  // Links
+$use-lists:          true;  // Lists
+$use-tables:         true;  // Tables
+$use-images:         true;  // Images
+$use-forms:          true;  // Forms
+$use-inputs:         true;  // Inputs
+$use-buttons:        true;  // Buttons
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// EXTENDED FEATURES
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+// Sprites
+// ----------------------------------------------------------------
+// More about Compass Sprite Generator at:
+// http://compass-style.org/help/tutorials/spriting/
+// http://compass-style.org/reference/compass/helpers/sprites/
+// ----------------------------------------------------------------
+
+$sprites-layout:                    horizontal; // "horizontal", "vertical", "smart"
+$disable-magic-sprite-selectors:    false;

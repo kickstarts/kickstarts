@@ -18,7 +18,7 @@
             </header>
 
             <main class="content">
-                <h1>Hello World!</h1>
+                <h1><script>document.write(pkg.name)</script></h1>
                 <p>Running NodeJS <script>document.write(process.version)</script></p>
             </main>
 
@@ -27,7 +27,24 @@
             </footer>
         </div>
 
-        <!-- Livereload for development environment -->
+        <!--
+        ******************************************
+        * Livereload for development environment
+        ******************************************
+        -->
+        <!-- Browser -->
         <script src="//localhost:35729/livereload.js"></script>
+
+        <!-- Node Webkit -->
+        <script>
+            var path = './';
+            var fs = require('fs');
+
+            fs.watch(path, function() {
+                if (location) {
+                    location.reload();
+                }
+            });
+        </script>
     </body>
 </html>

@@ -13,7 +13,9 @@ Generate a new project based on [Node Webkit Application](https://github.com/rog
 
 **STEP 1:** Execute `grunt run` to easily bootstrap the application.
 
-**In meantime, you can run the following tasks:**
+**STEP 2:** Profit! :)
+
+**Available tasks:**
 
 ```bash
 # Start Web Server and watch for changes
