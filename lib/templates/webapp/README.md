@@ -29,8 +29,8 @@ $ grunt spec
 # Build App
 $ grunt build
 
-# Share App
-$ grunt share
+# Generate App
+$ grunt generate
 ```
 
 

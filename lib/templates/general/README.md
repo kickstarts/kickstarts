@@ -32,8 +32,8 @@ $ grunt
 # Build App
 $ gulp build
 
-# Share App
-$ gulp share
+# Generate App
+$ gulp generate
 
 # Deploy App
 $ gulp deploy
