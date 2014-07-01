@@ -15,6 +15,7 @@ var prompt = [
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS App', value: 'nodeapp' },
+            { name: 'Node Webkit App', value: 'nwapp' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Rails', value: 'rails' },
@@ -66,6 +67,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'nodeapp':
         require('./lib/bp-nodeapp');
+        break;
+
+    case 'nwapp':
+        require('./lib/bp-nwapp');
         break;
 
     case 'clitool':
