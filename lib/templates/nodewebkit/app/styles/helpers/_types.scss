@@ -3,7 +3,7 @@
 // Types Utility Classes
 // --------------------------------------------------
 
-@if $use-types == true {
+@if $use-types == true and $use-helpers == false  {
 
     // Headings
     .big-title {

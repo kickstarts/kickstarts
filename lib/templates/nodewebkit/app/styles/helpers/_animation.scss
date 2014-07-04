@@ -35,7 +35,7 @@
 }
 
 
-@if $use-animations == true {
+@if $use-animations == true and $use-helpers == false  {
 
     // YOUR CSS GOES HERE
     // @include keyframes(bounce);

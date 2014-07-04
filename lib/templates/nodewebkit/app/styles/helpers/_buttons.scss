@@ -2,7 +2,7 @@
 // Buttons
 // --------------------------------------------------
 
-@if $use-buttons == true {
+@if $use-buttons == true and $use-helpers == false  {
 
     // Button Structure
     .btn,

@@ -2,7 +2,7 @@
 // Inputs Utility Classes
 // --------------------------------------------------
 
-@if $use-inputs == true {
+@if $use-inputs == true and $use-helpers == false  {
 
     // Input Sizes
     .input-mini   { @include input-size("mini"); }

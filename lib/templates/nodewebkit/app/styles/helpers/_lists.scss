@@ -2,7 +2,7 @@
 // Lists Utility Classes
 // --------------------------------------------------
 
-@if $use-lists == true {
+@if $use-lists == true and $use-helpers == false  {
 
     .list-inline { @include horizontal-list; }
 

@@ -22,12 +22,11 @@
 // -------------------
 // RESET.................................. CSS Normalize
 // BASE................................... Scaffolding
-// TABLE.................................. Basic Table Style
-// FORM................................... Basic Form Style
 //
 // APP
 // -------------------
 // LAYOUT................................. Your Application Style goes here
+// HELPERS................................ Helper Classes
 //
 // HELPERS
 // -------------------
@@ -62,11 +61,10 @@
 // GENERAL
 @import "general/reset";
 @import "general/base";
-@import "general/tables";
-@import "general/forms";
 
 // APP
 @import "app/layout";
+@import "app/helpers";
 
 // HELPERS
 @import "helpers/animation";
@@ -80,4 +78,3 @@
 @import "helpers/sprite";
 @import "helpers/tables";
 @import "helpers/types";
-@import "helpers/custom";

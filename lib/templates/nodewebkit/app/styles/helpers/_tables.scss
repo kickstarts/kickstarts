@@ -2,7 +2,7 @@
 // Table Utility Classes
 // --------------------------------------------------
 
-@if $use-tables == true {
+@if $use-tables == true and $use-helpers == false  {
 
     // Condensed
     .table-condensed {

@@ -2,7 +2,7 @@
 // Global Utility Classes
 // --------------------------------------------------
 
-@if $use-global == true {
+@if $use-globals == true and $use-helpers == false {
 
     .hide-text    { @include hide-text; }
     .is-hide      { display: none; }

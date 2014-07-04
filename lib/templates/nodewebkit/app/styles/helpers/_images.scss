@@ -2,7 +2,7 @@
 // Images Utility Classes
 // --------------------------------------------------
 
-@if $use-images == true {
+@if $use-images == true and $use-helpers == false  {
 
     .img-left {
         @include float(left);

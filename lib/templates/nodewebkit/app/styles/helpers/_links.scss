@@ -2,6 +2,6 @@
 // Link Utility Classes
 // --------------------------------------------------
 
-@if $use-links == true {
+@if $use-links == true and $use-helpers == false  {
 
 }

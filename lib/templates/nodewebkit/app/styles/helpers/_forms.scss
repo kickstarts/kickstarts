@@ -2,7 +2,7 @@
 // Forms Utility Classes
 // --------------------------------------------------
 
-@if $use-forms == true {
+@if $use-forms == true and $use-helpers == false  {
 
 
     // Forms Actions
