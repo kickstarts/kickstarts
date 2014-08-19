@@ -2,7 +2,7 @@
 
 ## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.svg)](https://travis-ci.org/vitorbritto/boilerplates)
 
-This is my personal Yeoman. A jumpstart for my projects
+This is my personal Yeoman. A jumpstart for my projects.
 
 > **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/](https://github.com/vitorbritto/boilerplates/issues/)
 
@@ -65,11 +65,9 @@ Execute it with: `new [project-name]`
 ## Boilerplates
 
 - [General](lib/templates/general/)
-- [Mobile](lib/templates/mobile/)
 - [WordPress](lib/templates/wordpress/)
 - [B.E.N.M. Stack](lib/templates/benmstack/)
 - [M.E.A.N. Stack](lib/templates/meanstack/)
-- [L.A.M. Stack](lib/templates/lamstack/)
 - [Web App](lib/templates/webapp/)
 - [Single Page App](lib/templates/spa/)
 - [Node App](lib/templates/nodeapp/)
@@ -80,14 +78,6 @@ Execute it with: `new [project-name]`
 - [NPM Package](lib/templates/npmpkg/)
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
-- [DocPad](lib/templates/docpad/)
-
-
-## References
-
-- [MEAN.JS](https://github.com/meanjs/mean)
-- [BBB](https://github.com/backbone-boilerplate/backbone-boilerplate)
-- [Ionic](http://ionicframework.com/)
 
 
 ## License

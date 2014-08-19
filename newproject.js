@@ -8,22 +8,19 @@ var prompt = [
     {
         choices: [
             { name: 'General', value: 'general' },
-            { name: 'Mobile', value: 'mobile' },
             { name: 'Web App', value: 'webapp' },
             { name: 'Single App Page', value: 'spa'},
-            { name: 'LAM Stack', value: 'lamstack' },
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
-            { name: 'NodeJS App', value: 'nodeapp' },
-            { name: 'Node Webkit App', value: 'nwapp' },
+            { name: 'NodeJS', value: 'nodeapp' },
+            { name: 'Node Webkit', value: 'nwapp' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Rails', value: 'rails' },
             { name: 'Sinatra', value: 'sinatra' },
             { name: 'WordPress', value: 'wordpress' },
             { name: 'Jekyll', value: 'jekyll' },
-            { name: 'Harp', value: 'harp' },
-            { name: 'Docpad', value: 'docpad' }
+            { name: 'Harp', value: 'harp' }
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to generate?',
@@ -41,20 +38,12 @@ inquirer.prompt(prompt, function(answers) {
         require('./lib/bp-general');
         break;
 
-    case 'mobile':
-        require('./lib/bp-mobile');
-        break;
-
     case 'spa':
         require('./lib/bp-spa');
         break;
 
     case 'webapp':
         require('./lib/bp-webapp');
-        break;
-
-    case 'lamstack':
-        require('./lib/bp-lamstack');
         break;
 
     case 'benmstack':
@@ -101,9 +90,6 @@ inquirer.prompt(prompt, function(answers) {
         require('./lib/bp-harp');
         break;
 
-    case 'docpad':
-        require('./lib/bp-docpad');
-        break;
     }
 
 });
