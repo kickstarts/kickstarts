@@ -1,11 +1,11 @@
 {
-    "name": "Project Name",
+    "name": "",
     "version": "0.1.0",
-    "homepage": "http://www.domain.com",
+    "homepage": "",
     "authors": [
         "Vitor Britto <code@vitorbritto.com.br>"
     ],
-    "description": "Description goes here",
+    "description": "",
     "ignore": [
         "**/.*",
         "node_modules",

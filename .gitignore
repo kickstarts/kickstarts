@@ -1,10 +1,4 @@
 .DS_Store
 node_modules
-lib/templates/lamstack
-lib/templates/laravel
-lib/templates/mobile
 lib/templates/rails
 lib/templates/sinatra
-lib/templates/spa
-lib/templates/webapp
-TODO.md
