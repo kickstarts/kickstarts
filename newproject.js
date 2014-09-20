@@ -16,7 +16,6 @@ var prompt = [
             { name: 'Node Webkit', value: 'nwapp' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'Node Package', value: 'npmpkg' },
-            { name: 'Rails', value: 'rails' },
             { name: 'Sinatra', value: 'sinatra' },
             { name: 'WordPress', value: 'wordpress' },
             { name: 'Jekyll', value: 'jekyll' },
@@ -68,10 +67,6 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'npmpkg':
         require('./lib/bp-npmpkg');
-        break;
-
-    case 'rails':
-        require('./lib/bp-rails');
         break;
 
     case 'sinatra':
