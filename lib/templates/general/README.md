@@ -29,14 +29,17 @@ Open `./src/grunt.conf.js` file and set up your configurations.
 # Start Serve and watch for Changes
 $ grunt
 
-# Build App
-$ gulp build
+# Build App - Development
+$ grunt build
 
-# Generate App
-$ gulp generate
+# Build App - Production
+$ grunt release
 
-# Deploy App
-$ gulp deploy
+# Deploy App (WIP!)
+$ grunt [ftp|rsync|ec2]
+
+# Some cool stuff for assets (WIP!)
+$ grunt assets
 ```
 
 

@@ -7,7 +7,10 @@
     <meta charset="UTF-8">
     <title>Project Title</title>
     <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width">
+
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 
     <link rel="stylesheet" href="assets/styles/style.css">
     <script src="assets/scripts/vendor/modernizr-2.6.2.min.js"></script>

@@ -13,7 +13,7 @@
         "components"
     ],
     "dependencies": {
-        "modernizr": "~2.6.2",
-        "jquery": "~1.10.2"
+        "jquery": "1.10.x",
+        "modernizr": "2.6.x"
     }
 }
