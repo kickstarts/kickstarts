@@ -11,24 +11,37 @@
   },
   "engines": {
     "node": ">=0.10.0",
-    "npm": ">=1.1.0"
+    "npm": ">=1.2.15"
   },
   "dependencies": {
     "browserify": "^4.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.4",
-    "time-grunt": "^0.3.1",
-    "load-grunt-tasks": "^0.4.0",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-compress": "^0.8.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-browser-sync": "^0.9.1",
+    "grunt-browser-sync": "^1.5.2",
     "grunt-browserify": "^2.0.8",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-compass": "^0.7.2",
-    "grunt-ftp-deploy": "^0.1.3"
+    "grunt-contrib-compress": "^0.8.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-csslint": "^0.3.1",
+    "grunt-contrib-imagemin": "^0.8.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-qunit": "^0.5.2",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ftp-deploy": "^0.1.3",
+    "grunt-grunticon": "^1.2.13",
+    "grunt-rsync": "^0.6.2",
+    "grunt-shell": "^1.1.1",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  },
+  "scripts": {
+    "install": "bower install && npm install cd ..",
+    "watch": "grunt",
+    "build": "grunt build",
+    "update": "bower update; grunt release",
+    "test": "grunt test"
   }
 }
