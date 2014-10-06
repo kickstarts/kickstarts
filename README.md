@@ -72,7 +72,6 @@ Execute it with: `new [project-name]`
 - [Single Page App](lib/templates/spa/)
 - [Node App](lib/templates/nodeapp/)
 - [Node Webkit](lib/templates/nodewebkit/)
-- [Rails](lib/templates/rails/)
 - [Sinatra](lib/templates/sinatra/)
 - [CLI Tool](lib/templates/clitool/)
 - [NPM Package](lib/templates/npmpkg/)
