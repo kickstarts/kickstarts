@@ -31,17 +31,18 @@ Open `./src/grunt.conf.js` file and set up your configurations.
 $ grunt
 
 # Build App
-$ gulp build
+$ grunt build
 
 # Share App
-$ gulp share
+$ grunt share
 
 # Deploy App
-$ gulp deploy
+$ grunt deploy
 ```
 
 
 ## Includes
+
 - [WordPress](http://wordpress.org/)
 - [Bower](http://bower.io)
 - [Grunt](http://gruntjs.com)
