@@ -14,10 +14,11 @@ var prompt = [
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS', value: 'nodeapp' },
             { name: 'Node Webkit', value: 'nwapp' },
-            { name: 'CLI Tool', value: 'clitool' },
             { name: 'Node Package', value: 'npmpkg' },
-            { name: 'Sinatra', value: 'sinatra' },
+            { name: 'CLI Tool', value: 'clitool' },
             { name: 'WordPress', value: 'wordpress' },
+            { name: 'WordPress Plugin', value: 'wpplugin' },
+            { name: 'Sinatra', value: 'sinatra' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' }
         ],
@@ -75,6 +76,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'wordpress':
         require('./lib/bp-wordpress');
+        break;
+
+    case 'wpplugin':
+        require('./lib/bp-wpplugin');
         break;
 
     case 'jekyll':

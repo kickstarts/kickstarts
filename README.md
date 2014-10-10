@@ -77,7 +77,7 @@ Execute it with: `new [project-name]`
 - [NPM Package](lib/templates/npmpkg/)
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
-
+- [WP Plugin](lib/templates/wpplugin/)
 
 ## License
 
