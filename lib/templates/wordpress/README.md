@@ -19,7 +19,14 @@ Generate a new project based on [WordPress](http://wordpress.org/).
 **STEP 2: Set your configurations**
 
 ```
-Open `./src/grunt.conf.js` file and set up your configurations.
+# 2.1 Open `./src/grunt.conf.js` file and set up your configurations.
+# 2.2 Rename the following files and place at root directory:
+
+- `__gitignore.txt` to `.gitignore`
+- `__htaccess.txt` to `.htaccess`
+- `__wp-config.txt` to `wp-config.php`
+
+# Note: its up to me (you) deal with these files. =]
 ```
 
 **STEP 3: Bootstrap your project**
