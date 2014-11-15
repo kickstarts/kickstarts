@@ -10,7 +10,6 @@ Generate a new project based on General Scaffolding.
 - [Grunt](http://gruntjs.com)
 - [Ruby](https://www.ruby-lang.org/pt/)
 - [Sass](http://sass-lang.com/)
-- [Compass](http://compass-style.org/)
 
 
 ## Instructions
@@ -35,20 +34,12 @@ $ grunt build
 # Build App - Production
 $ grunt release
 
-# Deploy App (WIP!)
-$ grunt [ftp|rsync|ec2]
+# Deploy App
+$ grunt [ftp|rsync]
 
-# Some cool stuff for assets (WIP!)
+# Some cool stuff for assets
 $ grunt assets
 ```
-
-
-## Includes
-- [Bower](http://bower.io)
-- [Grunt](http://gruntjs.com)
-- [Sass](http://sass-lang.com/)
-- [Compass](http://compass-style.org/)
-
 
 ## Documentation
 
