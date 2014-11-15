@@ -19,8 +19,11 @@ var prompt = [
             { name: 'WordPress', value: 'wordpress' },
             { name: 'WordPress Plugin', value: 'wpplugin' },
             { name: 'Sinatra', value: 'sinatra' },
+            { name: 'Rails', value: 'rails' },
             { name: 'Jekyll', value: 'jekyll' },
-            { name: 'Harp', value: 'harp' }
+            { name: 'Harp', value: 'harp' },
+            { name: 'Magento', value: 'magento' },
+            { name: 'WooCommerce', value: 'woocommerce' }
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to generate?',
@@ -88,6 +91,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'harp':
         require('./lib/bp-harp');
+        break;
+
+    case 'magento':
+        require('./lib/bp-magento');
         break;
 
     }
