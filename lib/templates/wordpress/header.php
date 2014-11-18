@@ -86,16 +86,14 @@
 </head>
 <body <?php body_class(); ?>>
 
-<?php get_template_part('includes/feature', 'custom') ?>
-
     <!-- .container -->
     <div class="container">
 
-        <!-- #header -->
-        <header id="header" class="row">
+        <!-- .header -->
+        <header class="header">
 
         </header>
-        <!-- /#header -->
+        <!-- /.header -->
 
-        <!-- #main -->
-        <div id="main">
+        <!-- .content -->
+        <main class="content">

@@ -28,17 +28,26 @@ Open `./src/grunt.conf.js` file and set up your configurations.
 # Start Serve and watch for Changes
 $ grunt
 
-# Build App - Development
+# Compile Files
 $ grunt build
 
+# Build App - Development
+$ grunt dev
+
 # Build App - Production
-$ grunt release
+$ grunt prod
 
 # Deploy App
-$ grunt [ftp|rsync]
+$ grunt [ftp|rsync|git]
 
-# Some cool stuff for assets
+# Optimize Images
 $ grunt assets
+
+# Run Unit Tests
+$ grunt spec
+
+# Generate Documentation
+$ grunt docs
 ```
 
 ## Documentation

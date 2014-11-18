@@ -23,9 +23,11 @@
         if ($localhost === 'localhost') :
     ?>
     <!-- Browser Sync -->
-    <script type='text/javascript'>//<![CDATA[
-    ;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
-    //]]></script>
+    <script type='text/javascript' id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.7.0.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+    //]]>
+    </script>
     <?php endif; ?>
 
 

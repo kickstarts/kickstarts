@@ -38,7 +38,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
  * Load stylesheets.
  */
 function enqueue_stylesheet($uri, $dir) {
-    return $dir . '/assets/styles/style.css';
+    return $dir . '/assets/styles/style.min.css';
 }
 
 add_filter('stylesheet_uri', 'enqueue_stylesheet', 10, 2);

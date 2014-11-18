@@ -37,14 +37,26 @@ Generate a new project based on [WordPress](http://wordpress.org/).
 # Start Serve and watch for Changes
 $ grunt
 
-# Build App
+# Compile Files
 $ grunt build
 
-# Share App
-$ grunt share
+# Build App - Development
+$ grunt dev
+
+# Build App - Production
+$ grunt prod
 
 # Deploy App
-$ grunt deploy
+$ grunt [ftp|rsync|git]
+
+# Optimize Images
+$ grunt assets
+
+# Run Unit Tests
+$ grunt spec
+
+# Generate Documentation
+$ grunt docs
 ```
 
 

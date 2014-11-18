@@ -12,7 +12,7 @@
 
     <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.min.css">
     <script src="assets/scripts/vendor/modernizr-2.6.2.min.js"></script>
 
     <!--[if lt IE 9]>
