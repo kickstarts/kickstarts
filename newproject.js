@@ -22,8 +22,7 @@ var prompt = [
             { name: 'Rails', value: 'rails' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
-            { name: 'Magento', value: 'magento' },
-            { name: 'WooCommerce', value: 'woocommerce' }
+            { name: 'Magento', value: 'magento' }
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to generate?',
