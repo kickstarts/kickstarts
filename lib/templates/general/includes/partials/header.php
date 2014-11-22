@@ -8,6 +8,7 @@
     <title>Project Title</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <meta name="google-site-verification" content="" />
     <meta name="viewport" content="width=device-width">
 
     <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon"/>
