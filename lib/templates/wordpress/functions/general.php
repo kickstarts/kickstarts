@@ -12,6 +12,15 @@
  * @package Project Name
  */
 
+
+/**
+ * Set content width.
+ */
+if (!isset($content_width)) {
+    $content_width = 960;
+}
+
+
 /**
  * Load scripts.
  */
@@ -70,31 +79,31 @@ add_action('after_switch_theme', 'flush_rewrite');
  * Add rel attribute to attachment link.
  */
 
-function add_lightbox_rel($content) {
-    // $permalink = wp_get_attachment_url($post->ID);
-    $content = preg_replace('/<a/', '<a rel="prettyPhoto[gallery]"' , $content, 1);
-    return $content;
-}
-add_filter('wp_get_attachment_link', 'add_lightbox_rel', 10, 6);
+// function add_lightbox_rel($content) {
+//     // $permalink = wp_get_attachment_url($post->ID);
+//     $content = preg_replace('/<a/', '<a rel="prettyPhoto[gallery]"' , $content, 1);
+//     return $content;
+// }
+// add_filter('wp_get_attachment_link', 'add_lightbox_rel', 10, 6);
 
 
 /**
  * Custom excerpt for content.
  */
-function excerpt($limit) {
-    $excerpt = explode(' ', get_the_excerpt(), $limit);
-    if (count($excerpt)>=$limit) {
-        array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'...';
-    } else {
-        $excerpt = implode(" ",$excerpt);
-    }
-    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-    return $excerpt;
-}
+// function excerpt($limit) {
+//     $excerpt = explode(' ', get_the_excerpt(), $limit);
+//     if (count($excerpt)>=$limit) {
+//         array_pop($excerpt);
+//         $excerpt = implode(" ",$excerpt).'...';
+//     } else {
+//         $excerpt = implode(" ",$excerpt);
+//     }
+//     $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+//     return $excerpt;
+// }
 
-function my_excerpt_length($limit){return 9; }
-add_filter('excerpt_length', 'my_excerpt_length');
+// function my_excerpt_length($limit){return 9; }
+// add_filter('excerpt_length', 'my_excerpt_length');
 
 /**
  * Add support for Post Formats.

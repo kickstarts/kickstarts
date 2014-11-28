@@ -1,15 +1,22 @@
 <?php
 /**
- * Setup theme features
+ * Support Configuration
  *
  * @package Project Name
  */
 
-function after_setup_theme_handler(){
+function after_setup_theme_handler() {
+
+    /**
+     * Loading theme textdomain.
+     */
+    load_theme_textdomain('projectname', get_template_directory() . '/languages/');
 
 	/**
      * Register nav menus.
      */
+
+    add_theme_support('menus');
 
     register_nav_menus(
         array(
@@ -37,11 +44,18 @@ function after_setup_theme_handler(){
 
 
     /*
-     * Add post_thumbnails suport.
+     * Add post_thumbnails support.
      */
 
     add_theme_support('post-thumbnails');
     add_image_size('thumb-main', 50, 50, true);
+
+
+    /*
+     * Add woocommerce support.
+     */
+
+    add_theme_support('woocommerce');
 
 }
 

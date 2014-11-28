@@ -6,7 +6,8 @@
  */
 ?>
 
-<form method="get" class="form-horizontal" action="<?php echo esc_url(home_url('/')); ?>">
-    <input type="text" value="<?php echo esc_attr(get_search_query()); ?>" name="s" class="input-large">
-    <input type="submit" class="btn btn-success" value="pesquisar">
+<form method="get" class="" action="<?php echo esc_url(home_url('/')); ?>">
+    <label for="s" class=""><?php _e('Search', 'projectname'); ?></label>
+    <input type="text" value="<?php echo esc_attr(get_search_query()); ?>" name="s" id="s" class="">
+    <input type="submit" class="" value="<?php esc_attr_e('Search', 'projectname'); ?>" />
 </form>

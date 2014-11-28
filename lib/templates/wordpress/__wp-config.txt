@@ -1,85 +1,106 @@
 <?php
 /**
- * As configurações básicas do WordPress.
+ * The base configurations of the WordPress.
  *
- * Esse arquivo contém as seguintes configurações: configurações de MySQL, Prefixo de Tabelas,
- * Chaves secretas, Idioma do WordPress, e ABSPATH. Você pode encontrar mais informações
- * visitando {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Codex page. Você pode obter as configurações de MySQL de seu servidor de hospedagem.
+ * This file has the following configurations: MySQL settings, Table Prefix,
+ * Secret Keys, WordPress Language, and ABSPATH. You can find more information
+ * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} Codex page. You can get the MySQL settings from your web host.
  *
- * Esse arquivo é usado pelo script ed criação wp-config.php durante a
- * instalação. Você não precisa usar o site, você pode apenas salvar esse arquivo
- * como "wp-config.php" e preencher os valores.
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
  *
- * @package WordPress
+ * @package Project Name
  */
 
-// ** Configurações do MySQL ** //
+// ** MySQL settings ** //
+
+define('DB_CHARSET',  'utf8');
+define('DB_COLLATE', '');
+
+// Development
 define('DB_NAME',     '');
 define('DB_USER',     'root');
 define('DB_PASSWORD', 'root');
 define('DB_HOST',     'localhost');
-define('DB_CHARSET',  'utf8');
-define('DB_COLLATE', '');
+
+// Production
+// define('DB_NAME', '');
+// define('DB_USER', '');
+// define('DB_PASSWORD', '');
+// define('DB_HOST', '');
 
 
-// ** Chaves únicas de autenticação e salts ** //
 
-/*
- *
- * Altere cada chave para um frase única!
- * https://api.wordpress.org/secret-key/1.1/salt/
- *
- * Você pode alterá-las a qualquer momento para desvalidar
- * quaisquer cookies existentes. Isto irá forçar todos os
- * usuários a fazerem login novamente.
- *
- */
+// ** WordPress Database Table prefix. ** //
 
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
-
-
-// ** Prefixo da tabela do banco de dados do WordPress ** //
 $table_prefix = 'wp_';
 
 
+
+// ** Authentication Unique Keys and Salts. ** //
+
+/*
+ * Generate these using: https://api.wordpress.org/secret-key/1.1/salt/
+ */
+
+define('AUTH_KEY',         '');
+define('SECURE_AUTH_KEY',  '');
+define('LOGGED_IN_KEY',    '');
+define('NONCE_KEY',        '');
+define('AUTH_SALT',        '');
+define('SECURE_AUTH_SALT', '');
+define('LOGGED_IN_SALT',   '');
+define('NONCE_SALT',       '');
+
+
+
+
 // ** FTP ** //
-define('FS_METHOD','direct');
+define('FS_METHOD','direct'); // ftpext
+// define('FTP_BASE', '');
+// define('FTP_USER', '');
+// define('FTP_PASS', '');
+// define('FTP_HOST', '127.0.0.1');
+
 
 // ** SSL ** //
-define( 'FORCE_SSL_LOGIN', false );
-define( 'FORCE_SSL_ADMIN', false );
+// define('FTP_SSL', false);
+define('FORCE_SSL_LOGIN', false);
+define('FORCE_SSL_ADMIN', false);
 
 
-// ** Idioma ** //
-define( 'WPLANG', 'pt_BR' );
+// ** Language ** //
+define('WPLANG', 'pt_BR');
 
 
-// ** Otimização dos dados ** //
+// ** Data Optimize ** //
 define('WP_POST_REVISIONS', false);
 define('EMPTY_TRASH_DAYS', 30);
 define('WP_ALLOW_REPAIR', true);
 define('DISALLOW_FILE_EDIT', false);
 define('DISALLOW_FILE_MODS', false);
-define ('AUTOMATIC_UPDATER_DISABLED' , true);
+define('AUTOMATIC_UPDATER_DISABLED' , true);
 
 
-// ** Modo debugging WordPress ** //
-define( 'WP_DEBUG',     true );
-define( 'WP_DEBUG_LOG', true );
-define( 'SCRIPT_DEBUG', true );
+// ** For developers: WordPress debugging mode. ** //
+define('WP_DEBUG',     true);
+define('WP_DEBUG_LOG', true);
+define('SCRIPT_DEBUG', true);
 
 
-/** Caminho absoluto para o diretório WordPress. */
-if ( !defined('ABSPATH') )
+// ** The WP_SITEURL and WP_HOME options are configured to access from any hostname or IP address. ** //
+// define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+// define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+
+
+
+// ** That's all, stop editing! Happy blogging. ** //
+
+// ** Absolute path to the WordPress directory. ** //
+if (!defined('ABSPATH'))
     define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Configura as variáveis do WordPress e arquivos inclusos. */
+// ** Sets up WordPress vars and included files. ** //
 require_once(ABSPATH . 'wp-settings.php');
