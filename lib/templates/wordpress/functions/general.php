@@ -30,14 +30,14 @@ function enqueue_scripts() {
 
     wp_deregister_script('jquery');
 
-    wp_register_script('jquery', WP_SCRIPT_URL . '/vendor/jquery-1.10.2.min.js', array(), null, true);
-    wp_enqueue_script('jquery');
+    wp_register_script('jquery.min', WP_SCRIPT_URL . '/vendors/jquery-1.10.2.min.js', array(), null, true);
+    wp_enqueue_script('jquery.min');
 
-    wp_register_script('modernizr', WP_SCRIPT_URL . '/vendor/modernizr-2.6.2.min.js', array(), null, false);
-    wp_enqueue_script('modernizr');
+    wp_register_script('modernizr.min', WP_SCRIPT_URL . '/vendors/modernizr-2.6.2.min.js', array(), null, false);
+    wp_enqueue_script('modernizr.min');
 
-    wp_register_script('main', WP_SCRIPT_URL . '/main.min.js', array(), null, true);
-    wp_enqueue_script('main');
+    wp_register_script('main.min', WP_SCRIPT_URL . '/main.min.js', array(), null, true);
+    wp_enqueue_script('main.min');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
@@ -61,54 +61,3 @@ function flush_rewrite() {
 }
 
 add_action('after_switch_theme', 'flush_rewrite');
-
-
-/**
- * Custom Search for categories
- */
-// function search_posts_filter($query){
-//     if ($query->is_search){
-//         $query->set('cat','1,2,3,4');
-//     }
-//     return $query;
-// }
-// add_filter('pre_get_posts','search_posts_filter');
-
-
-/**
- * Add rel attribute to attachment link.
- */
-
-// function add_lightbox_rel($content) {
-//     // $permalink = wp_get_attachment_url($post->ID);
-//     $content = preg_replace('/<a/', '<a rel="prettyPhoto[gallery]"' , $content, 1);
-//     return $content;
-// }
-// add_filter('wp_get_attachment_link', 'add_lightbox_rel', 10, 6);
-
-
-/**
- * Custom excerpt for content.
- */
-// function excerpt($limit) {
-//     $excerpt = explode(' ', get_the_excerpt(), $limit);
-//     if (count($excerpt)>=$limit) {
-//         array_pop($excerpt);
-//         $excerpt = implode(" ",$excerpt).'...';
-//     } else {
-//         $excerpt = implode(" ",$excerpt);
-//     }
-//     $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-//     return $excerpt;
-// }
-
-// function my_excerpt_length($limit){return 9; }
-// add_filter('excerpt_length', 'my_excerpt_length');
-
-/**
- * Add support for Post Formats.
- */
-// add_theme_support( 'post-formats', array(
-//     'gallery',
-//     'video'
-// ) );

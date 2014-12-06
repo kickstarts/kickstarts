@@ -38,3 +38,4 @@ require_once($functions_path . 'posttype.php');
 require_once($functions_path . 'support.php');
 // require_once($functions_path . 'shortcodes.php');
 // require_once($functions_path . 'social.php');
+// require_once($functions_path . 'theme.php');

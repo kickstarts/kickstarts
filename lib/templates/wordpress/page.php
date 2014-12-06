@@ -12,18 +12,18 @@
 
 get_header(); ?>
 
-<?php
-    global $pages_with_sidebar;
-    if (is_page($pages_with_sidebar)) :
-?>
+    <section class="">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php
 
-    <?php get_sidebar(); ?>
-    <?php get_template_part('includes/content', 'page'); ?>
+            endwhile; else :
 
-<?php else : ?>
+            // If no content, include the "No posts found" template.
+            get_template_part('includes/content', 'none');
 
-    <?php get_template_part('includes/content', 'page'); ?>
+            endif;
 
-<?php endif; ?>
+        ?>
+    </section>
 
 <?php get_footer(); ?>

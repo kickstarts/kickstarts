@@ -2,13 +2,13 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the <head> section and everything up till .main div
  *
  * @package Project Name
  */
 
 // if (!is_user_logged_in()) {
-//     wp_redirect('http://www.damain.com/subdomain', 302);
+//     wp_redirect('http://www.domain.com/subdomain', 302);
 //     exit;
 // }
 
@@ -79,7 +79,7 @@
 
 <!--[if lt IE 9]>
 <script type="text/javascript">
-    window.location.href = "http://www.consil.com.br/ie/";
+    window.location.href = "http://www.domain.com.br/ie/";
 </script>
 <![endif]-->
 
@@ -95,5 +95,5 @@
         </header>
         <!-- /.header -->
 
-        <!-- .content -->
-        <main class="content">
+        <!-- .main -->
+        <main class="main">
