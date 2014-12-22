@@ -10,6 +10,7 @@ var prompt = [
             { name: 'General', value: 'general' },
             { name: 'Web App', value: 'webapp' },
             { name: 'Single App Page', value: 'spa'},
+            { name: 'Simple App', value: 'simpleapp'},
             { name: 'BENM Stack', value: 'benmstack' },
             { name: 'MEAN Stack', value: 'meanstack' },
             { name: 'NodeJS', value: 'nodeapp' },
@@ -46,6 +47,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'webapp':
         require('./lib/bp-webapp');
+        break;
+
+    case 'simpleapp':
+        require('./lib/bp-simpleapp');
         break;
 
     case 'benmstack':

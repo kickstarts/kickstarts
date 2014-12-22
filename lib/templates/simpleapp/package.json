@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "application-name",
+  "version": "0.1.0",
+  "title": "Project Name",
+  "description": "Project description goes here",
+  "author": {
+    "name": "Vitor Britto",
+    "url": "http://vitorbritto.com.br",
+    "email": "code@vitorbritto.com.br"
+  },
+  "keywords": [
+    "boilerplate",
+    "grunt",
+    "framework",
+    "template",
+    "backbonejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitorbritto/boilerplates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorbritto/boilerplates/issues"
+  },
+  "licenses": {
+    "type": "MIT",
+    "url": "http://vitorbritto.mit-license.org/"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "backbone": "^1.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1"
+  }
+}
