@@ -11,7 +11,11 @@
     <meta name="google-site-verification" content="" />
     <meta name="viewport" content="width=device-width">
 
-    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/apple-72.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/apple-57.png">
+    <link rel="shortcut icon" href="assets/favicon.png">
 
     <link rel="stylesheet" href="assets/styles/style.min.css">
     <script src="assets/scripts/vendor/modernizr-2.6.2.min.js"></script>

@@ -65,8 +65,12 @@
 ?>
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link href="<?php echo WP_IMAGE_URL ?>/favicon.ico" rel="shortcut icon" />
-<!-- <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo WP_IMAGE_URL ?>/apple-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo WP_IMAGE_URL ?>/apple-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo WP_IMAGE_URL ?>/apple-72.png">
+<link rel="apple-touch-icon-precomposed" href="<?php echo WP_IMAGE_URL ?>/apple-57.png">
+<link rel="shortcut icon" href="<?php echo WP_IMAGE_URL ?>/favicon.png">
 
 <meta property="og:title" content="<?php echo $title_default; ?>"/>
 <meta property="og:type" content="site"/>

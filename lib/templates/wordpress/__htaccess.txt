@@ -1,19 +1,15 @@
-# Apache configuration file
-# httpd.apache.org/docs/2.2/mod/quickreference.html
+# ----------------------------------------------------------------------
+# Start rewrite engine
+# ----------------------------------------------------------------------
 
-# Note .htaccess files are an overhead, this logic should be in your Apache config if possible
-# httpd.apache.org/docs/2.2/howto/htaccess.html
-
-# Techniques in here adapted from all over, including:
-#   Kroc Camen: camendesign.com/.htaccess
-#   perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/
-#   Sample .htaccess file of CMS MODx: modxcms.com
-
-
-###
-### If you run a webserver other than Apache, consider:
-### github.com/h5bp/server-configs
-###
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
 
 
 
@@ -273,50 +269,6 @@ FileETag None
 
 
 # ----------------------------------------------------------------------
-# Start rewrite engine
-# ----------------------------------------------------------------------
-
-# Turning on the rewrite engine is necessary for the following rules and features.
-# FollowSymLinks must be enabled for this to work.
-
-<IfModule mod_rewrite.c>
-  Options +FollowSymlinks
-  RewriteEngine On
-</IfModule>
-
-
-
-# ----------------------------------------------------------------------
-# Suppress or force the "www." at the beginning of URLs
-# ----------------------------------------------------------------------
-
-# The same content should never be available under two different URLs - especially not with and
-# without "www." at the beginning, since this can cause SEO problems (duplicate content).
-# That's why you should choose one of the alternatives and redirect the other one.
-
-# By default option 1 (no "www.") is activated. Remember: Shorter URLs are sexier.
-# no-www.org/faq.php?q=class_b
-
-# If you rather want to use option 2, just comment out all option 1 lines
-# and uncomment option 2.
-# IMPORTANT: NEVER USE BOTH RULES AT THE SAME TIME!
-
-# ----------------------------------------------------------------------
-
-# Option 1:
-# Rewrite "www.example.com -> example.com"
-
-<IfModule mod_rewrite.c>
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
-</IfModule>
-
-# ----------------------------------------------------------------------
-
-
-
-# ----------------------------------------------------------------------
 # Built-in filename-based cache busting
 # ----------------------------------------------------------------------
 
@@ -346,15 +298,6 @@ FileETag None
 #   e.g. /blog/hello : webmasterworld.com/apache/3808792.htm
 
 Options -MultiViews
-
-
-
-# ----------------------------------------------------------------------
-# Custom 404 page
-# ----------------------------------------------------------------------
-
-# You can add custom pages to handle 500 or 403 pretty easily, if you like.
-ErrorDocument 404 /404.html
 
 
 
