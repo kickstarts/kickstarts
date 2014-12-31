@@ -1,0 +1,7 @@
+# Ignore all files
+*
+
+# Except these files
+!package.json
+!README.md
+!lib/
