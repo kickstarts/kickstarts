@@ -30,6 +30,9 @@
   "engines": {
     "node": "~0.10.0"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "lodash": "^2.4.1",
     "backbone": "^1.1.2"
