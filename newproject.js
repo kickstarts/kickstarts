@@ -24,7 +24,9 @@ var prompt = [
             { name: 'Rails', value: 'rails' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
-            { name: 'Magento', value: 'magento' }
+            { name: 'Magento', value: 'magento' },
+            { name: 'Shell Script', value: 'shellscript' }
+
         ],
         name: 'boilerplate',
         message: 'Which boilerplate would you like to generate?',
@@ -104,6 +106,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'magento':
         require('./lib/bp-magento');
+        break;
+
+    case 'shellscript':
+        require('./lib/bp-shellscript');
         break;
 
     }
