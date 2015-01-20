@@ -24,7 +24,7 @@ var prompt = [
             { name: 'Rails', value: 'rails' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
-            { name: 'Magento', value: 'magento' },
+            { name: 'C Program', value: 'cprogram' },
             { name: 'Shell Script', value: 'shellscript' }
 
         ],
@@ -104,8 +104,8 @@ inquirer.prompt(prompt, function(answers) {
         require('./lib/bp-harp');
         break;
 
-    case 'magento':
-        require('./lib/bp-magento');
+    case 'cprogram':
+        require('./lib/bp-cprogram');
         break;
 
     case 'shellscript':
