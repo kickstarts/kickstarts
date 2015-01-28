@@ -1,14 +1,13 @@
 # Web App Boilerplate
 
-The Web App Boilerplate provides an initial structure with [BackboneJS](http://backbonejs.org/) on the _client-side_, including [Grunt](http://gruntjs.com) and [Karma](http://karma-runner.github.io/0.12/index.html) for setup.
+The Web App Boilerplate provides an initial structure with [BackboneJS](http://backbonejs.org/) on the _client-side_, including [Grunt](http://gruntjs.com) for build and automation.
 
 
 ## Requires
 
+- [BackboneJS](http://backbonejs.org/)
 - [Node.JS](http://nodejs.org/)
 - [Grunt](http://gruntjs.com)
-- [PhantomJS](http://phantomjs.org/)
-- [Karma](http://karma-runner.github.io/0.12/index.html)
 
 
 ## Instructions
@@ -36,18 +35,11 @@ $ grunt generate
 
 ## Includes
 
-- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
-- [jQuery](http://jquery.com/) - JavaScript library
-- [Normalize](http://necolas.github.io/normalize.css/) - For standardize CSS elements
-- [Modernizr](http://modernizr.com/) - For legacy browsers support
 - [BackboneJS](http://backbonejs.org/) - MV* framework
 - [Grunt](http://gruntjs.com) - The streaming build system
-- [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
-- [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
-- [NIB](https://github.com/visionmedia/nib) - Stylus mixins, utilities, components, and gradient image generation
-- [Mocha](http://visionmedia.github.io/mocha/) - JavaScript test framework running on node.js and the browser
-- [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser
-
+- [Zepto](http://zeptojs.com/) - JavaScript library for modern browsers
+- [underscore](http://underscorejs.org/)
+- [Bootstrap CSS](http://getbootstrap.com/)
 
 ## Documentation
 
