@@ -59,25 +59,29 @@ new() {
 }
 ```
 
-Execute it with: `new [project-name]`
+Usage: `new [project-folder-name]`
 
 
 ## Boilerplates
 
 - [General](lib/templates/general/)
-- [WordPress](lib/templates/wordpress/)
 - [B.E.N.M. Stack](lib/templates/benmstack/)
 - [M.E.A.N. Stack](lib/templates/meanstack/)
 - [Web App](lib/templates/webapp/)
 - [Single Page App](lib/templates/spa/)
+- [Simple Web App](lib/templates/simpleapp/)
 - [Node App](lib/templates/nodeapp/)
 - [Node Webkit](lib/templates/nodewebkit/)
-- [Sinatra](lib/templates/sinatra/)
 - [CLI Tool](lib/templates/clitool/)
-- [NPM Package](lib/templates/npmpkg/)
+- [Node Package](lib/templates/npmpkg/)
+- [React Package](lib/templates/reactpkg)
+- [WordPress](lib/templates/wordpress/)
+- [WP Plugin](lib/templates/wpplugin/)
+- [Sinatra](lib/templates/sinatra/)
 - [Jekyll](lib/templates/jekyll/)
 - [Harp](lib/templates/harp/)
-- [WP Plugin](lib/templates/wpplugin/)
+- [C Program](lib/templates/cprogram/)
+- [Shell Script](lib/templates/shellscript/)
 
 ## License
 
