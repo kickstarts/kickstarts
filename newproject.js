@@ -9,19 +9,17 @@ var prompt = [
         choices: [
             { name: 'General', value: 'general' },
             { name: 'Web App', value: 'webapp' },
-            { name: 'Single App Page', value: 'spa'},
-            { name: 'Simple App', value: 'simpleapp'},
-            { name: 'BENM Stack', value: 'benmstack' },
-            { name: 'MEAN Stack', value: 'meanstack' },
+            { name: 'React + Backbone', value: 'reactbone' },
             { name: 'NodeJS', value: 'nodeapp' },
             { name: 'Node Webkit', value: 'nwapp' },
+            { name: 'B.E.N.M. Stack', value: 'benmstack' },
+            { name: 'M.E.A.N. Stack', value: 'meanstack' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'React Package', value: 'reactpkg' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'WordPress', value: 'wordpress' },
             { name: 'WordPress Plugin', value: 'wpplugin' },
             { name: 'Sinatra', value: 'sinatra' },
-            { name: 'Rails', value: 'rails' },
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
             { name: 'C Program', value: 'cprogram' },
@@ -44,16 +42,12 @@ inquirer.prompt(prompt, function(answers) {
         require('./lib/bp-general');
         break;
 
-    case 'spa':
-        require('./lib/bp-spa');
-        break;
-
     case 'webapp':
         require('./lib/bp-webapp');
         break;
 
-    case 'simpleapp':
-        require('./lib/bp-simpleapp');
+    case 'reactbone':
+        require('./lib/bp-reactbone');
         break;
 
     case 'benmstack':
