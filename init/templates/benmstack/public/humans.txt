@@ -1,0 +1,15 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Author: Vitor Britto
+  Site: www.vitorbritto.com.br
+  Twitter: @vitorbritto
+  Location: Brazil
+
+
+/* SITE */
+  Standards:
+  Setup:
+  Software:
