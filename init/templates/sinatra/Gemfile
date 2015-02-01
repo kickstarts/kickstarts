@@ -1,0 +1,36 @@
+source 'https://rubygems.org'
+
+gem 'rack'
+gem 'sinatra'
+gem 'rake'
+gem 'haml'
+gem 'sass'
+gem 'compass'
+gem 'coffee-script'
+gem 'foreman'
+gem 'data_mapper'
+
+group :development do
+  gem 'sqlite3'
+  gem 'shotgun'
+  gem 'foreman'
+  gem 'dm-sqlite-adapter'
+  gem 'rubyzip'
+  gem 'capistrano'
+end
+
+# If you plan on deploying to
+# Heroku, uncomment this group
+
+group :production do
+  # gem 'dm-mysql-adapter'
+  # gem 'dm-postgres-adapter'
+  gem 'puma'
+end
+
+group :test do
+  gem 'minitest', "~>2.6.0", :require => "minitest/autorun"
+  gem 'rack-test', :require => "rack/test"
+  gem 'factory_girl'
+  gem 'database_cleaner'
+end

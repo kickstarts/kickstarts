@@ -1,0 +1,12 @@
+!!! 5
+%html{html_attrs('en-en')}
+  %head
+    %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "lang", :content => "en"}
+    %title Sinatra Template for Heroku w/ Haml, Sass & jQuery | TJ Stein
+    %link{:href => "assets/css/style.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"}
+  %body
+    .container
+    = yield
+    = haml :analytics, :layout => false
