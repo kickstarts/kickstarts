@@ -1,0 +1,36 @@
+{
+  "name": "pkgname",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "pkgname": "bin/index.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitorbritto/pkgname"
+  },
+  "keywords": [
+    "pkgname"
+  ],
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitorbritto/pkgname/issues"
+  },
+  "homepage": "https://github.com/vitorbritto/pkgname",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+  	"simhelp": "^0.1.1",
+    "simlog": "^0.1.3"
+  }
+}
