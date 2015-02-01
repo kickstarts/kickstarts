@@ -1,0 +1,25 @@
+{
+    "name": "Project Name",
+    "version": "0.1.0",
+    "homepage": "http://www.projectpage.com",
+    "authors": [
+        "Vitor Britto <code@vitorbritto.com.br>"
+    ],
+    "description": "Some description here.",
+    "keywords": [
+        "jekyll",
+        "template",
+        "static generator"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "components"
+    ],
+    "dependencies": {
+        "modernizr": "~2.6.2",
+        "jquery": "~1.10.2"
+    }
+}
