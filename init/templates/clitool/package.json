@@ -1,0 +1,39 @@
+{
+    "name": "clitoolname",
+    "version": "0.1.0",
+    "description": "Some description here.",
+    "author": {
+        "name": "Vitor Britto",
+        "email": "code@vitorbritto.com.br",
+        "url": "http://vitorbritto.com.br"
+    },
+    "private": true,
+    "main": "index.js",
+    "bin": "bin/main",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vitorbritto/boilerplates"
+    },
+    "bugs": {
+        "url": "https://github.com/vitorbritto/boilerplates/issues"
+    },
+    "licenses": {
+        "type": "MIT",
+        "url": "http://vitorbritto.mit-license.org/"
+    },
+    "dependencies": {
+        "commander": "~2.0.0",
+        "colors": "~0.6.2",
+        "shelljs": "~0.2.6",
+        "inquirer": "~0.4.0",
+        "update-notifier": "~0.1.7"
+    },
+    "devDependencies": {
+        "gulp": "^3.6.2",
+        "gulp-mocha": "^0.4.1",
+        "gulp-jshint": "^1.5.5",
+        "jshint-stylish": "^0.2.0",
+        "mocha": "^1.18.2",
+        "chai": "~1.9.1"
+    }
+}
