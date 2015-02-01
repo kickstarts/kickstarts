@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "name": "application-name",
+  "version": "0.1.0",
+  "title": "Project Name",
+  "description": "Project description goes here",
+  "author": {
+    "name": "Vitor Britto",
+    "url": "http://vitorbritto.com.br",
+    "email": "code@vitorbritto.com.br"
+  },
+  "keywords": [
+    "boilerplate",
+    "gulp",
+    "nodejs",
+    "express",
+    "framework",
+    "mocha",
+    "chai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitorbritto/boilerplates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorbritto/boilerplates/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "gulp-changed": "^0.3.0",
+    "gulp-concat": "^2.4.3",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-csslint": "^0.1.5",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-header": "^1.0.2",
+    "gulp-imagemin": "^0.5.0",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-shell": "^0.2.11",
+    "gulp-stylus": "^2.0.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-webserver": "^0.4.0",
+    "reactify": "^0.14.0",
+    "vinyl-source-stream": "^1.0.0",
+    "chai": "~1.9.1",
+    "gulp": "^3.8.10",
+    "flux-react": "^2.6.0",
+    "react": "^0.12.0",
+    "lodash": "~2.4.1",
+    "backbone": "^1.1.2",
+    "nib": "^1.0.2",
+    "gulp-mocha": "^2.0.0"
+  }
+}
+
+
