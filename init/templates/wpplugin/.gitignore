@@ -1,0 +1,7 @@
+.DS_Store
+.sass-cache/
+node_modules
+_build
+assets/styles/*.css
+assets/scripts/*.min.js
+assets/scripts/src/*.bundle.js
