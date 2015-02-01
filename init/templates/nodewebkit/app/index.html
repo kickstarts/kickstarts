@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Node Webkit App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/app.min.js"></script>
+    <script>
+        var pkg = require('./package.json');
+    </script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <a class="logo" href="#">
+                    <img src="http://placehold.it/240x180" alt="">
+                </a>
+            </header>
+
+            <main class="content">
+                <h1><script>document.write(pkg.name)</script></h1>
+                <p>Running NodeJS <script>document.write(process.version)</script></p>
+            </main>
+
+            <footer class="footer">
+                <p>Todos os direitos reservados. Desenvolvido por: <script>document.write(pkg.author)</script></p>
+            </footer>
+        </div>
+
+        <!--
+        ******************************************
+        * Livereload for development environment
+        ******************************************
+        -->
+        <!-- Browser -->
+        <script src="//localhost:35729/livereload.js"></script>
+
+        <!-- Node Webkit -->
+        <script>
+            var path = './';
+            var fs = require('fs');
+
+            fs.watch(path, function() {
+                if (location) {
+                    location.reload();
+                }
+            });
+        </script>
+    </body>
+</html>

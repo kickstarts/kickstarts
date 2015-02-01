@@ -1,0 +1,144 @@
+//
+// Buttons
+// --------------------------------------------------
+
+@if $use-buttons == true and $use-helpers == false  {
+
+    // Button Structure
+    .btn,
+    button.btn,
+    input[type="submit"].btn,
+    button[type="submit"].btn {
+        @include button-structure(0, $base-font-size, 9px 12px);
+        margin-bottom: 0;
+        line-height: $base-line-height;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+
+        // Hover/focus state
+        &:hover,
+        &:focus {
+            @if $use-animations == true {
+                @include transition(all linear 0.2s);
+            }
+            color: $white;
+        }
+
+        // Focus state for keyboard and accessibility
+        &:focus {
+            @include tab-focus();
+        }
+
+        // Active state
+        &.active,
+        &:active {
+            outline: 0;
+            color: $white;
+        }
+
+        // Disabled state
+        &.btn-disabled,
+        &[disabled] {
+            cursor: default;
+            background: $btn-disable-color !important;
+            @include opacity(0.65);
+            &:hover, &:focus {
+                cursor: default;
+            }
+        }
+    }
+
+    // Button Sizes
+    // --------------------------------------------------
+
+    // Extra Large
+    .btn-extra { @include button-structure(0, $font-size-large * 2 , 18px 26px); }
+    .btn-extra [class^="icon-"],
+    .btn-extra [class*=" icon-"] {
+        margin-top: 11px;
+    }
+
+    // Large
+    .btn-large { @include button-structure(0, $font-size-large, 11px 19px); }
+    .btn-large [class^="icon-"],
+    .btn-large [class*=" icon-"] {
+        margin-top: 4px;
+    }
+
+    // Small
+    .btn-small { @include button-structure(0, $font-size-small, 2px 10px); }
+    .btn-small [class^="icon-"],
+    .btn-small [class*=" icon-"] {
+        margin-top: 0;
+    }
+
+    // Mini
+    .btn-mini { @include button-structure(0, $font-size-large, 0px 6px); }
+    .btn-mini [class^="icon-"],
+    .btn-mini [class*=" icon-"] {
+        margin-top: -1px;
+    }
+
+    // Block button
+    // -------------------------
+
+    .btn-block {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        @include box-sizing(border-box);
+    }
+
+    // Vertically space out multiple block buttons
+    .btn-block + .btn-block {
+        margin-top: 5px;
+    }
+
+    // Specificity overrides
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+        &.btn-block {
+            width: 100%;
+        }
+    }
+
+    // Button Styles
+    .btn-inverse     { @include button-gradient($btn-type, $btn-inverse-color); }
+    .btn-primary     { @include button-gradient($btn-type, $btn-primary-color); }
+    .btn-danger      { @include button-gradient($btn-type, $btn-error-color); }
+    .btn-warning     { @include button-gradient($btn-type, $btn-warning-color); }
+    .btn-highlight   { @include button-gradient($btn-type, $btn-highlight-color); }
+    .btn-info        { @include button-gradient($btn-type, $btn-info-color); }
+    .btn-success     { @include button-gradient($btn-type, $btn-success-color); }
+
+    // Link buttons
+    // --------------------------------------------------
+
+    // Make a button look and behave like a link
+    .btn-link,
+    .btn-link:active,
+    .btn-link[disabled] {
+        background-color: transparent;
+        background-image: none;
+    }
+    .btn-link {
+        border-color: transparent;
+        cursor: pointer;
+        color: $white;
+    }
+    .btn-link:hover,
+    .btn-link:focus {
+        color: $link-color-hover;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    .btn-link[disabled]:hover,
+    .btn-link[disabled]:focus {
+        color: $gray-dark;
+        text-decoration: none;
+    }
+
+}

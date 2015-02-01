@@ -1,0 +1,80 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// GRID FUNCTION
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Set initial value to container
+$max-columns: $columns;
+
+// Utility function — you should never need to modify this
+@function total-width($columns:$columns) {
+    @return ($column-width * $columns) + ($gutter-width * $columns);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// BASIC MIXINS
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+    *zoom:1;
+
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
+}
+
+@mixin container() {
+    margin: 0 auto;
+    width: $total-width;
+}
+
+@mixin row() {
+    display: block;
+    margin: 0 auto;
+    @include clearfix();
+}
+
+@mixin column($x,$columns:$columns) {
+    display: inline;
+    float: left;
+    width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / total-width($columns));
+    margin: 0 $total-width*(($gutter-width*.5)/total-width($columns));
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// MARGIN MIXINS
+//
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin push($offset: 1) {
+    margin-left: $total-width*((($gutter-width+$column-width)*$offset) / total-width($columns)) + $total-width*(($gutter-width*.5)/total-width($columns));
+}
+
+@mixin pull($offset: 1) {
+    margin-right: $total-width*((($gutter-width+$column-width)*$offset) / total-width($columns)) + $total-width*(($gutter-width*.5)/total-width($columns));
+}
+
+@mixin squish($offset: 1) {
+    margin-left: $total-width*((($gutter-width+$column-width)*$offset) / total-width($columns)) + $total-width*(($gutter-width*.5)/total-width($columns));
+    margin-right: $total-width*((($gutter-width+$column-width)*$offset) / total-width($columns)) + $total-width*(($gutter-width*.5)/total-width($columns));
+}
+
+@mixin alpha() {
+    margin-left: 0;
+}
+
+@mixin omega() {
+    margin-right: 0;
+}
