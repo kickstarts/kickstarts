@@ -18,6 +18,7 @@ var prompt = [
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Node Webkit', value: 'nwapp' },
             { name: 'CLI Tool', value: 'clitool' },
+            { name: 'Slim', value: 'slim' },
             { name: 'WordPress', value: 'wordpress' },
             { name: 'WordPress Plugin', value: 'wpplugin' },
             { name: 'Sinatra', value: 'sinatra' },
@@ -85,6 +86,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'sinatra':
         require('./init/bp-sinatra');
+        break;
+
+    case 'slim':
+        require('./init/bp-slim');
         break;
 
     case 'wordpress':

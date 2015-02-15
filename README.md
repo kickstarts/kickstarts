@@ -75,6 +75,7 @@ Usage: `new [project-folder-name]`
 - [CLI Tool](init/templates/clitool/)
 - [Node Package](init/templates/npmpkg/)
 - [React Package](init/templates/reactpkg)
+- [Slim](init/templates/slim/)
 - [WordPress](init/templates/wordpress/)
 - [WP Plugin](init/templates/wpplugin/)
 - [Sinatra](init/templates/sinatra/)
