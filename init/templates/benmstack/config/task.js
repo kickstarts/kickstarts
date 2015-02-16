@@ -38,7 +38,7 @@ module.exports = {
     // JSHint Config
     jshint: {
         all: [
-            // './vendors/**/*.js',
+            // './vendor/**/*.js',
             './config/*.js',
             './test/{client,server}/*.js',
             './server/**/*.js',
