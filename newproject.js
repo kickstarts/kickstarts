@@ -9,7 +9,7 @@ var prompt = [
         choices: [
             { name: 'General', value: 'general' },
             { name: 'Web App', value: 'webapp' },
-            { name: 'React + Backbone', value: 'reactbone' },
+            // { name: 'React + Backbone', value: 'reactbone' },
             { name: 'React + Flux', value: 'reactflux' },
             { name: 'React Component', value: 'reactcomp' },
             { name: 'B.E.N.M. Stack', value: 'benmstack' },
@@ -48,16 +48,16 @@ inquirer.prompt(prompt, function(answers) {
         require('./init/bp-webapp');
         break;
 
-    case 'reactbone':
-        require('./init/bp-reactbone');
-        break;
+    // case 'reactbone':
+    //     require('./init/bp-reactbone');
+    //     break;
 
     case 'reactflux':
         require('./init/bp-reactflux');
         break;
 
-    case 'reactcomp':
-        require('./init/bp-reactcomp');
+    case 'reactpkg':
+        require('./init/bp-reactpkg');
         break;
 
     case 'benmstack':
