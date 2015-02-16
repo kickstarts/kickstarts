@@ -5,7 +5,7 @@
 #
 # Author:       Vitor Britto
 # Version:      1.0.0
-# Description:  myscript goes here
+# Description:  description goes here
 #
 #
 # -- INSTRUCTIONS: -------------------------------------------------------------------------------------------
