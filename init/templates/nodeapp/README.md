@@ -6,9 +6,8 @@ Generate a new project based on [NodeJS Application](http://nodejs.org/).
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-- [Gulp](http://gulpjs.com/)
-- [MongoDB](http://www.mongodb.org/) - NoSQL database
-
+- [MongoDB](http://www.mongodb.org/)
+- [GIT](http://git-scm.com/)
 
 ## Instructions
 
@@ -92,10 +91,6 @@ $ npm install passport
 ```
 
 
-## Structure
+## License
 
-
-## Documentation
-
-After you clone this repository, be sure to delete this content and replace it.
-You can go to the Gist Cave and find the gold. :)
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
