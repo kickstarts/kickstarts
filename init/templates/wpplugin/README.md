@@ -7,10 +7,10 @@ This project was made based on [WordPress-Plugin-Boilerplate by tommcfarlin](htt
 
 ## Requirements
 
-* [Node.js](http://nodejs.org/)
-* [Compass](http://compass-style.org/)
-* [GIT](http://git-scm.com/)
-* [Subversion](http://subversion.apache.org/)
+- [WordPress](http://wordpress.org/)
+- [Node.JS](http://nodejs.org/)
+- [Ruby](https://www.ruby-lang.org/pt/)
+- [GIT](http://git-scm.com/)
 
 ## Getting Started
 
@@ -31,6 +31,12 @@ $ grunt spec
 # Deploy Plugin
 $ grunt deploy
 ```
+
+## Includes
+
+- [Grunt](http://gruntjs.com)
+- [Sass](http://sass-lang.com/)
+- [Compass](http://compass-style.org/)
 
 ## Changelog ##
 
