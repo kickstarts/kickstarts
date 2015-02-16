@@ -9,11 +9,8 @@ var prompt = [
         choices: [
             { name: 'General', value: 'general' },
             { name: 'Web App', value: 'webapp' },
-            // { name: 'React + Backbone', value: 'reactbone' },
             { name: 'React + Flux', value: 'reactflux' },
-            { name: 'React Component', value: 'reactcomp' },
             { name: 'B.E.N.M. Stack', value: 'benmstack' },
-            { name: 'M.E.A.N. Stack', value: 'meanstack' },
             { name: 'NodeJS', value: 'nodeapp' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Node Webkit', value: 'nwapp' },
@@ -48,24 +45,12 @@ inquirer.prompt(prompt, function(answers) {
         require('./init/bp-webapp');
         break;
 
-    // case 'reactbone':
-    //     require('./init/bp-reactbone');
-    //     break;
-
     case 'reactflux':
         require('./init/bp-reactflux');
         break;
 
-    case 'reactpkg':
-        require('./init/bp-reactpkg');
-        break;
-
     case 'benmstack':
         require('./init/bp-benmstack');
-        break;
-
-    case 'meanstack':
-        require('./init/bp-meanstack');
         break;
 
     case 'nodeapp':
@@ -82,6 +67,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'npmpkg':
         require('./init/bp-npmpkg');
+        break;
+
+    case 'frankbone':
+        require('./init/bp-frankbone');
         break;
 
     case 'sinatra':
