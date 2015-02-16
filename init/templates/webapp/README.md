@@ -5,9 +5,9 @@ The Web App Boilerplate provides an initial structure with [BackboneJS](http://b
 
 ## Requires
 
-- [BackboneJS](http://backbonejs.org/)
 - [Node.JS](http://nodejs.org/)
-- [Grunt](http://gruntjs.com)
+- [Ruby](https://www.ruby-lang.org/pt/)
+- [GIT](http://git-scm.com/)
 
 
 ## Instructions
