@@ -6,8 +6,8 @@ Generate a new project based on [Node Webkit Application](https://github.com/rog
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-- [Grunt](http://gruntjs.com)
-
+- [Ruby](https://www.ruby-lang.org/pt/)
+- [GIT](http://git-scm.com/)
 
 ## Instructions
 
@@ -31,7 +31,14 @@ $ grunt
 $ grunt test
 ```
 
-## Documentation
+## Includes
 
-After you clone this repository, be sure to delete this content and replace it.
-You can go to the Gist Cave and find the gold. :)
+- [Grunt](http://gruntjs.com)
+- [Sass](http://sass-lang.com/)
+- [Compass](http://compass-style.org/)
+- [Mocha](http://visionmedia.github.io/mocha/)
+- [Chai](http://chaijs.com/)
+
+## License
+
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
