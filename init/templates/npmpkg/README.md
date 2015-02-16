@@ -22,7 +22,6 @@ $ npm test
 - [Chai](http://chaijs.com/) - Chai is a BDD / TDD assertion library for node and the browser.
 
 
-## Documentation
+## License
 
-After you clone this repository, be sure to delete this content and replace it.
-You can go to the Gist Cave and find the gold. :)
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
