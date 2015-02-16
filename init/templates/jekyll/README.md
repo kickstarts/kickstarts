@@ -16,10 +16,10 @@ Generate a new project based on [Jekyll](http://jekyllrb.com/).
 
 ```
 # Start the server in DEV mode and watching files for rebuild:
-$ rake
+$ bundle exec rake
 
 # Build project:
-$ rake build
+$ bundle exec rake build
 ```
 
 
@@ -37,11 +37,6 @@ $ rake build
 - [Rakefile](http://rake.rubyforge.org/doc/rakefile_rdoc.html) - Task Runner (ruby-like syntax)
 
 
-## Structure
+## License
 
-
-## Documentation
-
-After you clone this repository, be sure to delete this content and replace it.
-You can go to the Gist Cave and find the gold. :)
-
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
