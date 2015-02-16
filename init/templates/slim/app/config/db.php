@@ -16,7 +16,6 @@ class DB {
         self::$connection->setAttribute(PDO::ATTR_DEFAULT_FECTH_MODE, PDO::FETCH_OBJ);
     }
 
-
     public static function getInstance() {
         if (empty(self::$instance)) {
             self::$instance = new DB();
@@ -24,11 +23,11 @@ class DB {
         return self::$instance;
     }
 
-
     public static function getConnection() {
         self::getInstance();
         return self::$connection;
     }
+
 
     public static function prepare($sql) {
         return self::getConnection()->prepare($sql);
@@ -36,6 +35,33 @@ class DB {
 
     public static function lastInsertId() {
         return self::getConnection()->lastInsertId();
+    }
+
+    public static function beginTransaction() {
+        return self::getConnection()->beginTransaction();
+    }
+
+    public static function commit() {
+        return self::getConnection()->commit();
+    }
+
+    public static function rollBack() {
+        self::getConnection()->rollBack();
+    }
+
+
+    public static function dateToMySQL($date) {
+        return implode("-",array_reverse(explode("/", $date)));
+    }
+
+    public static function dateFromMySQL($date) {
+        return implode("/",array_reverse(explode("-", $date)));
+    }
+
+    public static function decimalToMySQL($value) {
+        $value = str_replace(".", "", $value);
+        $value = str_replace(",", ".", $value);
+        return $value;
     }
 
 }

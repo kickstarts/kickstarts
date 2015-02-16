@@ -1,17 +1,17 @@
 <?php
 
 // ENVIRONMENT
-$app->configureMode("production", function() use ($app) {
+$app->configureMode('production', function() use ($app) {
     $app->config(array(
-        "log.enable"    => true,
-        "debug"         => false
+        'log.enable'    => true,
+        'debug'         => false
     ));
 });
 
-$app->configureMode("development", function() use ($app) {
+$app->configureMode('development', function() use ($app) {
     $app->config(array(
-        "log.enable"    => false,
-        "debug"         => false
+        'log.enable'    => false,
+        'debug'         => false
     ));
 });
 
@@ -19,9 +19,11 @@ $app->configureMode("development", function() use ($app) {
 $view = $app->view();
 $view->setData(array(
     'App' => array(
-        // Basic HTML head and meta info
-        'title'       => "App Title",
-        'description' => "App Description",
-        'keywords'    => "slim, boilerplate, webapp, rest, api"
+        'lang'          => 'pt-BR',
+        'title'         => 'App Title',
+        'description'   => 'App Description',
+        'keywords'      => 'slim, boilerplate, webapp, rest, api',
+        'verification'  => ''
+
     )
 ));

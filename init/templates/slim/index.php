@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require 'vendor/autoload.php';
 
 
@@ -21,6 +23,7 @@ $app = new \Slim\Slim(array(
 // ==========================================
 
 require_once('app/config/core.php');
+require_once('app/config/db.php');
 require_once('app/config/app.php');
 
 
