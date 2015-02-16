@@ -2,8 +2,6 @@
 
 Generate a new project based on [Sinatra](http://sinatrarb.com/).
 
-> WORK IN PROGRESS
-
 
 ## Requires
 
@@ -15,13 +13,7 @@ Generate a new project based on [Sinatra](http://sinatrarb.com/).
 
 ## Instructions
 
-
-**STEP 01: Clone from Github**
-
-    $ git clone https://github.com/Wixel/Frank-Sinatra.git <your app name>
-    $ cd <your app name>
-
-**STEP 02: Install Required Gems**
+**STEP 01: Install Required Gems**
 
 To check your dependencies and install, type:
 
@@ -30,7 +22,7 @@ To check your dependencies and install, type:
 
 This will install all the dependencies and create the Gemfile.lock file. This process could take some time to complete.
 
-**STEP 03: Running Locally**
+**STEP 02: Running Locally**
 
 When running locally, a sqlite3 database file will be created in the /db directory.
 
@@ -69,7 +61,7 @@ You can now access your app at [http://localhost:5000](http://localhost:5000)
 - [Data Mapper](http://datamapper.org/)
 - [Shotgun](https://github.com/rtomayko/shotgun)
 - [Foreman](https://github.com/ddollar/foreman) - Manage Procfile-based applications
-- [Puma]()
+- [Puma](http://puma.io/)
 - [Rake::Test](https://github.com/brynary/rack-test)
 
 **Optional**
@@ -95,11 +87,6 @@ $ npm install passport
 ```
 
 
+## License
 
-
-## Structure
-
-
-## Documentation
-
-Go to the Gist Cave and find the gold. :)
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
