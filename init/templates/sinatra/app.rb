@@ -64,7 +64,7 @@ class App < Sinatra::Base
     set :root          , File.dirname(__FILE__)
     set :public        , File.dirname(__FILE__) + '/public'
     set :views         , File.dirname(__FILE__) + '/app/views'
-    set :tests         , File.dirname(__FILE__) + '/tests'
+    set :tests         , File.dirname(__FILE__) + '/test'
 
     set :haml          , :format => :html5
     set :sass          , Compass.sass_engine_options
