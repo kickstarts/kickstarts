@@ -4,12 +4,10 @@ Generate a new project based on [WordPress](http://wordpress.org/).
 
 ## Requires
 
+- [WordPress](http://wordpress.org/)
 - [Node.JS](http://nodejs.org/)
-- [Bower](http://bower.io)
-- [Grunt](http://gruntjs.com)
 - [Ruby](https://www.ruby-lang.org/pt/)
-- [Sass](http://sass-lang.com/)
-- [Compass](http://compass-style.org/)
+- [GIT](http://git-scm.com/)
 
 
 ## Instructions
@@ -62,7 +60,6 @@ $ grunt docs
 
 ## Includes
 
-- [WordPress](http://wordpress.org/)
 - [Bower](http://bower.io)
 - [Grunt](http://gruntjs.com)
 - [Sass](http://sass-lang.com/)
