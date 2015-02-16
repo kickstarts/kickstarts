@@ -7,10 +7,10 @@ The B.E.N.M. Stack provides a boilerplate with [BackboneJS](http://backbonejs.or
 
 - [Node.JS](http://nodejs.org/)
 - [MongoDB](http://www.mongodb.org/)
-- [Grunt](http://gruntjs.com)
+- [Ruby](https://www.ruby-lang.org/pt/)
+- [GIT](http://git-scm.com/)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
-
 
 ## Instructions
 
@@ -107,7 +107,6 @@ $ npm install passport  --save
 ```
 
 
-## Documentation
+## License
 
-After you clone this repository, be sure to delete this content and replace it.
-You can go to the Gist Cave and find the gold. :)
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
