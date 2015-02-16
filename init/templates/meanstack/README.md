@@ -7,10 +7,9 @@ The M.E.A.N. Stack provides a boilerplate with [AngularJS](https://angularjs.org
 
 - [Node.JS](http://nodejs.org/)
 - [MongoDB](http://www.mongodb.org/)
-- [Grunt](http://gruntjs.com)
 - [PhantomJS](http://phantomjs.org/)
 - [Karma](http://karma-runner.github.io/0.12/index.html)
-- [Napa](https://www.npmjs.org/package/napa)
+- [GIT](http://git-scm.com/)
 
 
 ## Instructions
@@ -46,11 +45,11 @@ $ grunt generate
 ## Includes
 
 **Main**
+- [Napa](https://www.npmjs.org/package/napa)
 - [MongoDB](http://www.mongodb.org/) - An open-source document database, and the leading NoSQL database.
 - [Express](http://expressjs.com/) - Web application framework for Node
 - [AngularJS](https://angularjs.org/) - Superheroic JavaScript MVW Framework
 - [Grunt](http://gruntjs.com) - The JavaScript Task Runner
-- [Karma](http://karma-runner.github.io/0.12/index.html)
 - [Jade](https://github.com/visionmedia/jade) - Robust, elegant, feature-rich template engine for nodejs
 - [Stylus](https://github.com/LearnBoost/stylus) - Robust, expressive, and feature-rich CSS superset
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) - General elements for Scaffolding
@@ -96,9 +95,6 @@ $ npm install passport
 ```
 
 
-## Structure
+## License
 
-
-## Documentation
-
-Go to the Gist Cave and find the gold. :)
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
