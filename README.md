@@ -65,20 +65,19 @@ Usage: `new [project-folder-name]`
 ## Boilerplates
 
 - [General](init/templates/general/)
-- [B.E.N.M. Stack](init/templates/benmstack/)
-- [M.E.A.N. Stack](init/templates/meanstack/)
+- [B.E.N.M. Stack](init/templates/benmstack/) - *new version coming soon*
+- [M.E.A.N. Stack](init/templates/meanstack/) - *new version coming soon*
 - [Web App](init/templates/webapp/)
-- [Single Page App](init/templates/spa/)
-- [Simple Web App](init/templates/simpleapp/)
 - [Node App](init/templates/nodeapp/)
 - [Node Webkit](init/templates/nodewebkit/)
 - [CLI Tool](init/templates/clitool/)
 - [Node Package](init/templates/npmpkg/)
 - [React Package](init/templates/reactpkg)
+- [React + Flux](init/templates/reactflux)
 - [Slim](init/templates/slim/)
 - [WordPress](init/templates/wordpress/)
 - [WP Plugin](init/templates/wpplugin/)
-- [Sinatra](init/templates/sinatra/)
+- [Sinatra](init/templates/sinatra/) - *new version coming soon*
 - [Jekyll](init/templates/jekyll/)
 - [Harp](init/templates/harp/)
 - [C Program](init/templates/cprogram/)
