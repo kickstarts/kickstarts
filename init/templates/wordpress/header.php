@@ -13,11 +13,7 @@
 // }
 
 ?><!DOCTYPE html>
-<!--[if IE 7]><html class="no-js ie7 lt-ie9 lt-ie8" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 8]><html class="no-js ie8 lt-ie9" <?php language_attributes(); ?>><![endif]-->
-<!--[if !(IE 7) | !(IE 8) ]><!-->
 <html class="no-js" <?php language_attributes(); ?>>
-<!--<![endif]-->
 <head>
 <?php
 

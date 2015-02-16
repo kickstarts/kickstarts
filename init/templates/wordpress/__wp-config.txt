@@ -1,14 +1,5 @@
 <?php
 
-// ** Track errors on server ** //
-error_reporting(E_ALL); ini_set('display_errors', 1);
-
-
-// ** Trick for long posts ** //
-ini_set('pcre.recursion_limit', 20000000);
-ini_set('pcre.backtrack_limit', 10000000);
-
-
 /**
  * The base configurations of the WordPress.
  *
@@ -26,23 +17,20 @@ ini_set('pcre.backtrack_limit', 10000000);
 
 // ** MySQL settings ** //
 
-// Development
-
-define('DB_NAME',     'YOUR_TABLE_NAME_HERE');
-define('DB_USER',     'root');
-define('DB_PASSWORD', 'root');
-define('DB_HOST',     'localhost');
 define('DB_CHARSET',  'utf8');
 define('DB_COLLATE', '');
 
-// Production
+// Development
+define('DB_NAME', 'carretos');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'root');
+define('DB_HOST', 'localhost');
 
-// define('DB_NAME', '');
-// define('DB_USER', '');
-// define('DB_PASSWORD', '');
-// define('DB_HOST', '');
-// define('DB_CHARSET', '');
-// define('DB_COLLATE', '');
+// Production
+// define('DB_NAME', 'carretos_wp');
+// define('DB_USER', 'carretos_wp');
+// define('DB_PASSWORD', '0okm9ijn');
+// define('DB_HOST', 'localhost');
 
 
 // ** Authentication Unique Keys and Salts. ** //
@@ -51,14 +39,14 @@ define('DB_COLLATE', '');
  * Generate these using: https://api.wordpress.org/secret-key/1.1/salt/
  */
 
-define('AUTH_KEY',         '0-<oPjymw!|-Eqj%=>|$_g{gyU]wF&IoAm}]No72<Mx}a>20-Uu|P;+rWrs{c~bj');
-define('SECURE_AUTH_KEY',  'j4_8nsD|81Xoqx+*[C)EyqM!1 l|-P*xU.{OV%+yA(e_y}w[./=Rs-AkJ^8_D{I0');
-define('LOGGED_IN_KEY',    'x=LvFQ-J)|UZhf6lfoB[X.2m,]HL?/9snvLK6v#y1=K#`cth$CL?KId3u]vv@~~Y');
-define('NONCE_KEY',        'I>Yv;K0A,isj*-`87:#qutcOxAN$NUy+#T#A;|-w$qwtB5_9m#T{$q:|JSF{VO}X');
-define('AUTH_SALT',        'W~&4cgI(E6dwnl{G&:i~|_(,!~<%Qg;_(!1MDc?0xL#)v~ux;d7.5s4-W)Ucq02k');
-define('SECURE_AUTH_SALT', '{;!0rqFrx=+;(8pWr6D)7pf]7megbp56Ae`{#c+A&@+mXK%+/Hb_*VK$yyb9c1hM');
-define('LOGGED_IN_SALT',   'sTK1J{?ksw0.3{JNNEJ_&D5dc#$xen{JYN_3y<4u:q 40Hui+RW()i$b-IxUEN*7');
-define('NONCE_SALT',       'hn<M88HHMoaRAnIy3<(q^Nu[4t~h}yGF6<Cfb]%dU0gjl|tgv:R/(=s]]CZR0@#g');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 
 // ** WordPress Database Table prefix. ** //
@@ -117,4 +105,5 @@ if (!defined('ABSPATH'))
 
 // ** Sets up WordPress vars and included files. ** //
 require_once(ABSPATH . 'wp-settings.php');
+
 

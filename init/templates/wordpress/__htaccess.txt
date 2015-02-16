@@ -2,14 +2,25 @@
 # Start rewrite engine
 # ----------------------------------------------------------------------
 
+# DEVELOPMENT
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
+RewriteBase /~vitorbritto/projectname/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule . /~vitorbritto/projectname/index.php [L]
 </IfModule>
+
+# PRODUCTION
+# <IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteBase /
+# RewriteRule ^index\.php$ - [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . /index.php [L]
+# </IfModule>
 
 
 
