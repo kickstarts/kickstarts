@@ -6,7 +6,8 @@ This boilerplate provides an initial structure for CLI Tools based on [Node.JS](
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-- [Gulp](http://gulpjs.com/)
+- [Ruby](https://www.ruby-lang.org/pt/)
+- [GIT](http://git-scm.com/)
 
 
 ## Instructions
@@ -43,7 +44,6 @@ $ gulp spec
 - [ShellJS](https://www.npmjs.org/package/shelljs)
 
 
-## Documentation
+## License
 
-After you clone this repository, be sure to delete this content and replace it.
-You can go to the Gist Cave and find the gold. :)
+[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
