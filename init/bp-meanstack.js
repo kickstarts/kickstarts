@@ -19,7 +19,7 @@ sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
 sh.mv('./init/templates/meanstack/*', './');
 sh.rm('-rf', ['./init']);
-sh.exec('svn checkout https://github.com/ambitiouswebkit/ui-starter/trunk/stylus assets/styles');
+sh.exec('svn checkout https://github.com/ambitiouswebkit/ui-starter/trunk/stylus public/assets/styles');
 
 // Setup
 sh.echo(info('→ Setting up project'));

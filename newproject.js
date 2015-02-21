@@ -11,6 +11,7 @@ var prompt = [
             { name: 'Web App', value: 'webapp' },
             { name: 'React + Flux', value: 'reactflux' },
             { name: 'B.E.N.M. Stack', value: 'benmstack' },
+            { name: 'M.E.A.N. Stack', value: 'meanstack' },
             { name: 'NodeJS', value: 'nodeapp' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Node Webkit', value: 'nwapp' },
@@ -53,6 +54,10 @@ inquirer.prompt(prompt, function(answers) {
         require('./init/bp-benmstack');
         break;
 
+    case 'meanstack':
+        require('./init/bp-meanstack');
+        break;
+
     case 'nodeapp':
         require('./init/bp-nodeapp');
         break;
@@ -67,10 +72,6 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'npmpkg':
         require('./init/bp-npmpkg');
-        break;
-
-    case 'frankbone':
-        require('./init/bp-frankbone');
         break;
 
     case 'sinatra':
