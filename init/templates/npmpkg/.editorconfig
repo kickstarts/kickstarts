@@ -12,7 +12,7 @@ indent_style = space
 indent_size = 4
 
 # Specific Files
-[{*.styl, *.jade, *.coffee, *.sass, *.haml, *.rb, *.json}]
+[*.{styl,jade,coffee,sass,haml,rb,json}]
 indent_size = 2
 tab_width = 2
 indent_style = space
