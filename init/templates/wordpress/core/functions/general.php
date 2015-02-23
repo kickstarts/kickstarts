@@ -26,7 +26,7 @@ if (!isset($content_width)) {
  */
 function enqueue_scripts() {
 
-    wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), null, 'all');
+    wp_enqueue_style('style.min', get_stylesheet_uri(), array(), null, 'all');
 
     wp_deregister_script('jquery');
 

@@ -7,12 +7,15 @@
  * @package Project Name
  */
 
-// if (!is_user_logged_in()) {
-//     wp_redirect('http://www.domain.com/subdomain', 302);
-//     exit;
-// }
+if (!is_user_logged_in()) {
+    $domain = $_SERVER['SERVER_NAME'];
+    wp_redirect($domain . '/main', 302);
+    exit;
+}
 
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 <?php
