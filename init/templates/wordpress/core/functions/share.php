@@ -1,13 +1,19 @@
 <?php
+/**
+ * Social Widgets Functions and definitions
+ *
+ * @package Project Name
+ */
 
-// Social Buttons
-// -------------------
-add_action( 'wp_footer', 'include_social_js' );
-function include_social_js() {
 
-  $lang = get_bloginfo('language');
-  // $lang_g = strtolower(substr($lang, 0, 2));
-  $lang_fb = str_replace('-', '_', $lang);
+/*
+ * Initialize Widgets
+ */
+function share_widgets() {
+
+  $lang     = get_bloginfo('language');
+  $lang_g   = strtolower(substr($lang, 0, 2));
+  $lang_fb  = str_replace('-', '_', $lang);
 
 ?>
 
@@ -40,3 +46,4 @@ function include_social_js() {
 
 <?php
 }
+add_action( 'wp_footer', 'share_widgets' );

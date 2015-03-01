@@ -1,12 +1,19 @@
 <?php
+/**
+ * Custom Theme Elements
+ *
+ * @package Project Name
+ */
+
 
 
 /**
  * Custom Search for categories
  */
-function search_posts_filter($query){
-    if ($query->is_search){
-        $query->set('cat','1,2,3,4');
+function search_posts_filter($query) {
+    $cid = '1,2,3,4'; /* set ID's here */
+    if ($query->is_search) {
+        $query->set('cat', $cid);
     }
     return $query;
 }
