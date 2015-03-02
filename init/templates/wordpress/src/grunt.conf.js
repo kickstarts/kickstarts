@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
 
     // -------------------------------------------------------------------------------------
@@ -54,9 +56,8 @@ module.exports = {
         },
         files: {
             '../assets/scripts/main.min.js': [
-                // '../assets/scripts/vendors/*.js',
+                // '../assets/scripts/vendor/*.js',
                 // '../assets/scripts/libs/*.js',
-                // '../assets/scripts/legacy/*.js',
                 '../assets/scripts/bundle.js'
             ]
         }
@@ -178,14 +179,6 @@ module.exports = {
 
     // Mocha
     spec: '../spec/**/*.js',
-
-
-    // PERFORMANCE AND OPTIMISATION
-    // -----------------------------------------------------------
-
-    optimizeCSS: {},
-    phantomas: {},
-    pagespeed: {},
 
 
     // DEPLOY PROJECT
@@ -341,22 +334,6 @@ module.exports = {
         cwd: '../_build/',
         src: ['**/*'],
         dest: '../_build/'
-    },
-
-
-    // GENERATE DOCUMENTATION
-    // -----------------------------------------------------------
-
-    jsdoc: {
-        src: ['../assets/scripts/modules/*.js', '../spec/**/*.js'],
-        options: {
-            destination: '../docs/js'
-        }
-    },
-    cssdoc: {
-        files: {
-          '../docs/css': '../assets/styles/**/*.scss'
-        }
     },
 
 

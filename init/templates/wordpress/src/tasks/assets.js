@@ -16,8 +16,4 @@ module.exports = function(grunt) {
         dist: config.icons
     });
 
-    // grunt.loadNpmTasks('grunt-contrib-imagemin');
-    // grunt.loadNpmTasks('grunt-svgmin');
-    // grunt.loadNpmTasks('grunt-grunticon');
-
 };

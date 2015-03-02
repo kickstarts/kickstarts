@@ -8,7 +8,5 @@ module.exports = function(grunt) {
         spec: config.spec
     });
 
-    // grunt.loadNpmTasks('grunt-mocha');
-
 };
 
