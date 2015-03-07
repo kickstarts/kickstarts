@@ -16,9 +16,4 @@ module.exports = function(grunt) {
         build: config.compress
     });
 
-
-    // grunt.loadNpmTasks('grunt-contrib-compress');
-    // grunt.loadNpmTasks('grunt-contrib-copy');
-    // grunt.loadNpmTasks('grunt-contrib-clean');
-
 };

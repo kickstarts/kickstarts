@@ -10,7 +10,4 @@ module.exports = function(grunt) {
         dev: config.sync
     });
 
-    // grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-browser-sync');
-
 };

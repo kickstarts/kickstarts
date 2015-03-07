@@ -76,14 +76,6 @@ module.exports = function(grunt) {
     ]);
 
 
-    // DOCUMENTATION
-    // --------------------------------------
-
-    grunt.registerTask('docs', 'Generate Documentation', [
-        'jsdoc', 'styleguide'
-    ]);
-
-
     // UNIT TESTS
     // --------------------------------------
 

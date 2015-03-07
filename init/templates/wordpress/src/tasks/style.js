@@ -20,11 +20,5 @@ module.exports = function(grunt) {
         dist: config.cssmin
     });
 
-
-    // grunt.loadNpmTasks('grunt-sass');
-    // grunt.loadNpmTasks('grunt-contrib-csslint');
-    // grunt.loadNpmTasks('grunt-contrib-cssmin');
-    // grunt.loadNpmTasks('grunt-csscomb');
-
 };
 

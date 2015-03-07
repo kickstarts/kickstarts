@@ -16,8 +16,4 @@ module.exports = function(grunt) {
         dist: config.uglify
     });
 
-    // grunt.loadNpmTasks('grunt-contrib-jshint');
-    // grunt.loadNpmTasks('grunt-browserify');
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
-
 };

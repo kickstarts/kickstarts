@@ -20,9 +20,4 @@ module.exports = function(grunt) {
     //     mycmd: config.shell.mycmd
     // });
 
-    // grunt.loadNpmTasks('grunt-ftp-deploy');
-    // grunt.loadNpmTasks('grunt-rsync');
-    // grunt.loadNpmTasks('grunt-shell');
-    // grunt.loadNpmTasks('grunt-bump');
-
 };
