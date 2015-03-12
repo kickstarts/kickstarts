@@ -12,10 +12,9 @@ function after_setup_theme_handler() {
      */
     load_theme_textdomain('projectname', get_template_directory() . '/languages/');
 
-	/**
+    /**
      * Register nav menus.
      */
-
     add_theme_support('menus');
 
     register_nav_menus(
@@ -25,37 +24,40 @@ function after_setup_theme_handler() {
         )
     );
 
-
-    /**
-     * Register sidebars.
-     */
-
-    register_sidebar(
-        array(
-            'name'          => 'Name here',
-            'id'            => 'id-here',
-            'description'   => 'Description goes here',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '',
-            'after_title'   => ''
-        )
-    );
-
-
     /*
      * Add post_thumbnails support.
      */
+    add_theme_support( 'post-thumbnails' );
 
-    add_theme_support('post-thumbnails');
-    add_image_size('thumb-main', 50, 50, true);
-
-
-    /*
-     * Add woocommerce support.
+    /**
+     * Add feed link.
      */
+    add_theme_support( 'automatic-feed-links' );
 
-    add_theme_support('woocommerce');
+    /**
+     * Support Custom Header.
+     */
+    $default = array(
+        'width'         => 0,
+        'height'        => 0,
+        'flex-height'   => false,
+        'flex-width'    => false,
+        'header-text'   => false,
+        'default-image' => '',
+        'uploads'       => true,
+    );
+
+    add_theme_support( 'custom-header', $default );
+
+    /**
+     * Support Custom Background.
+     */
+    $defaults = array(
+        'default-color' => '',
+        'default-image' => '',
+    );
+
+    add_theme_support( 'custom-background', $defaults );
 
 }
 
