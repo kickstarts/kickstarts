@@ -24,7 +24,7 @@ function google_analytics() { ?>
 
 <?php }
 
-add_action('wp_footer', 'google_analytics');
+add_action('wp_head', 'google_analytics');
 
 
 function google_maps() { ?>
