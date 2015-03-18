@@ -31,10 +31,15 @@ $classes_path   = $core_path . 'classes/';
 
 
 /**
- * Debug
+ * Developer Tools
  */
 
-require_once $core_path . 'debug.php';
+define('APP_DEBUG_MODE', false);
+define('APP_SYNC_MODE', true);
+define('APP_PREVIEW_MODE', false);
+define('APP_UPDATE_MODE', false);
+
+require_once $includes_path . 'devtools.php';
 
 
 /**

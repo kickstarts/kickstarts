@@ -152,10 +152,10 @@ function remove_menus() {
     global $current_user;
     get_currentuserinfo();
     $restricted = array(
-        // __('Dashboard'),
-        // __('Posts'),
+        __('Dashboard'),
+        __('Posts'),
         // __('Pages'),
-        // __('Settings'),
+        __('Settings'),
         __('Links'),
         __('Appearance'),
         __('Tools'),
@@ -164,9 +164,11 @@ function remove_menus() {
 
    );
     end ($menu);
-    while (prev($menu)){
+    while (prev($menu)) {
         $value = explode(' ',$menu[key($menu)][0]);
-        if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
+        if (in_array($value[0] != NULL?$value[0]:"" , $restricted)) {
+            unset($menu[key($menu)]);
+        }
     }
 }
 
