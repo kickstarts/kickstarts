@@ -1,0 +1,29 @@
+{
+  "name": "jscomponent",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitorbritto/jscomponent"
+  },
+  "keywords": [
+    "jscomponent"
+  ],
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitorbritto/jscomponent/issues"
+  },
+  "homepage": "https://github.com/vitorbritto/jscomponent",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
