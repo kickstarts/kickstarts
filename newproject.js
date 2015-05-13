@@ -13,6 +13,7 @@ var prompt = [
             { name: 'B.E.N.M. Stack', value: 'benmstack' },
             { name: 'M.E.A.N. Stack', value: 'meanstack' },
             { name: 'JS Component', value: 'jscomponent' },
+            { name: 'jQuery Plugin', value: 'jqueryplugin' },
             { name: 'NodeJS', value: 'nodeapp' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Node Webkit', value: 'nwapp' },
@@ -61,6 +62,10 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'jscomponent':
         require('./init/bp-jscomponent');
+        break;
+
+    case 'jqueryplugin':
+        require('./init/bp-jqueryplugin');
         break;
 
     case 'nodeapp':
