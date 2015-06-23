@@ -1,14 +1,13 @@
 {
-  "name": "projectname",
-  "version": "1.0.0",
-  "title": "Vitor Britto",
-  "homepage": "http://www.projectname.com",
-  "description": "Description goes here",
-  "author": {
-    "name": "Vitor Britto",
-    "url": "http://www.vitorbritto.com",
-    "email": "code@vitorbritto.com.br"
-  },
+  "private": true,
+  "name": "jekyll",
+  "version": "0.1.0",
+  "title": "",
+  "homepage": "",
+  "description": "",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
+  "main": "",
   "repository": {
     "type": "git",
     "url": "git://github.com/vitorbritto/boilerplates.git"

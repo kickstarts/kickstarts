@@ -1,14 +1,13 @@
 {
   "private": true,
-  "name": "application-name",
+  "name": "benmstack",
   "version": "0.1.0",
-  "title": "Project Name",
-  "description": "Project description goes here",
-  "author": {
-    "name": "Vitor Britto",
-    "url": "http://vitorbritto.com.br",
-    "email": "code@vitorbritto.com.br"
-  },
+  "title": "",
+  "homepage": "",
+  "description": "",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
+  "main": "",
   "keywords": [
     "boilerplate",
     "gulp",
@@ -27,16 +26,10 @@
   "bugs": {
     "url": "https://github.com/vitorbritto/boilerplates/issues"
   },
-  "licenses": {
-    "type": "MIT",
-    "url": "http://vitorbritto.mit-license.org/"
-  },
+  "licenses": "MIT",
   "scripts": {
     "start": "node app.js",
     "test": "karma start ./config/test.js"
-  },
-  "engines": {
-    "node": "~0.10.0"
   },
   "dependencies": {
     "express": "^4.1.1",

@@ -1,12 +1,8 @@
 {
   "private": true,
   "name": "boilerplates",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A jump-start for new projects.",
-  "repository": {
-    "type": "git",
-    "url": "https://vitorbritto@github.com/vitorbritto/boilerplates.git"
-  },
   "keywords": [
     "boilerplates",
     "generator",
@@ -27,11 +23,12 @@
     "webapp",
     "wordpress"
   ],
-  "author": {
-    "name": "Vitor Britto",
-    "email": "code@vitorbritto.com.br"
-  },
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://vitorbritto@github.com/vitorbritto/boilerplates.git"
+  },
   "bugs": {
     "url": "https://github.com/vitorbritto/boilerplates/issues"
   },

@@ -1,14 +1,12 @@
 {
   "private": true,
-  "name": "application-name",
+  "name": "nodeapp",
   "version": "0.1.0",
-  "title": "Project Name",
-  "description": "Project description goes here",
-  "author": {
-    "name": "Vitor Britto",
-    "url": "http://vitorbritto.com.br",
-    "email": "code@vitorbritto.com.br"
-  },
+  "title": "",
+  "homepage": "",
+  "description": "",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
   "keywords": [
     "boilerplate",
     "gulp",
@@ -23,16 +21,10 @@
   "bugs": {
     "url": "https://github.com/vitorbritto/boilerplates/issues"
   },
-  "licenses": {
-    "type": "MIT",
-    "url": "https://github.com/vitorbritto/boilerplates/blob/master/LICENSE"
-  },
   "scripts": {
     "start": "node app.js",
-    "test": "karma start karma.conf"
-  },
-  "engines": {
-    "node": "~0.10.0"
+    "test": "karma start karma.conf",
+    "build": ""
   },
   "dependencies": {
     "gulp": "^3.6.2",

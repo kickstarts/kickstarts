@@ -1,18 +1,19 @@
 {
   "private": true,
   "name": "wp-plugin",
-  "title": "WP Plugin",
-  "description": "The best WordPress extension ever made!",
   "version": "0.1.0",
-  "homepage": "https://www.wpplugin.com/plugin",
-  "author": {
-    "name": "Vitor Britto",
-    "email": "code@vitorbritto.com.br",
-    "url": "https://www.vitorbritto.com.br"
+  "title": "",
+  "homepage": "",
+  "description": "",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "main": "",
+  "directories": {
+    "test": "test"
   },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.2.15"
+  "scripts": {
+    "test": "",
+    "start": "",
+    "build": ""
   },
   "dependencies": {
     "browserify": "^4.0.0"

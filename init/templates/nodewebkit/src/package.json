@@ -1,10 +1,14 @@
 {
   "name": "nodewebkit-app",
-  "description": "Description goes here.",
   "version": "0.1.0",
-  "homepage": "www.projectname.com",
+  "title": "",
+  "homepage": "",
+  "description": "",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
   "license": "MIT",
   "scripts": {
+    "test": "mocha",
+    "start": "",
     "build": "grunt"
   },
   "devDependencies": {
