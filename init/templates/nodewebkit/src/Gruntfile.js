@@ -53,7 +53,9 @@ module.exports = function(grunt) {
         // Watch
         watch: {
             options: {
-                livereload: true
+                livereload: true,
+                spawn: false,
+                reload: true
             },
             styles: {
                 files: '<%= paths.app %>/styles/**/*.scss',

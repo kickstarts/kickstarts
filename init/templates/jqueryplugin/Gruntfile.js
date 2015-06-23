@@ -96,6 +96,10 @@ module.exports = function(grunt) {
         // Better than calling grunt a million times
         // (call 'grunt watch')
         watch: {
+            options: {
+                spawn: false,
+                reload: true
+            },
             files: ['src/*'],
             tasks: ['default']
         }
@@ -109,6 +113,6 @@ module.exports = function(grunt) {
     // -------------------------------------------------------------------------------------
 
     grunt.registerTask('build', 'Compile files', ['concat', 'uglify', 'cssmin']);
-    grunt.registerTask('default', 'Initialize and watch for changes', ['jshint', 'csslint', 'build']);
+    grunt.registerTask('default', 'Lint and Compile Files', ['jshint', 'csslint', 'build']);
 
 };

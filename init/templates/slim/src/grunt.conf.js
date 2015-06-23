@@ -26,7 +26,9 @@ module.exports = {
     // Watch
     watch: {
         options: {
-            livereload: true
+            livereload: true,
+            spawn: false,
+            reload: true
         },
         css: {
             files: '../public/assets/styles/**/*.scss',

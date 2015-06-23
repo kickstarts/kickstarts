@@ -53,6 +53,10 @@ module.exports = function(grunt) {
         // -----------------------------------------------------------
 
         watch: {
+            options: {
+                spawn: false,
+                reload: true
+            },
             styles: {
                 files: [
                     '<%= path.css %>/src/**/*.scss',
