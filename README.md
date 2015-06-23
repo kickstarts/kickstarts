@@ -37,7 +37,7 @@ $ ./newproject.js
 
 **STEP 03: Profit! :)**
 
-> **Note**: chmod is an UNIX command, not present in MS-DOS.
+> **Note**: chmod is an UNIX command, not present in CMD/MS-DOS.
 
 ### Bonus
 
