@@ -14,41 +14,25 @@ Generate a new project based on General Scaffolding.
 
 ## Instructions
 
-**STEP 1: Set your configurations**
+**Start:**
 
-```
-Open `./src/grunt.conf.js` file and set up your configurations.
-```
+- with npm: `npm start`
+- with shell script: `bash ./bin/all.sh`
+- with grunt: `grunt start`
 
-**STEP 2: Bootstrap your project**
+**Build:**
 
-**STEP 3: In meantime, run the available tasks**
+- with npm: `npm build`
+- with grunt: `grunt build`
 
-```bash
-# Start Serve and watch for Changes
-$ grunt
+**Spec:**
 
-# Compile Files
-$ grunt build
+- with npm: `npm spec`
+- with grunt: `grunt spec`
 
-# Build App - Development
-$ grunt dev
+**Other Tasks:**
 
-# Build App - Production
-$ grunt prod
-
-# Deploy App
-$ grunt [ftp|rsync|git]
-
-# Optimize Images
-$ grunt assets
-
-# Run Unit Tests
-$ grunt spec
-
-# Generate Documentation
-$ grunt docs
-```
+> Check the `aliases.yaml` file at `src/grunt_modules` folder for more details.
 
 
 ## License

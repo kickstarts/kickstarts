@@ -1,8 +1,22 @@
-'use strict';
-
 ///////////////////////////////////////////
 // MODULES & CONFIGURATION               //
 ///////////////////////////////////////////
+
+// BOOTSTRAP
+var initAffix       = require('./modules/affix'),
+    initAlert       = require('./modules/alert'),
+    initButton      = require('./modules/button'),
+    initCarousel    = require('./modules/carousel'),
+    initCollapse    = require('./modules/collapse'),
+    initDropdown    = require('./modules/dropdown'),
+    initModal       = require('./modules/modal'),
+    initPopover     = require('./modules/popover'),
+    initScrollspy   = require('./modules/scrollspy'),
+    initTab         = require('./modules/tab'),
+    initTooltip     = require('./modules/tooltip'),
+    initTransition  = require('./modules/transition');
+
+// CUSTOM
 
 
 ///////////////////////////////////////////
@@ -10,6 +24,8 @@
 ///////////////////////////////////////////
 
 $(function() {
+
+    'use strict';
 
     // Accessibility - WAI-ARAI Roles
     $('nav').attr('role','navigation');
@@ -25,6 +41,20 @@ $(function() {
     $('.tabs').attr('role','tablist');
     $('.search-form').attr('role','search');
 
-    // Stuff to do as soon as the DOM is ready;
+    // Initialize Bootstrap Modules
+    initAffix();
+    initAlert();
+    initButton();
+    initCarousel();
+    initCollapse();
+    initDropdown();
+    initModal();
+    initPopover();
+    initScrollspy();
+    initTab();
+    initTooltip();
+    initTransition();
+
+    // Initialize Custom Modules
 
 });
