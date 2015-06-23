@@ -1,17 +1,14 @@
-#Info
+# Info
 name:        Project name
 description: Project description
 baseurl:     /
-domain:      vitorbritto.com.br
+url:         http://www.vitorbritto.com.br
 
-#Config
+# Config
 source:      .
 destination: ./_build
 permalink:   /:title/
-markdown:    redcarpet
-pygments:    true
-redcarpet:
-    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+markdown:    kramdown
 exclude: [
 bower.json,
 package.json,
@@ -33,4 +30,3 @@ README.md
 # Custom
 twitter:    https://twitter.com/projectname
 facebook:   https://www.facebook.com/projectname
-rssfeed:    http://feeds.feedburner.com/projectname

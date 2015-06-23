@@ -28,6 +28,10 @@ module.exports = function(grunt) {
 
         // Watch Task
         watch: {
+            options: {
+                spawn: false,
+                reload: true
+            },
             js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint', 'uglify']
