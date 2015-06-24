@@ -17,22 +17,22 @@ sh.echo(info('→ Initializing...'));
 // Create
 sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
-sh.mv('./init/templates/wordpress/*', './');
+sh.exec('git clone https://github.com/WordPress/WordPress');
+sh.mv('./init/templates/wordpress/*', './wp-content/themes/default/');
 sh.rm('-rf', ['./init']);
-// sh.exec('svn checkout https://github.com/ambitiouswebkit/webkit-css-starter
-// /trunk/sass assets/styles');
+sh.mv('./wp-content/themes/default/__wp-config.txt', './wp-config.php');
+sh.mv('./wp-content/themes/default/__gitignore.txt', './.gitignore');
+sh.mv('./wp-content/themes/default/__htaccess.txt', './wp-content/themes/default/htaccess.txt');
 
 // Setup
 sh.echo(info('→ Setting up project'));
 
-sh.exec('subl .');
 sh.cd('./src');
 
 if (!nodeCheck) {
     sh.echo(error('✖ This task requires NodeJS to run.'));
     process.exit(1);
 } else {
-    sh.exec('bower install');
     sh.exec('npm install');
 }
 
