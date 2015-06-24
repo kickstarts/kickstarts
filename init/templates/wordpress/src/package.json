@@ -12,9 +12,7 @@
     "test": "test"
   },
   "scripts": {
-    "spec": "grunt spec",
-    "start": "grunt start",
-    "build": "grunt build"
+    "postinstall": "bower install && grunt start"
   },
   "dependencies": {
     "browserify": "^4.0.0"
@@ -40,7 +38,6 @@
     "grunt-mocha": "^0.4.11",
     "grunt-pagespeed": "^1.0.0",
     "grunt-rsync": "^0.6.2",
-    "grunt-shell": "^1.1.1",
     "grunt-sitespeedio": "^0.5.0",
     "grunt-uncss": "^0.4.3",
     "load-grunt-config": "^0.17.1",
