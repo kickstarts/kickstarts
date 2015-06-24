@@ -63,14 +63,8 @@ require_once $functions_path . 'shortcodes.php';
  * Require Libs.
  */
 
-// require_once $libs_path . 'lib-foo.php';
-// require_once $libs_path . 'lib-bar.php';
-// require_once $libs_path . 'lib-baz.php';
-
 
 /**
  * Require Classes.
  */
 
-// require_once $classes_path . 'class-foo.php';
-// require_once $classes_path . 'class-bar.php';
