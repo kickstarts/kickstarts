@@ -3,7 +3,7 @@
 # USAGE: bash all.sh
 
 # Install Dependencies
-npm install
+npm install && bower install
 
 # Generate Project Structure
-grunt install
+grunt mount
