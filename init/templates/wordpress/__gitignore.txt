@@ -60,3 +60,4 @@ node_modules/
 bower_components/
 components/
 .sass-cache/
+npm-debug.log
