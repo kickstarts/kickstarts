@@ -92,9 +92,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // watch for changes to source
-        // Better than calling grunt a million times
-        // (call 'grunt watch')
         watch: {
             options: {
                 spawn: false,
