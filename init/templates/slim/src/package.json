@@ -1,14 +1,11 @@
 {
-  "name": "silmproject",
-  "version": "0.1.0",
-  "title": "Project Name",
-  "homepage": "http://www.projectname.com",
-  "description": "",
   "private": true,
-  "author": {
-    "name": "Vitor Britto",
-    "url": "http://vitorbritto.com.br"
-  },
+  "name": "slim",
+  "version": "0.1.0",
+  "title": "",
+  "homepage": "",
+  "description": "",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
   "dependencies": {
     "grunt": "^0.4.4",
     "browserify": "^4.0.0"
@@ -24,7 +21,6 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1"
   }
 }
