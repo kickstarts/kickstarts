@@ -8,7 +8,7 @@ var path = require('path'),
 module.exports = {
     app: {
         env:         process.env.NODE_ENV || 'development',
-        analytics:   process.env.GA       || 'UA-44765020-2',
+        analytics:   process.env.GA       || '',
         models:      path.join(__dirname, '../public/assets/scripts/app/models'),
         routes:      path.join(__dirname, '../public/assets/scripts/app/router'),
         views:       path.join(__dirname, '../public/assets/scripts/app/views')
