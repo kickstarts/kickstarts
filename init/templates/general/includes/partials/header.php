@@ -23,12 +23,13 @@
     <link rel="stylesheet" href="assets/styles/style.min.css">
     <script src="assets/scripts/vendor/modernizr-2.6.2.min.js"></script>
 
-    <!--[if lt IE 9]>
-        window.location.href = "http://domain.com/ie/";
-    <![endif]-->
 </head>
 
 <body>
+
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
     <header class="header">
 

@@ -54,14 +54,12 @@ if (!is_user_logged_in()) {
 
 <?php wp_head(); ?>
 
-<!--[if lt IE 9]>
-<script type="text/javascript">
-    window.location.href = "http://www.domain.com.br/ie/";
-</script>
-<![endif]-->
-
 </head>
 <body <?php body_class(); ?>>
+
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
     <!-- .container -->
     <div class="container">
