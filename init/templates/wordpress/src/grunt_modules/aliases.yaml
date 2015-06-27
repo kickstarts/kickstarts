@@ -68,3 +68,7 @@ rsync:
 git:
     - 'build'
     - 'bump'
+
+translate:
+    - 'makepot'
+    - 'potomo'
