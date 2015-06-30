@@ -28,6 +28,7 @@ To start a web server and watch for changed files, type:
 
     # NOTE: you need to execute this command into the ./src folder
 
+> Quick Start: execute `bash bin/init.sh`
 
 ## Includes
 

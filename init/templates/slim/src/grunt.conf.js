@@ -128,36 +128,32 @@ module.exports = {
     // Copy
     copy: {
         dev: {
-            files: {
-                expand: true,
-                src: [
-                    '!src/.sass-cache',
-                    '!src/node_modules',
-                    '!src/components',
-                    'src/**',
-                    '../**'
-                ],
-                dest: '../_build/'
-            },
+            expand: true,
+            src: [
+                '!src/.sass-cache',
+                '!src/node_modules',
+                '!src/components',
+                'src/**',
+                '../**'
+            ],
+            dest: '../_build/'
         },
         dist: {
-            files: {
-                expand: true,
-                src: [
-                    '!/src/**',
-                    '!.*',
-                    '!htaccess.txt',
-                    'README.md',
-                    '../public/assets/images',
-                    '../public/assets/fonts',
-                    '../public/assets/scripts/main.min.js',
-                    '../public/assets/styles/style.css',
-                    '../ie',
-                    '../*.{html,php}',
-                    '../includes',
-                ],
-                dest: '../_build/'
-            },
+            expand: true,
+            src: [
+                '!/src/**',
+                '!.*',
+                '!htaccess.txt',
+                'README.md',
+                '../public/assets/images',
+                '../public/assets/fonts',
+                '../public/assets/scripts/main.min.js',
+                '../public/assets/styles/style.css',
+                '../ie',
+                '../*.{html,php}',
+                '../includes',
+            ],
+            dest: '../_build/'
         }
     },
 
