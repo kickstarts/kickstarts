@@ -23,12 +23,12 @@ var gulp     = require('gulp'),
 ///////////////////////////////////////////
 
 
-// Web Server & Reload
+// Web Server & Live Reload
 // ---------------------
 
 // Sync Task
 gulp.task('server', function() {
-    sync(config.sync, function (err) {
+    sync(config.sync, function(err) {
         if (!err) {
             console.log('BrowserSync is ready!');
         }
@@ -54,8 +54,8 @@ gulp.task('bundle', function() {
 });
 
 gulp.task('minify', function() {
-    return gulp.src(config.paths.script + '/' + config.task.jsmin)
-        .pipe(__.plumber())
+    gulp.src(config.paths.script + '/' + config.task.jsmin)
+        .pipe(__.plumber({ errorHandler: __.notify.onError("Error: <%= error.message %>") }))
         .pipe(__.rename({suffix: '.min'}))
         .pipe(__.uglify({
             mangle: false,
@@ -73,21 +73,21 @@ gulp.task('minify', function() {
 
 // Stylus Task
 gulp.task('stylus', function() {
-    return gulp.src(config.task.stylus)
-        .pipe(__.plumber())
+    gulp.src(config.task.stylus)
+        .pipe(__.plumber({ errorHandler: __.notify.onError("Error: <%= error.message %>") }))
         .pipe(__.changed(config.task.stylus))
         .pipe(__.stylus({
             compress: false,
             use: nib()
         }))
-        .pipe(gulp.dest(config.paths.style))
-        .pipe(__.notify('CSS successfully compiled!'));
+        .pipe(__.notify('CSS successfully compiled!'))
+        .pipe(gulp.dest(config.paths.style));
 });
 
 // CSS Lint
 gulp.task('csslint', function() {
-    return gulp.src(config.task.cssmin)
-        .pipe(__.plumber())
+    gulp.src(config.task.cssmin)
+        .pipe(__.plumber({ errorHandler: __.notify.onError("Error: <%= error.message %>") }))
         .pipe(__.csslint('.csslint.json'))
         .pipe(__.csslint.reporter())
         .pipe(__.notify('CSS successfully linted!'));
@@ -95,20 +95,21 @@ gulp.task('csslint', function() {
 
 // CSS Comb
 gulp.task('csscomb', function() {
-    return gulp.src(config.task.cssmin)
-        .pipe(__.plumber())
+    gulp.src(config.task.cssmin)
+        .pipe(__.plumber({ errorHandler: __.notify.onError("Error: <%= error.message %>") }))
         .pipe(__.csscomb('.csscomb.json'))
-        .pipe(gulp.dest(config.paths.style))
-        .pipe(__.notify('CSS successfully organizied!'));
+        .pipe(__.notify('CSS successfully organizied!'))
+        .pipe(gulp.dest(config.paths.style));
+
 });
 
 // CSS Minify
 gulp.task('cssmin', function () {
-    return gulp.src(config.task.cssmin)
+    gulp.src(config.task.cssmin)
         .pipe(__.cssmin())
         .pipe(__.rename({suffix: '.min'}))
-        .pipe(gulp.dest(config.paths.style))
-        .pipe(__.notify('CSS successfully minified!'));
+        .pipe(__.notify('CSS successfully minified!'))
+        .pipe(gulp.dest(config.paths.style));
 });
 
 
@@ -117,11 +118,25 @@ gulp.task('cssmin', function () {
 
 // Jest Task
 gulp.task('jest', function() {
-    return gulp.src(config.paths.test)
-        .pipe(__.plumber())
+    gulp.src(config.paths.test)
+        .pipe(__.plumber({ errorHandler: __.notify.onError("Error: <%= error.message %>") }))
         .pipe(__.jest(config.task.jest))
         .pipe(__.notify('Test has finished!'));
 });
+
+// Coverage Task
+gulp.task('coverage', function() {
+    gulp.src([config.task.test], {read: false})
+        .pipe(__.coverage.instrument({
+            pattern: ['**/test*'],
+            debugDirectory: 'debug'
+        }))
+        .pipe(__.jest())
+        .pipe(__.coverage.gather())
+        .pipe(__.coverage.format())
+        .pipe(gulp.dest('reports'));
+});
+
 
 
 // Production
@@ -129,8 +144,8 @@ gulp.task('jest', function() {
 
 // Image Minify Task
 gulp.task('imagemin', function() {
-    return gulp.src(config.paths.images)
-        .pipe(__.plumber())
+    gulp.src(config.paths.images)
+        .pipe(__.plumber({ errorHandler: __.notify.onError("Error: <%= error.message %>") }))
         .pipe(__.changed(config.task.images))
         .pipe(__.imagemin({
             optimizationLevel: 5,
@@ -168,7 +183,7 @@ gulp.task('styles', ['stylus', 'csslint', 'csscomb', 'cssmin']);
 gulp.task('images', ['imagemin']);
 
 // Run Specs
-gulp.task('test', ['mocha']);
+gulp.task('test', ['jest', 'coverage']);
 
 // Build Task
 gulp.task('build', ['scripts', 'styles', 'images', 'generate']);

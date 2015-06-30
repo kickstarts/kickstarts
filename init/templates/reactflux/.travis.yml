@@ -16,4 +16,4 @@ branches:
     - master
 
 before_install:
-  - npm install -gq grunt coveralls
+  - npm install -gq gulp
