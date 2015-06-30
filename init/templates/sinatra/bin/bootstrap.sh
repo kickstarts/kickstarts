@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-cd ..
-
+bundle check
 bundle install
 rake migrate

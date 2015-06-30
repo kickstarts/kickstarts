@@ -32,6 +32,7 @@ To start a web server and watch for changed files, type:
 
     $ rackup
 
+> Quick Start: execute `bash bin/init.sh`
 
 ## Includes
 

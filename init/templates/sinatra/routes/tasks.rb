@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-get '/api/tasks' do
+get '/api/tasks/' do
   format_response(Task.all, request.accept)
 end
 
@@ -9,7 +9,7 @@ get '/api/tasks/:id' do
   format_response(task, request.accept)
 end
 
-post '/api/tasks' do
+post '/api/tasks/' do
   body = JSON.parse request.body.read
   task = Task.create(
     title:          body['title'],
