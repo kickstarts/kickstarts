@@ -44,9 +44,9 @@ module.exports = {
         'myApp.config'
     ],
     appModules: {
-        'controllers': require('../client/scripts/controllers'),
-        'services': require('../client/scripts/services'),
-        'filters': require('../client/scripts/filters'),
-        'directives': require('../client/scripts/directives')
+        'controllers': require('../client/controllers'),
+        'services': require('../client/services'),
+        'filters': require('../client/filters'),
+        'directives': require('../client/directives')
     }
 };

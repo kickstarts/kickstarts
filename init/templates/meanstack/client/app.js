@@ -9,7 +9,7 @@ require('angular/angular');
 require('angular-route/angular-route');
 
 var _       = require('lodash'),
-    config  = require('../../../config/client'),
+    config  = require('../config/app'),
     app     = angular.module(config.appName, config.appDeps);
 
 // Bootstrap Routes

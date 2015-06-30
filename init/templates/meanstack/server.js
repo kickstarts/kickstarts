@@ -7,7 +7,7 @@
 
 // Packages needed for Express 4.x
 var express           = require('express'),                         // https://npmjs.org/package/express
-    favicon           = require('static-favicon'),                  // https://github.com/expressjs/favicon
+    favicon           = require('serve-favicon'),                   // https://github.com/expressjs/serve-favicon
     session           = require('express-session'),                 // https://github.com/expressjs/session
     logger            = require('morgan'),                          // https://github.com/expressjs/morgan
     cookieParser      = require('cookie-parser'),                   // https://github.com/expressjs/cookie-parser
@@ -91,7 +91,7 @@ app.set('port', process.env.PORT || config.app.port);
 ///////////////////////////////////////////
 
 // Favicon
-app.use(favicon('public/favicon.ico'));
+app.use(favicon('public/assets/images/favicon.ico'));
 
 // Jade Config
 app.set('view engine', 'jade');
@@ -131,6 +131,8 @@ app.use(methodOverride());
 // Session (use a cookie and persist session in Mongo)
 app.use(cookieParser(config.session.secret));
 app.use(session({
+        resave: true,
+        saveUninitialized: false,
         secret: config.session.secret,
         key: 'sessionId',
         cookie: {
@@ -138,8 +140,8 @@ app.use(session({
             maxAge: config.session.maxAge
         },
         store: new MongoStore({
-            mongoose_connection: db,
-            auto_reconnect: true
+            mongooseConnection: db,
+            autoReconnect: true
         })
     }
 ));
@@ -269,13 +271,13 @@ if (config.app.env === 'development') {
 
 db.on('error', function () {
     winston.error('MongoDB connection error!');
-    console.error('✗ MongoDB connection error! Please make sure MongoDB is running.'.red.bold);
+    console.error('✗ MongoDB connection error! Please make sure MongoDB is running.');
     process.exit(0);
 });
 
 db.on('open', function() {
     winston.info('MongoDB connected!');
-    console.log('✓ MongoDB connected to %s', config.db.host.green.bold);
+    console.log('✓ MongoDB connected to %s', config.db.host);
 });
 
 
@@ -292,18 +294,18 @@ server.listen(app.get('port'), function() {
         'in ' + app.settings.env + ' mode.'
     );
     console.log(
-        '\n✓ ' + config.locals.name + ' listening on port ' + app.get('port').toString().green.bold,
-        'in ' + app.settings.env.green.bold + ' mode.',
-        '\n✓ Hint: ' + 'Ctrl+C'.green.bold + ' to shut down.'
+        '\n✓ ' + config.locals.name + ' listening on port ' + app.get('port').toString(),
+        'in ' + app.settings.env + ' mode.',
+        '\n✓ Hint: ' + 'Ctrl+C' + ' to shut down.'
     );
 
     // Exit on CTRL+C
     process.on('SIGINT', function () {
         winston.info('MongoDB has shutdown!');
         winston.info(config.locals.name + ' has shutdown.');
-        console.log('\n✗ MongoDB disconnected from %s. App has shutdown.', config.db.host.red.bold);
-        console.log('✗ %s has shutdown', config.locals.name.red.bold);
-        console.log('✗ %s was running for %s seconds.', config.locals.name, Math.round(process.uptime()).toString().cyan.bold);
+        console.log('\n✗ MongoDB disconnected from %s. App has shutdown.', config.db.host);
+        console.log('✗ %s has shutdown', config.locals.name);
+        console.log('✗ %s was running for %s seconds.', config.locals.name, Math.round(process.uptime()).toString());
         process.exit(0);
     });
 });
