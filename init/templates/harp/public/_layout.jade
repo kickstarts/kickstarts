@@ -1,0 +1,12 @@
+
+doctype html
+  html
+    head
+      != partial('_partials/head')
+    body
+      header
+        != partial('_partials/header')
+      main
+        != yield
+      footer
+        != partial('_partials/footer')
