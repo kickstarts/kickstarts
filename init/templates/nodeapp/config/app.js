@@ -13,7 +13,7 @@ module.exports = {
         env:         process.env.NODE_ENV || 'development',
         logStatus:   process.env.LOGGING  || false,
         logFile:     process.env.LOGFILE  || 'app.log',
-        analytics:   process.env.GA       || 'UA-44765020-2',
+        analytics:   process.env.GA       || 'UA-XXXXXXXX-X',
         host:        'http://localhost',
         port:        3000,
         routes:      path.join(__dirname, '../app/routes'),

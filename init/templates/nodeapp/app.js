@@ -133,6 +133,8 @@ app.use(methodOverride());
 // Session (use a cookie and persist session in Mongo)
 app.use(cookieParser(config.session.secret));
 app.use(session({
+        resave: true,
+        saveUninitialized: true,
         secret: config.session.secret,
         key: 'sessionId',
         cookie: {

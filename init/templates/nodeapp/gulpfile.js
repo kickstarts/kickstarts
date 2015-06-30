@@ -5,6 +5,7 @@
 ///////////////////////////////////////////
 
 var gulp   = require('gulp'),
+    del    = require('del'),
     pkg    = require('./package'),
     config = require('./config/task'),
     __     = require('gulp-load-plugins')();
@@ -31,7 +32,7 @@ gulp.task('minify', function() {
 });
 
 // Mocha Task
-gulp.task('test', function() {
+gulp.task('mocha', function() {
     gulp.src(config.task.test)
         .pipe(__.mocha({
             timeout: 6000,
@@ -40,6 +41,20 @@ gulp.task('test', function() {
             reporter: 'nyan'
         }));
 });
+
+// Coverage Task
+gulp.task('coverage', function() {
+    gulp.src([config.task.test], {read: false})
+        .pipe(__.coverage.instrument({
+            pattern: ['**/test*'],
+            debugDirectory: 'debug'
+        }))
+        .pipe(mocha())
+        .pipe(__.coverage.gather())
+        .pipe(__.coverage.format())
+        .pipe(gulp.dest('reports'));
+});
+
 
 // Imagemin Task
 gulp.task('images', function() {
@@ -54,9 +69,8 @@ gulp.task('images', function() {
 });
 
 // Clean Task
-gulp.task('clean', function() {
-    gulp.src(config.task.clean, {read: false})
-        .pipe(__.clean());
+gulp.task('clean', function(cb) {
+    del([config.task.clean], cb)
 });
 
 
@@ -72,7 +86,7 @@ gulp.task('scripts', ['lint', 'minify']);
 gulp.task('default', ['build', 'serve']);
 
 // Build Task
-gulp.task('build', ['scripts', 'images', 'test']);
+gulp.task('build', ['scripts', 'images']);
 
 // Serve Task
 gulp.task('serve', ['watch'], function() {
@@ -82,6 +96,9 @@ gulp.task('serve', ['watch'], function() {
             console.log('✓ Restarted!'.green.bold);
         });
 });
+
+// Test Task
+gulp.task('spec', ['mocha', 'coverage', 'coveralls']);
 
 
 

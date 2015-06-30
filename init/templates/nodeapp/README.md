@@ -22,7 +22,7 @@ Generate a new project based on [NodeJS Application](http://nodejs.org/).
 
 ```
 1. Set app configurations in `./config/app.js` file.
-2. Set task configuration in `./config/taks.js` file.
+2. Set task configuration in `./config/task.js` file.
 3. Run `npm i` to install dependencies.
 ```
 
