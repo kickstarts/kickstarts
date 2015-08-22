@@ -25,7 +25,9 @@ var prompt = [
             { name: 'Jekyll', value: 'jekyll' },
             { name: 'Harp', value: 'harp' },
             { name: 'C Program', value: 'cprogram' },
-            { name: 'Shell Script', value: 'shellscript' }
+            { name: 'Shell Script', value: 'shellscript' },
+            { name: 'Ionic', value: 'ionic' },
+            { name: 'Electron', value: 'electron' }
 
         ],
         name: 'boilerplate',
@@ -114,6 +116,14 @@ inquirer.prompt(prompt, function(answers) {
 
     case 'shellscript':
         require('./init/bp-shellscript');
+        break;
+
+    case 'ionic':
+        require('./init/bp-ionic');
+        break;
+
+    case 'electron':
+        require('./init/bp-electron');
         break;
 
     }
