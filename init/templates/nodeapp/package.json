@@ -22,7 +22,7 @@
     "url": "https://github.com/vitorbritto/boilerplates/issues"
   },
   "scripts": {
-    "preinstall": "npm install npm-check-updates -g && npm-check-updates -u",
+    "preinstall": "npm install npm-check-updates -g",
     "postinstall": "npm run start",
     "start": "gulp",
     "check": "npm outdated",
