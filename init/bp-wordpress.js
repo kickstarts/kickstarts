@@ -61,7 +61,7 @@ if (!gitCheck) {
 
     sh.echo(info('→ Clonning Advanced Custom Fields...'));
     sh.exec(gitClone + '/elliotcondon/acf.git');
-    sh.mv('./jetpack', pluginsPath);
+    sh.mv('./acf', pluginsPath);
     sh.echo(done('✔ Advanced Custom Fields successfully cloned!'));
 
     sh.echo(info('→ Clonning Yoast...'));
@@ -105,7 +105,7 @@ sh.echo(info('→ Setting up project...'));
 
 // Grant Permission
 sh.echo(info('→ Setting permission to folders and files...'));
-chmod('-R 755', './');
+sh.chmod('755', './');
 sh.echo(done('✔ Done!'));
 
 // Move on to "./src" folder
