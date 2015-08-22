@@ -43,7 +43,7 @@ if (!gitCheck) {
 
     // Scaffolding
     sh.echo(info('→ Creating Structure...'));
-    sh.mkdir('-p' themePath);
+    sh.mkdir('-p', themePath);
     sh.mv('./init/templates/wordpress/*', themePath);
     sh.mv(themePath + '__wp-config.txt', './wp-config.php');
     sh.mv(themePath + '__gitignore.txt', './.gitignore');
