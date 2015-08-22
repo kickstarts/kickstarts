@@ -1,0 +1,42 @@
+{
+  "name": "electron",
+  "productName": "Electron App",
+  "productVersion": "0.1.0",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:darwin": "bash ./bin/build-darwin.sh",
+    "build:linux": "bash ./bin/build-linux.sh",
+    "build:windows": "bash ./bin/build-windows.sh",
+    "build": "npm run build:darwin && npm run build:linux && npm run build:windows",
+    "release:darwin": "bash ./bin/release-darwin.sh",
+    "release:linux": "bash ./bin/release-linux.sh",
+    "release:windows": "bash ./bin/release-windows.sh",
+    "release": "npm run release:darwin && npm run release:linux && npm run release:windows",
+    "debug": "bash ./bin/debug.sh",
+    "test": "mocha",
+    "dist": "npm run build && npm run release"
+  },
+  "files": [
+    "main.js",
+    "index.html"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.1.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^4.1.2",
+    "electron-prebuilt": "^0.28.3",
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5",
+    "proxyquire": "^1.4.0",
+    "sinon": "^1.14.1"
+  }
+}
