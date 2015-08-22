@@ -31,7 +31,6 @@ sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travi
 
 sh.echo(info('→ Creating Documentation'));
 sh.mkdir('./docs');
-sh.exec('touch GUIDE.md');
 
 // Check if Git exists
 if (!gitCheck) {
@@ -41,6 +40,8 @@ if (!gitCheck) {
 
     // Install WordPress
     sh.exec(repositoryPath + '/WordPress/WordPress');
+    sh.mv('./WordPress/*', './');
+    sh.rm('-rf', ['./WordPress']);
     sh.mv('./init/templates/wordpress/*', themePath);
     sh.rm('-rf', ['./init']);
     sh.mv(themePath + '__wp-config.txt', './wp-config.php');
