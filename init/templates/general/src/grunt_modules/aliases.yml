@@ -41,18 +41,21 @@ assets:
     - 'svgmin'
     - 'grunticon'
 
-mount:
+start:
     - 'copy:styles'
     - 'copy:scripts'
     - 'copy:vendors'
     - 'copy:plugins'
-    - 'shell:scaffold'
     - 'uglify:modernizr'
     - 'clean:vendors'
 
-spec:
+tdd:
     - 'build'
     - 'mocha'
+
+e2e:
+    - 'build'
+    - 'casper'
 
 perf:
     - 'pagespeed'
