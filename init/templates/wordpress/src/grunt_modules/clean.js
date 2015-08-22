@@ -13,6 +13,12 @@ module.exports = {
             force: true
         },
         src: [ '<%= assets.scripts %>/vendors/modernizr.js' ]
+    },
+    translate: {
+        options: {
+            force: true
+        },
+        src: [ '../languages/<%= package.name %>.pot' ]
     }
 
 };

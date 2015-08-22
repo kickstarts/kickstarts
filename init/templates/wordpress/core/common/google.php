@@ -6,7 +6,7 @@
  */
 
  /*
-  * Google Analytics
+  * Google Analytics.
   */
 function google_analytics() { ?>
 
@@ -17,7 +17,7 @@ function google_analytics() { ?>
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-XXXXXXXX-X', 'auto');
+      ga('create', GOOGLE_ANALYTICS_UI, 'auto');
       ga('send', 'pageview');
 
     </script>
@@ -26,7 +26,9 @@ function google_analytics() { ?>
 
 add_action('wp_head', 'google_analytics');
 
-
+/*
+ * Google Maps.
+ */
 function google_maps() { ?>
 
     <script type="text/javascript">
@@ -41,7 +43,7 @@ function google_maps() { ?>
 
         function initialize() {
 
-            var mapPostion = new google.maps.LatLng(-99.999999, -99.999999),
+            var mapPostion = new google.maps.LatLng(GOOGLE_MAPS_LATLNG),
                 mapShowType = google.maps.MapTypeId.TERRAIN,
                 mapZoomStyle = google.maps.ZoomControlStyle.SMALL;
 

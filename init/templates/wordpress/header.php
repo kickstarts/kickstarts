@@ -7,68 +7,34 @@
  * @package Project Name
  */
 
-if (!is_user_logged_in()) {
-    $domain = $_SERVER['SERVER_NAME'];
-    wp_redirect($domain . '/main', 302);
-    exit;
-}
-
 ?>
 
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?> <?php theme_html_tag_schema(); ?>>
 <head>
 
-<title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php wp_title('|', true, 'right'); ?></title>
 
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="copyright" content="&copy; Copyright 2015 <?php get_bloginfo('name'); ?>" />
-<link type="text/plain" rel="author" href="humans.txt" />
-<meta name="keywords" content="" />
-<meta name="description" content="<?php get_bloginfo('description'); ?>" />
-<meta name="google-site-verification" content="" />
-<?php
-    if(is_single() || is_page() || is_category() || is_home()) {
-        echo '<meta name="robots" content="all,noodp" />';
-        echo "\n";
-    }
-    else if(is_archive()) {
-        echo '<meta name="robots" content="noarchive,noodp" />';
-        echo "\n";
-    }
-    else if(is_search() || is_404()) {
-        echo '<meta name="robots" content="noindex,noarchive" />';
-        echo "\n";
-    }
-?>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <meta name="google-site-verification" content="<?php echo GOOGLE_VERIFICATION; ?>" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link rel="shortcut icon" href="<?php echo WP_IMAGE_URL ?>/favicon.png">
 
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo WP_IMAGE_URL ?>/apple-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo WP_IMAGE_URL ?>/apple-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo WP_IMAGE_URL ?>/apple-72.png">
-<link rel="apple-touch-icon-precomposed" href="<?php echo WP_IMAGE_URL ?>/apple-57.png">
-<link rel="shortcut icon" href="<?php echo WP_IMAGE_URL ?>/favicon.png">
-
-<?php wp_head(); ?>
+    <?php wp_head(); ?>
 
 </head>
 <body <?php body_class(); ?>>
 
-    <!--[if lt IE 9]>
+    <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- .container -->
-    <div class="container">
+    <header class="header">
 
-        <!-- .header -->
-        <header class="header">
+    </header><!-- .header -->
 
-        </header>
-        <!-- /.header -->
-
-        <!-- .main -->
-        <main class="main">
+    <div class="main">

@@ -1,8 +1,6 @@
 <?php
 /**
- * --------------------------------------------------------------
- * ADMIN PANEL CONFIGURATION - Do not change anything here!
- * --------------------------------------------------------------
+ * WordPress Dashboard definitions
  *
  * @package Project Name
  */

@@ -4,7 +4,7 @@ module.exports = {
         config: '.csscomb'
     },
     files: {
-        '<%= assets.styles %>/style.sorted.css': ['<%= assets.styles %>/style.clean.css']
+        '<%= assets.styles %>/main.sorted.css': ['<%= assets.styles %>/main.clean.css']
     }
 
 };

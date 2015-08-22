@@ -1,12 +1,12 @@
 module.exports = {
 
     auth: {
-        host:       'ftp.host.com',
+        host:       '<%= deploy.ftp.host %>',
         authKey:    'key1',
         port:       21
     },
     src: '../',
-    dest: '/public_html/',
+    dest: '<%= deploy.ftp.dest %>',
     exclusions: [
         '../_{dev,prod}/**/*',
         '../**/.DS_Store',

@@ -1,7 +1,7 @@
 module.exports = {
 
     files: {
-        '<%= assets.styles %>/style.min.css': ['<%= assets.styles %>/style.sorted.css']
+        '<%= assets.styles %>/main.min.css': ['<%= assets.styles %>/main.sorted.css']
     }
 
 };

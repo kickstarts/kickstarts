@@ -16,25 +16,18 @@ module.exports = {
             '../htaccess.txt',
 
             // DO NOT IGNORE
-            '!../assets/styles/style.css',
+            '!../assets/styles/main.min.css',
             '!../assets/scripts/main.min.js',
             '!../assets/scripts/vendors/**'
         ],
         recursive   : true,
         syncDest    : true
     },
-    staging: {
+    dist: {
         options: {
-            src     : '../',
-            dest    : 'public_html/',
-            host    : 'user@host.com',
-        }
-    },
-    production: {
-        options: {
-            src     : '../',
-            dest    : 'public_html/',
-            host    : 'user@host.com',
+            src:  '../',
+            dest: '<%= deploy.ssh.dest %>',
+            host: '<%= deploy.ssh.host %>',
         }
     }
 

@@ -5,7 +5,7 @@ module.exports = {
     },
     strict: {
         options     : {},
-        src         : ['<%= assets.styles %>/style.sorted.css']
+        src         : ['<%= assets.styles %>/main.sorted.css']
     }
 
 };

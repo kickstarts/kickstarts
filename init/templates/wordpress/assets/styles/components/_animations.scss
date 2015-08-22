@@ -1,0 +1,10 @@
+////////////////////////////////////////////////////////////////////
+//
+// ANIMATION
+//
+////////////////////////////////////////////////////////////////////
+
+.fade-in   { @include transition(opacity .3s ease-in-out); @include opacity(1); }
+.fade-out  { @include opacity(0); }
+.close     { @include translateY(-100%); }
+.open      { @include translateY(0); }

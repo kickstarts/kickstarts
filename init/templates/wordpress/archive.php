@@ -17,18 +17,42 @@
 
 get_header(); ?>
 
-    <section class="content">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <?php
+<section class="full-width">
+    <main class="main-content">
 
-            endwhile; else :
+        <?php if (have_posts()) : ?>
 
-            // If no content, include the "No posts found" template.
-            get_template_part('templates/content', 'none');
+            <header class="page-header">
+                <?php
+                    the_archive_title('<h1 class="page-title">', '</h1>');
+                    the_archive_description('<div class="taxonomy-description">', '</div>');
+                ?>
+            </header><!-- .page-header -->
+
+            <?php
+                // Start the Loop.
+                while (have_posts()) : the_post();
+
+                    /*
+                     * Include the post format-specific template for the content. If you want to
+                     * use this in a child theme, then include a file called called content-___.php
+                     * (where ___ is the post format) and that will be used instead.
+                     */
+                    the_excerpt();
+
+                endwhile;
+
+                // Page navigation.
+                theme_paging_nav();
+
+            else :
+                // If no content, include the "No posts found" template.
+                get_template_part('content', 'none');
 
             endif;
-
         ?>
-    </section>
+    </main> <!-- .full-width -->
+</section> <!-- .main-content -->
 
-<?php get_footer(); ?>
+<?php
+get_footer();

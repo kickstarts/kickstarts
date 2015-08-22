@@ -1,19 +1,25 @@
+////////////////////////////////////////////////////////////////////
+//
+// COMMENTS
+//
+////////////////////////////////////////////////////////////////////
+
 .comment-list {
-  @include list-unstyled;
+    @include list-unstyled;
 }
 .comment-list ol {
-  list-style: none;
+    list-style: none;
 }
 .comment-form p {
-  @extend .form-group;
+    @extend .form-group;
 }
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @extend .form-control;
+    @extend .form-control;
 }
 .comment-form input[type="submit"] {
-  @extend .btn;
-  @extend .btn-primary;
+    @extend .btn;
+    @extend .btn-primary;
 }

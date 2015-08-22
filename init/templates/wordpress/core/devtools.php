@@ -1,6 +1,6 @@
 <?php
 
-if (APP_DEBUG_MODE) {
+if (THEME_DEBUG_MODE) {
     function debug_mode($param) {
         if (is_array($param) || is_object($param)) {
             echo '<pre>';
@@ -26,23 +26,25 @@ if (APP_DEBUG_MODE) {
     add_filter('wp_footer', 'debugx_mode');
 }
 
-if (APP_PREVIEW_MODE) {
+if (THEME_PREVIEW_MODE) {
     function preview_mode() { ?>
             <script>var s=document.createElement("style");s.innerHTML=".preview{position:fixed;bottom:0;left:0;right:0;background:rgba(170,0,0,.8);border-top:1px solid #AA0000;border-bottom:1px solid #FF0000;padding:20px;width:100%;text-align:center;text-transform:uppercase;color:white;font-family:'Arial', sans-serif;font-size:11px;}",document.body.appendChild(s);var d=document.createElement("div");d.className="preview",d.innerHTML="Você está no ambiente de teste.",document.body.appendChild(d);</script>
     <?php }
     add_filter('wp_footer', 'preview_mode');
 }
 
-if (APP_SYNC_MODE) {
+if (THEME_SYNC_MODE) {
     function sync_mode() { ?>
-            <script type='text/javascript' id="__bs_script__">//<![CDATA[
-            document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.9.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
-        //]]></script>
+        <script type='text/javascript' id="__bs_script__">
+        //<![CDATA[
+            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.'<?php echo THEME_SYNC_VERSION; ?>'.js'><\/script>".replace("HOST", location.hostname));
+        //]]>
+        </script>
     <?php }
     add_filter('wp_footer', 'sync_mode');
 }
 
-if (APP_UPDATE_MODE) {
+if (THEME_UPDATE_MODE) {
     function update_mode() {
         wp_redirect('main/', 302);
         exit;

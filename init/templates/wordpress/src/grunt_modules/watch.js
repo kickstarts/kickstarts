@@ -10,7 +10,7 @@ module.exports = {
     },
     js: {
         files: ['Gruntfile.js', '<%= assets.scripts %>/modules/*.js', '<%= assets.scripts %>/main.js'],
-        tasks: ['javascripts']
+        tasks: ['scripts']
     }
 
 };

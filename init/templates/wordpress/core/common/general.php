@@ -14,40 +14,37 @@
 
 
 /**
- * Set content width.
- */
-if (!isset($content_width)) {
-    $content_width = 960;
-}
-
-
-/**
  * Load scripts.
  */
 function enqueue_scripts() {
 
-    wp_enqueue_style('style.min', get_stylesheet_uri(), array(), null, 'all');
+    wp_enqueue_style('main.min', get_stylesheet_uri(), array(), null, 'all');
 
     wp_deregister_script('jquery');
 
-    wp_register_script('jquery.min', WP_SCRIPT_URL . '/vendors/jquery-1.10.2.min.js', array(), null, true);
+    wp_register_script('jquery.min', WP_SCRIPT_URL . '/vendors/jquery.min.js', array(), null, true);
     wp_enqueue_script('jquery.min');
 
-    wp_register_script('modernizr.min', WP_SCRIPT_URL . '/vendors/modernizr-2.6.2.min.js', array(), null, false);
+    wp_register_script('modernizr.min', WP_SCRIPT_URL . '/vendors/modernizr.min.js', array(), null, false);
     wp_enqueue_script('modernizr.min');
 
     wp_register_script('main.min', WP_SCRIPT_URL . '/main.min.js', array(), null, true);
     wp_enqueue_script('main.min');
+
+    // Load Thread comments WordPress script.
+	if ( is_singular() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_scripts', 1);
 
 
 /**
  * Load stylesheets.
  */
 function enqueue_stylesheet($uri, $dir) {
-    return $dir . '/assets/styles/style.min.css';
+    return $dir . '/assets/styles/main.min.css';
 }
 
 add_filter('stylesheet_uri', 'enqueue_stylesheet', 10, 2);

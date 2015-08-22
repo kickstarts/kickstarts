@@ -1,5 +1,5 @@
 module.exports = {
 
-    spec: '<%= spec %>/**/*.js'
+    spec: '<%= test %>/unit/*-test.js'
 
 };

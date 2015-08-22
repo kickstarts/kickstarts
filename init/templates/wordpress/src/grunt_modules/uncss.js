@@ -3,14 +3,12 @@ module.exports = {
     dist: {
         options: {
             ignore      : [],
-            stylesheets : ['<%= assets.styles %>/style.css'],
+            stylesheets : ['<%= assets.styles %>/main.css'],
             urls        : []
         },
         files: {
-            '<%= assets.styles %>/style.clean.css': ['../**/*.php']
+            '<%= assets.styles %>/main.clean.css': ['../**/*.php']
         }
     }
 
 };
-
-

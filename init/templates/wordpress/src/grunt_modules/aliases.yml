@@ -8,8 +8,8 @@ default:
     - 'watch'
 
 build:
-    - 'stylesheets'
-    - 'javascripts'
+    - 'styles'
+    - 'scripts'
 
 dev:
     - 'build'
@@ -24,14 +24,14 @@ prod:
     - 'copy:prod'
     - 'compress:prod'
 
-stylesheets:
+styles:
     - 'compass'
     - 'uncss'
     - 'csscomb'
     - 'csslint'
     - 'cssmin'
 
-javascripts:
+scripts:
     - 'jshint'
     - 'browserify'
     - 'uglify:main'
@@ -41,6 +41,12 @@ assets:
     - 'svgmin'
     - 'grunticon'
 
+sprites:
+    - 'svg_sprite'
+
+icons:
+    - 'favicons'
+
 start:
     - 'copy:styles'
     - 'copy:scripts'
@@ -49,9 +55,13 @@ start:
     - 'uglify:modernizr'
     - 'clean:vendors'
 
-spec:
+tdd:
     - 'build'
     - 'mocha'
+
+e2e:
+    - 'build'
+    - 'casper'
 
 perf:
     - 'pagespeed'
@@ -69,6 +79,17 @@ git:
     - 'build'
     - 'bump'
 
-translate:
-    - 'makepot'
+createpo:
+    - 'exec:txpull'
     - 'potomo'
+
+createpot:
+    - 'clean:translate'
+    - 'makepot'
+    - 'copy:translate'
+    - 'exec:txpush_s'
+
+translate:
+    - 'checktextdomain'
+    - 'createpot'
+    - 'createpo'

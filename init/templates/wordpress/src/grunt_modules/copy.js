@@ -34,7 +34,7 @@ module.exports = {
             'assets/images/**',
             'assets/fonts/**',
             'assets/scripts/main.min.js',
-            'assets/styles/style.min.css',
+            'assets/styles/main.min.css',
             'ie/**',
             'includes/**',
             '*.{html,php}'
@@ -71,6 +71,13 @@ module.exports = {
         cwd: '<%= bower %>/<%= bootstrap.scripts %>/',
         src: [ 'bootstrap/**/*' ],
         dest: '<%= assets.scripts %>/modules'
-    }
+    },
+
+    // Create PO File
+    translate: {
+        flatten: true,
+        src: ['../languages/<%= package.name %>.pot'],
+        dest: '../languages/<%= package.name %>.po'
+    },
 
 };

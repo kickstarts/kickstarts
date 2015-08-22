@@ -42,8 +42,8 @@ function configPostTypeDefault() {
 		'label'               => 'Label goes here',
 		'description'         => 'Description goes here',
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'thumbnail' ),
-		'taxonomies'          => array( 'category' ),
+		'supports'            => array('title', 'thumbnail', 'editor'),
+		'taxonomies'          => array('category'),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -58,7 +58,7 @@ function configPostTypeDefault() {
 		'capability_type'     => 'post',
 	);
 
-	register_post_type( 'default', $args );
+	register_post_type('default', $args);
 }
 
 add_action('init', 'cpt_add_default_boxes');

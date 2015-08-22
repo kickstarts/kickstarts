@@ -7,9 +7,9 @@ module.exports = {
         },
         files: [{
             expand: true,
-            cwd: '../languages',
+            cwd: '<%= languages %>',
             src: ['*.po'],
-            dest: '../languages',
+            dest: '<%= languages %>',
             ext: '.mo',
             nonull: true
         }]

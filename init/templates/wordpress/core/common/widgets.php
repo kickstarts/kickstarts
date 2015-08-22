@@ -6,12 +6,12 @@
  */
 
 
-function projectname_widgets_init() {
+function theme_widgets_init() {
     register_sidebar(
         array(
-            'name' => __( 'Main Sidebar', 'projectname' ),
+            'name' => __('Main Sidebar', THEME_TEXT_DOMAIN),
             'id' => 'main-sidebar',
-            'description' => __( 'Site Main Sidebar', 'projectname' ),
+            'description' => __('Site Main Sidebar', THEME_TEXT_DOMAIN),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
             'before_title' => '<h3 class="widgettitle widget-title">',
@@ -20,4 +20,4 @@ function projectname_widgets_init() {
     );
 }
 
-add_action( 'widgets_init', 'projectname_widgets_init' );
+add_action('widgets_init', 'theme_widgets_init');
