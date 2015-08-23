@@ -16,6 +16,7 @@ var nodeCheck = sh.which('node'),
 
 // Paths
 var themePath   = './wp-content/themes/default/',
+    twentyList  = './wp-content/themes/twenty{ten,eleven,twelve,thirteen,fourteen,fifteen}',
     pluginsPath = './wp-content/plugins/',
     gitClone    = 'git clone https://github.com';
 
@@ -48,7 +49,7 @@ if (!gitCheck) {
     sh.mv(themePath + '__wp-config.txt', './wp-config.php');
     sh.mv(themePath + '__gitignore.txt', './.gitignore');
     sh.mv(themePath + '__htaccess.txt', themePath + 'htaccess.txt');
-    sh.rm('-rf', ['./init']);
+    sh.rm('-rf', ['./init', twentyList]);
     sh.echo(done('✔ Created!'));
 
     // Install WP Plugins
@@ -110,7 +111,7 @@ sh.echo(done('✔ Done!'));
 
 // Move on to "./src" folder
 sh.echo(info('→ Installing dependencies....'));
-sh.cd('./src');
+sh.cd(themePath + './src');
 
 // Check if NodeJS exists and install dependencies
 if (!nodeCheck) {
@@ -124,4 +125,4 @@ if (!nodeCheck) {
 
 // Final Message
 sh.echo(done('✔ All Done!'));
-sh.echo(warn('\n!!! Remember to setup your "wp_config.php" file'));
+sh.echo(info('\n!!! Remember to setup your "wp_config.php" file'));
