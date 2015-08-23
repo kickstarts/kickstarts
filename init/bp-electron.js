@@ -11,27 +11,34 @@ var error = cli.red.bold,
 var nodeCheck = sh.which('node');
 
 
-// Welcome Message
+// Scaffolding
+// ----------------------------------
+
 sh.echo(info('→ Initializing...'));
 
-// Create
-sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
+
+sh.echo(info('→ Creating Structure...'));
 sh.mv('./init/templates/electron/*', './');
 sh.rm('-rf', ['./init']);
-// sh.exec('svn checkout https://github.com/ambitiouswebkit/webkit-css-starter
-// /trunk/stylus assets/styles');
+sh.echo(done('✔ Created!'));
+
 
 // Setup
-sh.echo(info('→ Setting up project'));
+// ----------------------------------
 
+sh.echo(info('→ Setting up project...'));
+
+// Check if NodeJS exists and install dependencies
 if (!nodeCheck) {
     sh.echo(error('✖ This task requires NodeJS to run.'));
     process.exit(1);
 } else {
+    sh.echo(info('→ Installing dependencies....'));
     sh.exec('npm install');
+    sh.echo(done('✔ Node Modules successfully installed!'));
+
 }
 
-sh.exec('subl .');
-
+// Final Message
 sh.echo(done('✔ All Done!'));

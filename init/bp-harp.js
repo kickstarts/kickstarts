@@ -11,25 +11,27 @@ var error = cli.red.bold,
 var nodeCheck = sh.which('node');
 
 
-// Welcome Message
+// Scaffolding
+// ----------------------------------
+
 sh.echo(info('→ Initializing...'));
 
-// Create
-sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
+
+sh.echo(info('→ Creating Structure...'));
 sh.mv('./init/templates/harp/*', './');
 sh.rm('-rf', ['./init']);
+sh.echo(done('✔ Created!'));
+
 
 // Setup
-sh.echo(info('→ Setting up project'));
+// ----------------------------------
 
 if (!nodeCheck) {
     sh.echo(error('✖ This task requires NodeJS to run.'));
     process.exit(1);
 } else {
+    sh.echo(info('→ Setting up project...'));
     sh.exec('harp compile src public');
+    sh.echo(done('✔ All Done!'));
 }
-
-sh.exec('subl .');
-
-sh.echo(done('✔ All Done!'));

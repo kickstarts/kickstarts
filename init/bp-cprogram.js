@@ -8,18 +8,14 @@ var error = cli.red.bold,
     done  = cli.green;
 
 
-// Welcome Message
+// Scaffolding
+// ----------------------------------
+
 sh.echo(info('→ Initializing...'));
 
-// Create
-sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
+
+sh.echo(info('→ Creating Structure...'));
 sh.mv('./init/templates/cprogram/*', './');
 sh.rm('-rf', ['./init']);
-
-// Setup
-sh.echo(info('→ Setting up project'));
-
-sh.exec('subl .');
-
 sh.echo(done('✔ All Done!'));
