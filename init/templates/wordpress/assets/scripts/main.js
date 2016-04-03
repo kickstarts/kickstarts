@@ -2,29 +2,20 @@
 // MODULES & CONFIGURATION               //
 ///////////////////////////////////////////
 
-// PLUGINS
-// --------------------------------------------
 
-
-
-// BOOTSTRAP MODULES
-// --------------------------------------------
-// var initAffix       = require('./modules/affix'),
-//     initAlert       = require('./modules/alert'),
-//     initButton      = require('./modules/button'),
-//     initCarousel    = require('./modules/carousel'),
-//     initCollapse    = require('./modules/collapse'),
-//     initDropdown    = require('./modules/dropdown'),
-//     initModal       = require('./modules/modal'),
-//     initPopover     = require('./modules/popover'),
-//     initScrollspy   = require('./modules/scrollspy'),
-//     initTab         = require('./modules/tab'),
-//     initTooltip     = require('./modules/tooltip'),
-//     initTransition  = require('./modules/transition');
-
-
-// CUSTOM MODULES
-// --------------------------------------------
+// Initialize Bootstrap Modules
+// require('./modules/bootstrap/affix');
+// require('./modules/bootstrap/alert');
+// require('./modules/bootstrap/button');
+// require('./modules/bootstrap/carousel');
+// require('./modules/bootstrap/collapse');
+// require('./modules/bootstrap/dropdown');
+// require('./modules/bootstrap/modal');
+// require('./modules/bootstrap/popover');
+// require('./modules/bootstrap/scrollspy');
+// require('./modules/bootstrap/tab');
+// require('./modules/bootstrap/tooltip');
+// require('./modules/bootstrap/transition');
 
 
 
@@ -47,22 +38,10 @@ $(function() {
     $('.alert').attr('role','alert');
     $('a.btn').attr('role','button');
     $('details, figure').attr('role', 'group');
-    $('.tabs').attr('role','tablist');
+    $('.nav-tabs li').attr('role', 'presentation');
+    $('.nav-tabs li a').attr('role','tablist');
+    $('.tab-pane').attr('role','tabpanel');
     $('.search-form').attr('role','search');
-
-    // Initialize Bootstrap Modules
-    // initAffix();
-    // initAlert();
-    // initButton();
-    // initCarousel();
-    // initCollapse();
-    // initDropdown();
-    // initModal();
-    // initPopover();
-    // initScrollspy();
-    // initTab();
-    // initTooltip();
-    // initTransition();
 
     // Initialize Custom Modules
 

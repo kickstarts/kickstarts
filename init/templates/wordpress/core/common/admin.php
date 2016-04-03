@@ -16,6 +16,23 @@ add_action('login_head', 'custom_login_logo');
 
 
 /*
+ * Generic Error Messages for Authentication.
+ */
+function wps_error_messages() {
+
+    $custom_error_msgs = array(
+        '<strong>YOU</strong> SHALL NOT PASS!',
+        '<strong>HEY!</strong> GET OUT OF HERE!',
+        '<strong>THIS IS SPARTA!!!!</strong>',
+        '<strong>MR. ANDERSON... THERE\'S NO WAY OUT</strong>'
+    );
+
+    return $custom_error_msgs[array_rand($custom_error_msgs)];
+
+}
+add_filter( 'login_errors', 'wps_error_messages' );
+
+/*
  * Manage items from admin bar.
  */
 function wps_admin_bar() {

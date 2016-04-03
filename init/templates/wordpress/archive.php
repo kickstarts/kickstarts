@@ -17,41 +17,40 @@
 
 get_header(); ?>
 
-<section class="full-width">
-    <main class="main-content">
+<section class="main-content">
 
-        <?php if (have_posts()) : ?>
+    <?php if (have_posts()) : ?>
 
-            <header class="page-header">
-                <?php
-                    the_archive_title('<h1 class="page-title">', '</h1>');
-                    the_archive_description('<div class="taxonomy-description">', '</div>');
-                ?>
-            </header><!-- .page-header -->
-
+        <header class="page-header">
             <?php
-                // Start the Loop.
-                while (have_posts()) : the_post();
+                the_archive_title('<h1 class="page-title">', '</h1>');
+                the_archive_description('<div class="taxonomy-description">', '</div>');
+            ?>
+        </header><!-- .page-header -->
 
-                    /*
-                     * Include the post format-specific template for the content. If you want to
-                     * use this in a child theme, then include a file called called content-___.php
-                     * (where ___ is the post format) and that will be used instead.
-                     */
-                    the_excerpt();
+        <?php
+            // Start the Loop.
+            while (have_posts()) : the_post();
 
-                endwhile;
+                /*
+                 * Include the post format-specific template for the content. If you want to
+                 * use this in a child theme, then include a file called called content-___.php
+                 * (where ___ is the post format) and that will be used instead.
+                 */
+                the_excerpt();
 
-                // Page navigation.
-                theme_paging_nav();
+            endwhile;
 
-            else :
-                // If no content, include the "No posts found" template.
-                get_template_part('content', 'none');
+            // Page navigation.
+            theme_paging_nav();
 
-            endif;
-        ?>
-    </main> <!-- .full-width -->
+        else :
+            // If no content, include the "No posts found" template.
+            get_template_part('partials/content', 'none');
+
+        endif;
+    ?>
+
 </section> <!-- .main-content -->
 
 <?php

@@ -2,7 +2,7 @@
 /**
  * Support Configuration
  *
- * @package Project Name
+ * @package Como Sou Brega
  */
 
  if (!function_exists('after_setup_theme_handler')) {
@@ -27,8 +27,7 @@
             array(
                 'main-menu'   => 'Main Menu',
                 'footer-menu' => 'Footer Menu'
-        )
-    );
+        ));
 
         /*
          * Add post_thumbnails support.
@@ -74,18 +73,19 @@
 		 * Add support for Post Formats.
 		 */
         if (THEME_SUPPORT_FORMAT) {
-		add_theme_support('post-formats', array(
-                'aside',
-                'gallery',
-                'link',
-                'image',
-                'quote',
-                'status',
-                'video',
-                'audio',
-                'chat'
-		    )
-        );
+    		add_theme_support('post-formats', array(
+                    'aside',
+                    'gallery',
+                    'link',
+                    'image',
+                    'quote',
+                    'status',
+                    'video',
+                    'audio',
+                    'chat'
+    		    )
+            );
+        }
 
         /**
 		 * Support The Excerpt on pages.

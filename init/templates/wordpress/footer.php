@@ -6,7 +6,7 @@
  */
 ?>
 
-    </div><!-- .main -->
+    </main><!-- .main -->
 
     <footer class="footer">
 

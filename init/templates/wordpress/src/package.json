@@ -1,56 +1,62 @@
 {
   "private": true,
-  "name": "",
-  "version": "0.1.0",
+  "name": "projectname",
+  "version": "1.0.0",
   "title": "",
   "homepage": "",
   "description": "",
   "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
   "license": "MIT",
-  "main": "Gruntfile.js",
-  "directories": {
-    "test": "mocha"
-  },
+
+  "main": "../index.php",
   "scripts": {
-    "preinstall": "npm install npm-check-updates -g",
-    "postinstall": "bower install",
-    "start": "grunt start",
-    "check": "npm outdated",
-    "update": "npm-check-updates -u && rm -rf node_modules && npm i"
-  },
-  "dependencies": {
-    "browserify": "^11.0.0"
+    "postinstall": "jspm install"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.1.3",
-    "grunt-browserify": "^3.8.0",
-    "grunt-bump": "0.3.1",
-    "grunt-casper": "^0.4.2",
-    "grunt-checktextdomain": "^1.0.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-compass": "^1.0.3",
-    "grunt-contrib-compress": "^0.13.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-csslint": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.12.3",
-    "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-csscomb": "^3.0.1",
-    "grunt-exec": "^0.4.6",
-    "grunt-favicons": "^0.7.0",
-    "grunt-ftp-deploy": "^0.1.10",
-    "grunt-grunticon": "^2.2.1",
-    "grunt-mocha": "^0.4.13",
-    "grunt-potomo": "^3.3.3",
-    "grunt-rsync": "^0.6.2",
-    "grunt-svg-sprite": "^1.2.8",
-    "grunt-uncss": "^0.4.3",
-    "grunt-wp-i18n": "^0.5.2",
-    "load-grunt-config": "^0.17.2",
-    "load-grunt-tasks": "^3.2.0",
-    "time-grunt": "^1.2.1"
+    "backstopjs": "^1.1.0",
+    "browser-sync": "^2.11.1",
+    "chromedriver": "^2.21.2",
+    "del": "^2.2.0",
+    "eslint": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-changed": "^1.3.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-dalek": "0.0.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-jspm": "^0.5.6",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rsync": "0.0.5",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^4.2.0",
+    "jspm": "^0.16.27",
+    "pioneer": "^0.11.7",
+    "require-dir": "^0.3.0",
+    "sassdoc": "^2.1.20",
+    "vinyl-ftp": "^0.4.5"
+  },
+  "jspm": {
+    "directories": {
+      "packages": "jspm_modules"
+    },
+    "dependencies": {
+      "jquery": "npm:jquery@^2.2.0",
+      "twbs/bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }

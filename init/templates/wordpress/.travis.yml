@@ -11,10 +11,10 @@ matrix:
 
 cache:
   directories:
-    - bower_modules
+    - jspm_modules
     - node_modules
 
 install:
   - npm install -g npm@latest
-  - npm install -g bower grunt-cli
+  - npm install -g babel grunt-cli
   - npm install

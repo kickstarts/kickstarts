@@ -7,6 +7,13 @@
  * @package Project Name
  */
 
+if (WP_ENV === 'production') {
+    if (!is_user_logged_in()) {
+        wp_redirect('/wait', 302);
+        exit;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -37,4 +44,4 @@
 
     </header><!-- .header -->
 
-    <div class="main">
+    <main class="main">

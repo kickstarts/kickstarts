@@ -359,3 +359,8 @@ AddCharset utf-8 .css .js .xml .json .rss .atom
 <IfModule php5_module>
   php_value session.cookie_httponly true
 </IfModule>
+
+<Files debug.log>
+    Order allow,deny
+    Deny from all
+</Files>

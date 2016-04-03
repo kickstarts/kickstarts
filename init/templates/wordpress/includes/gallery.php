@@ -3,7 +3,7 @@
 if (!function_exists('theme_gallery_lightbox')) {
 
     /**
-     * Post gGallery with lightbox ready for use.
+     * Post Gallery with lightbox ready for use.
      */
     function theme_gallery_lightbox($post_id) {
 

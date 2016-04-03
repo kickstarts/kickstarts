@@ -34,31 +34,44 @@ $includes_path  = get_template_directory() . '/includes';
 $common_path    = $core_path . '/common';
 $helpers_path   = $core_path . '/helpers';
 
+
 /**
  * Developer Tools.
  */
 require_once $core_path . '/devtools.php';
 
 /**
- * Autoload Functions.
- */
-function theme_autoload_files($folder) {
-    foreach (glob('{$folder}/*.php') as $filename) {
-        require_once $filename;
-    }
-}
-
-/**
  * Require Common Functions.
  */
-theme_autoload_files($common_path);
+require_once $common_path . '/admin.php';
+require_once $common_path . '/general.php';
+require_once $common_path . '/google.php';
+require_once $common_path . '/metaboxes.php';
+require_once $common_path . '/optimize.php';
+require_once $common_path . '/posttype.php';
+require_once $common_path . '/share.php';
+require_once $common_path . '/shortcodes.php';
+require_once $common_path . '/support.php';
+require_once $common_path . '/widgets.php';
+
 
 /**
  * Require Help Functions.
  */
-theme_autoload_files($helpers_path);
+require_once $helpers_path . '/excerpt.php';
+require_once $helpers_path . '/newletter.php';
+require_once $helpers_path . '/pagination.php';
+require_once $helpers_path . '/roles.php';
+require_once $helpers_path . '/schema.php';
+require_once $helpers_path . '/search.php';
+
 
 /**
  * Require Structure Functions.
  */
-theme_autoload_files($includes_path);
+require_once $includes_path . '/comments.php';
+require_once $includes_path . '/gallery.php';
+require_once $includes_path . '/modals.php';
+require_once $includes_path . '/related-posts.php';
+require_once $includes_path . '/social.php';
+require_once $includes_path . '/thumbnail.php';
