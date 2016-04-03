@@ -2,7 +2,8 @@
 // ----------------------------------
 
 // Modules
-var sh  = require('shelljs'),
+var path = require('path'),
+    sh  = require('shelljs'),
     cli = require('cli-color');
 
 // Messages
@@ -16,10 +17,19 @@ var nodeCheck = sh.which('node'),
 
 // Paths
 var themePath   = './wp-content/themes/default/',
-    twentyList  = './wp-content/themes/twenty{ten,eleven,twelve,thirteen,fourteen,fifteen}',
     pluginsPath = './wp-content/plugins/',
-    gitClone    = 'git clone https://github.com';
-
+    gitClone    = 'git clone https://github.com',
+    svnClone    = 'svn checkout http://plugins.svn.wordpress.org/',
+    wpRepo      = gitClone + '/WordPress/WordPress',
+    wpBranch    = '4.4-branch',
+    twentyList  = [
+        './wp-content/themes/twentyten',
+        './wp-content/themes/twentyeleven',
+        './wp-content/themes/twentytwelve',
+        './wp-content/themes/twentythirteen',
+        './wp-content/themes/twentyfourteen',
+        './wp-content/themes/twentyfifteen'
+    ];
 
 
 // Scaffolding
@@ -37,7 +47,7 @@ if (!gitCheck) {
 
     // Install WordPress
     sh.echo(info('→ Installing WordPress...'));
-    sh.exec(gitClone + '/WordPress/WordPress');
+    sh.exec('git clone -b ' + wpBranch + ' ' + wpRepo);
     sh.mv('./WordPress/*', './');
     sh.rm('-rf', ['./WordPress']);
     sh.echo(done('✔ WordPress successfully installed!'));
@@ -49,51 +59,42 @@ if (!gitCheck) {
     sh.mv(themePath + '__wp-config.txt', './wp-config.php');
     sh.mv(themePath + '__gitignore.txt', './.gitignore');
     sh.mv(themePath + '__htaccess.txt', themePath + 'htaccess.txt');
-    sh.rm('-rf', ['./init', twentyList]);
+    sh.rm('-rf', ['./init']);
+    sh.rm('-rf', twentyList);
     sh.echo(done('✔ Created!'));
 
     // Install WP Plugins
     sh.echo(info('→ Installing Plugins...'));
 
-    sh.echo(info('→ Clonning Jetpack...'));
-    sh.exec(gitClone + '/Automattic/jetpack.git');
-    sh.mv('./jetpack', pluginsPath);
-    sh.echo(done('✔ Jetpack successfully cloned!'));
+    function clonePlugin(pluginSrc, pluginDist, pluginName, pluginType) {
+        sh.echo(info('→ Clonning ' + pluginName + '...'));
+        if (type === 'git') {
+            sh.exec(path.join(gitClone, pluginSrc));
+        }
+        if (type === 'svn') {
+            sh.exec(path.join(svnClone, pluginSrc));
+        }
+        sh.mv(pluginDist, pluginsPath);
+        sh.echo(done('✔ ' + pluginName + ' successfully cloned!'));
+    }
 
-    sh.echo(info('→ Clonning Advanced Custom Fields...'));
-    sh.exec(gitClone + '/elliotcondon/acf.git');
-    sh.mv('./acf', pluginsPath);
-    sh.echo(done('✔ Advanced Custom Fields successfully cloned!'));
+    // Design Optimization and Performance
+    clonePlugin('/elliotcondon/acf.git', './acf', 'Advanced Custom Fields', 'git');
+    clonePlugin('/wp-plugins/admin-menu-editor.git', './admin-menu-editor', 'Admin Menu Editor', 'git');
+    clonePlugin('/wp-plugins/contact-form-7.git', './contact-form-7', 'Contact Form 7', 'git');
+    clonePlugin('/wp-plugins/w3-total-cache.git', './w3-total-cache', 'W3 Total Cache', 'git');
 
-    sh.echo(info('→ Clonning Yoast...'));
-    sh.exec(gitClone + '/Yoast/wordpress-seo.git');
-    sh.mv('./wordpress-seo', pluginsPath);
-    sh.echo(done('✔ Yoast successfully cloned!'));
+    // SEO Tools
+    clonePlugin('/Yoast/wordpress-seo.git', './wordpress-seo', 'Yoast', 'git');
+    clonePlugin('/Yoast/google-analytics-for-wordpress.git', './google-analytics-for-wordpress', 'Google Analytics for WordPress', 'git');
+    clonePlugin('/wp-plugins/reduce-bounce-rate.git', './reduce-bounce-rate', 'Reduce Bounce Rate', 'git');
+    clonePlugin('/Automattic/jetpack.git', './jetpack', 'Jetpack', 'git');
 
-    sh.echo(info('→ Clonning Google Analytics for WordPress...'));
-    sh.exec(gitClone + '/Yoast/google-analytics-for-wordpress.git');
-    sh.mv('./google-analytics-for-wordpress', pluginsPath);
-    sh.echo(done('✔ Google Analytics for WordPress successfully cloned!'));
 
-    sh.echo(info('→ Clonning Admin Menu Editor...'));
-    sh.exec(gitClone + '/wp-plugins/admin-menu-editor.git');
-    sh.mv('./admin-menu-editor', pluginsPath);
-    sh.echo(done('✔ Admin Menu Editor successfully cloned!'));
-
-    sh.echo(info('→ Clonning Contact Form 7...'));
-    sh.exec(gitClone + '/wp-plugins/contact-form-7.git');
-    sh.mv('./contact-form-7', pluginsPath);
-    sh.echo(done('✔ Contact Form 7 successfully cloned!'));
-
-    sh.echo(info('→ Clonning W3 Total Cache...'));
-    sh.exec(gitClone + '/wp-plugins/w3-total-cache.git');
-    sh.mv('./w3-total-cache', pluginsPath);
-    sh.echo(done('✔ W3 Total Cache successfully cloned!'));
-
-    sh.echo(info('→ Clonning Reduce Bounce Rate...'));
-    sh.exec(gitClone + '/wp-plugins/reduce-bounce-rate.git');
-    sh.mv('./reduce-bounce-rate', pluginsPath);
-    sh.echo(done('✔ Reduce Bounce Rate successfully cloned!'));
+    // Security and Backup
+    clonePlugin('/wp-plugins/updraftplus.git', './updraftplus', 'UpdraftPlus Backup and Restoration', 'git');
+    clonePlugin('/wp-plugins/wordfence.git', './wordfence', 'Wordfence Security', 'git');
+    clonePlugin('/login-lockdown/trunk login-lockdown', './login-lockdown', 'Login LockDown', 'svn');
 
     sh.echo(done('✔ Plugins successfully installed!'));
 }
