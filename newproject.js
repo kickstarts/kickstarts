@@ -17,6 +17,7 @@ var prompt = [
             { name: 'NodeJS', value: 'nodeapp' },
             { name: 'Node Package', value: 'npmpkg' },
             { name: 'Node Webkit', value: 'nwapp' },
+            { name: 'Simple ngApp', value: 'ngapp' },
             { name: 'CLI Tool', value: 'clitool' },
             { name: 'Slim', value: 'slim' },
             { name: 'WordPress', value: 'wordpress' },
@@ -77,6 +78,10 @@ inquirer.prompt(prompt, function(answers) {
     case 'nwapp':
         require('./init/bp-nwapp');
         break;
+
+        case 'ngapp':
+            require('./init/bp-ngapp');
+            break;
 
     case 'clitool':
         require('./init/bp-clitool');
