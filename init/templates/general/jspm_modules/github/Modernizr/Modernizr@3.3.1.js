@@ -1,0 +1,1 @@
+module.exports = require("github:Modernizr/Modernizr@3.3.1/lib/cli");

@@ -6,33 +6,35 @@ Generate a new project based on General Scaffolding.
 ## Requires
 
 - [Node.JS](http://nodejs.org/)
-- [Bower](http://bower.io)
-- [Grunt](http://gruntjs.com)
-- [Ruby](https://www.ruby-lang.org/pt/)
+- [JSPM](http://jspm.io/)
+- [Gulp](http://gruntjs.com)
 - [Sass](http://sass-lang.com/)
 
 
-## Instructions
+## Usage
 
-**Start:**
+1. Clone this repo from `https://github.com/user/repository-name.git`
+2. Run `npm install` in the root directory (will automatically run `jspm install`)
+3. Run `gulp`to start the local dev server (you may need to install Gulp locally using `npm install -g gulp`)
+4. Profit!
 
-- with npm: `npm start`
-- with shell script: `bash ./bin/all.sh`
-- with grunt: `grunt start`
+## Running Tests
 
-**Build:**
+This project cover severals tests. You can run functional, integration, unit and regressive tests.
 
-- with npm: `npm build`
-- with grunt: `grunt build`
+- Run `gulp rwd` to start a functional test with ...
+- Run `gulp tdd` to start a functional test with ...
+- Run `gulp e2e` to start a functional test with ...
 
-**Spec:**
+## Generating documentation
 
-- with npm: `npm spec`
-- with grunt: `grunt spec`
+Run `gulp docs` to generate documentation for your JavaScript and Sass automatically in the `docs` folder.
 
-**Other Tasks:**
+## Deploy for Production
 
-> Check the `aliases.yaml` file at `src/grunt_modules` folder for more details.
+Run `gulp deploy` to build the app for distribution and deploy it.
+
+> Note: You can upload files for production using FTP or Rsync. For more information, check the "deploy" task at `gulpfile.js` and `gulp_modules/deploy.js` for proper settings.
 
 
 ## License
