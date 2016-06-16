@@ -1,4 +1,0 @@
-{
-  "browser": ["chrome",  "firefox", "IE"],
-  "report": ["console", "html", "junit"]
-}
