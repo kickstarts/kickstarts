@@ -68,10 +68,10 @@ if (!gitCheck) {
 
     function clonePlugin(pluginSrc, pluginDist, pluginName, pluginType) {
         sh.echo(info('→ Clonning ' + pluginName + '...'));
-        if (type === 'git') {
+        if (pluginType === 'git') {
             sh.exec(path.join(gitClone, pluginSrc));
         }
-        if (type === 'svn') {
+        if (pluginType === 'svn') {
             sh.exec(path.join(svnClone, pluginSrc));
         }
         sh.mv(pluginDist, pluginsPath);
