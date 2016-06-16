@@ -13,9 +13,9 @@
          * Loading theme textdomain.
          */
 
-        $locale = apply_filters( 'plugin_locale', get_locale(), THEME_TEXT_DOMAIN );
-        load_textdomain( THEME_TEXT_DOMAIN, WP_LANG_DIR . '/' . THEME_TEXT_DOMAIN . '-$locale.mo' );
-        load_theme_textdomain(THEME_TEXT_DOMAIN, get_template_directory() . '/languages');
+        $locale = apply_filters( 'plugin_locale', get_locale(), THEME_NAME );
+        load_textdomain( THEME_NAME, WP_LANG_DIR . '/' . THEME_NAME . '-$locale.mo' );
+        load_theme_textdomain(THEME_NAME, get_template_directory() . '/languages');
 
 
         /**

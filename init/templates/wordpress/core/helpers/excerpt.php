@@ -40,7 +40,7 @@ if ( ! function_exists( 'theme_excerpt_more' ) && ! is_admin() ) {
 		$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 			esc_url( get_permalink( get_the_ID() ) ),
 			/* translators: %s: Name of current post */
-			sprintf( __( 'Continue reading %s', THEME_TEXT_DOMAIN ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+			sprintf( __( 'Continue reading %s', THEME_NAME ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
 			);
 		return ' &hellip; ' . $link;
 	}

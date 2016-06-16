@@ -1,11 +1,6 @@
 <?php
 
-if (isset($_GET['debug']) && $_GET['debug'] === 'true') {
-
-    // WP DEBUG
-    define( 'SCRIPT_DEBUG', true );
-    define( 'WP_DEBUG', true );
-    define( 'WP_DEBUG_LOG', true );
+if (isset($_GET['error']) && $_GET['error'] === 'true') {
 
     // HEADERS
     foreach (getallheaders() as $name => $value) {
@@ -64,34 +59,58 @@ if (isset($_GET['debug']) && $_GET['debug'] === 'true') {
 
 }
 
+if (isset($_GET['debug']) && $_GET['debug'] === 'true') {
+    define( 'SCRIPT_DEBUG', true );
+    define( 'WP_DEBUG', true );
+    define( 'WP_DEBUG_LOG', true );
+}
+
 if(THEME_PHP_INI) {
     phpinfo();
 }
 
-if (THEME_DEBUG_MODE) {
+if (APP_DEBUG_MODE) {
     function debug_mode($param) {
         if (is_array($param) || is_object($param)) {
+            echo '<style>.debug-wrapper{position:fixed;bottom:0;left:0;right:0;width:100%;background:#ececec;border-top:1px solid #dadada;height:250px;overflow-y:scroll;word-wrap:break-word;z-index:999;padding:10px;}</style>';
+            echo '<div class="debug-wrapper">';
             echo '<pre>';
             print_r($param);
             echo '</pre>';
+            echo '</div>';
         } else {
-            echo $param;
+            //echo $param;
             echo date("Y-m-d H:i:s: ").iconv("UTF-8", "ISO-8859-1//TRANSLIT",$param);
         }
     }
-    add_filter('wp_footer', 'debug_mode');
 
     function debugx_mode($param) {
         if (is_array($param) || is_object($param)) {
+            echo '<style>.debug-wrapper{position:fixed;bottom:0;left:0;right:0;width:100%;background:#ececec;border-top:1px solid #dadada;height:250px;overflow-y:scroll;word-wrap:break-word;z-index:999;padding:10px;}</style>';
+            echo '<div class="debug-wrapper">';
             echo '<pre>';
             print_r($param);
             echo '</pre>';
+            echo '</div>';
         } else {
             echo $param;
         }
         exit();
     }
-    add_filter('wp_footer', 'debugx_mode');
+
+    function dump($param) {
+        if (is_array($param) || is_object($param)) {
+            echo '<style>.debug-wrapper{position:fixed;bottom:0;left:0;right:0;width:100%;background:#ececec;border-top:1px solid #dadada;height:250px;overflow-y:scroll;word-wrap:break-word;z-index:999;padding:10px;}</style>';
+            echo '<div class="debug-wrapper">';
+            echo '<pre>';
+            var_dump($param);
+            echo '</pre>';
+            echo '</div>';
+        } else {
+            echo $param;
+        }
+        exit();
+    }
 }
 
 if (THEME_PREVIEW_MODE) {

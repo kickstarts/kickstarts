@@ -26,9 +26,9 @@
 	<?php else : ?>
 		<div class="entry-content">
 			<?php
-				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', THEME_TEXT_DOMAIN ) );
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', THEME_NAME ) );
 				wp_link_pages( array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', THEME_TEXT_DOMAIN ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', THEME_NAME ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
@@ -39,11 +39,11 @@
 
 	<footer class="entry-meta">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
-			<span class="cat-links"><?php echo __( 'Posted in:', THEME_TEXT_DOMAIN ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', THEME_TEXT_DOMAIN ) ); ?></span>
+			<span class="cat-links"><?php echo __( 'Posted in:', THEME_NAME ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', THEME_NAME ) ); ?></span>
 		<?php endif; ?>
-		<?php the_tags( '<span class="tag-links">' . __( 'Tagged as:', THEME_TEXT_DOMAIN ) . ' ', ', ', '</span>' ); ?>
+		<?php the_tags( '<span class="tag-links">' . __( 'Tagged as:', THEME_NAME ) . ' ', ', ', '</span>' ); ?>
 		<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', THEME_TEXT_DOMAIN ), __( '1 Comment', THEME_TEXT_DOMAIN ), __( '% Comments', THEME_TEXT_DOMAIN ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', THEME_NAME ), __( '1 Comment', THEME_NAME ), __( '% Comments', THEME_NAME ) ); ?></span>
 		<?php endif; ?>
 	</footer>
 </article><!-- #post-{class} -->

@@ -10,7 +10,7 @@
 
 <div id="comments" class="content-wrap" itemscope itemtype="http://schema.org/Comment">
 	<?php if ( post_password_required() ) : ?>
-		<span class="nopassword"><?php _e( 'This post is password protected. Enter the password to view all comments.',THEME_TEXT_DOMAIN ); ?></span>
+		<span class="nopassword"><?php _e( 'This post is password protected. Enter the password to view all comments.',THEME_NAME ); ?></span>
 </div><!-- #comments -->
 		<?php
 		return;
@@ -19,14 +19,14 @@
 	if ( have_comments() ) : ?>
 		<h2 id="comments-title">
 			<?php
-			comments_number( __( '0 Comments',THEME_TEXT_DOMAIN ), __( '1 Comment',THEME_TEXT_DOMAIN ), __( '% Comments',THEME_TEXT_DOMAIN ) );
-			echo ' ' . __( 'to',THEME_TEXT_DOMAIN ) . ' <span>&quot;' . get_the_title() . '&quot;</span>';
+			comments_number( __( '0 Comments',THEME_NAME ), __( '1 Comment',THEME_NAME ), __( '% Comments',THEME_NAME ) );
+			echo ' ' . __( 'to',THEME_NAME ) . ' <span>&quot;' . get_the_title() . '&quot;</span>';
 			?>
 		</h2>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above">
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Old Comments',THEME_TEXT_DOMAIN ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'New Comments &rarr;',THEME_TEXT_DOMAIN ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Old Comments',THEME_NAME ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'New Comments &rarr;',THEME_NAME ) ); ?></div>
 			</nav>
 		<?php endif; ?>
 		<ol class="commentlist">
@@ -34,13 +34,13 @@
 		</ol>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above">
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Old Comments',THEME_TEXT_DOMAIN ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'New Comments &rarr;',THEME_TEXT_DOMAIN ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Old Comments',THEME_NAME ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'New Comments &rarr;',THEME_NAME ) ); ?></div>
 			</nav>
 		<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<span class="nocomments"><?php _e( 'Comments closed.',THEME_TEXT_DOMAIN ); ?></span>
+		<span class="nocomments"><?php _e( 'Comments closed.',THEME_NAME ); ?></span>
 	<?php endif; ?>
 
 	<?php
@@ -51,11 +51,11 @@
 		comment_form(
 		array(
 			'comment_notes_after' => '',
-			'comment_field' => '<div class="comment-form-comment form-group"><label class="control-label" for="comment">' . __( 'Comment',THEME_TEXT_DOMAIN ) . '</label><div class="controls"><textarea id="comment" name="comment" cols="45" rows="8" class="form-control" aria-required="true"></textarea></div></div>',
+			'comment_field' => '<div class="comment-form-comment form-group"><label class="control-label" for="comment">' . __( 'Comment',THEME_NAME ) . '</label><div class="controls"><textarea id="comment" name="comment" cols="45" rows="8" class="form-control" aria-required="true"></textarea></div></div>',
 			'fields' => apply_filters( 'comment_form_default_fields', array(
-				'author' => '<div class="comment-form-author form-group">' . '<label class="control-label" for="author">' . __( 'Name',THEME_TEXT_DOMAIN ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-				'email' => '<div class="comment-form-email form-group"><label class="control-label" for="email">' . __( 'E-mail',THEME_TEXT_DOMAIN ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-				'url' => '<div class="comment-form-url form-group"><label class="control-label" for="url">' . __( 'Website',THEME_TEXT_DOMAIN ) . '</label>' . '<input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>' ) )
+				'author' => '<div class="comment-form-author form-group">' . '<label class="control-label" for="author">' . __( 'Name',THEME_NAME ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
+				'email' => '<div class="comment-form-email form-group"><label class="control-label" for="email">' . __( 'E-mail',THEME_NAME ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
+				'url' => '<div class="comment-form-url form-group"><label class="control-label" for="url">' . __( 'Website',THEME_NAME ) . '</label>' . '<input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>' ) )
 		)
 	); ?>
 </div><!-- #comments -->

@@ -24,7 +24,7 @@ function theme_related_posts( $display = 'category', $qty = 4, $title = '', $thu
 
 	$show = false;
 	$post_qty = (int) $qty;
-	! empty( $title ) || $title = __( 'Related Posts', THEME_TEXT_DOMAIN );
+	! empty( $title ) || $title = __( 'Related Posts', THEME_NAME );
 
 	// Creates arguments for WP_Query.
 	switch ( $display ) {

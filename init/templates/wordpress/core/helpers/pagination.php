@@ -40,8 +40,8 @@ function theme_pagination($mid = 2, $end = 1, $show = false, $query = null) {
 					'end_size'  => $end,
 					'mid_size'  => $mid,
 					'type'      => 'list',
-					'prev_text' => __('&laquo; Previous', THEME_TEXT_DOMAIN),
-					'next_text' => __('Next &raquo;', THEME_TEXT_DOMAIN),
+					'prev_text' => __('&laquo; Previous', THEME_NAME),
+					'next_text' => __('Next &raquo;', THEME_NAME),
 				)
 			);
 

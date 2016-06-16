@@ -24,13 +24,20 @@ if (!isset($content_width)) {
 /**
  * Setup theme default paths.
  */
-if (!defined('WP_THEME_URL'))  { define('WP_THEME_URL', get_stylesheet_directory_uri()); }
+
+define('WP_SITE_URL', site_url());
+define('WP_HOME_URL', home_url());
+define('WP_SITE_URI', site_url());
+define('WP_THEME_PATH', get_template_directory());
+define('WP_THEME_URL', get_stylesheet_directory_uri());
+define('WP_THEME_URI', get_template_directory_uri());
+
 if (!defined('WP_SCRIPT_URL')) { define('WP_SCRIPT_URL', WP_THEME_URL . '/assets/scripts'); }
 if (!defined('WP_STYLE_URL'))  { define('WP_STYLE_URL', WP_THEME_URL . '/assets/styles'); }
 if (!defined('WP_IMAGE_URL'))  { define('WP_IMAGE_URL', WP_THEME_URL . '/assets/images'); }
 
-$core_path      = get_template_directory() . '/core';
-$includes_path  = get_template_directory() . '/includes';
+$core_path      = WP_THEME_PATH . '/core';
+$includes_path  = WP_THEME_PATH . '/includes';
 $common_path    = $core_path . '/common';
 $helpers_path   = $core_path . '/helpers';
 
