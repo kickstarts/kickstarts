@@ -47,7 +47,7 @@ if (!gitCheck) {
 
     // Install WordPress
     sh.echo(info('→ Installing WordPress...'));
-    sh.exec('git clone -b ' + wpBranch + ' ' + wpRepo);
+    sh.exec('git clone -b ' + wpBranch + '/' + wpRepo);
     sh.mv('./WordPress/*', './');
     sh.rm('-rf', ['./WordPress']);
     sh.echo(done('✔ WordPress successfully installed!'));
