@@ -20,7 +20,7 @@ var themePath   = './wp-content/themes/default/',
     pluginsPath = './wp-content/plugins/',
     gitClone    = 'git clone https://github.com',
     svnClone    = 'svn checkout http://plugins.svn.wordpress.org/',
-    wpRepo      = gitClone + '/WordPress/WordPress',
+    wpRepo      = 'WordPress/WordPress',
     wpBranch    = '4.4-branch',
     twentyList  = [
         './wp-content/themes/twentyten',
