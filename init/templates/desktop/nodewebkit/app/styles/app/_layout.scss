@@ -1,0 +1,30 @@
+//
+// Layout
+// --------------------------------------------------
+
+
+// General
+.container { @include container; }
+
+.header,
+.content,
+.footer {
+    @include row;
+    padding: 10px;
+}
+
+// Header
+.header {
+    background-color: $color-main-darker;
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+// Content
+.content {}
+
+// Footer
+.footer {}

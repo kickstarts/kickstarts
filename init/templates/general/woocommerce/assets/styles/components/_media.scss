@@ -1,0 +1,66 @@
+/**
+ * Media
+ */
+
+.page-content,
+.entry-content,
+.comment-content {
+	img.wp-smiley {
+		border: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+		display: inline-block;
+	}
+}
+
+/**
+ * Captions
+ */
+.wp-caption {
+	margin-bottom: $vspacing;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 1.2% auto 0;
+		max-width: 98%;
+	}
+	.wp-caption-text {
+		text-align: left;
+		font-style: italic;
+		border-bottom: 2px solid $color_border;
+		padding: 1em 0;
+	}
+}
+
+/**
+ * Galleries
+ */
+.gallery {
+
+	@extend %clearfix;
+
+	margin-bottom: $vspacing;
+
+	.gallery-item {
+		float: left;
+
+		.gallery-icon {
+			a { display: block; }
+
+			img {
+				border: none;
+				height: auto;
+				margin-bottom: 0;
+			}
+		}
+
+		.gallery-caption {
+			margin: 0;
+			text-align: center;
+		}
+
+	}
+
+}

@@ -1,0 +1,9 @@
+{
+  "globals": {
+    "title": "",
+    "description" : "",
+    "author": "",
+    "ga_id": "UA-XXXXX-X",
+    "host": ""
+  }
+}

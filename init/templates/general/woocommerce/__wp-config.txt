@@ -1,0 +1,109 @@
+<?php
+
+/**
+ * The base configurations of the WordPress.
+ *
+ * This file has the following configurations: MySQL settings, Table Prefix,
+ * Secret Keys, WordPress Language, and ABSPATH. You can find more information
+ * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} Codex page. You can get the MySQL settings from your web host.
+ *
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings ** //
+
+define('DB_CHARSET',  'utf8');
+define('DB_COLLATE', '');
+
+// Development
+define('DB_NAME', 'database');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'root');
+define('DB_HOST', 'localhost');
+
+// Production
+// define('DB_NAME', 'database');
+// define('DB_USER', 'root');
+// define('DB_PASSWORD', 'root');
+// define('DB_HOST', 'localhost');
+
+
+// ** Authentication Unique Keys and Salts. ** //
+
+/*
+ * Generate these using: https://api.wordpress.org/secret-key/1.1/salt/
+ */
+
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
+
+
+// ** WordPress Database Table prefix. ** //
+$table_prefix = 'wp_'; // Change it for security!
+
+
+// ** WP Cache ** //
+// define('WP_CACHE', true);
+// define('WPCACHEHOME', 'path/to/cache/goes/here');
+
+
+// ** FTP ** //
+define('FS_METHOD','direct'); // FTP_EXT
+// define('FTP_BASE', '');
+// define('FTP_USER', '');
+// define('FTP_PASS', '');
+// define('FTP_HOST', '127.0.0.1');
+
+
+// ** SSL ** //
+// define('FTP_SSL', false);
+define('FORCE_SSL_LOGIN', false);
+define('FORCE_SSL_ADMIN', false);
+
+
+// ** Language ** //
+define('WPLANG', 'pt_BR');
+
+
+// ** Data Optimize ** //
+define('WP_POST_REVISIONS', false);
+define('EMPTY_TRASH_DAYS', 30);
+define('WP_ALLOW_REPAIR', true);
+define('DISALLOW_FILE_EDIT', false);
+define('DISALLOW_FILE_MODS', false);
+define('AUTOMATIC_UPDATER_DISABLED' , true);
+
+
+// ** For developers: WordPress debugging mode. ** //
+define('WP_DEBUG',     true);
+define('WP_DEBUG_LOG', true);
+define('SCRIPT_DEBUG', true);
+
+
+// ** The WP_SITEURL and WP_HOME options are configured to access from any hostname or IP address. ** //
+// define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+// define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+
+
+
+// ** That's all, stop editing! Happy blogging. ** //
+
+// ** Absolute path to the WordPress directory. ** //
+if (!defined('ABSPATH'))
+    define('ABSPATH', dirname(__FILE__) . '/');
+
+// ** Sets up WordPress vars and included files. ** //
+require_once(ABSPATH . 'wp-settings.php');
+
+

@@ -1,0 +1,66 @@
+# -------------------------------------------------------------------------------------
+# REGISTER CUSTOM TASKS
+# -------------------------------------------------------------------------------------
+
+default:
+    - 'build'
+    - 'browserSync'
+    - 'watch'
+
+build:
+    - 'styles'
+    - 'scripts'
+
+dev:
+    - 'build'
+    - 'clean:dev'
+    - 'copy:dev'
+    - 'compress:dev'
+
+prod:
+    - 'build'
+    - 'assets'
+    - 'clean:prod'
+    - 'copy:prod'
+    - 'compress:prod'
+
+styles:
+    - 'sass'
+    # - 'uncss'
+    - 'csscomb'
+    - 'csslint'
+    - 'cssmin'
+
+scripts:
+    - 'jshint'
+    - 'browserify'
+    - 'uglify:main'
+
+assets:
+    - 'imagemin'
+    - 'svgmin'
+    - 'grunticon'
+
+start:
+    - 'copy:styles'
+    - 'copy:scripts'
+    - 'copy:vendors'
+    - 'copy:plugins'
+    - 'uglify:modernizr'
+    - 'clean:vendors'
+
+tdd:
+    - 'build'
+    - 'mocha'
+
+ftp:
+    - 'build'
+    - 'ftp-deploy'
+
+rsync:
+    - 'build'
+    - 'rsync'
+
+git:
+    - 'build'
+    - 'bump'

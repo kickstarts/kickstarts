@@ -1,0 +1,3 @@
+dest: "docs/styles"
+theme: "default"
+package: "./package.json"

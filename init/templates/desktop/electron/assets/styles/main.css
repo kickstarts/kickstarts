@@ -1,0 +1,46 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+header {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -250px;
+    text-align: center;
+}
+header h1 {
+    color: rgb(70, 70, 70);
+    font-size: 60px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -250px;
+    text-align: center;
+}
+.btn {
+    font-weight: 200;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 10px;
+    color: #999;
+    border: 2px solid #e3e3e3;
+}
+.btn:hover {
+    color: #666;
+    background: rgba(240,240,240,.45);
+}

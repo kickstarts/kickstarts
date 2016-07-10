@@ -1,0 +1,4 @@
+www/assets/scripts/vendors/
+node_modules
+package.json
+.esdoc.json

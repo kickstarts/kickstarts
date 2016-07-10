@@ -1,0 +1,16 @@
+{
+  "name": "slim",
+  "version": "0.1.0",
+  "authors": [
+    "Vitor Britto <code@vitorbritto.com.br>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,38 @@
+// Bourbon
+// See: http://bourbon.io/docs/
+@import 'bourbon';
+
+// Susy
+// Susy grid system. See: http://susydocs.oddbird.net/en/latest/
+@import '../../src/node_modules/susy/sass/susy';
+
+// Utilities
+// Sass tools and helpers used across the project.
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Vendors
+// External libraries and frameworks
+@import 'vendors/normalize';
+
+// Base
+// Holds what we might call the boilerplate code for the project.
+@import 'base/base';
+@import 'base/typography';
+
+// Layout
+// Contains everything that takes part in laying out the theme
+@import 'layout/layout';
+
+// Components
+// For smaller, less global components that do not belong in /layout
+@import 'components/forms';
+@import 'components/menu';
+@import 'components/content';
+@import 'components/post-formats';
+@import 'components/media';
+@import 'components/pagination';
+@import 'components/comments';
+@import 'components/widgets';
+@import 'components/infinite-scroll';
+@import 'components/404';

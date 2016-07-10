@@ -1,0 +1,16 @@
+site_name: ''
+site_description: 'Este é um documento direcionado ao administrador do sistema de conteúdo.'
+theme: 'mkdocs'
+copyright: ''
+pages:
+    - Início: 'index.md'
+    - Guia do Usuário:
+        - Gerenciando Artigos: 'artigos.md'
+        - Gerenciando Anexos: 'anexos.md'
+    - Guia do Desenvolvedor:
+        - Iniciando: 'iniciando.md'
+        - Estrutura do Projeto: 'estrutura.md'
+        - Tarefas de automação: 'tarefas.md'
+    - Informações do Projeto:
+        - Versões: 'changelog.md'
+        - Licenças: 'license.md'
