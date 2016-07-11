@@ -1,0 +1,2 @@
+.alert{padding:$alert-padding;margin-bottom:$line-height-computed;border:1px solid transparent;border-radius:$alert-border-radius}.alert h4{margin-top:0;color:inherit}.alert .alert-link{font-weight:$alert-link-font-weight}.alert>p,.alert>ul{margin-bottom:0}.alert>p+p{margin-top:5px}.alert-dismissable,.alert-dismissible{padding-right:$alert-padding20}.alert-dismissable .close,.alert-dismissible .close{position:relative;top:-2px;right:-21px;color:inherit}
+/*# sourceMappingURL=alerts.css.map */
