@@ -59,7 +59,7 @@ module.exports = function(grunt) {
             },
             styles: {
                 files: [
-                    '<%= path.css %>/src/**/*.scss',
+                    '<%= path.css %>/src/**/*.sass',
                     '<%= path.css %>/public.css',
                     '<%= path.css %>/admin.css'
                 ],

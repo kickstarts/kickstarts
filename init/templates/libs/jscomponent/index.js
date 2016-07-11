@@ -1,5 +1,5 @@
 /*!
- * Copyright 2015, All Rights Reserved.
+ * Copyright 2016, All Rights Reserved.
  *
  * Code licensed under the MIT License:
  * http://vitorbritto.mit-license.org/
