@@ -30,18 +30,29 @@ require $core_path . 'config.php';
     <!-- Facebook OpenGraph -->
     <meta property="og:title" content="<?php echo NAME; ?>">
     <meta property="og:description" content="<?php echo DESCRIPTION; ?>">
-    <meta property="og:phone_number" content="">
-    <meta property="og:street-address" content="">
-    <meta property="og:locality" content="">
-    <meta property="og:region" content="">
-    <meta property="og:email" content="">
+    <meta property="og:image" content=".jpg"/>
+    <meta property="og:url" content=""/>
+    <meta name="twitter:card" content="summary_large_image"/>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?php echo IMAGE_URL; ?>/favicon.png" sizes="32x32">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo IMAGE_URL; ?>/icons/apple-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo IMAGE_URL; ?>/icons/apple-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo IMAGE_URL; ?>/icons/apple-72.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo IMAGE_URL; ?>/icons/apple-57.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo IMAGE_URL; ?>/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo IMAGE_URL; ?>/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo IMAGE_URL; ?>/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php echo IMAGE_URL; ?>/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo IMAGE_URL; ?>/icons/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo IMAGE_URL; ?>/icons/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<?php echo IMAGE_URL; ?>/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- StyleSheet -->
     <link rel="stylesheet" href="<?php echo STYLE_URL; ?>/main.min.css">
