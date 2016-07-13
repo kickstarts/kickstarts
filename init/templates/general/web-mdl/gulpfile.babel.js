@@ -7,6 +7,7 @@
 // Main
 import gulp from 'gulp';
 import pkg from './package';
+import rollupConfig from './rollup.config';
 
 // Utils
 import plumber from 'gulp-plumber';
@@ -23,30 +24,19 @@ import sourcemaps from 'gulp-sourcemaps';
 import eslint from 'gulp-eslint';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
+import rollup from 'gulp-rollup';
 
 // Assets
 import imagemin from 'gulp-imagemin';
-// import svgmin from 'gulp-svgmin';
-// import svgstore from 'gulp-svgstore';
 
 // Deploy
 import rsync from 'gulp-rsync';
 import ftp from 'vinyl-ftp';
 
 // PostCSS
-import postcss from 'gulp-postcss';
-import rucksack from 'rucksack-css';
-import fontMagician from 'postcss-font-magician';
 import gcmq from 'gulp-group-css-media-queries';
 import cssnano from 'gulp-cssnano';
 
-// Accessibility
-import a11y from 'gulp-a11y';
-
-// i18n
-import potomo from 'gulp-potomo';
-import makepot from 'gulp-wp-pot';
-import sort from 'gulp-sort';
 
 ///////////////////////////////////////////
 // CONFIGURATION                         //
@@ -62,35 +52,33 @@ const deploy = {
     'log': gutil.log
   },
   'rsync': {
-    'root': './',
+    'root': './www',
     'hostname': 'ftp.domain.com.br',
     'destination': './public_html'
   },
   'paths': [
     'assets/fonts/*',
-    'assets/images/**/*',
+    'assets/images/*',
     'assets/scripts/main.min.js',
     'assets/styles/main.min.css',
-    'includes/*.php',
-    'partials/*.php',
-    'core/**/*.php',
+    'includes/*',
     '*.{php,html,md,txt}'
   ]
 };
 
 const paths = {
-  styles: '../assets/styles',
-  scripts: '../assets/scripts',
-  images: '../assets/images',
-  icons: '../assets/images/icons',
-  svg: '../assets/svg',
-  locales: '../languages/',
+  styles: 'www/assets/styles',
+  scripts: 'www/assets/scripts',
+  views: 'www',
+  images: 'www/assets/images',
+  icons: 'www/assets/images/icons',
+  svg: 'www/assets/svg/',
   reports: {
-    css: 'reports/css/',
-    js: 'reports/js/'
+    css: 'reports/css',
+    js: 'reports/js'
   },
-  specs: 'test/',
-  host: `http://localhost/~vitorbritto/${pkg.name}/`
+  specs: 'test',
+  host: `http://localhost/~vitorbritto/${pkg.name}/www/`
 };
 
 
@@ -113,25 +101,13 @@ gulp.task('styles:lint', () => {
   };
 
   gulp
-    .src([
-      `${paths.styles}/**/*.scss`
-      `!${paths.styles}/bootstrap/*.scss`
-    ])
+    .src(`${paths.styles}/**/*.scss`)
     .pipe(stylelint(options));
 
 });
 
 // Compile Task
 gulp.task('styles:compile', () => {
-
-  let processors = [
-    rucksack({
-      autoprefixer: true
-    }),
-    fontMagician({
-      hosted: paths.fonts
-    })
-  ];
 
   let options = {
     'errLogToConsole': true,
@@ -143,7 +119,6 @@ gulp.task('styles:compile', () => {
     .pipe(plumber())
     .pipe(sass(options).on('error', sass.logError))
     .pipe(sourcemaps.init())
-    .pipe(postcss(processors))
     .pipe(gcmq())
     .pipe(cssnano())
     .pipe(sourcemaps.write('./'))
@@ -163,7 +138,7 @@ gulp.task('styles:compile', () => {
 gulp.task('scripts:lint', () => {
   gulp
     .src([
-      `${paths.scripts}/main.js`
+      `${paths.scripts}/main.js`,
       `${paths.scripts}/modules/*.js`
     ])
     .pipe(plumber())
@@ -172,15 +147,16 @@ gulp.task('scripts:lint', () => {
 });
 
 // Compile Task
-gulp.task('scripts:compile', () => {
+gulp.task('scripts:main', () => {
   gulp
     .src(`${paths.scripts}/main.js`)
     .pipe(plumber())
-    .pipe(concat('main.js'))
+    .pipe(rollup(rollupConfig))
     .pipe(uglify())
     .pipe(rename('main.min.js'))
     .pipe(gulp.dest(paths.scripts));
 });
+
 gulp.task('scripts:vendors', () => {
   gulp
     .src(`${paths.scripts}/vendors/*.js`)
@@ -188,7 +164,17 @@ gulp.task('scripts:vendors', () => {
     .pipe(concat('vendors.js'))
     .pipe(uglify())
     .pipe(rename('vendors.min.js'))
-    .pipe(gulp.dest(joinPath(paths.scripts, 'vendors/')));
+    .pipe(gulp.dest(`${paths.scripts}/vendors/`));
+});
+
+gulp.task('scripts:libs', () => {
+  gulp
+    .src(`${paths.scripts}/libs/*.js`)
+    .pipe(plumber())
+    .pipe(concat('libs.js'))
+    .pipe(uglify())
+    .pipe(rename('libs.min.js'))
+    .pipe(gulp.dest(`${paths.scripts}/libs/`));
 });
 
 
@@ -196,61 +182,20 @@ gulp.task('scripts:vendors', () => {
 // ASSETS                                //
 ///////////////////////////////////////////
 
-gulp.task('assets:images', () => {
+gulp.task('images:optimize', () => {
 
   let options = {
     progressive: true,
     svgoPlugins: [{
-        removeViewBox: false
-      }]
-      //, use: [pngquant()]
+      removeViewBox: false
+    }]
+    //, use: [pngquant()]
   };
 
   gulp
     .src(paths.images)
     .pipe(imagemin(options))
     .pipe(gulp.dest(`${paths.images}/opt`));
-
-});
-
-
-///////////////////////////////////////////
-// ACCESSIBILITY                         //
-///////////////////////////////////////////
-
-gulp.task('audit', () => {
-  gulp
-    .src('./**/*.html')
-    .pipe(a11y())
-    .pipe(a11y.reporter());
-});
-
-
-///////////////////////////////////////////
-// TRANSLATION                           //
-///////////////////////////////////////////
-
-gulp.task('i18n:pototmo', () => {
-  gulp
-    .src(`${paths.locales}/*.po`)
-    .pipe(potomo())
-    .pipe(gulp.dest(paths.locales));
-});
-
-gulp.task('i18n:makepot', () => {
-
-  let options = {
-    destFile: `${pkg.name}.pot`,
-    package: pkg.name,
-    bugReport: pkg.author.url,
-    lastTranslator: `${pkg.author.name}<${pkg.author.email}>`,
-    team: `${pkg.author.name}<${pkg.author.email}>`
-  };
-
-  gulp.src('../**/*.php')
-    .pipe(sort())
-    .pipe(makepot(options))
-    .pipe(gulp.dest(paths.locales));
 
 });
 
@@ -264,8 +209,9 @@ gulp.task('deploy:ftp', () => {
 
   let conn = ftp.create(deploy.ftp);
 
-  gulp.src(deploy.paths, {
-      base: './',
+  gulp
+    .src(deploy.paths, {
+      base: './www',
       buffer: false
     })
     .pipe(conn.dest(deploy.ftp.dest));
@@ -284,10 +230,10 @@ gulp.task('deploy:rsync', () => {
 ///////////////////////////////////////////
 
 const syncFiles = {
-  'script': ['../assets/scripts/main.js'],
-  'style': ['../assets/styles/**/*.scss'],
-  'image': ['../assets/images/*.{png,jpg,gif}'],
-  'view': ['../**/*.php']
+  'script': ['./www/assets/scripts/main.js'],
+  'style': ['./www/assets/styles/**/*.scss'],
+  'image': ['./www/assets/images/*.{png,jpg,gif}'],
+  'view': ['./www/*.php', './www/includes/**/*.php']
 };
 
 const syncOptions = {
@@ -296,11 +242,13 @@ const syncOptions = {
 
 // Watch for changes
 gulp.task('watch', () => {
-  gulp.watch(syncFiles.view,   {debounceDelay: 300});
+  gulp.watch(syncFiles.view, {
+    debounceDelay: 300
+  });
   gulp.watch(syncFiles.script, ['scripts']);
-  gulp.watch(syncFiles.style,  ['styles']);
-  gulp.watch(syncFiles.image,  ['images']);
-  gulp.watch(syncFiles.image,  ['icons']);
+  gulp.watch(syncFiles.style, ['styles']);
+  gulp.watch(syncFiles.image, ['images']);
+  gulp.watch(syncFiles.image, ['icons']);
 });
 
 // Start server and Sync files.
@@ -316,20 +264,17 @@ gulp.task('sync', () => {
 // Default Task
 gulp.task('default', ['build', 'watch', 'sync']);
 
-// Scripts
-gulp.task('scripts', ['scripts:lint', 'scripts:compile']);
+// Optimize Scripts
+gulp.task('scripts', ['scripts:lint', 'scripts:vendors', 'scripts:libs', 'scripts:main']);
 
-// Styles
+// Optimize Styles
 gulp.task('styles', ['styles:lint', 'styles:compile']);
 
-// Images
-gulp.task('assets', ['assets:images']);
+// Optimize Images
+gulp.task('images', ['images:optimize']);
 
 // Build
 gulp.task('build', ['scripts', 'styles']);
-
-// i18n
-gulp.task('i18n', ['i18n:makepot', 'i18n:potomo']);
 
 // Deploy
 gulp.task('deploy', ['deploy:ftp']); // OR use 'deploy:rsync'

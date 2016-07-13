@@ -5,19 +5,14 @@
   "title": "",
   "homepage": "",
   "description": "",
-  "author": {
-    "name": "Vitor Britto",
-    "email": "code@vitorbritto.com.br",
-    "url": "http://vitorbritto.com.br/"
-  },
+  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
   "license": "MIT",
-  "main": "../index.php",
+  "main": "www/index.php",
   "scripts": {
     "lint": "./node_modules/.bin/eslint www",
     "reporter": "./node_modules/.bin/parker ./www/assets/styles/",
     "precommit": "npm run lint",
     "prepush": "npm run lint",
-    "postinstall": "jspm install",
     "audit": "./node_modules/.bin/a11y **/*.html reports/a11y/log.txt  --verbose"
   },
   "devDependencies": {
@@ -39,27 +34,21 @@
     "gulp-eslint": "^2.0.0",
     "gulp-group-css-media-queries": "^1.1.0",
     "gulp-imagemin": "^3.0.1",
-    "gulp-jspm": "^0.5.6",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.0",
-    "gulp-potomo": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-rsync": "0.0.5",
     "gulp-sass": "^2.2.0",
     "gulp-shell": "^0.5.2",
-    "gulp-sort": "^2.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylelint": "^2.0.2",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^1.5.2",
     "gulp-util": "^3.0.7",
-    "gulp-wp-pot": "^1.2.2",
     "husky": "^0.11.4",
     "imagemin-pngquant": "^4.2.0",
-    "jspm": "^0.16.27",
     "parker": "0.0.10",
-    "pioneer": "^0.11.7",
     "postcss-font-magician": "^1.4.0",
     "rucksack-css": "^0.8.5",
     "rupture": "^0.6.1",
@@ -67,14 +56,5 @@
     "stylelint": "^6.8.0",
     "stylelint-config-standard": "^10.0.0",
     "vinyl-ftp": "^0.4.5"
-  },
-  "jspm": {
-    "directories": {
-      "packages": "jspm_modules"
-    },
-    "dependencies": {
-      "jquery": "npm:jquery@^2.2.0",
-      "twbs/bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6"
-    }
   }
 }
