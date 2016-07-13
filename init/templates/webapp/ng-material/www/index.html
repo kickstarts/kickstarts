@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="/">
+
+        <meta charset="utf-8">
+
+        <title>Angular JS Web App</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="icon" type="image/png" href=""/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.min.css">
+    </head>
+
+    <body ng-app="app">
+
+        <!--[if lt IE 10]>
+          <p>You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a>
+            to improve your experience.</p>
+        <![endif]-->
+
+        <div ui-view layout="row" layout-fill></div>
+
+        <!-- Development -->
+        <script src="js/angular.bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+
+        <!-- Production -->
+        <!-- <script src="js/all.min.js"></script> -->
+
+    </body>
+</html>
