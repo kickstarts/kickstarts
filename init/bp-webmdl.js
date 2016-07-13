@@ -19,7 +19,7 @@ sh.echo(info('→ Initializing...'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
 
 sh.echo(info('→ Creating Structure...'));
-sh.mv('./init/templates/general/website/*', './');
+sh.mv('./init/templates/general/web-mdl/*', './');
 sh.rm('-rf', ['./init']);
 sh.echo(done('✔ Created!'));
 
