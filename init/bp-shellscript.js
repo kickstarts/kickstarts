@@ -14,12 +14,6 @@ sh.echo(info('→ Initializing...'));
 // Create
 sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
-sh.mv('./init/templates/tools/shellscript/*', './');
+sh.mv('./init/templates/shellscript/*', './');
 sh.rm('-rf', ['./init', './lib']);
-
-// Setup
-sh.echo(info('→ Setting up project'));
-
-sh.exec('subl .');
-
 sh.echo(done('✔ All Done!'));

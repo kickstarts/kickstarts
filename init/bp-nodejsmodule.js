@@ -17,8 +17,8 @@ sh.echo(info('→ Initializing...'));
 // Create
 sh.echo(info('→ Creating Structure'));
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
-sh.mv('./init/templates/wpplugin/*', './');
-sh.rm('-rf', ['./init']);
+sh.mv('./init/templates/nodejsmodule/*', './');
+sh.rm('-rf', ['./init', './lib']);
 
 // Setup
 sh.echo(info('→ Setting up project'));
@@ -26,6 +26,10 @@ sh.echo(info('→ Setting up project'));
 if (!nodeCheck) {
     sh.echo(error('✖ This task requires NodeJS to run.'));
     process.exit(1);
+} else {
+    sh.exec('npm install');
 }
-sh.exec('npm install');
+
+sh.exec('subl .');
+
 sh.echo(done('✔ All Done!'));

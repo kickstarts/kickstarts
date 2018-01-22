@@ -12,22 +12,15 @@ var nodeCheck = sh.which('node');
 
 
 // Scaffolding
-// ----------------------------------
-
 sh.echo(info('→ Initializing...'));
-
 sh.rm('-rf', ['./node_modules', './.git', '.gitignore', '.editorconfig', '.travis.yml', 'newproject.js', 'package.json', 'README.md', 'logo-bp.jpg']);
-
 sh.echo(info('→ Creating Structure...'));
-sh.mv('./init/templates/libs/jqueryplugin/*', './');
+sh.mv('./init/templates/jqueryplugin/*', './');
 sh.rm('-rf', ['./init', './lib']);
 sh.echo(done('✔ Created!'));
 
 
 // Setup
-// ----------------------------------
-
-// Check if NodeJS exists and install dependencies
 if (!nodeCheck) {
     sh.echo(error('✖ This task requires NodeJS to run.'));
     process.exit(1);
@@ -37,5 +30,4 @@ if (!nodeCheck) {
     sh.exec('npm install');
     sh.echo(done('✔ Node Modules successfully installed!'));
 }
-
 sh.echo(done('✔ All Done!'));

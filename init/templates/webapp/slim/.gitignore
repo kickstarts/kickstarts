@@ -1,7 +1,0 @@
-.DS_Store
-.*.swp
-vendor/
-node_modules/
-bower_components/
-components/
-.sass-cache/

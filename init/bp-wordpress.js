@@ -1,34 +1,32 @@
-// Variables
+// Dependencies
 // ----------------------------------
 
 // Modules
-var path = require('path'),
-    sh  = require('shelljs'),
-    cli = require('cli-color');
+const path = require('path');
+const sh   = require('shelljs');
+const cli  = require('cli-color');
 
 // Messages
-var error = cli.red.bold,
-    info  = cli.cyan,
-    done  = cli.green;
+const error = cli.red.bold;
+const info  = cli.cyan;
+const done  = cli.green;
 
 // Check
-var nodeCheck = sh.which('node'),
-    gitCheck  = sh.which('git');
+const nodeCheck = sh.which('node');
+const gitCheck  = sh.which('git');
 
 // Paths
-var themePath   = './wp-content/themes/default/',
-    pluginsPath = './wp-content/plugins/',
-    gitClone    = 'git clone https://github.com',
-    svnClone    = 'svn checkout http://plugins.svn.wordpress.org/',
-    wpRepo      = 'https://github.com/WordPress/WordPress.git',
-    twentyList  = [
-        './wp-content/themes/twentyten',
-        './wp-content/themes/twentyeleven',
-        './wp-content/themes/twentytwelve',
-        './wp-content/themes/twentythirteen',
-        './wp-content/themes/twentyfourteen',
-        './wp-content/themes/twentyfifteen'
-    ];
+const themePath   = './wp-content/themes/default/';
+const pluginsPath = './wp-content/plugins/';
+const gitClone    = 'git clone https://github.com';
+const svnClone    = 'svn checkout http://plugins.svn.wordpress.org/';
+const wpRepo      = 'https://github.com/WordPress/WordPress.git';
+
+const twentyList  = [
+  './wp-content/themes/twentyfifteen',
+  './wp-content/themes/twentysixteen',
+  './wp-content/themes/twentyseventeen'
+];
 
 
 // Scaffolding
@@ -54,7 +52,7 @@ if (!gitCheck) {
     // Scaffolding
     sh.echo(info('→ Creating Structure...'));
     sh.mkdir('-p', themePath);
-    sh.mv('./init/templates/general/wordpress/*', themePath);
+    sh.mv('./init/templates/wordpress/*', themePath);
     sh.mv(themePath + '__wp-config.txt', './wp-config.php');
     sh.mv(themePath + '__gitignore.txt', './.gitignore');
     sh.mv(themePath + '__htaccess.txt', themePath + 'htaccess.txt');
@@ -109,19 +107,14 @@ sh.echo(info('→ Setting permission to folders and files...'));
 sh.chmod('755', './');
 sh.echo(done('✔ Done!'));
 
-// Move on to "./src" folder
-sh.echo(info('→ Installing dependencies....'));
-sh.cd(themePath + './src');
-
 // Check if NodeJS exists and install dependencies
+sh.echo(info('→ Installing dependencies....'));
 if (!nodeCheck) {
-    sh.echo(error('✖ This task requires NodeJS to run.'));
-    process.exit(1);
-} else {
-    sh.exec('npm install');
-    sh.echo(done('✔ Node Modules successfully installed!'));
-
+  sh.echo(error('✖ This task requires NodeJS to run.'));
+  process.exit(1);
 }
+sh.exec('npm install');
+sh.echo(done('✔ Node Modules successfully installed!'));
 
 // Final Message
 sh.echo(done('✔ All Done!'));

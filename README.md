@@ -64,15 +64,16 @@ Usage: `new [project-folder-name]`
 
 ## Boilerplates
 
-- [General](init/templates/general)
-- [Desktop](init/templates/desktop)
-- [Web Apps](init/templates/webapp)
-- [Mobile](init/templates/mobile)
-- [APIs](init/templates/api)
-- [Full-stack](init/templates/stack)
-- [Static Generators](init/templates/static)
-- [Libs](init/templates/libs)
-- [Tools](init/templates/tools)
+- WordPress
+- WP Plugin
+- Jekyll
+- REST API (NodeJS)
+- NodeJS Module
+- JQuery Plugin
+- ES6 Component
+- CLI Tool
+- Shell Script
+
 
 ## License
 

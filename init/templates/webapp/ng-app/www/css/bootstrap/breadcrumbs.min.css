@@ -1,2 +1,0 @@
-.breadcrumb{padding:$breadcrumb-padding-vertical $breadcrumb-padding-horizontal;margin-bottom:$line-height-computed;list-style:none;background-color:$breadcrumb-bg;border-radius:$border-radius-base}.breadcrumb>li{display:inline-block}.breadcrumb>li+li:before{content:'$breadcrumb-separator\00a0';padding:0 5px;color:$breadcrumb-color}.breadcrumb>.active{color:$breadcrumb-active-color}
-/*# sourceMappingURL=breadcrumbs.css.map */
