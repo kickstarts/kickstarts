@@ -130,8 +130,6 @@ const deploy = {
 ///////////////////////////////////////////
 
 gulp.task('styles', () => {
-
-
   const options = {
     'errLogToConsole': true,
     'outputStyle': 'expanded'
@@ -210,29 +208,28 @@ gulp.task('images', () => {
     .pipe(gulp.dest(paths.images));
 });
 
-// gulp.task('svg', () => {
-//   gulp.src(paths.svg)
-//     .pipe(svgmin())
-//     .pipe(gulp.dest(paths.svg));
-//   gulp.src(paths.svg)
-//     .pipe(svgmin())
-//     .pipe(gulp.dest(paths.svg));
-// });
+gulp.task('svg', () => {
+  return gulp
+    .src(paths.svg)
+    .pipe(svgmin())
+    .pipe(gulp.dest(paths.svg));
+});
 
-// gulp.task('icons', () => {
-//   gulp.src(paths.icons)
-//     .pipe(plumber())
-//     .pipe(svgmin())
-//     .pipe(svgstore({ fileName: 'icons.svg', inlineSvg: true }))
-//     .pipe(cheerio({
-//       run: function ($, file) {
-//         $('svg').addClass('hide');
-//         $('[fill]').removeAttr('fill');
-//       },
-//       parserOptions: { xmlMode: true }
-//     }))
-//     .pipe(gulp.dest(paths.svg));
-// });
+gulp.task('icons', () => {
+  return gulp
+    .src(paths.icons)
+    .pipe(plumber())
+    .pipe(svgmin())
+    .pipe(svgstore({ fileName: 'icons.svg', inlineSvg: true }))
+    // .pipe(cheerio({
+    //   run: function ($, file) {
+    //     $('svg').addClass('hide');
+    //     $('[fill]').removeAttr('fill');
+    //   },
+    //   parserOptions: { xmlMode: true }
+    // }))
+    .pipe(gulp.dest(paths.svg));
+});
 
 
 ///////////////////////////////////////////
@@ -240,7 +237,7 @@ gulp.task('images', () => {
 ///////////////////////////////////////////
 
 gulp.task('audit', () => {
-  gulp
+  return gulp
     .src('./**/*.html')
     .pipe(a11y())
     .pipe(a11y.reporter());
@@ -252,7 +249,7 @@ gulp.task('audit', () => {
 ///////////////////////////////////////////
 
 gulp.task('i18n:pototmo', () => {
-  gulp
+  return gulp
     .src(`${paths.locales}/*.po`)
     .pipe(potomo())
     .pipe(gulp.dest(paths.locales));
@@ -268,7 +265,8 @@ gulp.task('i18n:makepot', () => {
     team: `${pkg.author.name}<${pkg.author.email}>`
   };
 
-  gulp.src('../**/*.php')
+  return gulp
+    .src('../**/*.php')
     .pipe(sort())
     .pipe(makepot(options))
     .pipe(gulp.dest(paths.locales));
@@ -282,22 +280,22 @@ gulp.task('i18n:makepot', () => {
 
 // Deploy using FTP
 gulp.task('deploy:ftp', () => {
+  let conn = ftp.create(deploy.ftp);
 
-    let conn = ftp.create(deploy.ftp);
+  return gulp
+    .src(deploy.paths, {
+      base: './',
+      buffer: false
+    })
+    .pipe(conn.dest(deploy.ftp.dest));
+});
 
-    gulp.src(deploy.paths, {
-        base: './',
-        buffer: false
-      })
-      .pipe(conn.dest(deploy.ftp.dest));
-
-  });
-
-  // Deploy using Rsync / SSH
-  gulp.task('deploy:rsync', () => {
-    gulp.src(deploy.paths)
-      .pipe(rsync(deploy.rsync));
-  });
+// Deploy using Rsync / SSH
+gulp.task('deploy:rsync', () => {
+  return gulp
+    .src(deploy.paths)
+    .pipe(rsync(deploy.rsync));
+});
 
 
 ///////////////////////////////////////////
@@ -306,7 +304,7 @@ gulp.task('deploy:ftp', () => {
 
 const syncFiles = {
   'script' : ['assets/scripts/main.js'],
-  'style'  : ['assets/styles/**/*.scss'],
+  'style'  : ['assets/styles/**/*.{sass,scss}'],
   'image'  : ['assets/images/*.{png,jpg}'],
   'icons'  : ['assets/images/icons/*'],
   'view'   : ['**/*.php']

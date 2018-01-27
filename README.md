@@ -2,7 +2,7 @@
 
 ## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.svg)](https://travis-ci.org/vitorbritto/boilerplates)
 
-This is my personal Yeoman. A jumpstart for my projects.
+A jumpstart for my projects.
 
 > **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/](https://github.com/vitorbritto/boilerplates/issues/)
 
@@ -67,11 +67,11 @@ Usage: `new [project-folder-name]`
 - WordPress
 - WP Plugin
 - Jekyll
-- REST API (NodeJS)
-- NodeJS Module
+- **WIP:** REST API (NodeJS)
+- NodeJS Module/Package
 - JQuery Plugin
 - ES6 Component
-- CLI Tool
+- CLI Tool (w/ NodeJS)
 - Shell Script
 
 
