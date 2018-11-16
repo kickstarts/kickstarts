@@ -1,6 +1,9 @@
 {
   "private": false,
-  "name": "kickstart",
+  "name": "kickstarts",
+  "bin": {
+    "kick": "bin/kick"
+  },
   "version": "2.0.0",
   "description": "A jumpstart for new projects",
   "keywords": [
