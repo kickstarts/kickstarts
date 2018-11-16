@@ -1,6 +1,6 @@
-<h1 style="text-align: center;">Kickstarts</h1>
+<h1 align="center">Kickstarts</h1>
 <br>
-<p style="text-align: center;">Boilerplates is now <strong>Kickstarts</strong>. A jumpstart for my personal projects.</p>
+<p  align="center">Boilerplates is now <strong>Kickstarts</strong>. A jumpstart for my personal projects.</p>
 <br>
 
 
