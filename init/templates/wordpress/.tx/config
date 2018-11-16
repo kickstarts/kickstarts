@@ -1,8 +1,0 @@
-[main]
-host = https://www.transifex.com
-
-[project-1.project]
-file_filter = languages/<lang>.po
-source_file = languages/project.pot
-source_lang = pt_BR
-type = PO

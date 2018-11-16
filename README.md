@@ -1,80 +1,38 @@
-![Boilerplates Logo](logo-bp.jpg "Boilerplates")
+<h1 align="center">Boilerplates</h1>
 
-## Welcome [![Build Status](https://travis-ci.org/vitorbritto/boilerplates.svg)](https://travis-ci.org/vitorbritto/boilerplates)
+<br>
+<br>
 
-A jumpstart for my projects.
+<p align="center"><b>A jumpstart for my personal projects.</b></p>
 
-> **TODO LIST:** [https://github.com/vitorbritto/boilerplates/issues/](https://github.com/vitorbritto/boilerplates/issues/)
+<br>
+<br>
 
 
 ## Getting Started
 
-**STEP 01: Requirements and Installation**
+Install with [npm](https://www.npmjs.com/):
 
-First of all, make sure you have [Node.js](http://nodejs.org/) installed.
-
-```bash
-# 1. Clone this repository and access the generated folder
-$ git clone git://github.com/vitorbritto/boilerplates.git [project-name]
-$ cd [project-name]
-
-# 2. Install dependencies and make the script executable
-$ npm install
+```sh
+$ npm install kickstart
 ```
 
-**STEP 02: Execute the program**
 
-```bash
-# Conventional Method
-$ node newproject
+## Usage
 
------ OR -----
-
-# Executable Script
-$ chmod u+x newproject.js
-$ ./newproject.js
+```sh
+$ kick start
 ```
 
-**STEP 03: Profit! :)**
+**then...**
 
-> **Note**: chmod is an UNIX command, not present in CMD/MS-DOS.
-
-### Bonus
-
-Place this Bash Function in your `.bashrc` file.
-
-```bash
-# Start a new project
-new() {
-    printf "→ Setting up your new project\n"
-    git clone git://github.com/vitorbritto/boilerplates.git $1
-    cd $1
-
-    printf "→ Installing dependencies\n"
-    npm install
-    clear
-
-    printf "\n→ Initializing...\n"
-    node newproject
-}
-```
-
-Usage: `new [project-folder-name]`
-
-
-## Boilerplates
-
-- WordPress
-- WP Plugin
-- Jekyll
-- **WIP:** REST API (NodeJS)
-- NodeJS Module/Package
-- JQuery Plugin
-- ES6 Component
-- CLI Tool (w/ NodeJS)
-- Shell Script
+1. Choose the kickstart
+2. Set the project name
 
 
 ## License
 
 [MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
+
+
+

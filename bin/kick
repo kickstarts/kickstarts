@@ -1,0 +1,87 @@
+#!/usr/bin/env node
+
+// =====================================================
+// Dependencies
+// =====================================================
+
+const color    = require('ansi-colors')
+const shell    = require('shelljs')
+const program  = require('commander')
+const Enquirer = require('enquirer')
+
+const package  = require('../package.json')
+
+const enquirer = new Enquirer()
+
+const questions = [
+  {
+    type: 'input',
+    name: 'folder',
+    message: 'Whats is the name of your project?'
+  },
+  {
+    type: 'select',
+    name: 'boilerplate',
+    message: 'Which boilerplate would you like to use?',
+    choices: [
+      { name: 'react-kickstart', message: 'React JS', value: 'react-kickstart' },
+      { name: 'rna-kickstart', message: 'React Native', value: 'rna-kickstart' },
+      { name: 'ng-kickstart', message: 'AngularJS', value: 'ng-kickstart' },
+      { name: 'ionic-kickstart', message: 'Ionic', value: 'ionic-kickstart' },
+      { name: 'api-express-kickstart', message: 'API Express', value: 'api-express-kickstart' },
+      { name: 'api-lumen-kickstart', message: 'API Lumen', value: 'api-lumen-kickstart' },
+      { name: 'api-adonis-kickstart', message: 'API Adonis', value: 'api-adonis-kickstart' },
+      { name: 'wordpress', message: 'WordPress', value: 'wordpress' },
+      { name: 'wpplugin', message: 'WP Plugin', value: 'wpplugin' },
+      { name: 'clitool', message: 'CLI Tool', value: 'clitool' },
+      { name: 'shellscript', message: 'Shell Script', value: 'shellscript' }
+    ]
+  }
+];
+
+
+// =====================================================
+// Initialize
+// =====================================================
+
+const initializeProgram = () => {
+
+  const response = enquirer.prompt(questions);
+
+  response.then(result => {
+    console.log(result)
+    let projectName = result.folder.toLowerCase().replace(' ', '-')
+    shell.echo(color.cyan('→ Initializing...'))
+    shell.exec(`git clone https://github.com/vitorbritto/${result.boilerplate} ${projectName}`)
+    shell.echo(color.green('✔ All Done!'))
+  })
+
+}
+
+
+// =====================================================
+// CLI Commands
+// =====================================================
+
+// Version
+program
+  .version(color.cyan(`${package.name} - Version ${package.version}`), '-v, --version')
+  .option('-s --silent', 'Skip status logged to the console')
+
+// Main Command
+program
+  .command('start')
+  .description('Create a Kickstart')
+  .action(initializeProgram)
+
+  // Help
+program.on('-h, --help', () => {
+  console.log('Help')
+})
+
+// Default
+program.parse(process.argv)
+
+if (process.argv.length === 2) {
+  program.help()
+}
