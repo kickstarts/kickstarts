@@ -4,7 +4,7 @@
   "bin": {
     "kick": "bin/kick"
   },
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A jumpstart for new projects",
   "keywords": [
     "kickstart",
