@@ -2,6 +2,10 @@
 <br>
 <p  align="center">Boilerplates is now <strong>Kickstarts</strong>. A jumpstart for my personal projects.</p>
 <br>
+<br>
+<p align="center">
+<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/kickstarts.jpg" alt="Kickstarts" width="750">
+</p>
 
 
 ## Getting Started
