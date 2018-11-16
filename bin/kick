@@ -49,7 +49,7 @@ const initializeProgram = () => {
   const response = enquirer.prompt(questions);
 
   response.then(result => {
-    console.log(result)
+    // console.log(result)
     let projectName = result.folder.toLowerCase().replace(' ', '-')
     shell.echo(color.cyan('→ Initializing...'))
     shell.exec(`git clone https://github.com/vitorbritto/${result.boilerplate} ${projectName}`)
