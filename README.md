@@ -1,11 +1,6 @@
-<h1 align="center">Boilerplates</h1>
-
+<h1 style="text-align: center;">Kickstarts</h1>
 <br>
-<br>
-
-<p align="center"><b>A jumpstart for my personal projects.</b></p>
-
-<br>
+<p style="text-align: center;">Boilerplates is now <strong>Kickstarts</strong>. A jumpstart for my personal projects.</p>
 <br>
 
 
@@ -14,7 +9,7 @@
 Install with [npm](https://www.npmjs.com/):
 
 ```sh
-$ npm install kickstart
+$ npm i -g kickstarts
 ```
 
 
@@ -27,7 +22,7 @@ $ kick start
 **then...**
 
 1. Choose the kickstart
-2. Set the project name
+2. Set the directory name
 
 
 ## License
