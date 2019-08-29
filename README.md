@@ -1,10 +1,10 @@
 <h1 align="center">Kickstarts</h1>
 <br>
-<p  align="center">Boilerplates is now <strong>Kickstarts</strong>. A jumpstart for my personal projects.</p>
+<p align="center">No setup, just development!</p>
 <br>
 <br>
 <p align="center">
-<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/kickstarts.jpg" alt="Kickstarts" width="750">
+<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/kickstarts.jpg" alt="Kickstarts" width="500">
 </p>
 
 
@@ -31,7 +31,7 @@ $ kick start
 
 ## License
 
-[MIT License](http://vitorbritto.mit-license.org/) © Vitor Britto
+[MIT License](http://kickstarts.mit-license.org/) © Kickstarts
 
 
 
