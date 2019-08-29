@@ -1,8 +1,3 @@
-<h1 align="center">Kickstarts</h1>
-<br>
-<p align="center">No setup, just development!</p>
-<br>
-<br>
 <p align="center">
 <img src="https://github.com/vitorbritto/kickstarts/raw/master/source/kickstarts.jpg" alt="Kickstarts" width="500">
 </p>
