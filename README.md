@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/logo-kickstarts.jpg" alt="Kickstarts" width="500">
+<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/logo-kickstarts.png" alt="Kickstarts" width="500">
 </p>
 
 
