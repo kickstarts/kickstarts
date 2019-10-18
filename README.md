@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/kickstarts.jpg" alt="Kickstarts" width="500">
+<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/logo-kickstarts.jpg" alt="Kickstarts" width="500">
 </p>
 
 
@@ -22,6 +22,7 @@ $ kick start
 
 1. Choose the kickstart
 2. Set the directory name
+3. That's it! Start development.
 
 
 ## License
