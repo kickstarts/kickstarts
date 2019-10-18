@@ -5,7 +5,7 @@
 
 ## About Kickstarts
 
-Kickstarts helps you create fast and secure projects using modern tools. Have you ever feels like you're freeze in time and spent a lot of time setting up your project? So, Kickstarts came to help you in this way and so many other things.
+Kickstarts helps you create fast and secure projects using modern build tools. Have you ever feels like you're freeze in time and spent a lot of time setting up your project? So, Kickstarts came to help you in this way and so many other things.
 
 The approach is quite simple: no setup, just development.
 
