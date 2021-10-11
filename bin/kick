@@ -17,26 +17,19 @@ const questions = [
   {
     type: 'input',
     name: 'folder',
-    message: 'Whats is the name of your project?'
+    message: 'Your project name:'
   },
   {
     type: 'select',
-    name: 'boilerplate',
-    message: 'Which boilerplate would you like to use?',
+    name: 'kickstart',
+    message: 'Select a kickstart:',
     choices: [
       { name: 'react-kickstart', message: 'React JS', value: 'react-kickstart' },
-      { name: 'next-kickstart', message: 'React + Next [WIP]', value: 'next-kickstart' },
-      { name: 'gastby-kickstart', message: 'Gatsby [WIP]', value: 'gastby-kickstart' },
       { name: 'rna-kickstart', message: 'React Native', value: 'rna-kickstart' },
       { name: 'ng-kickstart', message: 'AngularJS', value: 'ng-kickstart' },
       { name: 'ionic-kickstart', message: 'Ionic', value: 'ionic-kickstart' },
-      { name: 'api-lumen-kickstart', message: 'API Lumen', value: 'api-lumen-kickstart' },
-      { name: 'api-slim-kickstart', message: 'API Adonis', value: 'api-slim-kickstart' },
-      { name: 'api-express-kickstart', message: 'API Express', value: 'api-express-kickstart' },
-      { name: 'api-adonis-kickstart', message: 'API Adonis', value: 'api-adonis-kickstart' },
-      { name: 'fullstack-laravel-kickstart', message: 'API Lumen', value: 'fullstack-laravel-kickstart' },
+      { name: 'nestjs-kickstart', message: 'NestJS', value: 'nestjs-kickstart' },
       { name: 'wp-kickstart', message: 'WordPress', value: 'wp-kickstart' },
-      // { name: 'wpplugin-kickstart', message: 'WP Plugin', value: 'wpplugin-kickstart' },
       { name: 'cli-tool-kickstart', message: 'CLI Tool', value: 'cli-tool-kickstart' },
       { name: 'sh-kickstart', message: 'Shell Script', value: 'sh-kickstart' }
     ]
@@ -53,10 +46,9 @@ const initializeProgram = () => {
   const response = enquirer.prompt(questions);
 
   response.then(result => {
-    // console.log(result)
     let projectName = result.folder.toLowerCase().replace(' ', '-')
     shell.echo(color.cyan('→ Initializing...'))
-    shell.exec(`git clone https://github.com/kickstarts/${result.boilerplate} ${projectName}`)
+    shell.exec(`git clone https://github.com/kickstarts/${result.kickstart} ${projectName}`)
     shell.echo(color.green('✔ All Done!'))
   })
 
