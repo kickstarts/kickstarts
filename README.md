@@ -1,6 +1,52 @@
-<p align="center">
-<img src="https://github.com/vitorbritto/kickstarts/raw/master/source/logo-kickstarts.png" alt="Kickstarts" width="500">
-</p>
+<div id="#top"></div>
+<br />
+
+<div align="center">
+
+</div>
+
+<div align="center">
+  <img src="source/logo-kickstarts.png" alt="Kickstarts" width="320">
+
+  <p align="center">
+    No setup! Just development.
+    <br />
+    <a href="https://github.com/kickstarts/kickstarts/docs">Documentation</a>
+    ·
+    <a href="https://github.com/kickstarts/kickstarts/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/kickstarts/kickstarts/blob/main/CONTRIBUTING.md">How to colaborate</a>
+  </p>
+
+  [![Gitter](https://badges.gitter.im/kickstarts/community.svg)](https://gitter.im/kickstarts/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<br />
+<br />
+
+<details>
+  <summary>Summary</summary>
+  <ol>
+    <li>
+      <a href="#about-kickstarts">About Kickstarts</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#plugins">Plugins</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li><a href="#running">Running</a></li>
+    <li><a href="#test">Test</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+<br />
+<br />
 
 
 ## About Kickstarts
@@ -13,16 +59,26 @@ You don't have to spent a lot of time setting up things like automation tasks or
 
 Kickstarts follows a modern architeture and best pratices to delivery high quality web projects.
 
+<p style="font-size: 14px;" align="right">[<a href="#top">back to top</a>]</p>
+
+### Built With
+
+* [Node.js](https://nodejs.org/en/)
+
+<p style="font-size: 14px;" align="right">[<a href="#top">back to top</a>]</p>
+
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-The first step to play with Kickstarts, is to install it. You may need to install `nodejs` and `npm` on your local machine. Then, execute on terminal:
+The first step to play with Kickstarts, is to install it. You may need to install `nodejs` in your local machine. Then, execute on terminal:
 
 ```sh
 $ npm i -g kickstarts
 ```
 
 
-## Usage
+## Running
 
 To start using Kickstarts, just type the follow command on your terminal:
 
@@ -30,17 +86,25 @@ To start using Kickstarts, just type the follow command on your terminal:
 $ kick start
 ```
 
-**then...**
+<!-- ROADMAP -->
+## Roadmap
 
-1. Choose the kickstart and tools you may wanna use;
-2. set the directory name;
-3. Define your env variables;
-3. And you're done. Start development.
+- [ ] Add Guidelines
+- [ ] Add plugins content
+- [ ] Review plugins
 
 
+<!-- CONTRIBUTING -->
+## Contributing
+
+See [Contributing Guide](https://github.com/kickstarts/kickstarts/blob/main/CONTRIBUTING.md).
+
+<p style="font-size: 14px;" align="right">[<a href="#top">back to top</a>]</p>
+
+
+<!-- LICENSE -->
 ## License
 
-[MIT License](http://kickstarts.mit-license.org/) © Kickstarts
+[MIT License](LICENSE) © Kickstarts
 
-
-
+<p style="font-size: 14px;" align="right">[<a href="#top">back to top</a>]</p>

@@ -4,54 +4,64 @@
 // Dependencies
 // =====================================================
 
+const Enquirer = require('enquirer')
 const color    = require('ansi-colors')
 const shell    = require('shelljs')
 const program  = require('commander')
-const Enquirer = require('enquirer')
 
 const package  = require('../package.json')
 
 const enquirer = new Enquirer()
 
-const questions = [
+const PKG_NAME_VERSION = color.cyan(`${package.name} - ${package.version}`)
+
+const TEMPLATES = [
+  { name: 'Vanilla', message: 'Vanilla', value: 'ks-vanilla-js' },
+  { name: 'React', message: 'React', value: 'ks-react' },
+  { name: 'Angular', message: 'Angular', value: 'ks-angular' },
+  { name: 'Vue', message: 'Vue', value: 'ks-vue' },
+  { name: 'React Native', message: 'React Native', value: 'ks-rna' },
+  { name: 'Ionic', message: 'Ionic', value: 'ks-ionic' },
+  { name: 'Nest.js', message: 'Nest.js', value: 'ks-nestjs' },
+]
+
+const INPUTS = [
   {
     type: 'input',
     name: 'folder',
-    message: 'Your project name:'
+    initial: 'kickstart',
+    message: 'Project name:'
   },
   {
     type: 'select',
-    name: 'kickstart',
+    name: 'template',
     message: 'Select a kickstart:',
-    choices: [
-      { name: 'react-kickstart', message: 'React JS', value: 'react-kickstart' },
-      { name: 'rna-kickstart', message: 'React Native', value: 'rna-kickstart' },
-      { name: 'ng-kickstart', message: 'AngularJS', value: 'ng-kickstart' },
-      { name: 'ionic-kickstart', message: 'Ionic', value: 'ionic-kickstart' },
-      { name: 'nestjs-kickstart', message: 'NestJS', value: 'nestjs-kickstart' },
-      { name: 'wp-kickstart', message: 'WordPress', value: 'wp-kickstart' },
-      { name: 'cli-tool-kickstart', message: 'CLI Tool', value: 'cli-tool-kickstart' },
-      { name: 'sh-kickstart', message: 'Shell Script', value: 'sh-kickstart' }
-    ]
+    choices: TEMPLATES
   }
 ];
 
 
 // =====================================================
-// Initialize
+// Kickstart
 // =====================================================
 
-const initializeProgram = () => {
+const kickstart = () => {
+  const prompt = enquirer.prompt(INPUTS);
 
-  const response = enquirer.prompt(questions);
+  prompt.then(result => {
+    let root = handleFolderName(result.folder)
+    let template = getRepositoryName(result.template)
+    let prefix = 'ks'
 
-  response.then(result => {
-    let projectName = result.folder.toLowerCase().replace(' ', '-')
-    shell.echo(color.cyan('→ Initializing...'))
-    shell.exec(`git clone https://github.com/kickstarts/${result.kickstart} ${projectName}`)
-    shell.echo(color.green('✔ All Done!'))
+    shell.echo('\n\n')
+    shell.echo(color.cyanBright(`📦 Creating project in ${root}...`))
+    shell.exec(`git clone https://github.com/kickstarts/${prefix}-${template} ${root} --quiet`)
+    shell.echo(color.green('\n🎉 All Done!'))
+    shell.echo(color.bold.white('\n🚀 Now run:'))
+    shell.echo(color.white('   npm install'))
+    shell.echo(color.white('   npm run dev'))
+    shell.echo('\n\n')
   })
-
 }
 
 
@@ -60,24 +70,41 @@ const initializeProgram = () => {
 // =====================================================
 
 // Version
-program
-  .version(color.cyan(`${package.name} - Version ${package.version}`), '-v, --version')
-  .option('-s --silent', 'Skip status logged to the console')
+program.version(PKG_NAME_VERSION, '-v, --version')
 
 // Main Command
 program
   .command('start')
-  .description('Create a Kickstart')
-  .action(initializeProgram)
+  .description('kickstart a project')
+  .action(kickstart)
 
-  // Help
-program.on('-h, --help', () => {
-  console.log('Help')
-})
+// Help
+program.on('-h, --help', () => console.log())
 
 // Default
 program.parse(process.argv)
 
 if (process.argv.length === 2) {
   program.help()
+}
+
+
+// =====================================================
+// Helpers
+// =====================================================
+
+const getRepositoryName = template => {
+  switch (template) {
+    case 'Vanilla': return 'vanilla-js'
+    case 'React': return 'react'
+    case 'Angular': return 'angular'
+    case 'Vue': return 'vue'
+    case 'React Native': return 'react-native'
+    case 'Ionic': return 'ionic'
+    case 'Nest.js': return 'nest-js'
+  }
+}
+
+const handleFolderName = folder => {
+  folder.toLowerCase().replace(' ', '-')
 }

@@ -4,14 +4,14 @@
   "bin": {
     "kick": "bin/kick"
   },
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "A jumpstart for new projects",
-  "keywords": [
-    "kickstart",
-    "generator"
-  ],
-  "author": "Vitor Britto <code@vitorbritto.com.br> (http://vitorbritto.com.br/)",
+  "author": "Vitor Britto",
   "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://vitorbritto@github.com/vitorbritto/kickstart.git"
@@ -20,10 +20,10 @@
     "url": "https://github.com/vitorbritto/kickstart/issues"
   },
   "dependencies": {
-    "ansi-colors": "^3.2.1",
-    "commander": "^2.19.0",
-    "enquirer": "^2.0.7",
-    "resolve": "^1.8.1",
-    "shelljs": "^0.8.3"
+    "ansi-colors": "^4.1.1",
+    "commander": "^9.0.0",
+    "enquirer": "^2.3.6",
+    "resolve": "^1.22.0",
+    "shelljs": "^0.8.5"
   }
 }
